@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 912,
-  "versionName": "0.9.12",
+  "versionCode": 913,
+  "versionName": "0.9.13",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-912.zip",
-  "packageSha256": "12860dfbbbad684b5008fd11dd33a2b7938b846a7e85d69d0d505159341b4c70",
-  "packageBytes": 1370598,
-  "notes": "HUD de combat enrichi : compteurs de vagues, equipage, perles et boss, statistiques colorees et panneau mobile preserve",
-  "signature": "pSgeore8qhRLL4kWR+JrFWFoMmSDwkZSa2WWCRvK4R8PikTRs1w2CrIeE7jdKkEnI4694yO/iynozfIp/qRm2PhJr90sqhKc+2XztaDEzGPyYHQ3nsC0GSdEPnERfM7fooQ0fvd3cFWy8Og6uXQUAaZly9PxdGtV+vVeY6BLEPxa5RAbCV/blfoL3kDSeVQrxxiJqdIKisu9H133b1C60dOPI6KzrzPM0ayRHvieSwwRijFstR92pCeiSpR9IGJ748tZ2fHSceInb7uuUATzKcITkAcIaRYxLMW7MuX3PRStKqTP/Oq9gVz0hb9+3Ld7CXVp+RYHsxBNBQNi8MA4Ghj7WJ5q12urvkMkhXFiSYBZ/cMH8/CiYakHZDeTtXh1JvNms3jKQ8T4xXbhT0dLokbrzxRnsILtB5wDNGWXdwrWe9obgI+v3nQKz/8TC7GovRcADiycgPPu2cRAGTBg2Ve8MJYbEEU0U1GThC9zaOSP6wUk+i+WtvUfnfNkd5PA"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-913.zip",
+  "packageSha256": "7e18dc1f751d96338e7dbf2e751786f3c7d79bf49769f5004ed7f4e6d28fe436",
+  "packageBytes": 1372184,
+  "notes": "Combat plus vivant : trainées, etincelles, techniques des heros et particules d'arene, sans modifier le cadrage ni le prestige",
+  "signature": "KCoksBREKfiCd5bk2wmqJxSx3mXJtcWTFCrZie2h3LhQkJF3ZOm/pdkVmPjtPO7+ZElZTJk9SQvaw2nyClncHh5O1fL5BbBqYIoJoAo6t3/ULi4/EXXv/SWktAnRvSN5VLe9esSGjHXGMD1zbdoppYxzcwr70H/GTcaUAyH1JYjX9SJJvEpt2unh7eHvX1PYONS3L8EAZRJS850pMKa8/3JqCLtXwOb22vA86izO4G0wMJu1av1/ZiaOe7zcN/2Zb3eFftVJwGku34pnpvNRhw8dC041EIyJCwk3S9G3iN1ShkR4C70Zn2EiL3OFODCg+HhrTKW34PMNr+JjcykSOEQ+Qo23lzOGe1BsyNcm10buDF0MA37P6BLLcUY5THnGlfdnztUjRtftN44aLKYcA11tVRAN2vM6e/RAQzd5D/1xi2Wh9s0TIJ7ACYy/EIufekk5TQXZ4+AbLcCtrC+n1brNyxt+pfITpYAspJXiE122OKxOZg9CveiE16NXgmLW"
 }

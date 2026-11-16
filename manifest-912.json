@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 912,
+  "versionName": "0.9.12",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-912.zip",
+  "packageSha256": "12860dfbbbad684b5008fd11dd33a2b7938b846a7e85d69d0d505159341b4c70",
+  "packageBytes": 1370598,
+  "notes": "HUD de combat enrichi : compteurs de vagues, equipage, perles et boss, statistiques colorees et panneau mobile preserve",
+  "signature": "pSgeore8qhRLL4kWR+JrFWFoMmSDwkZSa2WWCRvK4R8PikTRs1w2CrIeE7jdKkEnI4694yO/iynozfIp/qRm2PhJr90sqhKc+2XztaDEzGPyYHQ3nsC0GSdEPnERfM7fooQ0fvd3cFWy8Og6uXQUAaZly9PxdGtV+vVeY6BLEPxa5RAbCV/blfoL3kDSeVQrxxiJqdIKisu9H133b1C60dOPI6KzrzPM0ayRHvieSwwRijFstR92pCeiSpR9IGJ748tZ2fHSceInb7uuUATzKcITkAcIaRYxLMW7MuX3PRStKqTP/Oq9gVz0hb9+3Ld7CXVp+RYHsxBNBQNi8MA4Ghj7WJ5q12urvkMkhXFiSYBZ/cMH8/CiYakHZDeTtXh1JvNms3jKQ8T4xXbhT0dLokbrzxRnsILtB5wDNGWXdwrWe9obgI+v3nQKz/8TC7GovRcADiycgPPu2cRAGTBg2Ve8MJYbEEU0U1GThC9zaOSP6wUk+i+WtvUfnfNkd5PA"
+}
