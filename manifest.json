@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 913,
-  "versionName": "0.9.13",
+  "versionCode": 914,
+  "versionName": "0.9.14",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-913.zip",
-  "packageSha256": "7e18dc1f751d96338e7dbf2e751786f3c7d79bf49769f5004ed7f4e6d28fe436",
-  "packageBytes": 1372184,
-  "notes": "Combat plus vivant : trainées, etincelles, techniques des heros et particules d'arene, sans modifier le cadrage ni le prestige",
-  "signature": "KCoksBREKfiCd5bk2wmqJxSx3mXJtcWTFCrZie2h3LhQkJF3ZOm/pdkVmPjtPO7+ZElZTJk9SQvaw2nyClncHh5O1fL5BbBqYIoJoAo6t3/ULi4/EXXv/SWktAnRvSN5VLe9esSGjHXGMD1zbdoppYxzcwr70H/GTcaUAyH1JYjX9SJJvEpt2unh7eHvX1PYONS3L8EAZRJS850pMKa8/3JqCLtXwOb22vA86izO4G0wMJu1av1/ZiaOe7zcN/2Zb3eFftVJwGku34pnpvNRhw8dC041EIyJCwk3S9G3iN1ShkR4C70Zn2EiL3OFODCg+HhrTKW34PMNr+JjcykSOEQ+Qo23lzOGe1BsyNcm10buDF0MA37P6BLLcUY5THnGlfdnztUjRtftN44aLKYcA11tVRAN2vM6e/RAQzd5D/1xi2Wh9s0TIJ7ACYy/EIufekk5TQXZ4+AbLcCtrC+n1brNyxt+pfITpYAspJXiE122OKxOZg9CveiE16NXgmLW"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-914.zip",
+  "packageSha256": "7c4ba521d68e055def302fbd79fc46e4aabfab131ba24f5dac56f24b0de8ca8b",
+  "packageBytes": 1372686,
+  "notes": "Projectiles ancrés aux personnages, plus de departs sous la scene et message de boss vaincu qui ne couvre plus les combats",
+  "signature": "Q1DkVa0EAUlyASnZ3B+cWKcV7O++SAVU8t3S9kxUpAO1qI6URpCcuxy6H4Js46OS+/Hgh6y55UNFzSnNE8X7kenmsUjTFVuO+sKs0Qct2zGI17RYYax7M/04oDz2TTYVPXm4M41ZUnRAGzKGSFQMpl3hhc9Jy/4yl10amRbng0qblYFD1DV2uQiSD1mM9MumcjorDpq8md4vRuRngV53bax3BkGGLEstxQndQFJqyCaNYtvbNYlMN/9Oi6fcqLvKhwJfTJdlpvP7l5VDT9vTQzk4YXmKSWjaW9URruChiOWZSUpowjB2OgSP2d6Y+XqJjxEkmHXnpYYqNaUXR10UzjdoR4nUQkEI0FwSSmAsumrN63UBGw6ZNUx3Ax8h+4KfuvT/oUr1tRzcJJVNJNdipkrxXr6iZ/hE+af2zYR1R7SBUAaxMRrkkKTTmiXDjD3IPj3pPH8JKuxu7fbplwo1ToHOZvKYk74ZqczpjOeC13I5CghcH2nkYR3vhRNEv9gf"
 }
