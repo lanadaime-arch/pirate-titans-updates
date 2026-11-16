@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 902,
+  "versionName": "0.9.2",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-902.zip",
+  "packageSha256": "c6de3ef83e788d293b5861a5feac77a84e20c3dadf94d8492d2b88277a4b6d52",
+  "packageBytes": 1350528,
+  "notes": "Premier test de mise a jour",
+  "signature": "lxallq/aR5Vm4NDTQfIcWT9Wi/sQeMp58sLMNV2PgwjA9mYYjqsxymSoQgFGLVOVHLoGhQgI3XH601zVIfkGjkitptz5B5QBBAFOQ3EHXuTjtB1Pqn6BpciFUL0Vkq70cEEnV/p1adawYui5cV+F0yWcAkG75LDVWIQ0IXpPZcv55h65W+LG9cTamz5KrMfqiNjk1X+HirJRHHbrGMjmdEYFrOvMPLcXU8R8ehUTdtNLUxec8qbnmpMZ9REZdG8o5/5LtyjcRmNpayTTx3DnBjOoH4DRNYJw6eo/hjhZNfex2j5K1wrifUXlFRY6EmgIsQX6moNasWWFgOUGLwXkiLxiPCTbhfMnAP4qc/Dwmj/bSdSxGKh/7oHpA+uUnpONpDGmRA3CE3DB5/A7L8ZtW2EAKZYLFQmLrI9x18tGU7j1bcA7Lm4sg6ekxYRHFjBR7+lpwyVYj5QWaeRWIRZ3Svktqgajkji7UbmJdfWHh92zCWyrBsFmPPOGE1lE7CWv"
+}
