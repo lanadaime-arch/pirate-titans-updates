@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 920,
-  "versionName": "0.9.20",
+  "versionCode": 921,
+  "versionName": "0.9.21",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-920.zip",
-  "packageSha256": "9bb182a6591a1d20e6907a2d4227fc6edab51b7b1b78ad0cf98b9e76a38f33f4",
-  "packageBytes": 1375675,
-  "notes": "Refonte des PV, degats, prix et gains pour des centaines de milliers de stages. Niveaux et progres conserves, berrys convertis une seule fois.",
-  "signature": "EL1TGUcAxSsDwYIVbQDz03jDbxziBGRUZkHJM1ZOD+oyY3ODGmfm/PNzcFI3fUjmInx7X7cZPPSDa0YCU9CAtVv7GMhTjCW7Ov30rj6Sz45MtwJM86kIqVGB6pCpD9fQFDHBvIV3Vb7A43j77Oc3+pgrJ9pTz9Ixriy1zvl+RDOra1RvFpPzDskJjUTdZkSpYF13bE702EMMKQ5Ou2sSiwM2M5lykdUtx8o2x3e07w9wENEttrCIcK8v2B6JzvP0AM3yuig07yrwB++WSrjKg36veX0XHfSiOVND6JdNBzUHaG5pBO7tIkLIWUh5+w+LHkz/fHrJWjAlpcIqk5fqQzoj1OSj/nbtg+lh+0CmXiC9B5U9Cb5wYaOp6pP16mE0z3XBMoG1wSkd5y+1ApYM55zvyoA6czPOxFBizUl4NhGR4t78vK43ssrkMcD1tZ4wh7E6zuET4jmFkYN3421dD/SDna9PND0RMELriefc+B80/Pu+ok7k1awDn4xAqZs9"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-921.zip",
+  "packageSha256": "7ffcfa0410d8bda15922f36bafd18df37e3a6ded1b1d81b9d6f227b0fdf49fb8",
+  "packageBytes": 1376385,
+  "notes": "Notation K M B T AA...ZZ AAA pour les ressources et grands niveaux; prix des artefacts et familiers extensibles sans plafond exponentiel",
+  "signature": "jGRblP8BcVwEZJ7TtWQI5WLtPXP4COvL84UwkfM/zPUMyMtfSSm7falHp1XExH2Sidh4imAerVf7SSc2+vp8KPuOUmYrE7PT/pg7DwkH8+c+9fUGH6SM8Axd5t43JgRUTzdqJZKuCGB60kmm1gs/do0YUFXq0hhP0HTPLTd1HrXlE4MukBXhr96NqurFXSXT7RZuFSvt7cLve43teSETds5iY1HV9Pus5MDKMfOXjpo6sXnFglOE06tNjvzIU0bcM/ZHiGB899pTODzJS3ctjpFX1WdFZT0ISE6qOuSlnwsTTI/M877cf1pZMtUEav97wu8iKyWJeRd5fMsKwUHY+tXAUAHpvO9l6k4PdOphXTbNC2fEQvdH+qfBl+N2IoitTRvQ2mM2QkjuWHCIOffbitoxIvbEV6nj75jrnutlOt8vcIhWMWlVJgzfPP25sBLDMS1jYy/W/EsqLZvdAgCy9NSjc89syp/mPxOaoWhs8td21oK2Nm0+jh56JJ+tOEmR"
 }
