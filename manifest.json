@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 910,
-  "versionName": "0.9.10",
+  "versionCode": 911,
+  "versionName": "0.9.11",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-910.zip",
-  "packageSha256": "9c733b33db1e79d98d528c05a78c1aa19f8f9e2808391abe006f93598dbbd8c1",
-  "packageBytes": 1369619,
-  "notes": "Vrais jalons recompenses, prestige avec depart avance et bandes noires de securite",
-  "signature": "Rol4hMMMY7PuVopiOTziLv1P/xosSF2CPDd73l/DXYGz1axqSs2wqcxHSpucqQA3f2yZK3g4w4PKHKxxNcPJxb/bbScFbpsVMzvpw5JfzyN/aSMUrpGw7dtKCwjK6kG2KoURECNpcIhex6OVC1fo0CjA2NaXk41NJ+PHibAAecwlGUknjOpPtnzyX7tLLsRkreHDFdgu0a1odfKMwfDihWVb65DrRIwDl/8k27YPNqK/+4XYCnpovfDFw4oVmydVTmrl9W1Fd/MXpp5wagse5z1Uw30U5mr38BV6ZYDcGM0gSfV7RCV2x7ORTHQ5D8rG1WVcp9A8eHoE9sEypNP22as2bCIkr83BcEflF8tVYxJz7Z+Wd9CBb3h/JJJfn9d7M4S4/UKvDR7KcoLrxVi9RjfpxN51/hMc7EtTr6uK6dvlDJuml1mGBzwWql/Sy58U26crwi1vLjC2j9NFrfIZLBTg0Bs3SXmWUUFNnEj51zcDYTan31By1HHoTJo8lHSD"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-911.zip",
+  "packageSha256": "aafe6af2a33ec7daa414fa1aa9f6e5d248af1bbcd267a3851516e4065822bd1a",
+  "packageBytes": 1369696,
+  "notes": "Corrige la hauteur du panneau deroulant en portrait pour laisser Luffy visible, sans deplacer le combat ni supprimer les bandes noires",
+  "signature": "PLuGW+C1wY8LVzMFjeARYAKJOidG3VMc/fzuOIncYZk62EsB6aIlgIAdihccWCTYQj9gEAf7bVehJNnHyoEGQ02wjQhr/IlBD56poyYFe3VhiMzd/6VXJTshkXY0pj0kHybddak+WH55l8rFSDoyg0nK7i0eP0vjNuH9ZwDBLXzNS/Bz/jTL7pHmBLuPMYEiIgefOnQGefLC2E38xgR2yaFGvi8MznvfAPTtNOmji1OLwG8yqpPCoaqRu65/n8TvsM1RlL2mu/cAs3FzcM02YfSDEWFKWYmzihIdzdH2/dco57WeRsYAptOiLRVNX2/oMbVCEZ1ICMv5ZJArrfVJZ9piw2saDZUFgiD7OavJm8f4A1QBE7qmIJu2NAYATGYS5hqu/iLKFOAI7o4xHZsq2AyTwGW8oFtj+cahJnFajEudm0VlK1NKZcfVtS5d0sSh8PIKP08rsWtgcjadJjVv3Huj3C811+hde1HasIX15sef0PfXZsMfvxXQm+mMNlae"
 }
