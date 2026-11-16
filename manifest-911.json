@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 911,
+  "versionName": "0.9.11",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-911.zip",
+  "packageSha256": "aafe6af2a33ec7daa414fa1aa9f6e5d248af1bbcd267a3851516e4065822bd1a",
+  "packageBytes": 1369696,
+  "notes": "Corrige la hauteur du panneau deroulant en portrait pour laisser Luffy visible, sans deplacer le combat ni supprimer les bandes noires",
+  "signature": "PLuGW+C1wY8LVzMFjeARYAKJOidG3VMc/fzuOIncYZk62EsB6aIlgIAdihccWCTYQj9gEAf7bVehJNnHyoEGQ02wjQhr/IlBD56poyYFe3VhiMzd/6VXJTshkXY0pj0kHybddak+WH55l8rFSDoyg0nK7i0eP0vjNuH9ZwDBLXzNS/Bz/jTL7pHmBLuPMYEiIgefOnQGefLC2E38xgR2yaFGvi8MznvfAPTtNOmji1OLwG8yqpPCoaqRu65/n8TvsM1RlL2mu/cAs3FzcM02YfSDEWFKWYmzihIdzdH2/dco57WeRsYAptOiLRVNX2/oMbVCEZ1ICMv5ZJArrfVJZ9piw2saDZUFgiD7OavJm8f4A1QBE7qmIJu2NAYATGYS5hqu/iLKFOAI7o4xHZsq2AyTwGW8oFtj+cahJnFajEudm0VlK1NKZcfVtS5d0sSh8PIKP08rsWtgcjadJjVv3Huj3C811+hde1HasIX15sef0PfXZsMfvxXQm+mMNlae"
+}
