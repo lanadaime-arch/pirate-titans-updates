@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 919,
-  "versionName": "0.9.19",
+  "versionCode": 920,
+  "versionName": "0.9.20",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-919.zip",
-  "packageSha256": "2bd6ae91a3137d9a332e072747ca79b8eb1cb5cafb2df4bce33b7df00f42c53e",
-  "packageBytes": 1375085,
-  "notes": "Courte transition entre ennemis : 160 ms sur les vagues et 230 ms apres un boss, sans perte de recompenses ni changement des degats",
-  "signature": "hmHqqeT3SNFbCXAu3Q+J898GZEzP9MrQH1tGXc1JzNiGcNJLtTI1VSZjGcGHnNKaMyySZP+NKfcpJ2FvC/M3FOJCOdoC8qgqkTDu0VGKmnLDlebzoM3RUN2LSHudQ0fbB7JOl4Vl8jdZS/R/xumgMD/gBuV4gJ0duxdP4c2DsIurPVaFlsWWoYv12fZUU52trEvk0xE1dZ9v02UBjqd2FXdYHuyiioPH5wVfYCPJIYQSE5MPhp6lo1iLhmfxoskUvQpDBe5r8koJssZ6BWyT1IA8IlZ6RVPeiYLe3LxTaohFZOpU68QnUT2RwHwam+Q1YAiQZgKU3VKG/N4AMOwU/81e8BOw8V8P0zTGQTBCTLZM933CpfEO9sV1SS2rdQUgRraGk8VDirQearJiaHHX4aW3z02m5sKRn7h5oPf4DIEOxnEy5JHZjgp+m3Xj6JwNKUqV/9FYbSNXwHGjpaX+JNaZeLVlrYCtrFUECoD+fOEn4ceGLEb+JpZU0F4mYgxm"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-920.zip",
+  "packageSha256": "9bb182a6591a1d20e6907a2d4227fc6edab51b7b1b78ad0cf98b9e76a38f33f4",
+  "packageBytes": 1375675,
+  "notes": "Refonte des PV, degats, prix et gains pour des centaines de milliers de stages. Niveaux et progres conserves, berrys convertis une seule fois.",
+  "signature": "EL1TGUcAxSsDwYIVbQDz03jDbxziBGRUZkHJM1ZOD+oyY3ODGmfm/PNzcFI3fUjmInx7X7cZPPSDa0YCU9CAtVv7GMhTjCW7Ov30rj6Sz45MtwJM86kIqVGB6pCpD9fQFDHBvIV3Vb7A43j77Oc3+pgrJ9pTz9Ixriy1zvl+RDOra1RvFpPzDskJjUTdZkSpYF13bE702EMMKQ5Ou2sSiwM2M5lykdUtx8o2x3e07w9wENEttrCIcK8v2B6JzvP0AM3yuig07yrwB++WSrjKg36veX0XHfSiOVND6JdNBzUHaG5pBO7tIkLIWUh5+w+LHkz/fHrJWjAlpcIqk5fqQzoj1OSj/nbtg+lh+0CmXiC9B5U9Cb5wYaOp6pP16mE0z3XBMoG1wSkd5y+1ApYM55zvyoA6czPOxFBizUl4NhGR4t78vK43ssrkMcD1tZ4wh7E6zuET4jmFkYN3421dD/SDna9PND0RMELriefc+B80/Pu+ok7k1awDn4xAqZs9"
 }
