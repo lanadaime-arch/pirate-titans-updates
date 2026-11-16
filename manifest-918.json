@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 918,
+  "versionName": "0.9.18",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-918.zip",
+  "packageSha256": "4657dea61f5054319fa7fae849a4c40f21deee7720a31e4bbd5611cee69d8ea5",
+  "packageBytes": 1374723,
+  "notes": "Reequilibrage des heros et des ennemis des vagues normales, boss inchanges et recapitulatif des recompenses visible 7,5 secondes",
+  "signature": "WUZfmmqbI2u1kcfqXTm4tGcMRSEG+8e/iJakgriTCkK3ZZv0o3suLM2Fqvi77yxQ81mM2diL0KrAsqK+mQaRQifg3HfTBJsXJEnJpW7OS5dgC/eLo1LfUAxFVIO2fYkFj9aW0QO4VHwXyOSETjiYMXsfGx6oqYLA+NwbTzpd0Ut2Nwga52WZLiIkcrkUyLUtIGDsCUpPhIzWmC7rwF1mDpl2RJJFJo60tiVPZCIgeFZ6GfERDT5aWtGZIW6rQsP0G38b01AAbRH8US6NZBPhAgwj/Cjo+h8ZUeBdXkByOq8nJhsPMkicrVCym9kNmtC/gYfsH9YYI0lZJwtztHIDNKeDy5JABrCae32mfZ9PbsLAL47dctvtvOfgtZ0ewQjzGmsWCTuaUFgpYMfO5gOOPK0i+k6MUBReZEMncZvN6PG2WWukhG0Wj3vhcePCOWLwECpGgD4MvQrNjtQ3tnOPivCa+X5oinGcl99uXfbJyN89wSp9EbCsRzrMntlfmtSX"
+}

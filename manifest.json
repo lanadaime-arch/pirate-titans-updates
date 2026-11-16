@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 918,
-  "versionName": "0.9.18",
+  "versionCode": 919,
+  "versionName": "0.9.19",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-918.zip",
-  "packageSha256": "4657dea61f5054319fa7fae849a4c40f21deee7720a31e4bbd5611cee69d8ea5",
-  "packageBytes": 1374723,
-  "notes": "Reequilibrage des heros et des ennemis des vagues normales, boss inchanges et recapitulatif des recompenses visible 7,5 secondes",
-  "signature": "WUZfmmqbI2u1kcfqXTm4tGcMRSEG+8e/iJakgriTCkK3ZZv0o3suLM2Fqvi77yxQ81mM2diL0KrAsqK+mQaRQifg3HfTBJsXJEnJpW7OS5dgC/eLo1LfUAxFVIO2fYkFj9aW0QO4VHwXyOSETjiYMXsfGx6oqYLA+NwbTzpd0Ut2Nwga52WZLiIkcrkUyLUtIGDsCUpPhIzWmC7rwF1mDpl2RJJFJo60tiVPZCIgeFZ6GfERDT5aWtGZIW6rQsP0G38b01AAbRH8US6NZBPhAgwj/Cjo+h8ZUeBdXkByOq8nJhsPMkicrVCym9kNmtC/gYfsH9YYI0lZJwtztHIDNKeDy5JABrCae32mfZ9PbsLAL47dctvtvOfgtZ0ewQjzGmsWCTuaUFgpYMfO5gOOPK0i+k6MUBReZEMncZvN6PG2WWukhG0Wj3vhcePCOWLwECpGgD4MvQrNjtQ3tnOPivCa+X5oinGcl99uXfbJyN89wSp9EbCsRzrMntlfmtSX"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-919.zip",
+  "packageSha256": "2bd6ae91a3137d9a332e072747ca79b8eb1cb5cafb2df4bce33b7df00f42c53e",
+  "packageBytes": 1375085,
+  "notes": "Courte transition entre ennemis : 160 ms sur les vagues et 230 ms apres un boss, sans perte de recompenses ni changement des degats",
+  "signature": "hmHqqeT3SNFbCXAu3Q+J898GZEzP9MrQH1tGXc1JzNiGcNJLtTI1VSZjGcGHnNKaMyySZP+NKfcpJ2FvC/M3FOJCOdoC8qgqkTDu0VGKmnLDlebzoM3RUN2LSHudQ0fbB7JOl4Vl8jdZS/R/xumgMD/gBuV4gJ0duxdP4c2DsIurPVaFlsWWoYv12fZUU52trEvk0xE1dZ9v02UBjqd2FXdYHuyiioPH5wVfYCPJIYQSE5MPhp6lo1iLhmfxoskUvQpDBe5r8koJssZ6BWyT1IA8IlZ6RVPeiYLe3LxTaohFZOpU68QnUT2RwHwam+Q1YAiQZgKU3VKG/N4AMOwU/81e8BOw8V8P0zTGQTBCTLZM933CpfEO9sV1SS2rdQUgRraGk8VDirQearJiaHHX4aW3z02m5sKRn7h5oPf4DIEOxnEy5JHZjgp+m3Xj6JwNKUqV/9FYbSNXwHGjpaX+JNaZeLVlrYCtrFUECoD+fOEn4ceGLEb+JpZU0F4mYgxm"
 }
