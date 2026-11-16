@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 914,
-  "versionName": "0.9.14",
+  "versionCode": 915,
+  "versionName": "0.9.15",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-914.zip",
-  "packageSha256": "7c4ba521d68e055def302fbd79fc46e4aabfab131ba24f5dac56f24b0de8ca8b",
-  "packageBytes": 1372686,
-  "notes": "Projectiles ancrés aux personnages, plus de departs sous la scene et message de boss vaincu qui ne couvre plus les combats",
-  "signature": "Q1DkVa0EAUlyASnZ3B+cWKcV7O++SAVU8t3S9kxUpAO1qI6URpCcuxy6H4Js46OS+/Hgh6y55UNFzSnNE8X7kenmsUjTFVuO+sKs0Qct2zGI17RYYax7M/04oDz2TTYVPXm4M41ZUnRAGzKGSFQMpl3hhc9Jy/4yl10amRbng0qblYFD1DV2uQiSD1mM9MumcjorDpq8md4vRuRngV53bax3BkGGLEstxQndQFJqyCaNYtvbNYlMN/9Oi6fcqLvKhwJfTJdlpvP7l5VDT9vTQzk4YXmKSWjaW9URruChiOWZSUpowjB2OgSP2d6Y+XqJjxEkmHXnpYYqNaUXR10UzjdoR4nUQkEI0FwSSmAsumrN63UBGw6ZNUx3Ax8h+4KfuvT/oUr1tRzcJJVNJNdipkrxXr6iZ/hE+af2zYR1R7SBUAaxMRrkkKTTmiXDjD3IPj3pPH8JKuxu7fbplwo1ToHOZvKYk74ZqczpjOeC13I5CghcH2nkYR3vhRNEv9gf"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-915.zip",
+  "packageSha256": "fc301643d1845188c48f207c71bf3891ead7df27848ce10b67b0196042984dab",
+  "packageBytes": 1373392,
+  "notes": "Progression des 5 vagues dans le HUD, boss mis en valeur et compteurs de ressources reactifs, sans changer les menus ni le prestige",
+  "signature": "OPJrtin9mwu9p9/E4b782BJxjXX1SRZkhJFfHDtwhJSCiMLxIVRxTgq5t0NwMrFU0UvJSm8VGKiiHz64UWp2IXG3gpNK4c3IzkTqNXNxx9ni90TAjNc1Ed/8UcYYTOXWpf4Btmex3LOaacn4VtGNZ8LbfYk+NSIG0exOfKedykaVUJ6Z0MIJvkV/emFGk5bUVYexy4i8bZQiO06YoKK38smc0fV3uzhquURhyormuvJbpuqbdTOAwM8XkRraoqnyb6UuM+FhhYlUwha8vOZ91llPGPzs5Y9/sjTchn23ENG4jMWQi6279t8mGDg2bzJ2KO2sLt0ObP8eniN1Gysn8/HPzUWZ8tuh8OqcagQMgVfAp8IVpGoH/Ekm8R/jlakAqPiilfs4zBHroatdm5llEl3WZKHkmbF9Fqn23rpk1k+7IunilZilmfrRQ6Y6Wa56vafUOWBRt0UrCrzkSz7fy5uqtSYDaRIGqM2eX5zZ7lWtxRIsihQEyijmx6RUe5mF"
 }
