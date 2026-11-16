@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 908,
-  "versionName": "0.9.8",
+  "versionCode": 909,
+  "versionName": "0.9.9",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-908.zip",
-  "packageSha256": "90494d8ee93eab7c645182a0a93470bd6718e00b65b269389d2ffadbba794c10",
-  "packageBytes": 1367125,
-  "notes": "Bas d'ecran compacte : mana au-dessus des sorts, onglets fins et compteurs lisibles",
-  "signature": "G6GN6zRR3nUsajYM14zYzDvOrpdDdWhzpxKYYMyZKJZju+goT62IcIAHIHDskgpX4Vq0AzBhv1hYy1hcahojF7BaKFXyEwRq8F6fJnsZDtI1dXRcIPBOUHp+4XSXLdejVxws+1ZK3VzHIkOs6MOGCww7UbU3nQ15VCTwlR6ObxNGbjz5tEypP1kD8oXvJL3IcK27lFdLx2GhGHzTCRiautUuougUbimOCaD+J5O8t+sH3NrPhdFQhG/D6rJaCxbZgdn497gB5cClsaOcn//lspTBUhQZCJEkFZOjKYet2fOwsupGJnl/U4tyAQdXzp1wO02mQC5b/XqXXe2cZS5mTFJNb1YKEMQs474TGcZe3Mg+gnEbyaTh8EUXqQerkFholkPFUpfj4odmCGm2ArSgjBZP/+eNzwTbIxs9npfsvfBzclacGLEYU7wmAiWTibkZyeLSDRgSHu+GS8kSlmEDdPdJCm9aoQqJce9bEjkbszTBrHJhUcqTLznQH+ukg3dx"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-909.zip",
+  "packageSha256": "22c307a4af37d5d61e8ad0e2a840c66353f6bf9f50bef7fa2ee3c55b1e852305",
+  "packageBytes": 1367900,
+  "notes": "Objectif de progression dans le sous-sol, onglets sans debordement et noms lisibles",
+  "signature": "Tmns5ouqLgZ4GaDK4KE1FsgQ7fuPyFc/u5hwQi/050Jt2ZEi3REr+LvSDdWBwvEsgDWWpIsb0ZhjnsIQxIKJYUoWBEiNDBs/n4CqttIncK+MCjdN014/OcivQpEEZSzgr2M5FpJpuDBGQTuM+IbZ/DxQOl86ONroWSmla73G69hnovHvmMOn/gYVr+R7HN5emhVKxfJkW/YJbwtVkF0aGhwrFAfqn+1hfBsCI1xUGNgoaevcTgOccQSh392uStoE4hUF99nLtQsMJ85qKZUzLlzIZ5Oa71s8OHIKYsh0yGDdun2C3+GywWYZKDAkR8p12jaMsjS3FPyXtw+SUEVVeWcMK8fH3sqe5zNrcmVuFebHVPzLpq8/EMK+85QZvj4ep6OqBRlpmHWPMNExumQFraxOTMpN7eOKLNn7KFCPXkD/7SzPKI3+ice5rP0O5AyB1oN17uWk/UqGduUy4c4dg5wE9s56zBbxDpKOwpzRKe2tO1ivWFKBc6Dmx3vLPW8Z"
 }
