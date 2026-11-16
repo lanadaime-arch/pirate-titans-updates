@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 907,
+  "versionName": "0.9.7",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-907.zip",
+  "packageSha256": "d9fecaf4e537d2dbf2bb44a465e6b1c76b0539d4ce205dcfcd11caf55f2831ac",
+  "packageBytes": 1366222,
+  "notes": "Suppression du bouton plein ecran inutile dans l'APK",
+  "signature": "0bV9pXkuV+g+vC1WAZvftMly6SsKvcBQc0AhOMM6jvOOibZfAHH1p59l8pUq20GBsRWwJ39JXVgauySCxBqVDXeFuQr1kl3XEyP5UKTEumX9Xvbu7W8ADqH9iI+XXNHcXuh8xPgz+IwHD/gM491WxplIZhL39Mn/hUBE9Jfjylja0+FtPRLiH1G/1HA0GuQiHZMvPHrUm9r7LjehclLCkW/voBb/fcW3imj+Ffh7HEPGj2lEfrB+Mm2WWOrFn5OAyA87F/PtXJRK2Dr/wFFwTCBLktzq6WDx7Bl6TgUaWUml7954OHjKNOae6u5v5eJcXK/EYYEXkqJjZa67kWn1LgNusPqDfVBJ1R2xD/wXYeMlz/iLqX+jcQOO9zEZl2o9Pa+iAZWXtq0fPHFb/kyNH5Rd39Jo8BK7F9RGvHDZBuXRVvm4bgy7lQsFLVglyeOckEwctY7IM4FnBRzP239DwZHaHkU7G066IZD2B8UBinyWwAr1+ShJx+5yca1D+ksk"
+}
