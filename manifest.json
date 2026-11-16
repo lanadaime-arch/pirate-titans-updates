@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 904,
-  "versionName": "0.9.4",
+  "versionCode": 906,
+  "versionName": "0.9.6",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-904.zip",
-  "packageSha256": "fb66015bdde4ac3859cc5f2b8fc236141f6da53f498fe8c82b14876be5dcb743",
-  "packageBytes": 1353016,
-  "notes": "Combat fixe et menus compacts",
-  "signature": "AMOLK7LjApWgVFmDFT7eZdH83PiWmXTvOXIVKZEhvYB4LywlcJqA4D1ogHIc4BhhUkHMK7pAaW1+WSlRpcJasBdll7ZGYpHlOr7lkWZkixdoNilMw3xgNonrJph8jQelVKFVblRBJcaRMgrAqNhRR6LQjXJIzUliBJg8DUf7zdQxdyLsosv/58It9epa0djcYmSeE/EkOUTG9rbH1e6/p/6ls2ZkHkRxSOLQ/WrU/Vcqeil5in0SABY72vKOyYi4f0SYeXRjF6uSLe6SUTCc1spYPJtjDrz0b1g5bA5U1WdUxUG3cqzWNCkGv3XKUrlMRsQRDCYZBLPUpwb+WaJOsG3d5xM6YWVzw0vGYdghuKo/g0sutY9hamWIoinWe2n5JviIX5Is+Eewsg/fjD8pPOEWzgGYQ4wa/Vxwuh6eaSs/FZusspw/lWjPD0JvtfabBwZfOqfBr/QfGNuQaAPvumaOLjTRAQz81AraXMkkhVqRMgBp4kmtB9U1LmnRKire"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-906.zip",
+  "packageSha256": "cdd18642fe35d5e605cae335e11840845e67c4c1e22ff552f4c9a69aadf801cb",
+  "packageBytes": 1366601,
+  "notes": "V0.9.6 : interface compacte, sorts ronds et decor continu",
+  "signature": "oaAHuHWmBCVl2t+K80lQcKvNxC1Hn23bpb59m4O6G4GqylN1+rMfRHM2LDkxSAO2ghWIbZ/w9fMf3SwUogtwe9EHLyLr8IKfvhnpVExBQORE2uzor345yg+ERztwJISbTn1XOXjfXOlX0Pm4CngW56yEn/AgWPSuOh1K8rQJlH14dxv95PbM5+7WAP0dDX/4q7QDMZ3CrkyeRGduGUSyQi0CYuo5gitHLrrL/CjgLB4zShPZGO61hU+JO9M1+SObwzgadpFIARjE7YiL9Zq/gRgBHqHyqlNb2aq9c27QzRyMIra3FIPuMaU47rAd8C4HgA6RwxgF5GRXIWuUTLsXlNm0eEAr50d9mB/pftKNn06kuKdjfEhFFQ75V3EvrAzhUTH+LZI03WLqKc15YitUDwL2u9PsIax9DOb6omaqG1pIiDlcH7+/bAx+CmiDhPJhnKPbge1gKpXBaQNHx+97qvzQktDI2ULZzNYRsvZkdVXyMycp5CpZ/+1gPUZHmqym"
 }
