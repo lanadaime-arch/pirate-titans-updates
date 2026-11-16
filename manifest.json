@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 915,
-  "versionName": "0.9.15",
+  "versionCode": 916,
+  "versionName": "0.9.16",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-915.zip",
-  "packageSha256": "fc301643d1845188c48f207c71bf3891ead7df27848ce10b67b0196042984dab",
-  "packageBytes": 1373392,
-  "notes": "Progression des 5 vagues dans le HUD, boss mis en valeur et compteurs de ressources reactifs, sans changer les menus ni le prestige",
-  "signature": "OPJrtin9mwu9p9/E4b782BJxjXX1SRZkhJFfHDtwhJSCiMLxIVRxTgq5t0NwMrFU0UvJSm8VGKiiHz64UWp2IXG3gpNK4c3IzkTqNXNxx9ni90TAjNc1Ed/8UcYYTOXWpf4Btmex3LOaacn4VtGNZ8LbfYk+NSIG0exOfKedykaVUJ6Z0MIJvkV/emFGk5bUVYexy4i8bZQiO06YoKK38smc0fV3uzhquURhyormuvJbpuqbdTOAwM8XkRraoqnyb6UuM+FhhYlUwha8vOZ91llPGPzs5Y9/sjTchn23ENG4jMWQi6279t8mGDg2bzJ2KO2sLt0ObP8eniN1Gysn8/HPzUWZ8tuh8OqcagQMgVfAp8IVpGoH/Ekm8R/jlakAqPiilfs4zBHroatdm5llEl3WZKHkmbF9Fqn23rpk1k+7IunilZilmfrRQ6Y6Wa56vafUOWBRt0UrCrzkSz7fy5uqtSYDaRIGqM2eX5zZ7lWtxRIsihQEyijmx6RUe5mF"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-916.zip",
+  "packageSha256": "55f13b9042d679b41ce2a6cbb8e2439d574bab4873d0f50a5a20b559f5b25989",
+  "packageBytes": 1373603,
+  "notes": "Suppression de la surbrillance bleue Android lors des attaques, sans changer les effets de combat ni la navigation systeme",
+  "signature": "wKqPm7h/7JP5aiWyeO4TAI8zhKq10I+r7/PJEir9+yKKRfWXl1GirNciGBt18UgC5hDfWEcWVa738fhA8DD7+OMpiUyjOQmbsVBxF0BJvabkCeMYOCzJvPhhCI3T5WXvaRLhr2E4YIT5xV48ZBQ/UREOfA4OntQ5tRprjUlIUcmAIU/3Hj6Grm7gRGjpqnoqPP+3FR45nVDteE2cMBNrNXO3n1p+HShNudZTKJpRggi75JUO+dfTQBlMRbKxG7jdlImI0+CcwB5YW2Ad8dYTbuFfBq5t7mg1uA4fAZ1ATK9SXInPNoS1lu355R5306SyN/v0V7ZVLbou5rUjPW7jpB+O8Dr0CaX5tMpLZIebwbYNz2rFLN6F6q6hKGsmiJSF3gNnjfR8Um1ldcxZ7WetpoxIyqL2bsTWa0pU2VWtJryqEzH5xfzDW0l7WnEWPrOHW84egEDRNsNcQqwbB0YLwj6n506l4YleQLV/+CwCjRNBMtPRpIxfYdjnZhFdgC7K"
 }
