@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 921,
-  "versionName": "0.9.21",
+  "versionCode": 922,
+  "versionName": "0.9.22",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-921.zip",
-  "packageSha256": "7ffcfa0410d8bda15922f36bafd18df37e3a6ded1b1d81b9d6f227b0fdf49fb8",
-  "packageBytes": 1376385,
-  "notes": "Notation K M B T AA...ZZ AAA pour les ressources et grands niveaux; prix des artefacts et familiers extensibles sans plafond exponentiel",
-  "signature": "jGRblP8BcVwEZJ7TtWQI5WLtPXP4COvL84UwkfM/zPUMyMtfSSm7falHp1XExH2Sidh4imAerVf7SSc2+vp8KPuOUmYrE7PT/pg7DwkH8+c+9fUGH6SM8Axd5t43JgRUTzdqJZKuCGB60kmm1gs/do0YUFXq0hhP0HTPLTd1HrXlE4MukBXhr96NqurFXSXT7RZuFSvt7cLve43teSETds5iY1HV9Pus5MDKMfOXjpo6sXnFglOE06tNjvzIU0bcM/ZHiGB899pTODzJS3ctjpFX1WdFZT0ISE6qOuSlnwsTTI/M877cf1pZMtUEav97wu8iKyWJeRd5fMsKwUHY+tXAUAHpvO9l6k4PdOphXTbNC2fEQvdH+qfBl+N2IoitTRvQ2mM2QkjuWHCIOffbitoxIvbEV6nj75jrnutlOt8vcIhWMWlVJgzfPP25sBLDMS1jYy/W/EsqLZvdAgCy9NSjc89syp/mPxOaoWhs8td21oK2Nm0+jh56JJ+tOEmR"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-922.zip",
+  "packageSha256": "40779edc4c07d23e6be537da83224b0dd667be0263b32be117728d04c9f257dc",
+  "packageBytes": 1377483,
+  "notes": "Moteur grands nombres pour PV, degats et berrys; achats, butin et sauvegardes preserves au-dela de 1e308 (ZZ, AAA).",
+  "signature": "nEPntj0g94xZOfO0SW14cFwV5aiDQSnymX4H4gi4I9l5rfsXPTTfHpT0/jfzae/sV5wOhwrMlHNY/fkDxA5wblQTKyH7Evj9tzi4+X4nUwTicKpICSemvQ5uzBnQJdmza34UYCxrY3Eh2MlUp39TZSWpX5UuICxe8jYwWaGD48WwGRBdS5AshQgHAxTEkuW893GMBGVziNi8OTmORm0s//xPsvT6RU1QFcocEyP6cyc2//rdhs6igF2KsrP2rd+y4rOK3yZGyUWTzXj20kXvp1hf3Z4R+iKmdtxUP+hwGlLRnfYFVRuCoWnqLHyLwmv+p4BgAyaVTiymcg9rzrGOmUasF6vry+TMC0wyoG7jLBN6bH0ELinOtEHBe1vxd/c1wNUTtuXDqwWS0uzYybusxg3Br+EuxiYCtsm4Qc6Mtzt3bAo0XntFPKUqzQ2LOBkBJiE0wW2pW2MzsKk2iqN/e0p3+9oQM4yjsx8pVx3Uyf/hU7jdhWJRD/0Bye6guy8L"
 }
