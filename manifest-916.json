@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 916,
+  "versionName": "0.9.16",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-916.zip",
+  "packageSha256": "55f13b9042d679b41ce2a6cbb8e2439d574bab4873d0f50a5a20b559f5b25989",
+  "packageBytes": 1373603,
+  "notes": "Suppression de la surbrillance bleue Android lors des attaques, sans changer les effets de combat ni la navigation systeme",
+  "signature": "wKqPm7h/7JP5aiWyeO4TAI8zhKq10I+r7/PJEir9+yKKRfWXl1GirNciGBt18UgC5hDfWEcWVa738fhA8DD7+OMpiUyjOQmbsVBxF0BJvabkCeMYOCzJvPhhCI3T5WXvaRLhr2E4YIT5xV48ZBQ/UREOfA4OntQ5tRprjUlIUcmAIU/3Hj6Grm7gRGjpqnoqPP+3FR45nVDteE2cMBNrNXO3n1p+HShNudZTKJpRggi75JUO+dfTQBlMRbKxG7jdlImI0+CcwB5YW2Ad8dYTbuFfBq5t7mg1uA4fAZ1ATK9SXInPNoS1lu355R5306SyN/v0V7ZVLbou5rUjPW7jpB+O8Dr0CaX5tMpLZIebwbYNz2rFLN6F6q6hKGsmiJSF3gNnjfR8Um1ldcxZ7WetpoxIyqL2bsTWa0pU2VWtJryqEzH5xfzDW0l7WnEWPrOHW84egEDRNsNcQqwbB0YLwj6n506l4YleQLV/+CwCjRNBMtPRpIxfYdjnZhFdgC7K"
+}
