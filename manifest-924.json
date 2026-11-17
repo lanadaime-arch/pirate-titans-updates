@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 924,
+  "versionName": "0.9.24",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-924.zip",
+  "packageSha256": "9069172652c0196db089074138326e1c36e39ad13344e85cdd23983c5af24790",
+  "packageBytes": 1378948,
+  "notes": "Bonus visibles et precis : affichage x1,40 au lieu de x1, prochain rang et gain en pourcentage, confirmations d'ameliorations. Statistiques et sauvegardes preservees.",
+  "signature": "A1bZbOHKqyj3Yxs6yhIs6Pram7FAt8pk0yCS+t1W0Hv38doircnyHgkLtPdr+/MryE+PGPGY/6k9yqHUQw7W7NErNPmTqZ00hOvFJun1ebdH0RDKmU+kq/+H4Uu014KUGjJPyGv7sCnhs0UEls4FKc7mNdoQsRYuPIuHpk8E1jzSOJ43cyZqTK4dj5JglEJJF8t9kvQyAwGX72fQtuyP2UZGCgF02hfKdD6cngT6sLEwSi0HJwiouRW1LlR27w0yzfwEm3Mw3uv6v+zBOW8M+zFzv3dxO28z+0dPDCuVwUam0tdqZmTl8hEypvJnxLaR8smMaB3iMuzv21IkJq9HJ28HF1fkhBF18AaDv7T9MgWtCgBjT1UrEsP05typ4kFQRWGjqldkMahLeKjqZceF/u3Ujx4OKirfTezM1gL6k5e4dxJ/m6zqiUfOG0fqYDKLPMctstjtAjM8TeWUpG6dy1sjWM1e3h4VSqlJLAYf89iK/81QwU49x7xHpfifHzg3"
+}
