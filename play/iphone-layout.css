@@ -12,8 +12,14 @@
       height: calc(100dvh - max(var(--letterbox), env(safe-area-inset-top, 0px)) - max(var(--letterbox), env(safe-area-inset-bottom, 0px))) !important;
       min-height: 0 !important;
     }
+    /* iOS Home Screen reports a bottom safe-area (~34px), but our game's
+       fixed bottom nav can be only 32px high. Its inherited padding-bottom
+       consumes the ENTIRE nav content box and clips all six buttons.
+       The app itself already ends above the safe area. */
     .app .nav {
       bottom: 0 !important;
+      padding-bottom: 0 !important;
+      box-sizing: border-box !important;
       z-index: 35 !important;
     }
   }
