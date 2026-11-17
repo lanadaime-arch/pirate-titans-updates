@@ -2,9 +2,9 @@
 (() => {
   'use strict';
   const VERSION_URL = './version.json';
-  let installedVersion = null;
+  // Replaced with release/game.json versionCode when the iPhone package is built.
+  const installedVersion = 949;
   let alertVisible = false;
-  let alreadyReloaded = false;
 
   const fetchVersion = async () => {
     const response = await fetch(VERSION_URL + '?t=' + Date.now(), { cache: 'no-store' });
@@ -51,17 +51,28 @@
     panel.append(title, details, button);
     document.body.appendChild(panel);
   }
-  async function check() {
-    if (!navigator.onLine || alertVisible) return;
+  async function check(manual = false) {
+    if (alertVisible) {
+      if (manual) window.alert('La proposition de mise à jour est déjà affichée.');
+      return;
+    }
+    if (!navigator.onLine) {
+      if (manual) window.alert('Pas de connexion Internet : impossible de vérifier les mises à jour.');
+      return;
+    }
     try {
       const remote = await fetchVersion();
-      if (installedVersion === null) {
-        installedVersion = remote.versionCode;
-      } else if (Number(remote.versionCode) > Number(installedVersion)) {
+      if (Number(remote.versionCode) > Number(installedVersion)) {
         offerUpdate(remote);
+      } else if (manual) {
+        window.alert('Pirate Titans V' + String(remote.versionName) + ' : jeu déjà à jour.');
       }
-    } catch (_) { /* Remain playable offline. */ }
+    } catch (_) {
+      if (manual) window.alert('Vérification impossible. Réessaie lorsque la connexion est disponible.');
+    }
   }
+  // Exposed to the existing game settings modal; native Android uses its own hook.
+  window.PiratePWA = { checkForUpdates: () => check(true) };
   async function start() {
     if ('serviceWorker' in navigator && location.protocol === 'https:') {
       try { await navigator.serviceWorker.register('./service-worker.js', { scope: './' }); }
