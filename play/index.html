@@ -1823,6 +1823,7 @@
 <link rel="apple-touch-icon" href="./icon-192.png">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="stylesheet" href="./iphone-layout.css">
+<link rel="stylesheet" href="./iphone-performance.css">
 <style>html,body{background:#000}</style>
 </head>
 <body>
@@ -3534,6 +3535,14 @@ function renderHud(){
 }
 function renderAll(){renderHud();renderShop();}
 function save(){S.lastSeen=Date.now();try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+/* iOS PWA performance: cap expensive game ticks around 30fps. */
+const PIRATE_IOS_ECO_TICK = /iPhone|iPad|iPod/.test(navigator.userAgent) && !window.PirateAndroid;
+function schedulePirateTick(){
+  requestAnimationFrame(now => {
+    if (!PIRATE_IOS_ECO_TICK || now - lastTick >= 32) tick(now);
+    else schedulePirateTick();
+  });
+}
 function tick(now){
  const dt=Math.max(0,Math.min(.25,(now-lastTick)/1000));lastTick=now;
  S.mana=Math.min(100,S.mana+dt*(.42+.2*tlv('mana')+currentForm().mana));updateBossTactic(Date.now());
@@ -3559,7 +3568,7 @@ function tick(now){
   $('sheetSub').textContent='🪙 '+fmt(S.gold);
  }
  if(Date.now()-lastSave>5000){save();lastSave=Date.now();}
- requestAnimationFrame(tick);
+ schedulePirateTick();
 }
 $('tapArea').addEventListener('pointerdown',e=>{e.preventDefault();hit(e)});$('tapArea').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();hit()}});
 $('skillGear').addEventListener('click',()=>useSkill('gear'));$('skillHaki').addEventListener('click',()=>useSkill('haki'));$('skillMidas').addEventListener('click',()=>useSkill('midas'));$('skillGatling').addEventListener('click',()=>useSkill('gatling'));$('skillZoro').addEventListener('click',()=>useSkill('zoro'));$('skillCrew').addEventListener('click',()=>useSkill('crew'));
@@ -3619,7 +3628,7 @@ if(resourceBtn)resourceBtn.addEventListener('click',()=>{
  resourceBtn.querySelector('small').textContent=open?'▴':'▾';
 });
 
-startEnemy();renderAll();requestAnimationFrame(tick);save();try{if(window.PirateAndroid?.gameReady)window.PirateAndroid.gameReady();}catch(e){}
+startEnemy();renderAll();schedulePirateTick();save();try{if(window.PirateAndroid?.gameReady)window.PirateAndroid.gameReady();}catch(e){}
 let welcome=true;try{welcome=!localStorage.getItem('pirate_titans_v09_seen')}catch(e){}if(welcome && !(S.stats?.taps>0||S.stats?.upgrades>0||S.highest>1)){setTimeout(()=>modal('🏴‍☠️ PIRATE TITANS V0.9.23',`<p>Nouveautés V0.9.23 : <b>multiplicateurs spécialisés pour les artefacts, six talents, équipements de cinq types et familiers actifs/passifs</b>, tout en conservant la progression, combat fixe, ouverture du panneau sans zoom, <b>formes de Luffy</b> et <b>attaques spéciales des boss tous les 10 stages</b> : contre-les avec 5 touches rapides ou tes sorts !</p><p>👆 <b>Tape et enchaîne les combos</b> · ⚔️ recrute ton équipage · 🎒 ouvre des coffres · 🐣 élève tes familiers · 📜 accomplis des missions · ✨ recommence plus fort après un prestige.</p><p>Tu démarres avec 20 berrys et peux réclamer chaque jour 5 perles + 1 coffre avec 🎁. Aucun achat en euros !</p><p class="fine">Prototype de démonstration fan-made, non affilié à One Piece ni à Tap Titans 2.</p>`,()=>{try{localStorage.setItem('pirate_titans_v09_seen','1')}catch(e){}},"C'EST PARTI !"),280)}
 if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
 })();
