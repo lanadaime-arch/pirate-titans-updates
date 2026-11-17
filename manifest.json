@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 925,
-  "versionName": "0.9.25",
+  "versionCode": 926,
+  "versionName": "0.9.26",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-925.zip",
-  "packageSha256": "0e19145f545316077e57ba4c06b05aee9fd52f12ac7adf9eefe41b6e97ca5ef1",
-  "packageBytes": 1379511,
-  "notes": "Perles et reliques en grands nombres jusqu aux suffixes TT2, sauvegardes compatibles et achats MAX plus rapides grace au cache des devis. Courbes et jalons conserves.",
-  "signature": "loq4ByhUfaPpWUj9Um1N0c1siPfDTtwmCVS6+Q4rv05IkLddnjfssrSXzN51Gz1JYHhDV3b6mnOGXXUnRf+QFubnPYfpOc8IrS4IgPqig2CLHLgeLYSUbnm09amXQXVvZ5NZn9ZvOO3rJ2eZdPk3c8iaIrbNbk65YeFBKBi5OJbMp/n6nFzQ8H2TaTzuUo7qxhidwl0P+xEHPBl30gVAlAVi7tG4mHEF6mkTCEEJNf7GGhsMOsBwIUFtS/20AVsBAZkd9C9PxIuPCU9NpKbolWQwK53x82Iq/12l52E4K+NH6a/HbswxUzdbK9O9xsjHhcprYuFMAqBuHB27Y6i6yXVr6d8jEsFCPc+k6l3zGNC4FFk7arBG2VZbLMb/ABK5waHt27bpPDmbUoTGgoP1h69LgArEoG5KVrdklCHIMidt9e5YoWPZ5r+U0PbcAUFvuA8+jCebncQYID6Ey4bWWmwkIxvq43tjXINL5Dp4yiDFqzvNe106k0/4wGqQwMtK"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-926.zip",
+  "packageSha256": "9730ebfd4ce4269d043a80487c02af1ea6b6c9574532c62bcbed267cc40bdf6e",
+  "packageBytes": 1380897,
+  "notes": "Refonte du menu inspiree de TT2 : six onglets Capitaine, Heros, Equipement, Familiers, Artefacts, Boutique ; arbre de competences dans Capitaine, barre coloree inclinee et panneaux sombres. Progression et sauvegardes conservees.",
+  "signature": "RpatjSK1eWVFt7U5iQWHU/pSgu0C1ofDvpQ4jSays+xbQHgFrYs6Dp/xCxKCb5a4OIlDJ7eE5TCk28lzY0jMJS26wppmAjwfFENin8p/VONSHs/hDoZTiaH1F2vbrMukMqSwU8hX3+OZAg0g5965sqCNC3tp2XohR8s+8vSpNyQrHFSiVgsMrORhoLRrscMXZjJIpHCYBMd5ZDIIB4kXTgl2wtbz98EL3iI1sFw/wluguiLZw6GRo7c1IEHvTL0XIZNDiM9Fx4x4lm7CyxkCtq6cBIIYzDG0kisiK3ABIDz1GCB2ec4l2c4fEXW8a/c2ODZ4aO9gO5jQ+79oR7P/MgpErC+Kf+x83mvodPVUcXh8/oQs9U529l0CH9RVdN0kxMhTUKEAYFztlnbSjfGBQ1L2u/iI6wgyNOLU6zBQbahB5QK6bsfUI7t2oj3L26H/JG0BcuLt9WYcXYdGIaXwyAhCoW3AAyaxt01fkbn1NWwj3u25nZ6tTID/KS4yLym4"
 }
