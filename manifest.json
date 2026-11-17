@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 944,
-  "versionName": "0.9.44",
+  "versionCode": 945,
+  "versionName": "0.9.45",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-944.zip",
-  "packageSha256": "5a9300da00c37c0f715aabd91e999fb891f5dd5bc8f6f8ac895ea1e614ce4879",
-  "packageBytes": 2432065,
-  "notes": "Alvida normale : 3 poses de frappe nettoyees et restaurees pour fluidifier la trajectoire de massue et le retour au repos. Test Android necessaire. Reserve de berrys et sauvegardes conservees. Vrais graphismes des eveils encore a creer.",
-  "signature": "eYRqPEQHzW63RQTfad0uJry1zZ6cRSrrO446u5jkh2skn20AfO3EZCHqOJlsEQwUwqgm224O+rNfT1ADY08F6TFA1wU8x0yltoRFBv9hjusVRA4NfcLBtylOBT7W00FxirDLQzQzLBtgi65QBDcygyIHYiyV2tM16o5yQJp+yqkMQMNJgjDXZ/FvIAcllwoVQt0rC/teVP6owJDk2JVUCfNHvO03Zmb0mITsFbwSY/TMwE+KQ/sS2aRa9aSZzIIH6Wtr9/6lbfl061Qsx1jbyXU9hwg564CTnfgJakaILYQD1oX4El5FPtTtLM5OWYWSnLoiVh4f9GkaZUz/qZIEmMy8949whuIErpIXUVpLWBsIKL2JR63bJsgHb1jwnkTPpG3doL/hCnXDsVdFcqS6a5uX+LwW8Ea/2HNUoe+fTxqULhIVlThi0LKpuf6dv4w95oV/h1F2s/Kf5sgUC7yn915cMaljIgiJGI4r0xTMmBKuPzlPVszdw3DywZsOA0Sz"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-945.zip",
+  "packageSha256": "a4db12c3a819fcae14a700f66f591bf5373b193608cbedbe43134aeaf6e65ca4",
+  "packageBytes": 2432085,
+  "notes": "Alvida normale : recuperation plus progressive entre impact et repos, avec une pose supplementaire. Frappes et cadence conservees. 9 DR berrys de test, niveaux 6000, eveils mecaniques et sauvegardes maintenus.",
+  "signature": "UQ3ssIT220QDD30yFjBemHK4nQ3IxOe63MI3XM/fEfllOmsWtIR0n6TQDD1ZscQbDlEmpZlBGH4mE1M6//JCuU5Q6Ml6kjtoPLPXTBiAdQ0aZ7NVxIXJt/Ct2pCTjCHxkXGbQRZUnRNkHh6EosIiCOB0eonZPzHraCMdpOb7JVbGNSP6R1QofUpyrJQqxC3JMvBu6fdm7s2ezqWuxS+YvVGsDmpQxnwbOXd1foxxMoe6PZ7fhKF5P4TAKhc96hfGKAAOKbzlHvH8Z0juxPOik4T69Yr5wiAFXwXF2y7W0tCOhowj1ZvQFCYMmL/+um3PX0kg8yHIfCv1c1QodfmdUHujChVeKxKYmJPQ0Dxs2EtwGHnb+bddEC/h2Swp7XT34FDBdw3NzGM2dOPnCGbkuG/CpnKf7VZRh2Hxcq3ketI5DpDQs6zPaWfvuIzOXjfyMTyFEhdbu1TCLqZZp1ITrgQ0jQZmfXmB2GUntl6wr4gwGTcLqykXiellvIUNz4QG"
 }
