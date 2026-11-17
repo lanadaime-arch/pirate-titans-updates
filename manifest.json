@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 932,
-  "versionName": "0.9.32",
+  "versionCode": 933,
+  "versionName": "0.9.33",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-932.zip",
-  "packageSha256": "858ec743b4087585c66a90caf3d941c54650257fcbd71e5ed848e67311065972",
-  "packageBytes": 1387944,
-  "notes": "Fiche Statistiques des Heros facon TT2 : portrait, DPS reel, progression et competences debloquees aux niveaux 10, 25, 50, 75 et 100. Navigation depuis les icones. Combat, prix et sauvegardes inchanges.",
-  "signature": "I/IJZaxt5JuOdsmPmX7IhnixaV381XDBjRh5KcUYYEPi+vBp7ckp1al53ZPkRmTzim8afP3+//fVxmQ5xpuAiYwMQe1gkEqRYrA4BmNHKaYPvZGY7YdZOuWL9FlOQtHhC3/kHjavkkwZqLHifQTY8TsGYtRjDOmSZOhlBn1VAdWV+MWAoApBuGdDaCNSM6UkkHWYh3z2mAamNM1d6crrpEqhPn2mf0Kn78jqFPg7HnxfFLvAPMuVj1khqIbexBkNOKWxYRrIwCL2aCEamLIRWvJC8P8WrlFQc5vySz6O3t2mHy+aa72QjeO6BtQow2RT2ycPB2pN9PMCX32aEpSJ4M6EskvOt19TMzqY48e7Bfu0+kG/lJ+Z+K1JMls99q17jn3nxKjAE7yq0mKlMUUUTjhpHjB8ZmVgCUZlcj1yDrecfOVQ1whGh/0PqUnWrNZYeewCG/t6RT2nPlhm2sBoSIvzmenazIE1WGQBu2huRzIdtbb1FPvI5c0TyvwnlvDy"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-933.zip",
+  "packageSha256": "f620e545c6f7f76ebf57183a7efc1b83b0c632894c3b609d45dbae0476dde93a",
+  "packageBytes": 1388586,
+  "notes": "Heros jusqu'au niveau MAX 6000 : 12 vrais paliers calques sur TT2 (20 a 6000), evolutions a 999 et 1999, nouveaux bonus DPS et achats x1/x10/x100/MAX plafonnes. Anciennes sauvegardes conservees.",
+  "signature": "Zyy0EDPblhHtrsLTIigzcAKYBNcSfxwcJlp5vEQkiTxkV/laY2ItlCiKrWmOInq+WqK6hZg6X0NI+nE5rfgKwwSUJG+19y7wRufaUyZdRdTotJIKLKCqixc/BW5yIvQEwjxCdOcROYn8T701Moe0yAgz+ZVhKv2hCSUnNtrvJNVafYUUS/Xfs35qru/f1io9Pu+EgJvwxh9A8WT+jNAVAdDFtjkFd3rXY8+fZ+9AKZpZuQKRfKegmxBrKEcZBCG0beXxbjy3QQZZAQexs4DCnxJpopX/zydXGNOgXJJcgnkK/quWRpUPWHY3kYKG7Vjjm2vgExEBuq81djpL7/Uzu234PL84F/8bc9vW2g1UF1Xhe1NBDmHGYNfbeif+uqMGFOTaTqDVzc3AU3IBlEZ1UaKjy+H9UCJz1K84BKRiOP/w+h+ZFLNh5yluZzNFkG6u5AOj+9FicqJltVXADqOtt2dAeJjGlPS237WS01VM4iuL7NP8JL1hkXobWMLDqEga"
 }
