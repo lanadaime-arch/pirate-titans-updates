@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 938,
-  "versionName": "0.9.38",
+  "versionCode": 939,
+  "versionName": "0.9.39",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-938.zip",
-  "packageSha256": "a16b14c6b5c6a65bd5d3aa40996b1208546c05c632a226c7178236d68fd734d5",
-  "packageBytes": 1492674,
-  "notes": "Alvida V0.9.38 : cadence de frappe stable du niveau 1 au niveau 6000, animations conservees entre les vagues et techniques sans interruption. Partie de test conservee.",
-  "signature": "PUpI5hUYrQhYXfAJIJNTweWNG7TX/h+6YenVY/jKktpnREx9Pfp4A2sEoO6Ked0jMroaqrELRfu1pOWmInbQVWgZgxp0fZdZAsB4Ccv6YgWcOJrvnWVjpKyzf23iOdZC4o5PilFAtNo+axa1YrO0bHCQEYro2DVnE2xBv5eSEos8Ld6SUPC+COj2bHHu1/9fcWrpttDFuuUpXdntsd956jHsd7Pwb6hGeqPALydTodxhoPXEBIMtKDpIv8ZK/HhDLkm2mG6gAclhuqxvgaAFXjRd4/nEAw3bruI/25eoMxx7Vbla8vEy1M/HtNh1qFUrTuTgm6OAx/4kXD8/Yr6V+m73ttzGnvrHeZnYgJ9Ceqs7Z6lJVYxQP2YdnbJ5qq7jhSJVLsij7OvGBl4NA/C1xNVq5o+fc/ii1JoTFd53jm1Xe1i+F3zEmLk503/wugAwjZvJFZVU/pTKls8J+HXWrhQ4kWa0PUWi27iP36PTTbybz/AEKQpSATQrTEVI6qxK"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-939.zip",
+  "packageSha256": "d2ea6273e25960efc7f241e2e98785ca66b894300c83f68f6d37e4a362d4b9fb",
+  "packageBytes": 1905465,
+  "notes": "Alvida V2 0.9.39 : 16 poses completes animees en combat (repos, frappe et technique). Plus de bras decoupes sur la forme initiale. Berrys et eveils de test conserves.",
+  "signature": "f2OQp3dEr1Sq9Z/Q3i+uQLZkMAM/lXsprHkzYtzcJjLdjMRnQ4wr8WvODcIHzKB0LLds75S5rdrcHa9eaUXwo/prkF2r9SOVQxnBq+AfH263Gb28uuQtVsvAn3yS+ESasluaFw30Pm0eDtqgGj6jlEkIhG8e31Gq2F0+wFlJ4/q8jJjfiQqtd3s3Lh/ghHc0oUXM07hVuOc+LuGBVFVEa2P/fdIxOEAqSrRDkK3CFDBjaA4dB67K4jxVou3gwpv7lm8fsQQ6ZCN7QOTCYTuK53NgOYvS2dnpdJ8hJm3zE1oVTn28m+NjYzmfoR/DR4bXmjdEzkeA1vy0s0qlG09MRRDLLvJFHhxLeigYLGsuJXVXkdEM6LmbgilzQ73HgysLZz1f2RgyrJA58Vg+dDRJe2740JBowRFaBet0bD+ViSNXGUnzkLHllvgguJt/hN8hpPHSiZsHSVAQURXX8vvl0vvJaJMrA+9X0cuZNdR6kqdv6DkDfpy4+wQkH2xxp1HL"
 }

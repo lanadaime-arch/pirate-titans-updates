@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 938,
+  "versionName": "0.9.38",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-938.zip",
+  "packageSha256": "a16b14c6b5c6a65bd5d3aa40996b1208546c05c632a226c7178236d68fd734d5",
+  "packageBytes": 1492674,
+  "notes": "Alvida V0.9.38 : cadence de frappe stable du niveau 1 au niveau 6000, animations conservees entre les vagues et techniques sans interruption. Partie de test conservee.",
+  "signature": "PUpI5hUYrQhYXfAJIJNTweWNG7TX/h+6YenVY/jKktpnREx9Pfp4A2sEoO6Ked0jMroaqrELRfu1pOWmInbQVWgZgxp0fZdZAsB4Ccv6YgWcOJrvnWVjpKyzf23iOdZC4o5PilFAtNo+axa1YrO0bHCQEYro2DVnE2xBv5eSEos8Ld6SUPC+COj2bHHu1/9fcWrpttDFuuUpXdntsd956jHsd7Pwb6hGeqPALydTodxhoPXEBIMtKDpIv8ZK/HhDLkm2mG6gAclhuqxvgaAFXjRd4/nEAw3bruI/25eoMxx7Vbla8vEy1M/HtNh1qFUrTuTgm6OAx/4kXD8/Yr6V+m73ttzGnvrHeZnYgJ9Ceqs7Z6lJVYxQP2YdnbJ5qq7jhSJVLsij7OvGBl4NA/C1xNVq5o+fc/ii1JoTFd53jm1Xe1i+F3zEmLk503/wugAwjZvJFZVU/pTKls8J+HXWrhQ4kWa0PUWi27iP36PTTbybz/AEKQpSATQrTEVI6qxK"
+}
