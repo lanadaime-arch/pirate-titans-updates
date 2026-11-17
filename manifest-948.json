@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 948,
+  "versionName": "0.9.48",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-948.zip",
+  "packageSha256": "c266722213963948a6272eb6ffdf092023dd40b4f1e975bb94a0709552aea022",
+  "packageBytes": 2950099,
+  "notes": "Alvida Eveil 1 : textures normales et eveillees prechargees pour reduire le bref saut au changement de forme. Dessins et animations conserves. Reserve de berrys 9 DR, prestige et sauvegardes conserves.",
+  "signature": "my/LV8HRqcyYToM4VgHKyrZMc1NijI/Gk3ByI14MdzRNiJExxtDhKJxImEyN1VvdTTD5C6z+/E4GcSMxeT+0oj6j2hk1tA2KCC08chKBzpypTwIiHcpz9nOu1Icf1CD5lm7Q0vk/sVmOy/au+W/Ve5rYxSTt0YV/6JOQmBdPgrDy56iZSFPDphcA79/8NMaNrITGceAFSZnjc41nYv4vWpA43mfXnnzuj4DTTtIKj7t/BJG6iGNVuzb5xpB40MaSHXAmrbWEzol0wX5PqA354bd3+Zj5VZJWCshALcmEJtxmW3O4eQrNJPbHJ5WSCv0oTic3JDYVNDclKkR5q8zlMVLS9ccACAfBoJ2sVkaCq8aREpJaYnqA9e4hCkGJoYmGJXngb2jemXcfWFloxdSDQWBQobHPn1LgP+nh3kUC5f5JbZm2QSnJEjaZvG8mIblErzVT0izeTh4QreDdddjP/ZYgDNMS9QNW0hlek40tstmPmfvDJn+OyD4KMA5fGXBn"
+}
