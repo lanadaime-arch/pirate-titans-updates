@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 931,
-  "versionName": "0.9.31",
+  "versionCode": 932,
+  "versionName": "0.9.32",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-931.zip",
-  "packageSha256": "e0e4def135cfdc92563ac9041cf3327f25efd73d500045847b081c32f917dc04",
-  "packageBytes": 1386269,
-  "notes": "Menu Heros TT2 : quatre raccourcis, cinq paliers visuels reellement debloques par niveau et modal Maitrises/Techniques, lignes compactes avec part du DPS. Aucun bonus, cout, personnage ni modification des sauvegardes.",
-  "signature": "gDZkT8K3Ip4mmsKZdPb2rrI2hh4Z3voc5pbTDPszWDEmRWbYgMrw3rBTqc0BefYPydsBq+3dQiDmUnM3gsxmQbj3whNGokY5sRSjCwtPW+aU8zgHxjPmuW6bZNd46RxSBOPoR+hGuj0sAHt+qvvRA/Gd3gj1MpeKP6af6XgWsFN2xhWihH5BX/hUEOnCQU3DX5NStsb0zgQ+vxVamIXawQCll0X/amqaINRsV7Z6iiLGf3hwGv8xiNYiR6D1B8U2seQ+4JAtF+hFNzVXDHjTi0gACXLIN3kHTxHrUjvZAaobbLODcGH6S/lSOo1yBWBFX0T1XHyZjVs/ljbjlTGHYy2W4Fii7XmMAxyrlUSO4tPjNvMN4R8/SjFoWvCg0Fig+ctdRx511S3nJBVlPB6KJw0d5o3elImErw84jUXhhamG26esysF6iFhW3XgwMi/Ou4B59W0Vim2loF6drntT+yjKWKtnyRcjdTFbjPKBaso96oORWw5gjLi3N8mwL0wR"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-932.zip",
+  "packageSha256": "858ec743b4087585c66a90caf3d941c54650257fcbd71e5ed848e67311065972",
+  "packageBytes": 1387944,
+  "notes": "Fiche Statistiques des Heros facon TT2 : portrait, DPS reel, progression et competences debloquees aux niveaux 10, 25, 50, 75 et 100. Navigation depuis les icones. Combat, prix et sauvegardes inchanges.",
+  "signature": "I/IJZaxt5JuOdsmPmX7IhnixaV381XDBjRh5KcUYYEPi+vBp7ckp1al53ZPkRmTzim8afP3+//fVxmQ5xpuAiYwMQe1gkEqRYrA4BmNHKaYPvZGY7YdZOuWL9FlOQtHhC3/kHjavkkwZqLHifQTY8TsGYtRjDOmSZOhlBn1VAdWV+MWAoApBuGdDaCNSM6UkkHWYh3z2mAamNM1d6crrpEqhPn2mf0Kn78jqFPg7HnxfFLvAPMuVj1khqIbexBkNOKWxYRrIwCL2aCEamLIRWvJC8P8WrlFQc5vySz6O3t2mHy+aa72QjeO6BtQow2RT2ycPB2pN9PMCX32aEpSJ4M6EskvOt19TMzqY48e7Bfu0+kG/lJ+Z+K1JMls99q17jn3nxKjAE7yq0mKlMUUUTjhpHjB8ZmVgCUZlcj1yDrecfOVQ1whGh/0PqUnWrNZYeewCG/t6RT2nPlhm2sBoSIvzmenazIE1WGQBu2huRzIdtbb1FPvI5c0TyvwnlvDy"
 }
