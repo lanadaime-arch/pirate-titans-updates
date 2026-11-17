@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 943,
-  "versionName": "0.9.43",
+  "versionCode": 944,
+  "versionName": "0.9.44",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-943.zip",
-  "packageSha256": "ac618a27310de173abc6d03433f83efe7e4c680d61c33c3d98859b63223e8930",
-  "packageBytes": 2366107,
-  "notes": "Alvida : poses avec traces grises supprimees des frappes et retour au repos stabilise. Eveils jouables mais leurs nouvelles apparences restent a refaire. Reserve de berrys de test et sauvegardes conservees.",
-  "signature": "gmTGtjHYUMRN2VlCCiTf3hRgo5TNqozn+ol8yb7z0bTyOcGGF452V1kjBuZ2BImq5ruWKEP6AtVStgEAyX5hDEBW6AGymhDK6KT7q1aGvQRQcwqGGhb+jwn9t7MGp34packRXtI19LmTA3G2EIUHe2ldqpq2xxvk8FkGD7Xs91URXVrFGa+g0QogCm+Tcd4DcKwb10G0j/kaFm6k/oJ6Y6e2m/D0kpVl32BDsIprvtHB/qjOI3Av6rNK+Blhgjj2jCET6YzOCnv2II41HZ0HVo62N/2m12mWDCdTfRZIV/3nKppjELKrx6KHcYmhoqPBTJD92nQznUcvnaI1I2BLkgVhLOgmiHOjxH/0S5oO08QWD94QjkOMvL1a0+/lU66KnqyrAjiMr0onX3SNbZkzT76O2dqSYXeBLsxloaVWSu6CHtqjUKdRLhTwu2W70oN+yewvblG9yQJx6ONuwAwDKZ8Nhz4LQ0NrTztxgUsoynNyeM+V+L5WlJdUKvzilBXu"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-944.zip",
+  "packageSha256": "5a9300da00c37c0f715aabd91e999fb891f5dd5bc8f6f8ac895ea1e614ce4879",
+  "packageBytes": 2432065,
+  "notes": "Alvida normale : 3 poses de frappe nettoyees et restaurees pour fluidifier la trajectoire de massue et le retour au repos. Test Android necessaire. Reserve de berrys et sauvegardes conservees. Vrais graphismes des eveils encore a creer.",
+  "signature": "eYRqPEQHzW63RQTfad0uJry1zZ6cRSrrO446u5jkh2skn20AfO3EZCHqOJlsEQwUwqgm224O+rNfT1ADY08F6TFA1wU8x0yltoRFBv9hjusVRA4NfcLBtylOBT7W00FxirDLQzQzLBtgi65QBDcygyIHYiyV2tM16o5yQJp+yqkMQMNJgjDXZ/FvIAcllwoVQt0rC/teVP6owJDk2JVUCfNHvO03Zmb0mITsFbwSY/TMwE+KQ/sS2aRa9aSZzIIH6Wtr9/6lbfl061Qsx1jbyXU9hwg564CTnfgJakaILYQD1oX4El5FPtTtLM5OWYWSnLoiVh4f9GkaZUz/qZIEmMy8949whuIErpIXUVpLWBsIKL2JR63bJsgHb1jwnkTPpG3doL/hCnXDsVdFcqS6a5uX+LwW8Ea/2HNUoe+fTxqULhIVlThi0LKpuf6dv4w95oV/h1F2s/Kf5sgUC7yn915cMaljIgiJGI4r0xTMmBKuPzlPVszdw3DywZsOA0Sz"
 }
