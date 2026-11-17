@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 936,
-  "versionName": "0.9.36",
+  "versionCode": 937,
+  "versionName": "0.9.37",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-936.zip",
-  "packageSha256": "cee860a6914781093c88b3a72ffa874cb3d9e0253a410948c027e357af74a615",
-  "packageBytes": 1416522,
-  "notes": "Demo Alvida V0.9.36 : un premier heros anime et ses attaques en combat, trois sprites provisoires, deux eveils LV 6000, reset unique du test avec berrys abondants.",
-  "signature": "iACsssDv6MJt4VZUZDRs1mhgOOUvH5PtPz2PyIaqwTpGeROvxQ5f4M7K0uOPH6E05xYLIRQ79zU9wJjckXm+kcfK2YRzW52eKA8bxlpykBacwzf5ie8cbvZQEq3cMIDjcYKTqdJPoj93VOAXjkNxTQC+GtQcqz4Vt5CH54wkKW8u3wztpZN6JMVVyVjwsdC/teWujeKUILUe7u8777zSdpcKFcgv42DDHt+sAiS/54A38HEKVS6RhAm/KC5tD9ShaF/PeTdwLQJ4l4i1YbDxHoB1ZjyKCpZhu3ul0wwZUjsdJZjIDQSKdnRJBADuMmO2oniMsLynmVEvhGSfQk2emo17wVWI7zuJYj6FC4a+i0XIv5yr+vGMgVALJrPBIKJRdVvgBGuWT34q6UyHeK2e3SQrf+y50/Vcmmq8D1+HbCVI6ysgdJ/lnOOqSrfKnV11mu/2PQVBsODtOZaHPWeFGTcPz2twt+RsKQjjfow9y4ToRs7Jrq1Dw5O+lYWzImKu"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-937.zip",
+  "packageSha256": "15a306c31e98e478dcf5dad7320d6ae0a9fcbb7274ba62d794e94dfdfb2cb924",
+  "packageBytes": 1492020,
+  "notes": "Alvida V0.9.37 : personnage articule en 8 couches, mouvement de massue et impact synchronise, meilleure lisibilite en combat. Partie et berrys de test conserves.",
+  "signature": "EsN5+C/gkhwkcZ0UztyymgaB8UFQaXQocUvhp+NnBbSPg4Am2m6lDJf8mlLsrB2RVs77Eu0duagaKJ5aWG0sqIIPSjA1CseEmhgSd1YWx1FeLydkQO8aeYRd8EnE4qC5b3qZpirxCuUhFkKo3rNhG14ATtSmIoLh6gjqOa9fzZzVGstnXUgFlWY+LJi6GysA9MkO2rbQVCIGCSpNUBI3jgHrI0C8Vi4KJX8wA1SwSVo6Y+/XPF4MdHoZMcJ1VVQLGA3NE9GBgCTWIqA+V18dR02+UHC7Vy7vqM8j/mNGFTVxriCEtef9b3qObrSgdWo/CPu8fw2aSBCo3ZlIThgPQESFyEPCD2nSAdtlhX6Fwjc1ko+O8h22dh6bIvHm9c1zc01ZB0rYveXS9oBGveuW9BBZ1yNugIav0KqpnN0X8OL5w4uqEIZgYigF5/Ygf+n082488jbEg84PMnghsYOYCfABYxuomfWe3PwIGaUqCyBcOeqFF9IF1VwYCgu9k+c3"
 }
