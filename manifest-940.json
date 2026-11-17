@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 940,
+  "versionName": "0.9.40",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-940.zip",
+  "packageSha256": "7a7b259f40bb73f44482bc8d2ba27e8334a0d0c5607a64355699531b9b331caf",
+  "packageBytes": 1906217,
+  "notes": "Alvida V2.1 : coups plus fluides, retour au repos progressif, meilleure sensation de poids et impacts synchronises. Personnage entier, sans decoupes ; partie et eveils de test conserves.",
+  "signature": "YwjccTvU9LFA2L+IR8f0/jnkP3vxBN/MNflXTBq8Mukm+bs5LVompt3bn/jgmgBDaGviVDJe68ykXxU7BrrqFeo8jRyW7tbwRQDF2YqqMk9nXGzLT01I/IPntAjTeyt/Rb5sdoeAwA8LM6XXI7/10vE3wYawLh5Nzt+hN9qMwdER8bQkbpEg6Hgop3v/Wj6ln1+ZLvbFB6nVsCH9XxuASleBA4nk6pBnsgZ6pH7TqiWg1/u/+L+Atx976MkhKkPjQJsaPHU6b9h1a+/ALEIk8sdb9ySB75njjIffspaeSRWaThxknYAs5yzy3ozVgsBrm0g2X2SSk/cbAbXUik4v8INLJtWQLcleOdOaJ/TWic9fPodTU37/FBOOBatp1wtlIjDXJCwWIvlgVjspo7RlWReNAu3uJbGv7s9nsjGp0+PzNM1lex3lur3+ETEojkmvZLPXyzrB6ov2rKvIohJa3RGClyLpMheZwPJeW0vfqFDLIMbZCYHjCQhjl4vfRE7d"
+}

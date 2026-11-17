@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 940,
-  "versionName": "0.9.40",
+  "versionCode": 941,
+  "versionName": "0.9.41",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-940.zip",
-  "packageSha256": "7a7b259f40bb73f44482bc8d2ba27e8334a0d0c5607a64355699531b9b331caf",
-  "packageBytes": 1906217,
-  "notes": "Alvida V2.1 : coups plus fluides, retour au repos progressif, meilleure sensation de poids et impacts synchronises. Personnage entier, sans decoupes ; partie et eveils de test conserves.",
-  "signature": "YwjccTvU9LFA2L+IR8f0/jnkP3vxBN/MNflXTBq8Mukm+bs5LVompt3bn/jgmgBDaGviVDJe68ykXxU7BrrqFeo8jRyW7tbwRQDF2YqqMk9nXGzLT01I/IPntAjTeyt/Rb5sdoeAwA8LM6XXI7/10vE3wYawLh5Nzt+hN9qMwdER8bQkbpEg6Hgop3v/Wj6ln1+ZLvbFB6nVsCH9XxuASleBA4nk6pBnsgZ6pH7TqiWg1/u/+L+Atx976MkhKkPjQJsaPHU6b9h1a+/ALEIk8sdb9ySB75njjIffspaeSRWaThxknYAs5yzy3ozVgsBrm0g2X2SSk/cbAbXUik4v8INLJtWQLcleOdOaJ/TWic9fPodTU37/FBOOBatp1wtlIjDXJCwWIvlgVjspo7RlWReNAu3uJbGv7s9nsjGp0+PzNM1lex3lur3+ETEojkmvZLPXyzrB6ov2rKvIohJa3RGClyLpMheZwPJeW0vfqFDLIMbZCYHjCQhjl4vfRE7d"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-941.zip",
+  "packageSha256": "6d48eef9eebe3c4a52e8ebfa4afc970c7cad774ef8ec05c6f8a9ba15e042f052",
+  "packageBytes": 1906859,
+  "notes": "Alvida V2.2 : animation plus naturelle, amorti du corps et ombre au sol. Reserve de berrys de test rechargee a chaque ouverture, prestige et import pour les niveaux 6000 et eveils. Sauvegardes conservees.",
+  "signature": "C2hS5yjxf6Ead+WZpeAxxUp59ZUpNrZQJo6mwQQXQ1/z5gfFwUsUzBghcjCaU4nNj80r6pOVJvNNQWxQKlb93B8hy+2xc9yokOv3/OxjQbndYgVmwa4has50J8AQlcUusoU/zcxe506llbZWH+YI+wqJregxEH35am5AjAP8ZcHS0Ysy93jysphbO9S7GJZJ5fOk88eaAgExMwUW/edG9g/6cGfiML9PEJgOHAfmeGHVKB4dXaTNi3Wx6kNCuAxW7XdyL/pBpby/PJ9ilK1SpsUIi438jyHSsVyuYrSYxcgiWu5DNAJb+d9CDiWhEqlw7FzpGIbpzlmxn7EQLtpeojvJTS8X5WziDXTI0uD5YZ+bY8iJpaXhO8hDw8m9BX05KXWH9VScehjDYmdGHGRf9y3DW0avf2Xnqec4r19YIJqj8UjUdB8GchqorF9mihcixEoFmlpxoYFPHHl2AaU64h9f24ShHmrEAiLgJoulVQgn/SaP9Tedwt5j2laxbBBo"
 }
