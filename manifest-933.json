@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 933,
+  "versionName": "0.9.33",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-933.zip",
+  "packageSha256": "f620e545c6f7f76ebf57183a7efc1b83b0c632894c3b609d45dbae0476dde93a",
+  "packageBytes": 1388586,
+  "notes": "Heros jusqu'au niveau MAX 6000 : 12 vrais paliers calques sur TT2 (20 a 6000), evolutions a 999 et 1999, nouveaux bonus DPS et achats x1/x10/x100/MAX plafonnes. Anciennes sauvegardes conservees.",
+  "signature": "Zyy0EDPblhHtrsLTIigzcAKYBNcSfxwcJlp5vEQkiTxkV/laY2ItlCiKrWmOInq+WqK6hZg6X0NI+nE5rfgKwwSUJG+19y7wRufaUyZdRdTotJIKLKCqixc/BW5yIvQEwjxCdOcROYn8T701Moe0yAgz+ZVhKv2hCSUnNtrvJNVafYUUS/Xfs35qru/f1io9Pu+EgJvwxh9A8WT+jNAVAdDFtjkFd3rXY8+fZ+9AKZpZuQKRfKegmxBrKEcZBCG0beXxbjy3QQZZAQexs4DCnxJpopX/zydXGNOgXJJcgnkK/quWRpUPWHY3kYKG7Vjjm2vgExEBuq81djpL7/Uzu234PL84F/8bc9vW2g1UF1Xhe1NBDmHGYNfbeif+uqMGFOTaTqDVzc3AU3IBlEZ1UaKjy+H9UCJz1K84BKRiOP/w+h+ZFLNh5yluZzNFkG6u5AOj+9FicqJltVXADqOtt2dAeJjGlPS237WS01VM4iuL7NP8JL1hkXobWMLDqEga"
+}
