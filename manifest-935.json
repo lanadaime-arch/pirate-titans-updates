@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 935,
+  "versionName": "0.9.35",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-935.zip",
+  "packageSha256": "8eb78a0cb8619212557bc67da9bd67cf2e06ba1a21c0c823320787f3682a190e",
+  "packageBytes": 1390775,
+  "notes": "Heros V0.9.35 : lignes et fiches plus compactes, badges de competences sans debordement, descriptions simplifiees ; les heros non recrutes (dont Jinbe) affichent RECRUTER meme avec berrys insuffisants.",
+  "signature": "WY0y22tsGAci1rb1OIvaLugk2TpvTDPMt60XbDq5BIFlR/l0yKc7TGTAVSTbJB+a7ZF2mj8s3Jn3eBfkCx6hluMYyvpEditD2RiE45UxD8Mdl54WnfC7QPgMdcQuP9uLaWF8RUQsx7Y9w2ONXmNaK1CW6wvyKMJ6lF24OvSSLw0zghb5QEYgasqMxsyDreMSax7lDOtHUm2bdN8oll20r89M1psgSlkIpFpX+xWWL5wY6ZvXoDnpqux8lIPnKCeHZNOjliIzKRdv+zVgC7KmtlqX9zwwVAZOXCNSKVJm1UssnnV0gPnBZpY6SHY1xyqGbNEAkp46r35TRT7n9gu6YdTOoLkgQLbD6qSo4BVY2QIW4GaC5DU0qfAXUsjXYL6Oiheb1BxBXsPoByFZLILzcSLhdrwe0eUtmzJ3xHxncZ9itaqF5+//wib2r7WYDEI38S7Zu1+szEHPbByWKlFP8S0+IU0i65IEzhE3vQFhIVQQrHj8SW1vYEXxTh7k2KLK"
+}
