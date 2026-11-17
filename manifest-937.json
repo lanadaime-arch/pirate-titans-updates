@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 937,
+  "versionName": "0.9.37",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-937.zip",
+  "packageSha256": "15a306c31e98e478dcf5dad7320d6ae0a9fcbb7274ba62d794e94dfdfb2cb924",
+  "packageBytes": 1492020,
+  "notes": "Alvida V0.9.37 : personnage articule en 8 couches, mouvement de massue et impact synchronise, meilleure lisibilite en combat. Partie et berrys de test conserves.",
+  "signature": "EsN5+C/gkhwkcZ0UztyymgaB8UFQaXQocUvhp+NnBbSPg4Am2m6lDJf8mlLsrB2RVs77Eu0duagaKJ5aWG0sqIIPSjA1CseEmhgSd1YWx1FeLydkQO8aeYRd8EnE4qC5b3qZpirxCuUhFkKo3rNhG14ATtSmIoLh6gjqOa9fzZzVGstnXUgFlWY+LJi6GysA9MkO2rbQVCIGCSpNUBI3jgHrI0C8Vi4KJX8wA1SwSVo6Y+/XPF4MdHoZMcJ1VVQLGA3NE9GBgCTWIqA+V18dR02+UHC7Vy7vqM8j/mNGFTVxriCEtef9b3qObrSgdWo/CPu8fw2aSBCo3ZlIThgPQESFyEPCD2nSAdtlhX6Fwjc1ko+O8h22dh6bIvHm9c1zc01ZB0rYveXS9oBGveuW9BBZ1yNugIav0KqpnN0X8OL5w4uqEIZgYigF5/Ygf+n082488jbEg84PMnghsYOYCfABYxuomfWe3PwIGaUqCyBcOeqFF9IF1VwYCgu9k+c3"
+}
