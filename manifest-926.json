@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 926,
+  "versionName": "0.9.26",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-926.zip",
+  "packageSha256": "9730ebfd4ce4269d043a80487c02af1ea6b6c9574532c62bcbed267cc40bdf6e",
+  "packageBytes": 1380897,
+  "notes": "Refonte du menu inspiree de TT2 : six onglets Capitaine, Heros, Equipement, Familiers, Artefacts, Boutique ; arbre de competences dans Capitaine, barre coloree inclinee et panneaux sombres. Progression et sauvegardes conservees.",
+  "signature": "RpatjSK1eWVFt7U5iQWHU/pSgu0C1ofDvpQ4jSays+xbQHgFrYs6Dp/xCxKCb5a4OIlDJ7eE5TCk28lzY0jMJS26wppmAjwfFENin8p/VONSHs/hDoZTiaH1F2vbrMukMqSwU8hX3+OZAg0g5965sqCNC3tp2XohR8s+8vSpNyQrHFSiVgsMrORhoLRrscMXZjJIpHCYBMd5ZDIIB4kXTgl2wtbz98EL3iI1sFw/wluguiLZw6GRo7c1IEHvTL0XIZNDiM9Fx4x4lm7CyxkCtq6cBIIYzDG0kisiK3ABIDz1GCB2ec4l2c4fEXW8a/c2ODZ4aO9gO5jQ+79oR7P/MgpErC+Kf+x83mvodPVUcXh8/oQs9U529l0CH9RVdN0kxMhTUKEAYFztlnbSjfGBQ1L2u/iI6wgyNOLU6zBQbahB5QK6bsfUI7t2oj3L26H/JG0BcuLt9WYcXYdGIaXwyAhCoW3AAyaxt01fkbn1NWwj3u25nZ6tTID/KS4yLym4"
+}
