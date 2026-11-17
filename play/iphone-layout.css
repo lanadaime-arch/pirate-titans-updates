@@ -1,0 +1,20 @@
+/* Correctif PWA iPhone — ne touche pas aux styles du jeu Android.
+   En mode ajouté à l'écran d'accueil seulement, les marges noires restent
+   visibles, mais le letterbox historique de 4dvh est trop grand sur iOS. */
+@supports (-webkit-touch-callout: none) {
+  @media (display-mode: standalone) and (orientation: portrait) {
+    html, body { background: #000 !important; }
+    .app {
+      --letterbox: clamp(8px, 1.4dvh, 14px) !important;
+      /* CSS dvh et env() peuvent exclure/inclure différemment les zones iOS.
+         Eviter d'empiler deux fois une marge au-dessus de la Dynamic Island. */
+      margin-top: max(var(--letterbox), env(safe-area-inset-top, 0px)) !important;
+      height: calc(100dvh - max(var(--letterbox), env(safe-area-inset-top, 0px)) - max(var(--letterbox), env(safe-area-inset-bottom, 0px))) !important;
+      min-height: 0 !important;
+    }
+    .app .nav {
+      bottom: 0 !important;
+      z-index: 35 !important;
+    }
+  }
+}
