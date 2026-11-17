@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 922,
+  "versionName": "0.9.22",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-922.zip",
+  "packageSha256": "40779edc4c07d23e6be537da83224b0dd667be0263b32be117728d04c9f257dc",
+  "packageBytes": 1377483,
+  "notes": "Moteur grands nombres pour PV, degats et berrys; achats, butin et sauvegardes preserves au-dela de 1e308 (ZZ, AAA).",
+  "signature": "nEPntj0g94xZOfO0SW14cFwV5aiDQSnymX4H4gi4I9l5rfsXPTTfHpT0/jfzae/sV5wOhwrMlHNY/fkDxA5wblQTKyH7Evj9tzi4+X4nUwTicKpICSemvQ5uzBnQJdmza34UYCxrY3Eh2MlUp39TZSWpX5UuICxe8jYwWaGD48WwGRBdS5AshQgHAxTEkuW893GMBGVziNi8OTmORm0s//xPsvT6RU1QFcocEyP6cyc2//rdhs6igF2KsrP2rd+y4rOK3yZGyUWTzXj20kXvp1hf3Z4R+iKmdtxUP+hwGlLRnfYFVRuCoWnqLHyLwmv+p4BgAyaVTiymcg9rzrGOmUasF6vry+TMC0wyoG7jLBN6bH0ELinOtEHBe1vxd/c1wNUTtuXDqwWS0uzYybusxg3Br+EuxiYCtsm4Qc6Mtzt3bAo0XntFPKUqzQ2LOBkBJiE0wW2pW2MzsKk2iqN/e0p3+9oQM4yjsx8pVx3Uyf/hU7jdhWJRD/0Bye6guy8L"
+}
