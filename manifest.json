@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 945,
-  "versionName": "0.9.45",
+  "versionCode": 946,
+  "versionName": "0.9.46",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-945.zip",
-  "packageSha256": "a4db12c3a819fcae14a700f66f591bf5373b193608cbedbe43134aeaf6e65ca4",
-  "packageBytes": 2432085,
-  "notes": "Alvida normale : recuperation plus progressive entre impact et repos, avec une pose supplementaire. Frappes et cadence conservees. 9 DR berrys de test, niveaux 6000, eveils mecaniques et sauvegardes maintenus.",
-  "signature": "UQ3ssIT220QDD30yFjBemHK4nQ3IxOe63MI3XM/fEfllOmsWtIR0n6TQDD1ZscQbDlEmpZlBGH4mE1M6//JCuU5Q6Ml6kjtoPLPXTBiAdQ0aZ7NVxIXJt/Ct2pCTjCHxkXGbQRZUnRNkHh6EosIiCOB0eonZPzHraCMdpOb7JVbGNSP6R1QofUpyrJQqxC3JMvBu6fdm7s2ezqWuxS+YvVGsDmpQxnwbOXd1foxxMoe6PZ7fhKF5P4TAKhc96hfGKAAOKbzlHvH8Z0juxPOik4T69Yr5wiAFXwXF2y7W0tCOhowj1ZvQFCYMmL/+um3PX0kg8yHIfCv1c1QodfmdUHujChVeKxKYmJPQ0Dxs2EtwGHnb+bddEC/h2Swp7XT34FDBdw3NzGM2dOPnCGbkuG/CpnKf7VZRh2Hxcq3ketI5DpDQs6zPaWfvuIzOXjfyMTyFEhdbu1TCLqZZp1ITrgQ0jQZmfXmB2GUntl6wr4gwGTcLqykXiellvIUNz4QG"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-946.zip",
+  "packageSha256": "2042abc8e186693922f4af76afdfc34f6dabf6017f6b7be04acdf702c32464f4",
+  "packageBytes": 2851597,
+  "notes": "Alvida Eveil 1 : silhouette plus fine, nouveau costume, massue bronze et 16 poses animees. Portrait mis a jour. Forme normale inchangee. Reserve de berrys de test, niveaux 6000, prestige et sauvegardes conserves.",
+  "signature": "xPRf1TK/x4i/1YyROLR7PsVMrPNHW6OycI+/1+bG1VLj8Kk1WuBOvNnXdtrFd8DRFJ0fbV6jgJjgk9BaIDlsnL85z4YIGRu0msYAsBevjW6nDGAr+rgqVB1PQOUFLEPIPYv7P803r31kVmRvfxhUhx6tswBP2dZB91D3EK8lZBz3KEKOQOzXVAlTyr1VyqwnjdRaxGfcHXG2v2U3mEviF3XAZO5T7LEEHcKdhYh+8jIUp2lDEoV2wrMjDPX6DHXZ0HKKfyIofc6XVU33YZ5Iea/v3t5bheIMZfAk6uvoHk092CK+YQOV6kazEzUm9xx8TPmok6LFOGYz0wh8/E0vNs6jJKvlmkuzkLdx0TQrEwonh91rIZMeo+TtMbjf0VWEpBxZhZTjvLAsuPGlOvqDGjVlH477L6huMLObZ6+cDfob9tmwFPAM0S76YSupUlMW2nLVXu1s6HhktlbaQuigoi6bwVwyP7fTTkkaCsXvW4qNdlwXhrObpxzFtOt1ZBOs"
 }
