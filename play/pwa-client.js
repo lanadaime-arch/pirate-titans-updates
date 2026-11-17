@@ -52,23 +52,26 @@
     document.body.appendChild(panel);
   }
   async function check(manual = false) {
+    // Browser event callbacks receive Event objects; only a deliberate
+    // settings-button click is allowed to open a 'jeu déjà à jour' dialog.
+    const requestedByUser = manual === true;
     if (alertVisible) {
-      if (manual) window.alert('La proposition de mise à jour est déjà affichée.');
+      if (requestedByUser) window.alert('La proposition de mise à jour est déjà affichée.');
       return;
     }
     if (!navigator.onLine) {
-      if (manual) window.alert('Pas de connexion Internet : impossible de vérifier les mises à jour.');
+      if (requestedByUser) window.alert('Pas de connexion Internet : impossible de vérifier les mises à jour.');
       return;
     }
     try {
       const remote = await fetchVersion();
       if (Number(remote.versionCode) > Number(installedVersion)) {
         offerUpdate(remote);
-      } else if (manual) {
+      } else if (requestedByUser) {
         window.alert('Pirate Titans V' + String(remote.versionName) + ' : jeu déjà à jour.');
       }
     } catch (_) {
-      if (manual) window.alert('Vérification impossible. Réessaie lorsque la connexion est disponible.');
+      if (requestedByUser) window.alert('Vérification impossible. Réessaie lorsque la connexion est disponible.');
     }
   }
   // Exposed to the existing game settings modal; native Android uses its own hook.
@@ -79,12 +82,12 @@
       catch (_) { /* The game must still work without a service worker. */ }
     }
     await check();
-    window.addEventListener('focus', check);
-    window.addEventListener('online', check);
+    window.addEventListener('focus', () => check(false));
+    window.addEventListener('online', () => check(false));
     document.addEventListener('visibilitychange', () => {
-      if (!document.hidden) check();
+      if (!document.hidden) check(false);
     });
-    setInterval(check, 60000);
+    setInterval(() => check(false), 60000);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
   else start();
