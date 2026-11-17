@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 928,
+  "versionName": "0.9.28",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-928.zip",
+  "packageSha256": "86f0ed258edf992db3cd4dadf2b571e576b10d14b07516f0b0eea20594637dcf",
+  "packageBytes": 1383404,
+  "notes": "Capitaine compact selon les captures TT2 : lignes, boutons et bandeaux resserres, transformations sur Luffy, avantages juste apres les sorts, arbre accessible uniquement en haut. Gameplay et sauvegardes inchanges.",
+  "signature": "x21eUGxedAz/HxiO/EDwdGcOlmmOAC7qelPyUpYbT/rDa1at9GBnXiYOFxGAJLJ8er3YNVsUj2GrnUM0HHoB54EPGaPVo+UiMBaLHJu7fNbrgbbdT5ETtqXK1rIKLkG4B9n+hqu7WXglcVjQKiS6VwGIjpx2SulVxRAgqr2ugxJZ40QIpZTztxs8/2lsk94qg7SYJOZbLXwsgH00fjIs7J5wcoIrzWPSPefqHrTczy1k0gBypJtO0U12kFqMihF8/Nw0LY5qmtAnWI7rd4b4/54MsXop12jfMTi2513vPoMvTZtErwhlqEdz0s5uLXlzd0VNr45Ogbzd7s6Y/Od52s1kIo+GDshARJBb4lo9ztljekcmTZJ+ul8A1T6JkdLzfbVP1hK4QA+MIV12+2bVxamK/rhpkKN+AA+3RAVtkPHErlBT6binYzGBRnUtIePabik6lFoMT9tY4buCxoYePPzyxASgSS4s/XLLuZ6zazjTUB2KewPv3PZN617WhT1+"
+}
