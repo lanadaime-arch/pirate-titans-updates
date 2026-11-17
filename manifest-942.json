@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 942,
+  "versionName": "0.9.42",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-942.zip",
+  "packageSha256": "1971fe55df706e6a5d211af83e51bd1058adf6cb076c0ccc50e6c7d1dd40c637",
+  "packageBytes": 1907334,
+  "notes": "Alvida V2.3 : les deux eveils sont animes comme la forme normale avec 16 poses completes, auras distinctes et coups synchronises. Reserve de berrys de test et sauvegardes conservees.",
+  "signature": "jBkLG05YmAC0c9TLROzsEAdWiq6iJ1kEa0xf/OaNaYW6ID2YuiCMwTlT7Z1seVo5KMNZNM1mWFWQfKS6L9qfgxDHqlRvsnyuxGIO3nEkuxhwr0fkYndBNK28K8+FSey5OZDqUOuiXQLBH1A+d0N4CgNBWs2pAYKS5edmg4b+rDsnZR/usZVZF//SAvM1ofhdewr2HOZul1CczSXTyXJSr/rZR69bglrvS0izgClHNwXayeLqyoBn4xVdSBwEDEkk9HMVC//sqwBJlpkK5XSuO5IHWi4kMcvBnGm0+pXnns0jah5jsVfZibWfzQhRV05C+tqhgOUlf6l+j6CraB8k6ePXjEvQXVss9MyUhUKnXLCps2hbjeQROpvE3YSmidAQjgRzCVHBLt02idRsMCdLaxvcdo1RyLqdMs3H4Eb+GXaQq21i4tNrWul6bWaA54CYnm6RU9iclCc1lPzI7ZTn7SaLCMPC158DydvEKzv6Nks02upMC3KR3FKXvpQHrhwy"
+}

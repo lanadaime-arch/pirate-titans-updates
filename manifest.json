@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 942,
-  "versionName": "0.9.42",
+  "versionCode": 943,
+  "versionName": "0.9.43",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-942.zip",
-  "packageSha256": "1971fe55df706e6a5d211af83e51bd1058adf6cb076c0ccc50e6c7d1dd40c637",
-  "packageBytes": 1907334,
-  "notes": "Alvida V2.3 : les deux eveils sont animes comme la forme normale avec 16 poses completes, auras distinctes et coups synchronises. Reserve de berrys de test et sauvegardes conservees.",
-  "signature": "jBkLG05YmAC0c9TLROzsEAdWiq6iJ1kEa0xf/OaNaYW6ID2YuiCMwTlT7Z1seVo5KMNZNM1mWFWQfKS6L9qfgxDHqlRvsnyuxGIO3nEkuxhwr0fkYndBNK28K8+FSey5OZDqUOuiXQLBH1A+d0N4CgNBWs2pAYKS5edmg4b+rDsnZR/usZVZF//SAvM1ofhdewr2HOZul1CczSXTyXJSr/rZR69bglrvS0izgClHNwXayeLqyoBn4xVdSBwEDEkk9HMVC//sqwBJlpkK5XSuO5IHWi4kMcvBnGm0+pXnns0jah5jsVfZibWfzQhRV05C+tqhgOUlf6l+j6CraB8k6ePXjEvQXVss9MyUhUKnXLCps2hbjeQROpvE3YSmidAQjgRzCVHBLt02idRsMCdLaxvcdo1RyLqdMs3H4Eb+GXaQq21i4tNrWul6bWaA54CYnm6RU9iclCc1lPzI7ZTn7SaLCMPC158DydvEKzv6Nks02upMC3KR3FKXvpQHrhwy"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-943.zip",
+  "packageSha256": "ac618a27310de173abc6d03433f83efe7e4c680d61c33c3d98859b63223e8930",
+  "packageBytes": 2366107,
+  "notes": "Alvida : poses avec traces grises supprimees des frappes et retour au repos stabilise. Eveils jouables mais leurs nouvelles apparences restent a refaire. Reserve de berrys de test et sauvegardes conservees.",
+  "signature": "gmTGtjHYUMRN2VlCCiTf3hRgo5TNqozn+ol8yb7z0bTyOcGGF452V1kjBuZ2BImq5ruWKEP6AtVStgEAyX5hDEBW6AGymhDK6KT7q1aGvQRQcwqGGhb+jwn9t7MGp34packRXtI19LmTA3G2EIUHe2ldqpq2xxvk8FkGD7Xs91URXVrFGa+g0QogCm+Tcd4DcKwb10G0j/kaFm6k/oJ6Y6e2m/D0kpVl32BDsIprvtHB/qjOI3Av6rNK+Blhgjj2jCET6YzOCnv2II41HZ0HVo62N/2m12mWDCdTfRZIV/3nKppjELKrx6KHcYmhoqPBTJD92nQznUcvnaI1I2BLkgVhLOgmiHOjxH/0S5oO08QWD94QjkOMvL1a0+/lU66KnqyrAjiMr0onX3SNbZkzT76O2dqSYXeBLsxloaVWSu6CHtqjUKdRLhTwu2W70oN+yewvblG9yQJx6ONuwAwDKZ8Nhz4LQ0NrTztxgUsoynNyeM+V+L5WlJdUKvzilBXu"
 }
