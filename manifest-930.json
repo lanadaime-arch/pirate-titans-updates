@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 930,
+  "versionName": "0.9.30",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-930.zip",
+  "packageSha256": "09d1a32cad9695927911f536f1c1d361cdaff2c3fbb245e3ffa81150fcd1e095",
+  "packageBytes": 1384399,
+  "notes": "Refonte onglet Heros TT2 : DPS et berrys sur une seule ligne, huit portraits avec acces aux techniques, niveaux et paliers, boutons d'achat compacts, mode x1 x10 x100 MAX. Degats, prix, prestige, combat et sauvegardes conserves.",
+  "signature": "fO4YmUNI3EtWrGC6PHK04MiDNFR22M0zMeSv8BVRcm1xgj6BgvnjYIQH3UQ9wi2igDVVBsulJueI2IUWg5T6SxiPL4f4VA1KQma87c04bUSim3jo8b68WICB+Mx7ee8enedRqKX/3cbt09M7uKlUvnYeKo12dtgKjjQYw/5gGVc0U/utfxZqN2XP3v90OB+55SSh9cJUrYB6QW8rTZFwd8kp5NMz0DfGSEK8RHIitq19CkbVBuuMvpB+QJ4LXGZyyASxHNUY+8jPbXlGBslRqqfwzxPN5Pl/313YMA2+/DDLvJCYryAn20t9E20U18Duw+R5JNAYdTuabjYbnMD1zHLEu9qRBJiFRUeE8Pa1EdJZ501VMPRrQbi04VC2yzztCxVu1L7WBtoi+Cj0NOos7z2AU33P0/o+XztnTZ8pJ6GcBuy96KUgOD62b3HSOWrkF+bQ6LXCnmA7xuDgbQW3aXzpiDhIAlLbyO7N3xkRawI0Fsv3Fz8ZRQkIWWyf6kQW"
+}

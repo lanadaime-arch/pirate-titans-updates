@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 930,
-  "versionName": "0.9.30",
+  "versionCode": 931,
+  "versionName": "0.9.31",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-930.zip",
-  "packageSha256": "09d1a32cad9695927911f536f1c1d361cdaff2c3fbb245e3ffa81150fcd1e095",
-  "packageBytes": 1384399,
-  "notes": "Refonte onglet Heros TT2 : DPS et berrys sur une seule ligne, huit portraits avec acces aux techniques, niveaux et paliers, boutons d'achat compacts, mode x1 x10 x100 MAX. Degats, prix, prestige, combat et sauvegardes conserves.",
-  "signature": "fO4YmUNI3EtWrGC6PHK04MiDNFR22M0zMeSv8BVRcm1xgj6BgvnjYIQH3UQ9wi2igDVVBsulJueI2IUWg5T6SxiPL4f4VA1KQma87c04bUSim3jo8b68WICB+Mx7ee8enedRqKX/3cbt09M7uKlUvnYeKo12dtgKjjQYw/5gGVc0U/utfxZqN2XP3v90OB+55SSh9cJUrYB6QW8rTZFwd8kp5NMz0DfGSEK8RHIitq19CkbVBuuMvpB+QJ4LXGZyyASxHNUY+8jPbXlGBslRqqfwzxPN5Pl/313YMA2+/DDLvJCYryAn20t9E20U18Duw+R5JNAYdTuabjYbnMD1zHLEu9qRBJiFRUeE8Pa1EdJZ501VMPRrQbi04VC2yzztCxVu1L7WBtoi+Cj0NOos7z2AU33P0/o+XztnTZ8pJ6GcBuy96KUgOD62b3HSOWrkF+bQ6LXCnmA7xuDgbQW3aXzpiDhIAlLbyO7N3xkRawI0Fsv3Fz8ZRQkIWWyf6kQW"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-931.zip",
+  "packageSha256": "e0e4def135cfdc92563ac9041cf3327f25efd73d500045847b081c32f917dc04",
+  "packageBytes": 1386269,
+  "notes": "Menu Heros TT2 : quatre raccourcis, cinq paliers visuels reellement debloques par niveau et modal Maitrises/Techniques, lignes compactes avec part du DPS. Aucun bonus, cout, personnage ni modification des sauvegardes.",
+  "signature": "gDZkT8K3Ip4mmsKZdPb2rrI2hh4Z3voc5pbTDPszWDEmRWbYgMrw3rBTqc0BefYPydsBq+3dQiDmUnM3gsxmQbj3whNGokY5sRSjCwtPW+aU8zgHxjPmuW6bZNd46RxSBOPoR+hGuj0sAHt+qvvRA/Gd3gj1MpeKP6af6XgWsFN2xhWihH5BX/hUEOnCQU3DX5NStsb0zgQ+vxVamIXawQCll0X/amqaINRsV7Z6iiLGf3hwGv8xiNYiR6D1B8U2seQ+4JAtF+hFNzVXDHjTi0gACXLIN3kHTxHrUjvZAaobbLODcGH6S/lSOo1yBWBFX0T1XHyZjVs/ljbjlTGHYy2W4Fii7XmMAxyrlUSO4tPjNvMN4R8/SjFoWvCg0Fig+ctdRx511S3nJBVlPB6KJw0d5o3elImErw84jUXhhamG26esysF6iFhW3XgwMi/Ou4B59W0Vim2loF6drntT+yjKWKtnyRcjdTFbjPKBaso96oORWw5gjLi3N8mwL0wR"
 }
