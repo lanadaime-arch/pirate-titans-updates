@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 946,
-  "versionName": "0.9.46",
+  "versionCode": 947,
+  "versionName": "0.9.47",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-946.zip",
-  "packageSha256": "2042abc8e186693922f4af76afdfc34f6dabf6017f6b7be04acdf702c32464f4",
-  "packageBytes": 2851597,
-  "notes": "Alvida Eveil 1 : silhouette plus fine, nouveau costume, massue bronze et 16 poses animees. Portrait mis a jour. Forme normale inchangee. Reserve de berrys de test, niveaux 6000, prestige et sauvegardes conserves.",
-  "signature": "xPRf1TK/x4i/1YyROLR7PsVMrPNHW6OycI+/1+bG1VLj8Kk1WuBOvNnXdtrFd8DRFJ0fbV6jgJjgk9BaIDlsnL85z4YIGRu0msYAsBevjW6nDGAr+rgqVB1PQOUFLEPIPYv7P803r31kVmRvfxhUhx6tswBP2dZB91D3EK8lZBz3KEKOQOzXVAlTyr1VyqwnjdRaxGfcHXG2v2U3mEviF3XAZO5T7LEEHcKdhYh+8jIUp2lDEoV2wrMjDPX6DHXZ0HKKfyIofc6XVU33YZ5Iea/v3t5bheIMZfAk6uvoHk092CK+YQOV6kazEzUm9xx8TPmok6LFOGYz0wh8/E0vNs6jJKvlmkuzkLdx0TQrEwonh91rIZMeo+TtMbjf0VWEpBxZhZTjvLAsuPGlOvqDGjVlH477L6huMLObZ6+cDfob9tmwFPAM0S76YSupUlMW2nLVXu1s6HhktlbaQuigoi6bwVwyP7fTTkkaCsXvW4qNdlwXhrObpxzFtOt1ZBOs"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-947.zip",
+  "packageSha256": "6c1a6f67c35c3c546ee3bc0b40efe9f8707552f0edd50b1ad35226a7e9d34242",
+  "packageBytes": 2949814,
+  "notes": "Alvida Eveil 1 : 16 nouvelles illustrations originales, visage, tenue et massue redessines. Animations de repos, frappe et retour adaptees. Forme normale et berrys de test conserves. Eveil 2 en chantier.",
+  "signature": "WLPkaWGnsnt4lhvx29tfvsZMnfQtK8poXxRy6UqAWwuH2kRG20eI1XAR6exy74LVG3wpXCzSBN+rQbxzxd+lIhGW8QUjG20uoa0iTuniFec1/dQuCb8mLjpWavGlLRQevHBs7mkZfVY/rDnO/t7RWhxJpDyMHuOfeMo+ioqwId15sCrs5dMrL2jJWD2drehKdOEtTPdh4Lum2PG8W9xPL/VG5ijwwbNiX3aHjeh1HsGnm1JHRScrkLMGx/rzsPsoO0aUjLAH0lD6PgoKo4edNYojUfjOmq8GFiD3R8T4Y3HZQz2gb2jfcCHpIJLfGH6aQ8gXJxQ7vcwTBsbPmpPmDoIiywqYak3262unVjXV5XyrK4tAuf92sKraRixDZ6sZ2uuUJhvgNUedeJhRDVacBUhe6GR/IMREwRengDKEPoeWC5wiTHuhEjN3iJTnbcl+xal4e/Snu/emgiIWwDvNp/9NsZZG37fjH9bsKJ4OOKseCRBbK1BRVq9pd1UTLK/k"
 }
