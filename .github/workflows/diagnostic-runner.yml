@@ -9,6 +9,11 @@ permissions:
 jobs:
   runner:
     runs-on: ubuntu-latest
+    env:
+      SIGNING_KEY_PRESENT: ${{ secrets.OTA_PRIVATE_KEY_BASE64 != '' }}
+      CROSS_REPO_TOKEN_PRESENT: ${{ secrets.OTA_REPOSITORY_TOKEN != '' }}
     steps:
-      - name: Tester le démarrage sans secrets
-        run: echo 'RUNNER_OK — aucune clé de signature utilisée'
+      - name: Vérifier les secrets possibles sans afficher leur contenu
+        run: |
+          echo "Android OTA signing secret configured: $SIGNING_KEY_PRESENT"
+          echo "Cross-repository token configured: $CROSS_REPO_TOKEN_PRESENT"
