@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 953,
-  "versionName": "0.9.53",
+  "versionCode": 954,
+  "versionName": "0.9.54",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-953.zip",
-  "packageSha256": "f9816f3339e941ac5074be4a92143adb0dd416e3d7c835bf1e36ede448b42a8f",
-  "packageBytes": 3971691,
-  "notes": "Vivi F0 : suppression des glissements de sprites et des fragments/pieds fantomes pendant repos, frappe et technique speciale. 48 poses V1, niveaux 6000 et 9 DR conserves.",
-  "signature": "iEEKSTI7/4sgWwAYl3yw3ikwupnLnY2GDZ3FsiAMWtUFLirMms6fvDesallsTsW8et9fjevU42OLmHzEHAd2DmsMxj5izt9fOJuGTcrQhd2dhut5ttgXtarpAi6Uf4wLYgqMI3dQ2uFcmjBAeTMbEjL53Vrjc/n8tS7dcL1kttnh8w6CXBXp2jM6FmRuyhQ/ChCg5RhKcBAmO5xVvwUfWAG66ns+O3R80kHfv43Ijf6dxHgehLz9IQvT1K+HQRNwqp8O70NQvX5eo3QczP0jp1B1NJ7UNS1DiUI8WA9x7XxpHMxcNotoj8GWAEDQx0SV11sSEys8d6jpsFlxt0xtU5kwEJZ192N5MRbdiUtaALBSU3Fmp3F4cGprFHzqp0YSNHtsS+FE7kHCs+yU+pcaMr3kxpe2M35QOMyxDkA22ZzB6e6fu6F9fV0/DsYxtzUv8brC788rBtHBLmEw+o29p8uOBjyBmDxDIDuNxYgt677c96HfWr8RB3zmXlGKc6ze"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-954.zip",
+  "packageSha256": "719487409de5c54fd791d93380ecc942b2a12dfd8284234c80581f50d7e05778",
+  "packageBytes": 3971882,
+  "notes": "Vivi F0 : taille reduite en arene et pieds ancres au sol, comme Alvida. Aucun changement au dessin, aux 48 poses, au prestige, aux 9 DR ou au niveau 6000.",
+  "signature": "FDwQsaTHtE0B6tRRi7FhESWT2WlHbU5aUBhP7xsMPurP0dAaTnMQXDb/oiiHKFSKJGSuXsEKkxnrhxNGdPbMKcLQzlm4wbhYQJa7vS66NhNTKy+I8wqvmGCcmAHxzRbZMx1DY2TAC5nUgWzWQirkyG5pDWB7vHfdLNbCkNA0Ow//VQje+IfDGd2xRiJMuEW/ok5SMuoaPM75wV9wtriNKNr/7p7/ajPUXVgs4k05SAUQYoFCr0L45heG50Z1joxirGsghHKpn9KfX9aitjisH3isv07/wVAudWnLfTe7zXNQmyIAb1oWih+CP3/1ft+3p7dIcsj9vhOw2aHgqTW+8da9/+TnwV9XekVx+Ik1PCAglFqAdoYXe1oGbsF52UUZbI743euGryg88ITNRjcqgZgntfxocbzY0ufuE8ajWZrao/mampjSocK5qAfyeI31mpR71khB3aWh+xHWw30X354QLUJRn1522yjIN3gvT7Gls9/ocJv7VBCf1DjXf3+m"
 }
