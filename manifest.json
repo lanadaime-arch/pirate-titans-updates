@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 950,
-  "versionName": "0.9.50",
+  "versionCode": 951,
+  "versionName": "0.9.51",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-950.zip",
-  "packageSha256": "1b586e8682c1f1cd87bffab07a2df86396330aafc02c063ab89a7e2192f728c4",
-  "packageBytes": 3971384,
-  "notes": "Vivi F0 (Miss Wednesday) remplace Alvida : 48 poses, anneaux transparents, niveaux 6000, 9 DR berrys de test. Sauvegardes conservees et optimisation iPhone maintenue.",
-  "signature": "wXBKy688eVqmuEF8GjUHf2a8kqHG1kzei5AOctCJoCWAVx26WMfzSU/5yHfdnQ6ZpV1cUlev9TuRNDqDvgETrcIZ5bkI+O5ZgZoYL9v7738SsImJv1AB6bXiC46ImMvbmidYm8dEfzzFL1l7u3gf0CGwylavJuNN9kWyoePfkyK4wT7jd1DnncLxszwaJbxvEB2hgFHWmNOu4u4wUbZ5r5Uzldf1LGPe3308WfkBjsw66j+RxmzbtkikOUA0KA64Hf4BiHzj/yoTNbnroj4Vk8eZGPwrzGl8Dbv2zdfAPPk3GjIQAkz2CqIjeMk4b5UjTSx0riB5e9fII5gTUtOIU74BC9W79SsLVOw5qJdVYXnNa+l3WBzKFrXv/vMVc3FryCLQuYpZhN+FxeQHv2ggIdNZIH+79qcM3JtwlkIsImBElaK55zV0z8y89U89ZoWjKoCA9zg8MV1Pxg1iI1rysDdyrQzD5ebXTjBWC7qUXWXImBGnOXNLxJsgg+dq3qnv"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-951.zip",
+  "packageSha256": "7629fa41a4020e0d3ea8b3deeed871ea5a421114ebe4d87259a78509f61fa1df",
+  "packageBytes": 3971316,
+  "notes": "Vivi F0 : animation de repos adoucie, suppression de la bascule extreme de la tete. 48 poses, 9 DR berrys, niveau MAX 6000, prestige et sauvegardes conserves.",
+  "signature": "mj/4C7SSLXD77xKwkdiGT+X3CbopCg6TIHCFFb+N8aDBEgSzO5xYVb/kLW1/CAyd4PZ68v1Y1xP8n8m5OI9l38SFOxCbq4IK65h/K/hLPjd0wCXODsfUYsVUSUFhz9vbMv6YfUH5L9uXsp2+LhSthD5Xs8CNxUTWl3PyI0LE7iIADTe9hPEmRdSWTNhP2kchQRpLTbomKK+FMMuthfg2Q9YNY2gIJnL7VVFX8b/N3zcz05R9jXzz6V3v+q7U60JQsr3ZV4utlwJlKtnVh/YXh2OesvRYDKgpbkq5qaPj2m3WYlebmyhpIUPypDdFuq3UPP7lIYqfZwXFPPUaakyU8K3KnokRYdidN859l+HF4yQVgv5KmC1MKkOkaCkzN4YgFxjeazfh0NQXdkoxAfGjEsxEL9svpla9EF7DpoASaGESZ6FwKZwZY5aZhaa/8NGnMsWWF92dVvsDnxbpp0K3MYCmrASg7+CrhS4Y2R7scr4/m/BbujAbqnS2e32d8gIe"
 }
