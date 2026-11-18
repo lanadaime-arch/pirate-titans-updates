@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 964,
-  "versionName": "0.9.64",
+  "versionCode": 965,
+  "versionName": "0.9.65",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-964.zip",
-  "packageSha256": "714f3ad68b13019257aee532b58db1a693afcedc22ffcf917568ada9ba3a25ca",
-  "packageBytes": 3978116,
-  "notes": "Vivi : préparation d'attaque raccourcie pour supprimer l'effet de grandissement puis rétrécissement (vidéo 20921). Taille 135 %, dessin, rythme, anneaux, dégâts et sauvegardes préservés.",
-  "signature": "SaqrqNe3Vbs7YnIa73siiIc0aCTHEtIR7ezHpaWnRoh0OICTMizdmGwFH4ZM2W66N+3F4gQXOrtm4lQo4b2VLXMcHV7BrCUVDU//NlPpRmY7mqMBs75P7kQ76XM4Pmj42VIAiZ2q/NtBkm2ijLqwXQ3cdUutCecAXWCC8x8Nt21J2nEo+q81pxAryt2Ldkj1f1R612kuqvRKu1fFBXg+p4+kSMxMw+K7E7/v/E75jdOrkOFXCultP5hOaV3CXTGfmtIEvR1WXQebB+Zo5f+zyta6J/gs2WYyRVDGMRGcVP0E7ZN0KjuLQmO08Lqylf6ef2EuijuyeG+OBko/pgX1zCkRhsq6DrtPos3JrZATwlJQGhPB1sBM57W2Md06C81gPhgzpTVVtYAvqbQ2lRkHdR3MIKvHOwYqgq9yZ9BYacVI+l3mghQoWIeYF5v6PIhN02Yz3u+nBrJu3W5ugahHUbYH/IpsjMwtAJr8+mYLujZSMjrM4eePwSO2AL1/21p3"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-965.zip",
+  "packageSha256": "0757b9802a60371431e2fa592ac54e146c4972eb658c9cfb1a6fa9878b730ef0",
+  "packageBytes": 3978525,
+  "notes": "Journal des nouveautés synchronisé : notes 0.9.64 et 0.9.65 ajoutées, indicateur « Dernière version » et pastille de lecture corrigés. Aucun changement aux dégâts, animations ou sauvegardes.",
+  "signature": "BLgooLusj5KXFA+bw2JxGDFppJRxKAqIEAgR1/0R58SL5ITwc0vJtsnXYEqeAWtspQ9zgfjCG3XI4pBTF4NKMkxm8Bmf8uPOAtHDPDBmTUINV7N1LDUtMKSW/Nkl3iw+RB+gkyUV1yhvikcapvLYMxo2HHNG/FwVXTgIUp3vw60C03YqPMAlh4bOuw/wm1p9HCfNZPxzviQUWjiGpzSUWWmvNXOFP1ugyhJkza/QARCTfHrXGW2p2jQ2vhXXeL2vuFXctHV/8ZsLIfVVAziUUNihD1ilO1MVaL2wbjXEgGIyvMABx+i092LaWj549gnvbm81rz0bSLcQ8MBr+0UTfEbmMZkhNjyDBbZ9JO+E8F2yFq6gq/lxdBeNMx4EEKsMx9uxgq3KrRAALNrQOUcZbarpsB8ef2d1QYHaaK2H/MqAPa3fyL9NR1tfsML27sGbDJjQmRmwWZIb+fJXuoBUCS9ZzAuu1iiwyZ6A2tWjs/cSjZitYKxwfnXwmqvlgzHI"
 }

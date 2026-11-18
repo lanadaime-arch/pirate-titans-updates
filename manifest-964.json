@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 964,
+  "versionName": "0.9.64",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-964.zip",
+  "packageSha256": "714f3ad68b13019257aee532b58db1a693afcedc22ffcf917568ada9ba3a25ca",
+  "packageBytes": 3978116,
+  "notes": "Vivi : préparation d'attaque raccourcie pour supprimer l'effet de grandissement puis rétrécissement (vidéo 20921). Taille 135 %, dessin, rythme, anneaux, dégâts et sauvegardes préservés.",
+  "signature": "SaqrqNe3Vbs7YnIa73siiIc0aCTHEtIR7ezHpaWnRoh0OICTMizdmGwFH4ZM2W66N+3F4gQXOrtm4lQo4b2VLXMcHV7BrCUVDU//NlPpRmY7mqMBs75P7kQ76XM4Pmj42VIAiZ2q/NtBkm2ijLqwXQ3cdUutCecAXWCC8x8Nt21J2nEo+q81pxAryt2Ldkj1f1R612kuqvRKu1fFBXg+p4+kSMxMw+K7E7/v/E75jdOrkOFXCultP5hOaV3CXTGfmtIEvR1WXQebB+Zo5f+zyta6J/gs2WYyRVDGMRGcVP0E7ZN0KjuLQmO08Lqylf6ef2EuijuyeG+OBko/pgX1zCkRhsq6DrtPos3JrZATwlJQGhPB1sBM57W2Md06C81gPhgzpTVVtYAvqbQ2lRkHdR3MIKvHOwYqgq9yZ9BYacVI+l3mghQoWIeYF5v6PIhN02Yz3u+nBrJu3W5ugahHUbYH/IpsjMwtAJr8+mYLujZSMjrM4eePwSO2AL1/21p3"
+}
