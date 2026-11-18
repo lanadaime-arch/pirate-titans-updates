@@ -1,5 +1,5 @@
 {
-  "versionCode": 967,
-  "versionName": "0.9.67",
-  "notes": "Vivi : premier personnage vectoriel articulé à 9 éléments, sélectionnable dans les réglages du jeu pour un essai sur Android et iPhone. Ancienne V6 par défaut, sauvegardes et gameplay inchangés."
+  "versionCode": 968,
+  "versionName": "0.9.68",
+  "notes": "Vivi articulée : 9 parties graphiques retravaillées vers son apparence V1 (cheveux, visage, blouse, ceinture, armes, bottes). Option dans l'appli uniquement ; Vivi V6 par défaut. Progression inchangée."
 }

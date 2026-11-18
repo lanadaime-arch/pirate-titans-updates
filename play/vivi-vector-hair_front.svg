@@ -7,4 +7,12 @@
 <linearGradient id="steel"><stop stop-color="#f7e1a4"/><stop offset=".5" stop-color="#adb3c3"/><stop offset="1" stop-color="#d5a456"/></linearGradient>
 </defs>
 <path d="M108 69 Q103 49 113 43 Q116 31 130 31 Q146 30 150 46 Q157 54 153 68 L147 65 Q146 57 143 53 Q140 66 131 66 L131 56 Q121 69 113 70 L115 59Z" fill="url(#hair)" stroke="#284760" stroke-width="2.2"/><path d="M112 48 Q123 38 135 42 Q146 42 149 54" fill="none" stroke="#c5f0f3" stroke-width="2.1" opacity=".7"/><path d="M126 40 Q125 56 117 63 M140 40 Q140 54 133 60" fill="none" stroke="#1d7aa0" stroke-width="2.3"/><path d="M148 51 Q157 65 150 87 Q148 92 153 97" fill="none" stroke="#26759e" stroke-width="4.5"/><path d="M148 55 Q151 69 149 80" fill="none" stroke="#baf2ed" stroke-width="1.5" opacity=".8"/>
+<!-- V0.9.68 : frange et attaches de la V1 -->
+<path d="M102 55 Q103 29 123 30 Q143 22 150 40 Q161 50 156 72 Q151 65 149 56 Q146 48 141 45 Q141 60 132 64 Q134 52 134 43 Q123 60 114 67 Q117 53 119 47 Q110 64 107 70Z" fill="url(#hair)" stroke="#24425c" stroke-width="1.9" stroke-linejoin="round"/>
+<path d="M107 48 C113 35 128 32 137 37 Q145 38 151 46" fill="none" stroke="#bff6fb" stroke-width="2" opacity=".86"/>
+<path d="M122 38 Q121 55 109 65 M131 34 Q130 50 123 58 M143 39 Q142 55 136 60" fill="none" stroke="#0c648d" stroke-width="1.9" opacity=".78"/>
+<path d="M151 47 Q161 62 155 80 Q151 91 156 99" stroke="#1f6b8f" stroke-width="3.3" fill="none" stroke-linecap="round"/>
+<path d="M153 50 Q156 67 153 76" stroke="#bff8fc" stroke-width="1.1" fill="none" opacity=".8"/>
+<ellipse cx="103" cy="32" rx="6.3" ry="4" transform="rotate(-25 103 32)" fill="#285478" stroke="#23394f" stroke-width="1.4"/>
+<ellipse cx="103" cy="32" rx="3.2" ry="1.3" transform="rotate(-25 103 32)" fill="#b6e6ed"/>
 </svg>
