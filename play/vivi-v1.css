@@ -1,10 +1,18 @@
+/* V0.9.53 — CORRECTION DES GLISSEMENTS DE PLANCHE
+   Chaque case doit s'afficher instantanément. Avec 'linear', les gaps minimes
+   entre les sélecteurs @keyframes faisaient défiler la planche 4x12 :
+   Vivi, ses pieds et des fragments voisins apparaissaient dans l'arène
+   pendant une seule image (video Android 20882, vers 2.47, 5.20, 7.90 s).
+   'step-end' bloque la position sur une seule cellule jusqu'à l'image suivante,
+   sans retoucher les dessins, le rythme, l'éveil ni les autres personnages.
+ */
 /* Vivi F0 V6: original V1 full-body poses + 32 anatomically warped in-betweens.
    V0.9.52: idle uses only neutral V1 poses 0, 1, 2 and safe in-betweens 16, 20; exclude 3 and 17-19 (face/head snapping).
    Every frame is a single flattened character. Keep alpha holes in both ring weapons. */
 .v08-formation .crew-slot.prototype-vivi .vivi-v1-actor{position:absolute;inset:0;pointer-events:none;transform-origin:50% 89%;animation:viviBodyIdle 2.6s ease-in-out infinite}
-.v08-formation .crew-slot.prototype-vivi .vivi-v1-sprite{position:absolute;left:50%;bottom:-2%;height:174%;aspect-ratio:1;width:auto;max-width:none;transform:translateX(-50%);background:url("./vivi-f0-sheet-v6.webp") 0 0 no-repeat;background-size:400% 1200%;image-rendering:auto;animation:viviIdle 1.900s linear infinite;filter:drop-shadow(0 3px 2px #151d2d66)}
-.v08-formation .crew-slot.prototype-vivi.strike:not(.special) .vivi-v1-sprite{animation:viviAttack 2.238s linear 1 both}
-.v08-formation .crew-slot.prototype-vivi.strike.special .vivi-v1-sprite{animation:viviSpecial 2.397s linear 1 both}
+.v08-formation .crew-slot.prototype-vivi .vivi-v1-sprite{position:absolute;left:50%;bottom:-2%;height:174%;aspect-ratio:1;width:auto;max-width:none;transform:translateX(-50%);background:url("./vivi-f0-sheet-v6.webp") 0 0 no-repeat;background-size:400% 1200%;image-rendering:auto;animation:viviIdle 1.900s step-end infinite;filter:drop-shadow(0 3px 2px #151d2d66)}
+.v08-formation .crew-slot.prototype-vivi.strike:not(.special) .vivi-v1-sprite{animation:viviAttack 2.238s step-end 1 both}
+.v08-formation .crew-slot.prototype-vivi.strike.special .vivi-v1-sprite{animation:viviSpecial 2.397s step-end 1 both}
 .v08-formation .crew-slot.prototype-vivi.strike:not(.special) .vivi-v1-actor{animation:viviBodyStrike 2.238s ease-in-out 1 both}
 .v08-formation .crew-slot.prototype-vivi.strike.special .vivi-v1-actor{animation:viviBodyStrike 2.397s ease-in-out 1 both}
 .v08-formation .crew-slot.prototype-vivi .vivi-v1-actor::before{content:"";position:absolute;left:20%;bottom:-4%;width:62%;height:10%;border-radius:50%;pointer-events:none;background:radial-gradient(ellipse,#17132977,transparent 73%);animation:viviShadowIdle 2.6s ease-in-out infinite}

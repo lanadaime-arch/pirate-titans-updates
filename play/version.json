@@ -1,5 +1,5 @@
 {
-  "versionCode": 952,
-  "versionName": "0.9.52",
-  "notes": "Vivi F0 : nouvelles poses de repos sans bascule brusque de la tete. Design V1, niveaux MAX 6000, 9 DR berrys de test, prestige et sauvegardes inchanges."
+  "versionCode": 953,
+  "versionName": "0.9.53",
+  "notes": "Vivi F0 : suppression des glissements de sprites et des fragments/pieds fantomes pendant repos, frappe et technique speciale. 48 poses V1, niveaux 6000 et 9 DR conserves."
 }
