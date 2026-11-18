@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 959,
+  "versionName": "0.9.59",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-959.zip",
+  "packageSha256": "a97a8eb3f951104658e85b5ca5c54225690085650d7202ee4f26cc9149b35898",
+  "packageBytes": 3976794,
+  "notes": "Vivi F0 : silhouette réduite de 145 % à 135 % dans son emplacement pour se rapprocher des proportions de TT2. Ancrage, sprite, 48 poses, anneaux, éveils et gameplay préservés. Patch notes actualisées.",
+  "signature": "GNFJShJjfiBZ5zhcJztc9Ncw8kBKagVgeHehv5otXcSRMBFcAz4ZGURo7ooDaeiYAgbgruPoPjg3DWq5ksTuWGXK2GIM39jl/JNw5neCEhIRQzWPwbxTvkBpTnjoTsSM2V8HK0Cvy738sX34x7T4HA7USuZE78en5+OG+V5iOBogQlxBpL1/VYxxPGi0AmBNjQrZYxF1uWhxniDvn4tgIWJeo7CHLeLz9Rn0d+QFdvCrSk1egH1Vt234eZOAe992DUOFQML56g6mw5UTQ9X5DcCD5mZlAv2/+VIYzmKPTcrHZRBUgVaX007HPd4xKkSEfS9BUp0NKNRjpZoQCw4YEVik387nqfXEv4YOCfNGsAjDaUYzDwk+/d0VS0rCmxcSma/DfLrGdhWMfRqInPirAem0aIKRpWljHlMrWJVxMEh4oEqswNfK9BC+wR/FqfJeXtWQNnOppEbSTP1yqJVMXrvRD4kpPZPiX3nXsUA/hc0HSN/NOQFTmGG2hH4/yv8o"
+}

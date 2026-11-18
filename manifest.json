@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 959,
-  "versionName": "0.9.59",
+  "versionCode": 960,
+  "versionName": "0.9.60",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-959.zip",
-  "packageSha256": "a97a8eb3f951104658e85b5ca5c54225690085650d7202ee4f26cc9149b35898",
-  "packageBytes": 3976794,
-  "notes": "Vivi F0 : silhouette réduite de 145 % à 135 % dans son emplacement pour se rapprocher des proportions de TT2. Ancrage, sprite, 48 poses, anneaux, éveils et gameplay préservés. Patch notes actualisées.",
-  "signature": "GNFJShJjfiBZ5zhcJztc9Ncw8kBKagVgeHehv5otXcSRMBFcAz4ZGURo7ooDaeiYAgbgruPoPjg3DWq5ksTuWGXK2GIM39jl/JNw5neCEhIRQzWPwbxTvkBpTnjoTsSM2V8HK0Cvy738sX34x7T4HA7USuZE78en5+OG+V5iOBogQlxBpL1/VYxxPGi0AmBNjQrZYxF1uWhxniDvn4tgIWJeo7CHLeLz9Rn0d+QFdvCrSk1egH1Vt234eZOAe992DUOFQML56g6mw5UTQ9X5DcCD5mZlAv2/+VIYzmKPTcrHZRBUgVaX007HPd4xKkSEfS9BUp0NKNRjpZoQCw4YEVik387nqfXEv4YOCfNGsAjDaUYzDwk+/d0VS0rCmxcSma/DfLrGdhWMfRqInPirAem0aIKRpWljHlMrWJVxMEh4oEqswNfK9BC+wR/FqfJeXtWQNnOppEbSTP1yqJVMXrvRD4kpPZPiX3nXsUA/hc0HSN/NOQFTmGG2hH4/yv8o"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-960.zip",
+  "packageSha256": "f25e2ffa0bb616640e7b056198223e1b275f43796bed0a3587c21eea544e41ba",
+  "packageBytes": 3977075,
+  "notes": "Vivi : correction de la dernière pose de repos qui faisait basculer la tête en arrière (vidéo 20916). Taille 135 %, pieds, anneaux et toutes les animations de combat préservés. Journal des nouveautés à jour.",
+  "signature": "pK61Js95R2I3YaDDGFZP7MGtahIXVxEtX5NZ2Mvl3D+yk1Afj0KcRlFkDmsXe7Ths8t3JxhRz8VDgHoqsPu9LEH0HUD8MadkfbCwZdv9tZ/687wUE5JbiQtyKsGK7mTBJvBo2bpgg2TtrK8WBk9WBwXpPVdFBSuFl+FOvdbgju+HeWH8GdjxQbtJja0rsFSlKu6q61LVIByfZ+KdOclJ8i8BO/ol5xNHrYCcXaRip19+6c9amCZVkbQTHGx7o8LwQF5Mex7zuG8bGMnYb/zUPitPhNn8MnP7sI1HNu7OLzitTIUKbA4ZyhLqROm0tzbstd17Bp9rFkD5/I9mwHdFo5080Wp4Tzv0BMBlVQjU/keg9EkHC1Yj9a30ZDiB6IY5FQY85kh7iVl+hAmeLZfBLoMSO13yzSsFoNMGjhgoRTof2xV4a7GHJrGZQJ2iklVPn4dcWzBVi1DsJmcKVvkBFtK14ZIOF+DXZv4sYEWBfEmx5pXOyI+BtOlkcUVFp9aI"
 }
