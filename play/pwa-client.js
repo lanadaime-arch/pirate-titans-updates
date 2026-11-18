@@ -3,7 +3,7 @@
   'use strict';
   const VERSION_URL = './version.json';
   // Replaced with release/game.json versionCode when the iPhone package is built.
-  const installedVersion = 965;
+  const installedVersion = 966;
   let alertVisible = false;
 
   const fetchVersion = async () => {

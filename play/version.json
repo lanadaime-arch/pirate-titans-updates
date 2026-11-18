@@ -1,5 +1,5 @@
 {
-  "versionCode": 965,
-  "versionName": "0.9.65",
-  "notes": "Journal des nouveautés synchronisé : notes 0.9.64 et 0.9.65 ajoutées, indicateur « Dernière version » et pastille de lecture corrigés. Aucun changement aux dégâts, animations ou sauvegardes."
+  "versionCode": 966,
+  "versionName": "0.9.66",
+  "notes": "Nouveau moteur 2D articulé intégré au jeu (préparation technique). Vivi conserve ses animations actuelles en attendant de vrais calques adaptés. Gameplay et sauvegardes inchangés."
 }

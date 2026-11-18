@@ -62,9 +62,9 @@
         let previous = -1;
         for (const frame of frames) {
           assert(frame && within(frame.at, 0, 1) && frame.at > previous &&
-            within(frame.angle || 0, -180, 180) &&
-            within(frame.dx || 0, -50, 50) &&
-            within(frame.dy || 0, -50, 50),
+            within(frame.angle === undefined ? 0 : frame.angle, -180, 180) &&
+            within(frame.dx === undefined ? 0 : frame.dx, -50, 50) &&
+            within(frame.dy === undefined ? 0 : frame.dy, -50, 50),
             'pose invalide pour ' + id + '/' + name);
           previous = frame.at;
         }
@@ -95,6 +95,10 @@
     assert(global.document && global.Image, 'navigateur requis pour monter le personnage');
     // Refuser tout art incomplet avant de toucher à l'arène.
     const loaded = await Promise.all(manifest.parts.map(p => imageLoaded(p.src)));
+    const width = loaded[0].naturalWidth, height = loaded[0].naturalHeight;
+    assert(width >= 16 && height >= 16 &&
+      loaded.every(img => img.naturalWidth === width && img.naturalHeight === height),
+      'calques de tailles incompatibles : chaque image doit avoir le même canevas');
     const roots = [];
     const nodes = new Map();
     for (let i = 0; i < manifest.parts.length; i++) {
@@ -121,7 +125,7 @@
     const wrapper = document.createElement('div');
     wrapper.className = 'pirate-rig2d';
     wrapper.style.cssText = 'position:absolute;inset:0;pointer-events:none;' +
-      'contain:layout style paint;overflow:visible;';
+      'contain:layout style;overflow:visible;';
     for (const el of roots) wrapper.appendChild(el);
     const active = [];
     let runId = 0;
