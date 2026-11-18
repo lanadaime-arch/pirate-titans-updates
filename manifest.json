@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 962,
-  "versionName": "0.9.62",
+  "versionCode": 963,
+  "versionName": "0.9.63",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-962.zip",
-  "packageSha256": "e650737fd0bc4d02cbf024a83ec768bf5ac5819bb069685c0d751ca778531039",
-  "packageBytes": 3977682,
-  "notes": "Vivi : suppression d’une dernière pose parasite de tête relevée au début de l’attaque normale et spéciale (vidéo 20918). Taille 135 %, 48 cases, pieds, anneaux, dégâts et sauvegardes préservés.",
-  "signature": "z/IDcx/5TvE/RWl7aF3JOUraCRxAmJz/09A3GRVd8EPchG7I9tIIof2RCMZvayNaWKpkpBPDrHJe49i53SD9o2djRAaP8EbxEDBBibEFovDIo3ln/tJ+M0kcEbUQFI+TZl+X7AgXZxBLCbCBd1JU7GqmvzyM5SIiYOq9Ww62Yn07TH5NoWKp4+YYjRHzsWhVldP+epxhbqpxX2iaSBfjgWYxvPw9XxyR1a6c5/w67nwB5w+AoDLxI0TpSw4WXBb+7KHi0qVdD+2txYQAeWIm7Z4YK85LtCOwMqpWxC79WuqBZ8Axh3Ka1ZbOJTbi4pUJBQC0fWdiisdiRFvea2TeQM5eJ0o16T+wSDDCKMCWE6YQfwq0poQa/x7ed8Zv2eKD0yR7Um/xWYVqZ9QxMtU6eq6dM80tmMolxQLr66DW/NbLHZNeaLxDudtj3hEU7UfSSQc7g/8yuwgXmdtT31ZDdP5Y//ET+YVuRdShQMxIlvaTqNpBzi7AT7saYdjyPMH3"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-963.zip",
+  "packageSha256": "c78d0ddcb946eac768cf9605e2e71ccb44f2248c9b7d4709268e8973757076e7",
+  "packageBytes": 3977989,
+  "notes": "Vivi : suppression des dernières poses yeux fermés et tête relevée en début d’attaque (vidéo 20918). Préparation naturelle, taille 135 %, rythme, anneaux, dégâts et sauvegardes préservés.",
+  "signature": "HL3ekbODeIvSCBCrmtweoOIVwZ35s/f7jZg+ge+KWhM0OAn5XzXjZ7ALBDXzLxo9+hk9hr7xJjW5Vr3LTBnYvyKrqhRVYlBXh71FKSKF/IoULYT0jsxE13lLADbNObY3LWxkxWo2XUBsQFR0Y5nrk+fe8ZjllzMqYuEejxPxeC486do1mry0fhtvoFfDfo/8eKVxas9OPXFdOP38sjgX4HTuVFfGlAJYRWcrvbWGi6D5WqZoYQrgrXS3W8JdfM3RX7Pfe0ppQ0+vexKfY+tTiC67rcU1IzEe8Yo2EN6Wuc4NR2azHvqX4IP3tD+QODaG1X+y7kcF/8HdAsmRvw8jm3ep8hniBObU9LC+f/FNPYyTZGN8PYBZS6RkAimkcQ2S5SeABsuEJHxxRy8JZ1RMaHpM1UYjh1vKqjbrAbBAM0Fj/Kzpt06l2ikA/hZ3k2fEc6H8N7Qdw1dU4gvIoSyNJebv//NSH26OyZ5Jsjwf1wz2sWa94oMKr1YmBvqP3vOt"
 }
