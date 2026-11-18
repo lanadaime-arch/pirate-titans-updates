@@ -1,5 +1,5 @@
 {
-  "versionCode": 959,
-  "versionName": "0.9.59",
-  "notes": "Vivi F0 : silhouette réduite de 145 % à 135 % dans son emplacement pour se rapprocher des proportions de TT2. Ancrage, sprite, 48 poses, anneaux, éveils et gameplay préservés. Patch notes actualisées."
+  "versionCode": 960,
+  "versionName": "0.9.60",
+  "notes": "Vivi : correction de la dernière pose de repos qui faisait basculer la tête en arrière (vidéo 20916). Taille 135 %, pieds, anneaux et toutes les animations de combat préservés. Journal des nouveautés à jour."
 }
