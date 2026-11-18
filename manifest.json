@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 961,
-  "versionName": "0.9.61",
+  "versionCode": 962,
+  "versionName": "0.9.62",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-961.zip",
-  "packageSha256": "1bfcfedab01f198b9af290730166274d99c5743ec3757a2288c3d527323e1c05",
-  "packageBytes": 3977424,
-  "notes": "Vivi : suppression des mouvements de tête parasites en début d’attaque normale et spéciale (vidéo 20917). Taille 135 %, animations suivantes, anneaux, dégâts et sauvegarde préservés.",
-  "signature": "A8lsBDTve6d82SOWRGHXRjHyrS/+MJGwvud/+7a7eYSyxiP7jyNrNAx/Ey0V0y/xr6uqVqD84PaxqrcSInBSf/4CsyxuD7291cpuJ3EaV5g+CnV+dvgEOpSvbkDOiKwkO0DTu0n7HsKgVlG0fUhKDfUJ7llfCMITAj0ZJFGwlokhK/7Fx3XMJfDX/XmZb8cmWpV6wF5uXz2pRrHMTpZ7Xx9bH80P1WYnnc+ELA2wnMleDjIfL0J5Y2Qev2Q8B1iDzyrhH3Mu+vmPwNdgtaK0nptlRNPCdv2YkNdylv4MeSdzfzEbeu7hvWUOuexegUsBX91qh2/JAXsv4K9szNIkMGk8bono3NbuGY+bmm781hcrGcTZmkDwA/4YyJD5H5GOnY4G6jpgXAs9Sf2gLeHWkvP2lq9KSlnDaupICOLz4fLYk2D8qZZfPqA6PaQF0afhc5YvaAVqLHzwd6gdj6eMozn8/M4l0xxWZUI4YLSM9xFDE52yV4mqdcppBrqyLfN6"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-962.zip",
+  "packageSha256": "e650737fd0bc4d02cbf024a83ec768bf5ac5819bb069685c0d751ca778531039",
+  "packageBytes": 3977682,
+  "notes": "Vivi : suppression d’une dernière pose parasite de tête relevée au début de l’attaque normale et spéciale (vidéo 20918). Taille 135 %, 48 cases, pieds, anneaux, dégâts et sauvegardes préservés.",
+  "signature": "z/IDcx/5TvE/RWl7aF3JOUraCRxAmJz/09A3GRVd8EPchG7I9tIIof2RCMZvayNaWKpkpBPDrHJe49i53SD9o2djRAaP8EbxEDBBibEFovDIo3ln/tJ+M0kcEbUQFI+TZl+X7AgXZxBLCbCBd1JU7GqmvzyM5SIiYOq9Ww62Yn07TH5NoWKp4+YYjRHzsWhVldP+epxhbqpxX2iaSBfjgWYxvPw9XxyR1a6c5/w67nwB5w+AoDLxI0TpSw4WXBb+7KHi0qVdD+2txYQAeWIm7Z4YK85LtCOwMqpWxC79WuqBZ8Axh3Ka1ZbOJTbi4pUJBQC0fWdiisdiRFvea2TeQM5eJ0o16T+wSDDCKMCWE6YQfwq0poQa/x7ed8Zv2eKD0yR7Um/xWYVqZ9QxMtU6eq6dM80tmMolxQLr66DW/NbLHZNeaLxDudtj3hEU7UfSSQc7g/8yuwgXmdtT31ZDdP5Y//ET+YVuRdShQMxIlvaTqNpBzi7AT7saYdjyPMH3"
 }
