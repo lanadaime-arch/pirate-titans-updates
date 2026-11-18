@@ -1,5 +1,5 @@
 {
-  "versionCode": 962,
-  "versionName": "0.9.62",
-  "notes": "Vivi : suppression d’une dernière pose parasite de tête relevée au début de l’attaque normale et spéciale (vidéo 20918). Taille 135 %, 48 cases, pieds, anneaux, dégâts et sauvegardes préservés."
+  "versionCode": 963,
+  "versionName": "0.9.63",
+  "notes": "Vivi : suppression des dernières poses yeux fermés et tête relevée en début d’attaque (vidéo 20918). Préparation naturelle, taille 135 %, rythme, anneaux, dégâts et sauvegardes préservés."
 }
