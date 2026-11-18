@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 957,
-  "versionName": "0.9.57",
+  "versionCode": 958,
+  "versionName": "0.9.58",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-957.zip",
-  "packageSha256": "0bd465f95af6fb5f547a5707ac615e8ee8bd210edeed488df981ff8f2acacbad",
-  "packageBytes": 3973888,
-  "notes": "Vivi F0 : repos corrigé après analyse vidéo, visage stable et tête moins relevée. Les 48 poses de combat, les anneaux, la taille, les éveils et Déferlante sont conservés.",
-  "signature": "JvekKAqYQBLzuy29zEFcgeiQr4qTHT8E/p3T+WDqU/psSqIZ9UTb2MZlwSapAoLLNVCcKz26dH16pVyJk2FZwnyIPmwRetnChqLhMp2IgRHk5UuMqdjbtOyCWm8lx7QoDCffBSXwMrONsAVA3cmdgeOigdCoi4SfVjMk9UjNiI2aHlXVkk4hYF3LWUmvYVC/f+TgF/FQHF1B+gmUiwg1DBC2z1FVpeqrw1242ouRGNHfEy1LHisK6DDeRvF5Ujh7sQYT+IM/Ey0l5/71SeTTtx8Qu75kuFq6/XnN+/QyOPxv+L28MvCvFGXiHcoUISgANBtnIvefCRndeFMj8iPS/8wpo7Snf8XreChDRmKUxpvN3QZbppTBs1UIATKr94s3v0V/QnLNhdIDQiRYBWOsEC1YlSXaxnvYEOZQYIVZTxu7wSnrq+5PfbeIDDVy/ipF7+gU+U4bzfHuyq9HZMvEmP+0aSdzNYyvaAVm4KQ/HREsZBvl27eFjM2jh0wSR03z"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-958.zip",
+  "packageSha256": "1565c54adcfe00942113c2472deaf5b833864fe79f67f981795bfbe316f75fc1",
+  "packageBytes": 3976488,
+  "notes": "Nouveau journal des mises à jour : bouton Nouveautés, notes de version 0.9.54 à 0.9.58, pastille de lecture mémorisée. Aucun changement aux animations de Vivi ou au combat.",
+  "signature": "KyemAkdETXyl7EIijwRGEnAufLyRDB+Om92E/UlmL2CRqpaHC0wfXBOtTexiB7Didib+610ILgS+BkVMVnCP/1LfpzRpmLBe9xjN5a/nLZ7CZ1n6uShZQtwp4PwEC3g6jm9D58qRjHvVj/gm0a1tmFQDcEsOKn98jHfyjFYm/znCpSdCxtoACi9PsrIoiuk/u4VKlJmSdIXnpCDR09Jr3Vm5SVEytFaTDtKm/tvEiUNeB4BLB0yu+qvLBX29xo+uDRdLnRFIiCscfEZiB0YT0WLq5W0TNO8+OQZnxSkehxRhuBiE5KrymjvtutSSmtima2qVFCEX6621n+N64KEU0Cj4Y0w8GUnCfEOtZIxPgGMXZDvPVsDQl1yK9YkWjifi4o2K2+EZYhHE6rrPiZT+on1We8OQofR20C6bqRuAyRjLUFsLoNLvUrc9ZKsnToCvyiU8L1uxcgC1MK9NmoVIYwBtO87cMD83K7T+YxZ01heLLHFJx2EKtx+mNlNjTxVS"
 }
