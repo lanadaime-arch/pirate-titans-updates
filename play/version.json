@@ -1,5 +1,5 @@
 {
-  "versionCode": 957,
-  "versionName": "0.9.57",
-  "notes": "Vivi F0 : repos corrigé après analyse vidéo, visage stable et tête moins relevée. Les 48 poses de combat, les anneaux, la taille, les éveils et Déferlante sont conservés."
+  "versionCode": 958,
+  "versionName": "0.9.58",
+  "notes": "Nouveau journal des mises à jour : bouton Nouveautés, notes de version 0.9.54 à 0.9.58, pastille de lecture mémorisée. Aucun changement aux animations de Vivi ou au combat."
 }

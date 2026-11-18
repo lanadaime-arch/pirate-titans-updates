@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#19243f"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest">
 <!-- Precharger et decoder les planches AVANT les changements de rang (evite
      un frame blanc au passage de la forme normale a l'Eveil 1). -->
-<meta name="description" content="Pirate Titans 0.9.57 : Vivi Miss Wednesday animee en 48 poses entieres, reserve de berrys de test, prestige, sorts et talents.">
+<meta name="description" content="Pirate Titans 0.9.58 : Vivi Miss Wednesday animee en 48 poses entieres, reserve de berrys de test, prestige, sorts et talents.">
 
-<title>Pirate Titans — Grand Line v0.9.57</title>
+<title>Pirate Titans — Grand Line v0.9.58</title>
 <style>
 :root{--ink:#122332;--deep:#112634;--panel:#213746;--panel2:#304554;--line:#68808a;--warm:#fceac0;--gold:#ffce68;--cyan:#58dfee;--mint:#5bdeb8;--red:#f4705e;--paper:#f3ebd7;--h:100dvh}
 *{box-sizing:border-box}html,body{margin:0;height:100%;width:100%;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--paper);background:#08141c;touch-action:manipulation}button{font:inherit;cursor:pointer;color:inherit;-webkit-tap-highlight-color:transparent}button:disabled{cursor:default}button:focus-visible{outline:2px solid #fff2b5;outline-offset:2px}[hidden]{display:none!important}
@@ -1811,6 +1811,44 @@
 @keyframes alvidaStrike{0%,100%{transform:translate(0,0)}22%{transform:translate(-6px,-3px) rotate(-5deg)}55%{transform:translate(21px,-12px) rotate(8deg)}78%{transform:translate(10px,-6px) rotate(2deg)}}
 @keyframes alvidaMace{0%,100%{transform:rotate(0)}24%{transform:rotate(-32deg) translateY(-7%)}53%{transform:rotate(37deg) translateX(8%)}}
 @media(prefers-reduced-motion:reduce){.v08-formation .crew-slot.prototype-alvida.strike,.v08-formation .crew-slot.prototype-alvida.strike .rig-arm-right{animation-duration:1s!important}}
+
+/* V0.9.58 — Journal des nouveautés : discret, mobile-first, sans effet sur l'arène. */
+.app .header-actions #patchNotesButton{position:relative;display:grid;place-items:center;flex:0 0 auto;padding:0;overflow:visible}
+.app .header-actions #patchNotesButton svg{width:19px;height:19px;color:#fff1d2;pointer-events:none}
+.app .header-actions #patchNotesButton .patchnotes-unread{position:absolute;top:-4px;right:-4px;width:10px;height:10px;border-radius:50%;background:#ff822d;border:2px solid #fce8a5;box-shadow:0 0 0 2px #182c49,0 0 6px #ff9e34}
+.app .header-actions #patchNotesButton .patchnotes-unread[hidden]{display:none!important}
+#veil .modal.patchnotes-modal{position:relative;display:flex;flex-direction:column;box-sizing:border-box;
+ width:min(95vw,460px);max-width:460px;height:min(78dvh,640px);max-height:calc(100dvh - 48px);
+ padding:0 0 9px!important;overflow:hidden;border:2px solid #e9ce91;border-radius:12px;
+ background:#e7dbb9;box-shadow:0 18px 50px #020912db}
+#veil .modal.patchnotes-modal h2{flex:none;margin:0!important;padding:14px 43px 14px 16px!important;
+ background:#514334;color:#fff7e8;text-align:left;font-size:19px;letter-spacing:.25px;border-bottom:2px solid #bc9c68}
+#veil .modal.patchnotes-modal #modalClose{position:absolute!important;z-index:4;right:8px!important;top:7px!important;left:auto!important;
+ float:none!important;margin:0!important;width:31px!important;height:31px!important;padding:0!important;
+ border:2px solid #fff2dc!important;border-radius:7px!important;background:#d66d35!important;color:#fff!important;font-size:17px}
+#veil .modal.patchnotes-modal #modalBody{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;padding:11px 12px 6px;
+ color:#4d3c29;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#bca77e #e8dfc9}
+#veil .modal.patchnotes-modal .modal-row{flex:none;padding:3px 13px 0;margin:0}
+#veil .modal.patchnotes-modal .modal-row button{flex:1;border-radius:7px!important;padding:8px!important;
+ background:#6f593b!important;border:1px solid #a08457!important;color:#fff9ed!important;font-size:12px}
+#veil .modal.patchnotes-modal .patchnotes-lead{font-size:12px;line-height:1.5;color:#6b5335;margin:2px 4px 10px}
+#veil .modal.patchnotes-modal .patchnotes-entry{margin:0 0 12px;border-top:1px solid #c2b28c;padding:10px 2px 2px}
+#veil .modal.patchnotes-modal .patchnotes-entry:first-of-type{border-top:0;padding-top:0}
+#veil .modal.patchnotes-modal .patchnotes-version{display:flex;align-items:center;gap:7px;flex-wrap:wrap;color:#4b3725}
+#veil .modal.patchnotes-modal .patchnotes-version strong{font-size:20px;font-weight:900}
+#veil .modal.patchnotes-modal .patchnotes-version small{font-size:10px;color:#8c7a60;font-weight:650}
+#veil .modal.patchnotes-modal .patchnotes-current{font-size:9px;font-weight:900;color:#fff;background:#c9672d;
+ border-radius:12px;padding:3px 7px;letter-spacing:.1px}
+#veil .modal.patchnotes-modal .patchnotes-title{font-size:12px;font-weight:800;color:#655038;margin:6px 0}
+#veil .modal.patchnotes-modal .patchnotes-section{padding:8px 10px;margin:7px 0;
+ border:1px solid #c6b994;background:#f3ecd5;border-radius:8px}
+#veil .modal.patchnotes-modal .patchnotes-section strong{display:block;margin-bottom:4px;color:#9a4f25;font-size:11px}
+#veil .modal.patchnotes-modal .patchnotes-section ul{margin:0;padding-left:18px}
+#veil .modal.patchnotes-modal .patchnotes-section li{margin:4px 0;font-size:11px;line-height:1.43;color:#4e4537}
+#veil .modal.patchnotes-modal .patchnotes-foot{margin:9px 2px 2px;font-size:10px;color:#877252}
+@media(max-width:355px){.app .header-actions #patchNotesButton{width:29px!important;min-width:29px!important;height:29px!important;min-height:29px!important}
+ #veil .modal.patchnotes-modal{width:96vw;max-height:calc(100dvh - 32px)}
+ #veil .modal.patchnotes-modal #modalBody{padding:10px 9px 5px}}
 </style>
 <link rel="preload" as="image" href="./vivi-f0-sheet-v6.webp" type="image/webp">
 <link rel="stylesheet" href="./alvida-rig.css">
@@ -1831,7 +1869,10 @@
   <div class="frame" id="frame">
     <div class="sky-orb"></div><div class="left-fort" aria-hidden="true"><span>☠️ ⚔️ 🧭</span><span>🏴‍☠️ 🏹 ⚓</span></div><div class="right-fort" aria-hidden="true"><span>🏴‍☠️ 🐟</span><span>💥 🗡️</span></div><div class="cloud a"></div><div class="cloud b"></div><div class="island l"></div><div class="island r"></div><div class="sea-line"></div><div class="art-landscape" id="artLandscape" aria-hidden="true"></div><div class="scenery" aria-hidden="true"><span id="landmarkA">🌴</span><span id="landmarkB">⛵</span></div><div class="platform"></div>
     <div class="hud">
-      <div class="hdr-row"><div class="header-actions"><button class="tiny-btn" id="settings" aria-label="Aide et réglages"><svg viewBox="0 0 24 24" aria-hidden="true" width="23" height="23" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.8 2.4h4.4l.7 2.7 2.1.9 2.4-1.5 3.1 3.1-1.5 2.4.9 2.1 2.7.7v4.4l-2.7.7-.9 2.1 1.5 2.4-3.1 3.1-2.4-1.5-2.1.9-.7 2.7H9.8l-.7-2.7-2.1-.9-2.4 1.5-3.1-3.1L3 17.9l-.9-2.1-2.7-.7v-4.4L2.1 10 3 7.9 1.5 5.5l3.1-3.1L7 3.9l2.1-.9z" transform="translate(1.4 1.4) scale(.88)"/><circle cx="12" cy="12" r="3.35"/></svg></button></div><div class="stage-strip"><span class="stage-mark" id="stagePrev">1</span><span class="stage-line"></span><span class="stage-mark current" id="stageNow">1</span><span class="stage-line"></span><span class="stage-mark" id="stageNext">2</span></div><button class="flag" id="bossToggle">⚔ AUTO</button></div>
+      <div class="hdr-row"><div class="header-actions"><button class="tiny-btn patchnotes-trigger" id="patchNotesButton" type="button" aria-label="Lire les nouveautés" title="Nouveautés">
+<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M6 3.5h9l3.5 3.5v13.5H6a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2Z"/><path d="M15 3.5V8h3.5M8 11.5h7M8 15h7M8 18h5"/>
+</svg><i class="patchnotes-unread" id="patchNotesUnread" aria-hidden="true"></i></button><button class="tiny-btn" id="settings" aria-label="Aide et réglages"><svg viewBox="0 0 24 24" aria-hidden="true" width="23" height="23" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.8 2.4h4.4l.7 2.7 2.1.9 2.4-1.5 3.1 3.1-1.5 2.4.9 2.1 2.7.7v4.4l-2.7.7-.9 2.1 1.5 2.4-3.1 3.1-2.4-1.5-2.1.9-.7 2.7H9.8l-.7-2.7-2.1-.9-2.4 1.5-3.1-3.1L3 17.9l-.9-2.1-2.7-.7v-4.4L2.1 10 3 7.9 1.5 5.5l3.1-3.1L7 3.9l2.1-.9z" transform="translate(1.4 1.4) scale(.88)"/><circle cx="12" cy="12" r="3.35"/></svg></button></div><div class="stage-strip"><span class="stage-mark" id="stagePrev">1</span><span class="stage-line"></span><span class="stage-mark current" id="stageNow">1</span><span class="stage-line"></span><span class="stage-mark" id="stageNext">2</span></div><button class="flag" id="bossToggle">⚔ AUTO</button></div>
       <div class="boss-hp"><div class="boss-top"><span class="boss-title" id="enemyName">Pirate</span><span id="hpText">12/12 PV</span></div><div class="hp-track"><div class="hp-fill" id="hpFill"></div></div><div class="timer-wrap" id="timerWrap" hidden><span>⏱ BOSS</span><span class="timer-bar"><span id="timerFill"></span></span><span id="timerText">30s</span></div><div class="boss-tactic" id="bossTactic" hidden aria-live="polite"><span id="bossTacticText">⚠️ ATTAQUE EN PRÉPARATION</span><div class="boss-tactic-track"><i id="bossTacticFill"></i></div></div><div class="boss-rage" id="bossRage" hidden>🔥 ENRAGÉ</div></div>
       <div class="stage-name" id="zone">EAST BLUE · STAGE 1 · 1/5</div><div class="voyage-track" id="voyageTrack" aria-label="Progression du stage"><i></i><i></i><i></i><i></i><i></i></div>
       <div class="resource" id="resourceStrip"><button class="resource-chip gold gold-toggle" id="resourceToggle" aria-label="Afficher les autres ressources" aria-expanded="false">🪙 <em id="gold">20</em> <small>▾</small></button><div class="resource-chip">⚔ <em id="dps">0 DPS</em></div><div class="resource-chip relic">✦ <em id="relics">0</em></div><div class="resource-chip pearl">💎 <em id="pearlsHud">0</em></div></div>
@@ -3056,8 +3097,63 @@ function hit(evt){
 function tone(freq,dur){if(S.mute)return;try{audio=audio||new (window.AudioContext||window.webkitAudioContext)();const o=audio.createOscillator(),g=audio.createGain();o.type='triangle';o.frequency.value=freq;g.gain.setValueAtTime(.025,audio.currentTime);g.gain.exponentialRampToValueAtTime(.001,audio.currentTime+dur);o.connect(g);g.connect(audio.destination);o.start();o.stop(audio.currentTime+dur);}catch(e){}}
 function flash(){$('flash').classList.remove('go');void $('flash').offsetWidth;$('flash').classList.add('go')}
 function toast(t){const el=$('toast');el.textContent=t;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2200)}
-function modal(title,body,cb,label='CONTINUER',cancel=false){$('modalTitle').textContent=title;$('modalBody').innerHTML=body;$('modalBody').parentElement.classList.toggle('tt2-hero-details-modal',String(body).includes('class="tt2-hero-sheet"'));modalCb=cb;$('modalOk').textContent=label;$('modalCancel').hidden=!cancel;$('veil').hidden=false;}
+function modal(title,body,cb,label='CONTINUER',cancel=false){$('modalTitle').textContent=title;$('modalBody').innerHTML=body;$('modalBody').parentElement.classList.toggle('tt2-hero-details-modal',String(body).includes('class="tt2-hero-sheet"'));$('modalBody').parentElement.classList.toggle('patchnotes-modal',String(body).includes('class="patchnotes-root"'));modalCb=cb;$('modalOk').textContent=label;$('modalCancel').hidden=!cancel;$('veil').hidden=false;}
 function closeModal(){$('veil').hidden=true;modalCb=null;}
+
+/* V0.9.58 — Notes éditoriales locales : ne changent pas la sauvegarde du jeu. */
+const PATCH_NOTES_VERSION=958;
+const PATCH_NOTES_SEEN_KEY='pirate_titans_patchnotes_seen_v1';
+const PATCH_NOTES=[
+ {code:958,version:'0.9.58',date:'18 novembre 2026',title:'Les nouveautés ont leur journal de bord',sections:[
+  {name:'Interface',items:[
+   'Un nouveau bouton en haut du jeu ouvre l’historique des mises à jour.',
+   'Une pastille orange signale les notes non consultées et disparaît après leur ouverture.',
+   'La fenêtre se parcourt facilement sur Android comme sur iPhone.']},
+  {name:'Stabilité',items:['Cette mise à jour ne modifie ni les dégâts, ni les éveils, ni les animations de Vivi.']}]},
+ {code:957,version:'0.9.57',date:'18 novembre 2026',title:'Vivi : un repos plus naturel',sections:[
+  {name:'Animations',items:[
+   'Certaines poses qui relevaient brusquement la tête de Vivi ont été retirées de sa boucle de repos.',
+   'Les 48 images de combat, ses anneaux et la taille du personnage restent inchangés.']},
+  {name:'Compatibilité',items:['Les corrections du combat sont réunies dans les versions Android et iPhone.']}]},
+ {code:956,version:'0.9.56',date:'18 novembre 2026',title:'Déferlante : correction du déclenchement',sections:[
+  {name:'Combat',items:[
+   'Sur Android, la compétence passive se déclenche désormais avant les dégâts automatiques ordinaires, même lorsque Vivi élimine un ennemi immédiatement.',
+   'Le rang 3 est offert aux sauvegardes qui n’avaient pas encore débloqué la compétence. Les rangs acquis sont conservés.']}]},
+ {code:955,version:'0.9.55',date:'18 novembre 2026',title:'Déferlante des mers : test de puissance',sections:[
+  {name:'Gameplay',items:[
+   'Ajout d’une compétence passive améliorable sur 20 rangs.',
+   'Une activation peut franchir jusqu’à 100 niveaux, boss compris, à condition de disposer de suffisamment de dégâts.',
+   'Les récompenses des ennemis et les jalons franchis sont pris en compte.']},
+  {name:'Vivi',items:['Ajout de deux éveils temporaires pour prolonger sa progression, sans changer son apparence.']}]},
+ {code:954,version:'0.9.54',date:'18 novembre 2026',title:'Vivi : proportions en arène',sections:[
+  {name:'Visuel',items:[
+   'Vivi a été réduite d’environ 17 % pour retrouver une taille plus cohérente sur sa plateforme.',
+   'Ses pieds restent ancrés au sol, sans modifier ses armes, ses couleurs ou son dessin.']}]}
+];
+function patchNotesLastRead(){
+ try{return Math.max(0,Math.floor(Number(localStorage.getItem(PATCH_NOTES_SEEN_KEY))||0));}
+ catch(_){return 0;}
+}
+function refreshPatchNotesBadge(){
+ const button=$('patchNotesButton'),badge=$('patchNotesUnread');
+ const unread=patchNotesLastRead()<PATCH_NOTES_VERSION;
+ badge.hidden=!unread;
+ button.setAttribute('aria-label',unread?'Nouvelles notes de mise à jour à lire':'Lire les notes de mise à jour');
+}
+function openPatchNotes(){
+ const cards=PATCH_NOTES.map((n,i)=>'<article class="patchnotes-entry">'+
+  '<div class="patchnotes-version"><strong>V'+n.version+'</strong><small>'+n.date+'</small>'+
+  (i===0?'<span class="patchnotes-current">DERNIÈRE VERSION</span>':'')+'</div>'+
+  '<div class="patchnotes-title">'+n.title+'</div>'+
+  n.sections.map(section=>'<div class="patchnotes-section"><strong>'+section.name+'</strong><ul>'+
+   section.items.map(item=>'<li>'+item+'</li>').join('')+'</ul></div>').join('')+
+  '</article>').join('');
+ modal('📜 Nouveautés','<div class="patchnotes-root"><p class="patchnotes-lead">Retrouve les améliorations et les correctifs apportés à ton aventure, des plus récents aux plus anciens.</p>'+
+  cards+'<p class="patchnotes-foot">Journal provisoire du prototype. Les notes seront enrichies au fil des versions.</p></div>',
+  ()=>{},'FERMER');
+ try{localStorage.setItem(PATCH_NOTES_SEEN_KEY,String(PATCH_NOTES_VERSION));}catch(_){}
+ refreshPatchNotesBadge();
+}
 function buy(kind,id,step){
  if(kind==='master'){
   const q=quote(masterPrice,S.master);if(!q.n||bnCompare(q.cost,S.gold)>0)return;
@@ -3726,7 +3822,9 @@ $('bossToggle').addEventListener('click',()=>{if(farm){farm=false;startEnemy();r
 $('shop').addEventListener('click',e=>{const btn=e.target.closest('[data-kind]');if(btn)buy(btn.dataset.kind,btn.dataset.id,btn.dataset.step);if(e.target.closest('#prestige'))prestige();});
 $('multipliers').addEventListener('click',e=>{const b=e.target.closest('[data-mul]');if(!b)return;multi=b.dataset.mul;document.querySelectorAll('[data-mul]').forEach(x=>x.classList.toggle('on',x===b));renderShop()});
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;setDrawer(true);document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));$('shop').scrollTop=0;renderShop()}));
-$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.57 · Démo Vivi',`<p><b>Version de test :</b> réserve de berrys de test, Vivi seule, deux éveils temporaires sans changement d’apparence, et passif Déferlante des mers préactivé (rang 3 offert) jusqu’à 100 niveaux par attaque.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige au <b>stage 30</b> est accéléré pour tester les reliques et les artefacts.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animations 2D articulées encore en cours de finition.</p>`,()=>{},'JOUER'));
+$('patchNotesButton').addEventListener('click',openPatchNotes);
+refreshPatchNotesBadge();
+$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.58 · Démo Vivi',`<p><b>Version de test :</b> réserve de berrys de test, Vivi seule, deux éveils temporaires sans changement d’apparence, et passif Déferlante des mers préactivé (rang 3 offert) jusqu’à 100 niveaux par attaque.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige au <b>stage 30</b> est accéléré pour tester les reliques et les artefacts.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animations 2D articulées encore en cours de finition.</p>`,()=>{},'JOUER'));
 $('modalBody').addEventListener('click',e=>{
  if(e.target.id==='fxToggle'){S.fx=S.fx===false; e.target.textContent=S.fx===false?'✨ Activer':'✨ Désactiver';save();}if(e.target.id==='soundToggle'){S.mute=!S.mute;e.target.textContent=S.mute?'🔇 Activer':'🔊 Couper';save();}
   if(e.target.id==='checkGameUpdates'){if(window.PirateAndroid?.checkForUpdates)window.PirateAndroid.checkForUpdates();else if(window.PiratePWA?.checkForUpdates)window.PiratePWA.checkForUpdates();else toast('Mises à jour web indisponibles');}
