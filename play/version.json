@@ -1,5 +1,5 @@
 {
-  "versionCode": 951,
-  "versionName": "0.9.51",
-  "notes": "Vivi F0 : animation de repos adoucie, suppression de la bascule extreme de la tete. 48 poses, 9 DR berrys, niveau MAX 6000, prestige et sauvegardes conserves."
+  "versionCode": 952,
+  "versionName": "0.9.52",
+  "notes": "Vivi F0 : nouvelles poses de repos sans bascule brusque de la tete. Design V1, niveaux MAX 6000, 9 DR berrys de test, prestige et sauvegardes inchanges."
 }
