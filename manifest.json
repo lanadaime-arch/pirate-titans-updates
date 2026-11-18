@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 968,
-  "versionName": "0.9.68",
+  "versionCode": 969,
+  "versionName": "0.9.69",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-968.zip",
-  "packageSha256": "7d33b017d7f612164449852b00a5158b0fc91b0cb209a53aa93e3d58bd1a4f2c",
-  "packageBytes": 3993193,
-  "notes": "Vivi articulée : 9 parties graphiques retravaillées vers son apparence V1 (cheveux, visage, blouse, ceinture, armes, bottes). Option dans l'appli uniquement ; Vivi V6 par défaut. Progression inchangée.",
-  "signature": "zSBB1HjpMR1aQRiF7q8KEbtbo3UtPBE8H5QHOwUAtQ1pS94CCVUcPrksbIj8OUCDJv4AvNXHUNqXwDHzGGinjS349jKSzj4lReX+SK4iduJc0QlWhdO+F4hS8wMBXi8Omsr2YaZEyIUlDx6TGvHcsFSbgET6l3y/FlIpp6g4bAKyC3Osky7xdx/NSx1NC9QJqVs0z6QbKKWPiyJFuO3Mj6EE9tAgR77BLiIATheUH8PKwuq4P3sXZXodvEnbW4xR4UMdIP/dGayVz5oALJ4Ghj9RRgca7t5mwsqhcILnTGlkkYx+g+QHI9oeeZ+rRIkl9qVtZM5k17LdkrSdIjcvTDIpk0Kxazp/YLeL9ajKxmBlkAfMeOFUbtxNANVwaoLGg/Jxqmf5bugyPRJvaURcgluR5McuM/n9mGeNEdE6MTPejX22MxEdGPodvQs2azYDq1+exZ1Wgl0lLhxel0njpCfDQ5dif+dW7zWHipK8NSbPn0QXSKntQ0Umvi46cFLc"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-969.zip",
+  "packageSha256": "1f4ea89449b5a3b2b6e916ad94766e6691cd045090e625870543050ddbc9fa92",
+  "packageBytes": 3993872,
+  "notes": "Vivi articulée : jambes et buste rattachés au bassin ; attaques plus dynamiques et orientées vers l'ennemi, avec appuis et retour au repos. Essai dans l'appli ; V6, dégâts et sauvegardes inchangés.",
+  "signature": "rJZab4hXLBdqJP+xMUFEnhzhw6slbvwwNSGWl/FJwVPhhFawVj6AD9cixzHmucQtQwwRibpYxTes5RloifEJ7+ZKMGiFo7joPBIM5I1URukHPIOfRKNs5wgAIf0F2WCID0wimtKV+4Vlsx584FjhBITRb3ZUcUxbR+exRXddHLLAaa669wEtxCGTBQnj4JSM9agEHjHvqR9TLHMSvnT/afinazQ+24CZfz4KiCG1HQFMtkLjTveZ9MLBG62RG0A2irN7g7adKNXSy8tl7QqqJtyHSMayMwd24Xep0i0mJ/6C+DN45rJE2OckbogyJFGSbY6PaZTvFPBCAC6DLBkC4VVwuN5pF+4cX9lq2vuKK1t2SV3NNINBTnd+v3pOg3Fdw3KKkRjcFuu/4czWl80xhb6Wmti0oQDBV4ZL/J2WQhXWjLpwuVCq2UMrSvffM/13FSGIr1DTKQTyypuuH7eqZzTgtxPcISzEayNuSpfbc6j4WRYzxpKLnC667MdmCuZn"
 }
