@@ -1,5 +1,5 @@
 {
-  "versionCode": 958,
-  "versionName": "0.9.58",
-  "notes": "Nouveau journal des mises à jour : bouton Nouveautés, notes de version 0.9.54 à 0.9.58, pastille de lecture mémorisée. Aucun changement aux animations de Vivi ou au combat."
+  "versionCode": 959,
+  "versionName": "0.9.59",
+  "notes": "Vivi F0 : silhouette réduite de 145 % à 135 % dans son emplacement pour se rapprocher des proportions de TT2. Ancrage, sprite, 48 poses, anneaux, éveils et gameplay préservés. Patch notes actualisées."
 }

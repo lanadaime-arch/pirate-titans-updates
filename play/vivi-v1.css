@@ -1,3 +1,6 @@
+/* V0.9.59 — Recalibrage TT2 : Vivi 145% → 135% dans son slot.
+   Son pied de sprite reste calé sur bottom:-2% : même ancrage de plateforme.
+   Pas de retouche de planche, ni de cadence, de pose, d'anneaux ou de visage. */
 /* V0.9.57 — Repos Vivi : retirer les poses 2 et 16 (tête trop relevée).
    Conserver 0/1/20, la respiration douce, l'échelle et la planche 4×12.
    Les 48 poses d'attaque et de technique restent strictement identiques. */
@@ -19,7 +22,7 @@
    V0.9.57: idle uses safe V1 poses 0, 1 and transition 20; exclude original 2 and intercalary 16 (head/eyes snapping), plus 3 and 17-19.
    Every frame is a single flattened character. Keep alpha holes in both ring weapons. */
 .v08-formation .crew-slot.prototype-vivi .vivi-v1-actor{position:absolute;inset:0;pointer-events:none;transform-origin:50% 89%;animation:viviBodyIdle 2.6s ease-in-out infinite}
-.v08-formation .crew-slot.prototype-vivi .vivi-v1-sprite{position:absolute;left:50%;bottom:-2%;height:145%;aspect-ratio:1;width:auto;max-width:none;transform:translateX(-50%);background:url("./vivi-f0-sheet-v6.webp") 0 0 no-repeat;background-size:400% 1200%;image-rendering:auto;animation:viviIdle 1.900s step-end infinite;filter:drop-shadow(0 3px 2px #151d2d66)}
+.v08-formation .crew-slot.prototype-vivi .vivi-v1-sprite{position:absolute;left:50%;bottom:-2%;height:135%;aspect-ratio:1;width:auto;max-width:none;transform:translateX(-50%);background:url("./vivi-f0-sheet-v6.webp") 0 0 no-repeat;background-size:400% 1200%;image-rendering:auto;animation:viviIdle 1.900s step-end infinite;filter:drop-shadow(0 3px 2px #151d2d66)}
 .v08-formation .crew-slot.prototype-vivi.strike:not(.special) .vivi-v1-sprite{animation:viviAttack 2.238s step-end 1 both}
 .v08-formation .crew-slot.prototype-vivi.strike.special .vivi-v1-sprite{animation:viviSpecial 2.397s step-end 1 both}
 .v08-formation .crew-slot.prototype-vivi.strike:not(.special) .vivi-v1-actor{animation:viviBodyStrike 2.238s ease-in-out 1 both}
