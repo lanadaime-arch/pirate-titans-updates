@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 963,
+  "versionName": "0.9.63",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-963.zip",
+  "packageSha256": "c78d0ddcb946eac768cf9605e2e71ccb44f2248c9b7d4709268e8973757076e7",
+  "packageBytes": 3977989,
+  "notes": "Vivi : suppression des dernières poses yeux fermés et tête relevée en début d’attaque (vidéo 20918). Préparation naturelle, taille 135 %, rythme, anneaux, dégâts et sauvegardes préservés.",
+  "signature": "HL3ekbODeIvSCBCrmtweoOIVwZ35s/f7jZg+ge+KWhM0OAn5XzXjZ7ALBDXzLxo9+hk9hr7xJjW5Vr3LTBnYvyKrqhRVYlBXh71FKSKF/IoULYT0jsxE13lLADbNObY3LWxkxWo2XUBsQFR0Y5nrk+fe8ZjllzMqYuEejxPxeC486do1mry0fhtvoFfDfo/8eKVxas9OPXFdOP38sjgX4HTuVFfGlAJYRWcrvbWGi6D5WqZoYQrgrXS3W8JdfM3RX7Pfe0ppQ0+vexKfY+tTiC67rcU1IzEe8Yo2EN6Wuc4NR2azHvqX4IP3tD+QODaG1X+y7kcF/8HdAsmRvw8jm3ep8hniBObU9LC+f/FNPYyTZGN8PYBZS6RkAimkcQ2S5SeABsuEJHxxRy8JZ1RMaHpM1UYjh1vKqjbrAbBAM0Fj/Kzpt06l2ikA/hZ3k2fEc6H8N7Qdw1dU4gvIoSyNJebv//NSH26OyZ5Jsjwf1wz2sWa94oMKr1YmBvqP3vOt"
+}
