@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 956,
-  "versionName": "0.9.56",
+  "versionCode": 957,
+  "versionName": "0.9.57",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-956.zip",
-  "packageSha256": "afbad013fcf7bd017bd33c9d8bc677a395a3f755903afba7dfc7ef2236795cf3",
-  "packageBytes": 3973764,
-  "notes": "Correctif Android : Vivi déclenche Déferlante avant son DPS normal, rang 3 offert aux anciennes sauvegardes, jusqu'à 100 niveaux au rang 20 selon la puissance. Éveils et animations inchangés.",
-  "signature": "SEAgcV1P5M/3LD2klmQWFmO3UrxEFQ5g7SXLgjFTnnZwk/AV6Of5tKu0JR/kXj2ySavynHd80YVNK4BopkUznk050OGKgZp7ELQrEFosymIiwD9vPCZ0nvOFkkJ3fg3lXhR/zxCkMUHQlkhG3zMM8yX7A0ePjvQ6JlBz/CiGOG9btbphcb68y0D14txmx+Pcjboht0twg4hMaARP0XpOVorzBEzbA+gU7ipZ1FEOQ5NF7EdKk8CSNjuczolFhefQzf+Vh+hUE38hNFoZb4HDjdLbUJffAokMgDYuS5bcqm+cDShc+AxCf2VsQSD7kBLBr+a3uTtLLoaezH1DgQENzBtaviIg2/tjAyXIoB8WKVES5f4RcMh6oi9vcb9V9D45FkPExrhqlLBcYKuhQCeUE65TE+XGoVNI44uzTJB0Z6CWT+rEfmh4JjjJBrOAOVZNXP4Myt8345yvt8YhPpXYhSpe57oob6/gHgjE2F8H3t1fCI5PjD50R+z7OKNeb/SP"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-957.zip",
+  "packageSha256": "0bd465f95af6fb5f547a5707ac615e8ee8bd210edeed488df981ff8f2acacbad",
+  "packageBytes": 3973888,
+  "notes": "Vivi F0 : repos corrigé après analyse vidéo, visage stable et tête moins relevée. Les 48 poses de combat, les anneaux, la taille, les éveils et Déferlante sont conservés.",
+  "signature": "JvekKAqYQBLzuy29zEFcgeiQr4qTHT8E/p3T+WDqU/psSqIZ9UTb2MZlwSapAoLLNVCcKz26dH16pVyJk2FZwnyIPmwRetnChqLhMp2IgRHk5UuMqdjbtOyCWm8lx7QoDCffBSXwMrONsAVA3cmdgeOigdCoi4SfVjMk9UjNiI2aHlXVkk4hYF3LWUmvYVC/f+TgF/FQHF1B+gmUiwg1DBC2z1FVpeqrw1242ouRGNHfEy1LHisK6DDeRvF5Ujh7sQYT+IM/Ey0l5/71SeTTtx8Qu75kuFq6/XnN+/QyOPxv+L28MvCvFGXiHcoUISgANBtnIvefCRndeFMj8iPS/8wpo7Snf8XreChDRmKUxpvN3QZbppTBs1UIATKr94s3v0V/QnLNhdIDQiRYBWOsEC1YlSXaxnvYEOZQYIVZTxu7wSnrq+5PfbeIDDVy/ipF7+gU+U4bzfHuyq9HZMvEmP+0aSdzNYyvaAVm4KQ/HREsZBvl27eFjM2jh0wSR03z"
 }

@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 956,
+  "versionName": "0.9.56",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-956.zip",
+  "packageSha256": "afbad013fcf7bd017bd33c9d8bc677a395a3f755903afba7dfc7ef2236795cf3",
+  "packageBytes": 3973764,
+  "notes": "Correctif Android : Vivi déclenche Déferlante avant son DPS normal, rang 3 offert aux anciennes sauvegardes, jusqu'à 100 niveaux au rang 20 selon la puissance. Éveils et animations inchangés.",
+  "signature": "SEAgcV1P5M/3LD2klmQWFmO3UrxEFQ5g7SXLgjFTnnZwk/AV6Of5tKu0JR/kXj2ySavynHd80YVNK4BopkUznk050OGKgZp7ELQrEFosymIiwD9vPCZ0nvOFkkJ3fg3lXhR/zxCkMUHQlkhG3zMM8yX7A0ePjvQ6JlBz/CiGOG9btbphcb68y0D14txmx+Pcjboht0twg4hMaARP0XpOVorzBEzbA+gU7ipZ1FEOQ5NF7EdKk8CSNjuczolFhefQzf+Vh+hUE38hNFoZb4HDjdLbUJffAokMgDYuS5bcqm+cDShc+AxCf2VsQSD7kBLBr+a3uTtLLoaezH1DgQENzBtaviIg2/tjAyXIoB8WKVES5f4RcMh6oi9vcb9V9D45FkPExrhqlLBcYKuhQCeUE65TE+XGoVNI44uzTJB0Z6CWT+rEfmh4JjjJBrOAOVZNXP4Myt8345yvt8YhPpXYhSpe57oob6/gHgjE2F8H3t1fCI5PjD50R+z7OKNeb/SP"
+}
