@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#19243f"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest">
 <!-- Precharger et decoder les planches AVANT les changements de rang (evite
      un frame blanc au passage de la forme normale a l'Eveil 1). -->
-<meta name="description" content="Pirate Titans 0.9.55 : Vivi Miss Wednesday animee en 48 poses entieres, reserve de berrys de test, prestige, sorts et talents.">
+<meta name="description" content="Pirate Titans 0.9.57 : Vivi Miss Wednesday animee en 48 poses entieres, reserve de berrys de test, prestige, sorts et talents.">
 
-<title>Pirate Titans — Grand Line v0.9.55</title>
+<title>Pirate Titans — Grand Line v0.9.57</title>
 <style>
 :root{--ink:#122332;--deep:#112634;--panel:#213746;--panel2:#304554;--line:#68808a;--warm:#fceac0;--gold:#ffce68;--cyan:#58dfee;--mint:#5bdeb8;--red:#f4705e;--paper:#f3ebd7;--h:100dvh}
 *{box-sizing:border-box}html,body{margin:0;height:100%;width:100%;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--paper);background:#08141c;touch-action:manipulation}button{font:inherit;cursor:pointer;color:inherit;-webkit-tap-highlight-color:transparent}button:disabled{cursor:default}button:focus-visible{outline:2px solid #fff2b5;outline-offset:2px}[hidden]{display:none!important}
@@ -2158,7 +2158,7 @@ const HERO_TECH={
  robin:['🌺','Clutch',2.25,'petal'],franky:['💥','Radical Beam',3.1,'burst'],brook:['❄️','Entaille glacée',2.25,'ice'],jinbe:['🌊','Vague du karaté',2.7,'wave']
 };
 const QUESTS=[{id:'tap',name:'La volonté du capitaine',icon:'👆',base:45,step:35,reward:3,unit:'attaques'}, {id:'boss',name:'Chasseur de capitaines',icon:'👑',base:2,step:2,reward:5,unit:'boss'}, {id:'upgrade',name:'Un équipage plus fort',icon:'⚔️',base:15,step:15,reward:4,unit:'niveaux achetés'}];
-const original=()=>({version:9,economyV:2,gold:20,stage:1,wave:1,highest:1,runMax:1,prestigeBaseStage:1,bestLootStage:0,master:0,heroes:{},heroAscensions:{},artifacts:{},talents:{},relics:0,prestiges:0,skillPoints:0,totalSkillPoints:0,mana:100,autoBoss:true,mute:true,created:Date.now(),lastSeen:Date.now(),gear:0,loot:0,pets:{gull:1},activePet:'gull',pearls:0,chests:0,equipment:{weapon:null,emblem:null,charm:null,aura:null,slash:null},inventory:[],nextItemId:1,quests:{tap:{progress:0,cycle:0},boss:{progress:0,cycle:0},upgrade:{progress:0,cycle:0}},stats:{taps:0,bosses:0,upgrades:0},lastDaily:"",boostUntil:0,shopBuys:0,earnedFree:true,fx:true,islandMarks:{},bestCombo:0,form:'base'});
+const original=()=>({version:9,economyV:2,gold:20,surgeRank:3,stage:1,wave:1,highest:1,runMax:1,prestigeBaseStage:1,bestLootStage:0,master:0,heroes:{},heroAscensions:{},artifacts:{},talents:{},relics:0,prestiges:0,skillPoints:0,totalSkillPoints:0,mana:100,autoBoss:true,mute:true,created:Date.now(),lastSeen:Date.now(),gear:0,loot:0,pets:{gull:1},activePet:'gull',pearls:0,chests:0,equipment:{weapon:null,emblem:null,charm:null,aura:null,slash:null},inventory:[],nextItemId:1,quests:{tap:{progress:0,cycle:0},boss:{progress:0,cycle:0},upgrade:{progress:0,cycle:0}},stats:{taps:0,bosses:0,upgrades:0},lastDaily:"",boostUntil:0,shopBuys:0,earnedFree:true,fx:true,islandMarks:{},bestCombo:0,form:'base'});
 let S=original(),tab='master',multi='1',hp=0,maxHp=0,bossEnd=0,farm=false,toastTimer=null,modalCb=null,audio=null,lastTick=performance.now(),lastHud=0,lastSave=Date.now(),lastAttack=0;
 let cooldown={gear:0,haki:0,midas:0,gatling:0,zoro:0,crew:0},active={gear:0,midas:0,crew:0},lastCaptainUI=0;
 let combo=0,lastTapAt=0,lastPetAt=performance.now(), lastPetFlash=0,lastCrewVisual=0,crewIndex=0,bossRaged=false,lastBossThump=0,previousIsland="",recentBattleLoot=null,enemyTransition=false,respawnTimer=null;
@@ -3231,7 +3231,7 @@ function renderShop(){
       <div class="tt2-captain-art">🌊</div>
       <div class="tt2-captain-info"><strong>Déferlante des mers · LV. ${surgeRank()}/20</strong>
         <small>Puissance ×${fmt(surgeMultiplier())} · jusqu'à ${surgeMaxStages()} niveaux / attaque, boss compris</small>
-        <small>2,8 s entre les activations · chaque ennemi consomme de vrais dégâts</small></div>
+        <small>Rang 3 offert pour les essais · 2,8 s entre les activations · chaque ennemi consomme de vrais dégâts</small></div>
       <button class="tt2-captain-talent-buy" data-kind="surgeUpgrade" ${surgeRank()>=SURGE_MAX_RANK||bnCompare(S.gold,surgePrice())<0?'disabled':''}>
         <small>${surgeRank()>=SURGE_MAX_RANK?'MAX':'🪙 '+fmt(surgePrice())}</small>
         <b>${surgeRank()>=SURGE_MAX_RANK?'MAX':multi==='max'?'AMÉLIORER MAX':'AMÉLIORER'}</b>
@@ -3692,15 +3692,17 @@ function tick(now){
  const dt=Math.max(0,Math.min(.25,(now-lastTick)/1000));lastTick=now;
  S.mana=Math.min(100,S.mana+dt*(.42+.2*tlv('mana')+currentForm().mana));updateBossTactic(Date.now());
  if(combo && now-lastTapAt>1800){combo=0;if(tab==='master')renderShop()}
+ // V0.9.56: resolve the multi-stage passive BEFORE the normal DPS tick.
+ // Otherwise an overpowered Vivi kills each freshly spawned enemy first,
+ // leaves enemyTransition=true, and never gets an opportunity to use the passive.
+ const surgeTriggered=lv('vivi')>0&&!enemyTransition&&$('veil').hidden
+  &&trySurge(bnProd(heroDps(),2.6,bossFactor()));
  const dmg=bnProd(heroDps(),dt,bossFactor());
- if(bnPositive(dmg)&&bnPositive(hp))damage(dmg);
+ if(!surgeTriggered&&bnPositive(dmg)&&bnPositive(hp))damage(dmg);
  // La représentation graphique des coups est indépendante du calcul
  // des dégâts et du temps de réapparition des ennemis.
  if(now-lastAttack>1350&&CREW.some(h=>lv(h.id)>0)){
   lastAttack=now;crewAttackVisual();
-  if(lv('vivi')>0&&!enemyTransition&&$('veil').hidden){
-   trySurge(bnProd(heroDps(),2.6,bossFactor()));
-  }
   if(!enemyTransition&&Math.random()<.45)pop(fmt(heroDps())+' DPS',.50,.49,'passive');
  }
  if(now>=nextHeroTechnique){nextHeroTechnique=now+2200;heroTechnique();}
@@ -3724,7 +3726,7 @@ $('bossToggle').addEventListener('click',()=>{if(farm){farm=false;startEnemy();r
 $('shop').addEventListener('click',e=>{const btn=e.target.closest('[data-kind]');if(btn)buy(btn.dataset.kind,btn.dataset.id,btn.dataset.step);if(e.target.closest('#prestige'))prestige();});
 $('multipliers').addEventListener('click',e=>{const b=e.target.closest('[data-mul]');if(!b)return;multi=b.dataset.mul;document.querySelectorAll('[data-mul]').forEach(x=>x.classList.toggle('on',x===b));renderShop()});
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;setDrawer(true);document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));$('shop').scrollTop=0;renderShop()}));
-$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.55 · Démo Vivi',`<p><b>Version de test :</b> réserve de berrys de test, Vivi seule, deux éveils temporaires sans changement d’apparence, et passif Déferlante des mers jusqu’à 100 niveaux par attaque.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige au <b>stage 30</b> est accéléré pour tester les reliques et les artefacts.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animations 2D articulées encore en cours de finition.</p>`,()=>{},'JOUER'));
+$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.57 · Démo Vivi',`<p><b>Version de test :</b> réserve de berrys de test, Vivi seule, deux éveils temporaires sans changement d’apparence, et passif Déferlante des mers préactivé (rang 3 offert) jusqu’à 100 niveaux par attaque.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige au <b>stage 30</b> est accéléré pour tester les reliques et les artefacts.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animations 2D articulées encore en cours de finition.</p>`,()=>{},'JOUER'));
 $('modalBody').addEventListener('click',e=>{
  if(e.target.id==='fxToggle'){S.fx=S.fx===false; e.target.textContent=S.fx===false?'✨ Activer':'✨ Désactiver';save();}if(e.target.id==='soundToggle'){S.mute=!S.mute;e.target.textContent=S.mute?'🔇 Activer':'🔊 Couper';save();}
   if(e.target.id==='checkGameUpdates'){if(window.PirateAndroid?.checkForUpdates)window.PirateAndroid.checkForUpdates();else if(window.PiratePWA?.checkForUpdates)window.PiratePWA.checkForUpdates();else toast('Mises à jour web indisponibles');}
