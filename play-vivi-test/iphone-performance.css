@@ -1,0 +1,23 @@
+/* Lightweight iOS web mode: remove only continuous decorative effects.
+   Combat sprites, tap flashes, damage numbers and menu interactions remain.
+   No layout, saving or Android changes. */
+@supports (-webkit-touch-callout: none) {
+  /* Cloud drift and blur repaint continuously behind the arena. */
+  .app .cloud {
+    animation: none !important;
+    filter: none !important;
+  }
+  /* Pet attacks still animate; only idle hovering is suspended. */
+  .app .pet:not(.strike) {
+    animation: none !important;
+  }
+  /* Boss glow and modal blur are cosmetic, not gameplay indicators. */
+  .app .enemy.boss::before {
+    animation: none !important;
+    filter: none !important;
+  }
+  .app .veil {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+}

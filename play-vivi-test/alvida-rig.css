@@ -1,0 +1,39 @@
+/* V0.9.37 : personnage Alvida en huit images WebP indépendantes.
+   Original de référence au repos, sans déformer l'ensemble du corps. */
+.v08-formation .crew-slot.prototype-alvida{transform-origin:50% 90%;filter:drop-shadow(0 4px 3px #201032aa)}
+.v08-formation .crew-slot.prototype-alvida.strike{animation:none!important}
+.alvida-rig{position:relative;width:100%;height:100%;transform-origin:50% 93%;animation:alvidaIdle 2.3s ease-in-out infinite alternate}
+.alvida-layer{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;will-change:transform;transform:translateZ(0)}
+.alvida-layer img{width:100%;height:100%;object-fit:fill;display:block;pointer-events:none;user-select:none;-webkit-user-drag:none}
+.alvida-layer-cape{transform-origin:22% 61%;animation:alvidaCape 2.9s ease-in-out infinite alternate}
+.alvida-layer-head{transform-origin:45% 45%;animation:alvidaHead 2.7s ease-in-out infinite alternate}
+.alvida-layer-arm_left{transform-origin:25% 54%;animation:alvidaArm 2.3s ease-in-out infinite alternate}
+.alvida-layer-arm_right{transform-origin:60% 47%;animation:alvidaRightArm 2.5s ease-in-out infinite alternate}
+.alvida-layer-weapon{transform-origin:73% 64%;animation:alvidaWeapon 2.5s ease-in-out infinite alternate}
+.alvida-layer-leg_left{transform-origin:32% 82%}
+.alvida-layer-leg_right{transform-origin:56% 82%}
+/* Anticipation -> rotation du bras et de la massue -> impact -> retour. */
+.v08-formation .crew-slot.prototype-alvida.strike .alvida-rig{animation:alvidaStrikeRig .58s cubic-bezier(.2,.75,.3,1)!important}
+.v08-formation .crew-slot.prototype-alvida.strike .alvida-layer-head{animation:alvidaStrikeHead .58s ease-in-out!important}
+.v08-formation .crew-slot.prototype-alvida.strike .alvida-layer-body{animation:alvidaStrikeBody .58s ease-in-out!important}
+.v08-formation .crew-slot.prototype-alvida.strike .alvida-layer-arm_right{animation:alvidaStrikeArm .58s ease-in-out!important}
+.v08-formation .crew-slot.prototype-alvida.strike .alvida-layer-weapon{animation:alvidaStrikeMace .58s ease-in-out!important}
+.v08-formation .crew-slot.prototype-alvida.strike .alvida-layer-arm_left{animation:alvidaStrikeLeft .58s ease-in-out!important}
+/* Les deux formes éveillées conservent leurs sprites propres jusqu'à leur
+   production en calques distincts, après validation du rig initial. */
+.v08-formation .crew-slot.prototype-alvida.strike .rig-arm-right{animation:alvidaLegacyArm .58s ease-in-out!important}
+@keyframes alvidaIdle{from{transform:scaleY(.993)}to{transform:scaleY(1.007)}}
+@keyframes alvidaCape{from{transform:rotate(-2.4deg)}to{transform:rotate(3deg)}}
+@keyframes alvidaHead{from{transform:rotate(-1.6deg)}to{transform:rotate(1.7deg)}}
+@keyframes alvidaArm{from{transform:rotate(-1.8deg)}to{transform:rotate(2.2deg)}}
+@keyframes alvidaRightArm{from{transform:rotate(1deg)}to{transform:rotate(-2deg)}}
+@keyframes alvidaWeapon{from{transform:rotate(-1.2deg)}to{transform:rotate(1.8deg)}}
+@keyframes alvidaStrikeRig{0%,100%{transform:translate(0,0)}22%{transform:translate(-2px,-2px) scaleY(.99)}52%{transform:translate(6px,-1px) rotate(2deg)}72%{transform:translate(2px,0)}}
+@keyframes alvidaStrikeHead{0%,100%{transform:rotate(0)}28%{transform:rotate(-5deg)}52%{transform:rotate(7deg)}}
+@keyframes alvidaStrikeBody{0%,100%{transform:rotate(0)}30%{transform:rotate(-3deg)}54%{transform:rotate(5deg)}}
+@keyframes alvidaStrikeArm{0%,100%{transform:rotate(0)}26%{transform:rotate(-22deg)}52%{transform:rotate(30deg)}73%{transform:rotate(9deg)}}
+@keyframes alvidaStrikeMace{0%,100%{transform:rotate(0)}25%{transform:rotate(-36deg)}50%{transform:rotate(54deg)}72%{transform:rotate(15deg)}}
+@keyframes alvidaStrikeLeft{0%,100%{transform:rotate(0)}22%{transform:rotate(7deg)}53%{transform:rotate(-12deg)}}
+@keyframes alvidaLegacyArm{0%,100%{transform:rotate(0)}25%{transform:rotate(-24deg)}52%{transform:rotate(34deg)}}
+@media(prefers-reduced-motion:reduce){.alvida-rig,.alvida-layer,.v08-formation .crew-slot.prototype-alvida.strike .alvida-rig,.v08-formation .crew-slot.prototype-alvida.strike .alvida-layer{animation-duration:1.5s!important}}
+.app.reduce-motion .alvida-rig,.app.reduce-motion .alvida-layer{animation:none!important}
