@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 965,
+  "versionName": "0.9.65",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-965.zip",
+  "packageSha256": "0757b9802a60371431e2fa592ac54e146c4972eb658c9cfb1a6fa9878b730ef0",
+  "packageBytes": 3978525,
+  "notes": "Journal des nouveautés synchronisé : notes 0.9.64 et 0.9.65 ajoutées, indicateur « Dernière version » et pastille de lecture corrigés. Aucun changement aux dégâts, animations ou sauvegardes.",
+  "signature": "BLgooLusj5KXFA+bw2JxGDFppJRxKAqIEAgR1/0R58SL5ITwc0vJtsnXYEqeAWtspQ9zgfjCG3XI4pBTF4NKMkxm8Bmf8uPOAtHDPDBmTUINV7N1LDUtMKSW/Nkl3iw+RB+gkyUV1yhvikcapvLYMxo2HHNG/FwVXTgIUp3vw60C03YqPMAlh4bOuw/wm1p9HCfNZPxzviQUWjiGpzSUWWmvNXOFP1ugyhJkza/QARCTfHrXGW2p2jQ2vhXXeL2vuFXctHV/8ZsLIfVVAziUUNihD1ilO1MVaL2wbjXEgGIyvMABx+i092LaWj549gnvbm81rz0bSLcQ8MBr+0UTfEbmMZkhNjyDBbZ9JO+E8F2yFq6gq/lxdBeNMx4EEKsMx9uxgq3KrRAALNrQOUcZbarpsB8ef2d1QYHaaK2H/MqAPa3fyL9NR1tfsML27sGbDJjQmRmwWZIb+fJXuoBUCS9ZzAuu1iiwyZ6A2tWjs/cSjZitYKxwfnXwmqvlgzHI"
+}

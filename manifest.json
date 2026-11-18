@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 965,
-  "versionName": "0.9.65",
+  "versionCode": 966,
+  "versionName": "0.9.66",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-965.zip",
-  "packageSha256": "0757b9802a60371431e2fa592ac54e146c4972eb658c9cfb1a6fa9878b730ef0",
-  "packageBytes": 3978525,
-  "notes": "Journal des nouveautés synchronisé : notes 0.9.64 et 0.9.65 ajoutées, indicateur « Dernière version » et pastille de lecture corrigés. Aucun changement aux dégâts, animations ou sauvegardes.",
-  "signature": "BLgooLusj5KXFA+bw2JxGDFppJRxKAqIEAgR1/0R58SL5ITwc0vJtsnXYEqeAWtspQ9zgfjCG3XI4pBTF4NKMkxm8Bmf8uPOAtHDPDBmTUINV7N1LDUtMKSW/Nkl3iw+RB+gkyUV1yhvikcapvLYMxo2HHNG/FwVXTgIUp3vw60C03YqPMAlh4bOuw/wm1p9HCfNZPxzviQUWjiGpzSUWWmvNXOFP1ugyhJkza/QARCTfHrXGW2p2jQ2vhXXeL2vuFXctHV/8ZsLIfVVAziUUNihD1ilO1MVaL2wbjXEgGIyvMABx+i092LaWj549gnvbm81rz0bSLcQ8MBr+0UTfEbmMZkhNjyDBbZ9JO+E8F2yFq6gq/lxdBeNMx4EEKsMx9uxgq3KrRAALNrQOUcZbarpsB8ef2d1QYHaaK2H/MqAPa3fyL9NR1tfsML27sGbDJjQmRmwWZIb+fJXuoBUCS9ZzAuu1iiwyZ6A2tWjs/cSjZitYKxwfnXwmqvlgzHI"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-966.zip",
+  "packageSha256": "957acb245c5f92019668b3a515bc2343744778ef3aa11a3e91cd6b455e41b7eb",
+  "packageBytes": 3982002,
+  "notes": "Nouveau moteur 2D articulé intégré au jeu (préparation technique). Vivi conserve ses animations actuelles en attendant de vrais calques adaptés. Gameplay et sauvegardes inchangés.",
+  "signature": "Vfz5nByPTnn6Pl7cSKDAquoj1kjujAL++0cF+1pQk/uIk5gIo/VqEucqPIVm5nPsKuLGiWhxM0EmoygidPFiqz2Tl4qMZW75/u8t3MhGheHL8guq536txgRTI4p/LuBSjcfk+wP4RN7HXZayafSOZfm2qUtXdR2Y/HKaYK18pm2Xesk75BUfy3sMw2ds7ALb5HabTSWDXZLLXUDp2tJrMLBMgqvpFQMEZBxe0KCYTGB53NDJZPuvC/aOYLfAzLEUNBdZm/yBL9zshjdUn6IZW/carIwXdQuIcnlGNby+35sLsFVXaKkey/wFo5Ue+8AVmzDURXhRy8HW/ciML9Z6qnrkEvi3bANnRCVwGlJHYHFvT3p3+0iGNHVogeqV4TZ8kdIF90/5xeYkGXhmAfx6BEncqYr8sYhdnMQU1iZ4PQWPlvkYUh4K9hiTk9tZdUmz0/Vzep5KKNwtxgpem0mcbjdxNB/OhIsACWcmemCNFC9WFWJX+iN3YziuTB5CSlDA"
 }
