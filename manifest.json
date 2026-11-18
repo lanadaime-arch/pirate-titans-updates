@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 966,
-  "versionName": "0.9.66",
+  "versionCode": 967,
+  "versionName": "0.9.67",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-966.zip",
-  "packageSha256": "957acb245c5f92019668b3a515bc2343744778ef3aa11a3e91cd6b455e41b7eb",
-  "packageBytes": 3982002,
-  "notes": "Nouveau moteur 2D articulé intégré au jeu (préparation technique). Vivi conserve ses animations actuelles en attendant de vrais calques adaptés. Gameplay et sauvegardes inchangés.",
-  "signature": "Vfz5nByPTnn6Pl7cSKDAquoj1kjujAL++0cF+1pQk/uIk5gIo/VqEucqPIVm5nPsKuLGiWhxM0EmoygidPFiqz2Tl4qMZW75/u8t3MhGheHL8guq536txgRTI4p/LuBSjcfk+wP4RN7HXZayafSOZfm2qUtXdR2Y/HKaYK18pm2Xesk75BUfy3sMw2ds7ALb5HabTSWDXZLLXUDp2tJrMLBMgqvpFQMEZBxe0KCYTGB53NDJZPuvC/aOYLfAzLEUNBdZm/yBL9zshjdUn6IZW/carIwXdQuIcnlGNby+35sLsFVXaKkey/wFo5Ue+8AVmzDURXhRy8HW/ciML9Z6qnrkEvi3bANnRCVwGlJHYHFvT3p3+0iGNHVogeqV4TZ8kdIF90/5xeYkGXhmAfx6BEncqYr8sYhdnMQU1iZ4PQWPlvkYUh4K9hiTk9tZdUmz0/Vzep5KKNwtxgpem0mcbjdxNB/OhIsACWcmemCNFC9WFWJX+iN3YziuTB5CSlDA"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-967.zip",
+  "packageSha256": "f4d9c118e1d641f54e6b07d812a3ffed693451ec42c442e0e2e6b553b48c787a",
+  "packageBytes": 3990134,
+  "notes": "Vivi : premier personnage vectoriel articulé à 9 éléments, sélectionnable dans les réglages du jeu pour un essai sur Android et iPhone. Ancienne V6 par défaut, sauvegardes et gameplay inchangés.",
+  "signature": "QiU08rKrodmW89RLzXTvlZVxa+mmJQ+OMSLSIXGoe+ArJD7cGPQJT8pN/jUIYvNDlOsHChxuAVHkwnaGV1mrRnyrqPpf4ChxALk782VdaRCDvQ+HQKvcVE+rq1CHE5lecP0o0JiGfWP0xeEOqtPXEme0IFViTH5KC3fpg43VHq5alhQx4zpipjaFwN5vwx55sUrIR9Kd5eNN9UEYxywR0M3RvBa/l+yLT9hJ9SosW6WH9CRlBfOL77osKp6t3f6tfoqcHrBc7KNg2Dzz+3sefkRlP4ZcBRrDvZg8tliyiy7H+be6Rlgg8HIP/DIgFiUklgYrFwphb0YcqrHxRwBj8Pj/3jJpI5ltKQ8OLbcqqeO5oe4LTCmUUBXAqAFwMEwFXrXL5zX50fNqj+aPxQqIVhuHE9x7ktqTU8UrnGNdULjtd1gN6z4MrVnumB/gXSYS+n2CJmHJgBJDb/MM4lCW7hZExix2k2kP2X5+UALFpVSdqR8ETqB/Wdqyjr2HWcs4"
 }

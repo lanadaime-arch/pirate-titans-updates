@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 966,
+  "versionName": "0.9.66",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-966.zip",
+  "packageSha256": "957acb245c5f92019668b3a515bc2343744778ef3aa11a3e91cd6b455e41b7eb",
+  "packageBytes": 3982002,
+  "notes": "Nouveau moteur 2D articulé intégré au jeu (préparation technique). Vivi conserve ses animations actuelles en attendant de vrais calques adaptés. Gameplay et sauvegardes inchangés.",
+  "signature": "Vfz5nByPTnn6Pl7cSKDAquoj1kjujAL++0cF+1pQk/uIk5gIo/VqEucqPIVm5nPsKuLGiWhxM0EmoygidPFiqz2Tl4qMZW75/u8t3MhGheHL8guq536txgRTI4p/LuBSjcfk+wP4RN7HXZayafSOZfm2qUtXdR2Y/HKaYK18pm2Xesk75BUfy3sMw2ds7ALb5HabTSWDXZLLXUDp2tJrMLBMgqvpFQMEZBxe0KCYTGB53NDJZPuvC/aOYLfAzLEUNBdZm/yBL9zshjdUn6IZW/carIwXdQuIcnlGNby+35sLsFVXaKkey/wFo5Ue+8AVmzDURXhRy8HW/ciML9Z6qnrkEvi3bANnRCVwGlJHYHFvT3p3+0iGNHVogeqV4TZ8kdIF90/5xeYkGXhmAfx6BEncqYr8sYhdnMQU1iZ4PQWPlvkYUh4K9hiTk9tZdUmz0/Vzep5KKNwtxgpem0mcbjdxNB/OhIsACWcmemCNFC9WFWJX+iN3YziuTB5CSlDA"
+}
