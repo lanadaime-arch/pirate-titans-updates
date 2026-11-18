@@ -1,5 +1,5 @@
 {
-  "versionCode": 964,
-  "versionName": "0.9.64",
-  "notes": "Vivi : préparation d'attaque raccourcie pour supprimer l'effet de grandissement puis rétrécissement (vidéo 20921). Taille 135 %, dessin, rythme, anneaux, dégâts et sauvegardes préservés."
+  "versionCode": 965,
+  "versionName": "0.9.65",
+  "notes": "Journal des nouveautés synchronisé : notes 0.9.64 et 0.9.65 ajoutées, indicateur « Dernière version » et pastille de lecture corrigés. Aucun changement aux dégâts, animations ou sauvegardes."
 }
