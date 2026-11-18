@@ -1,0 +1,14 @@
+name: Diagnostic temporaire des runners GitHub
+on:
+  push:
+    paths:
+      - '.github/workflows/diagnostic-runner.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  runner:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tester le démarrage sans secrets
+        run: echo 'RUNNER_OK — aucune clé de signature utilisée'
