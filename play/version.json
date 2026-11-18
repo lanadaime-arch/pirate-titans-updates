@@ -1,5 +1,5 @@
 {
-  "versionCode": 968,
-  "versionName": "0.9.68",
-  "notes": "Vivi articulée : 9 parties graphiques retravaillées vers son apparence V1 (cheveux, visage, blouse, ceinture, armes, bottes). Option dans l'appli uniquement ; Vivi V6 par défaut. Progression inchangée."
+  "versionCode": 969,
+  "versionName": "0.9.69",
+  "notes": "Vivi articulée : jambes et buste rattachés au bassin ; attaques plus dynamiques et orientées vers l'ennemi, avec appuis et retour au repos. Essai dans l'appli ; V6, dégâts et sauvegardes inchangés."
 }
