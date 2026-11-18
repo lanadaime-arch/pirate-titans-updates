@@ -1,5 +1,5 @@
 {
-  "versionCode": 954,
-  "versionName": "0.9.54",
-  "notes": "Vivi F0 : taille reduite en arene et pieds ancres au sol, comme Alvida. Aucun changement au dessin, aux 48 poses, au prestige, aux 9 DR ou au niveau 6000."
+  "versionCode": 955,
+  "versionName": "0.9.55",
+  "notes": "Test : Déferlante des mers améliorable jusqu'à 100 niveaux par coup (500 vagues, boss inclus) selon la puissance, et deux éveils temporaires de Vivi sans changement visuel."
 }
