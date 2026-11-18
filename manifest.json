@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 951,
-  "versionName": "0.9.51",
+  "versionCode": 952,
+  "versionName": "0.9.52",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-951.zip",
-  "packageSha256": "7629fa41a4020e0d3ea8b3deeed871ea5a421114ebe4d87259a78509f61fa1df",
-  "packageBytes": 3971316,
-  "notes": "Vivi F0 : animation de repos adoucie, suppression de la bascule extreme de la tete. 48 poses, 9 DR berrys, niveau MAX 6000, prestige et sauvegardes conserves.",
-  "signature": "mj/4C7SSLXD77xKwkdiGT+X3CbopCg6TIHCFFb+N8aDBEgSzO5xYVb/kLW1/CAyd4PZ68v1Y1xP8n8m5OI9l38SFOxCbq4IK65h/K/hLPjd0wCXODsfUYsVUSUFhz9vbMv6YfUH5L9uXsp2+LhSthD5Xs8CNxUTWl3PyI0LE7iIADTe9hPEmRdSWTNhP2kchQRpLTbomKK+FMMuthfg2Q9YNY2gIJnL7VVFX8b/N3zcz05R9jXzz6V3v+q7U60JQsr3ZV4utlwJlKtnVh/YXh2OesvRYDKgpbkq5qaPj2m3WYlebmyhpIUPypDdFuq3UPP7lIYqfZwXFPPUaakyU8K3KnokRYdidN859l+HF4yQVgv5KmC1MKkOkaCkzN4YgFxjeazfh0NQXdkoxAfGjEsxEL9svpla9EF7DpoASaGESZ6FwKZwZY5aZhaa/8NGnMsWWF92dVvsDnxbpp0K3MYCmrASg7+CrhS4Y2R7scr4/m/BbujAbqnS2e32d8gIe"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-952.zip",
+  "packageSha256": "0a97f6112069fdfe0fcf96fb429e60656666291245424740483bc7931ec28039",
+  "packageBytes": 3971318,
+  "notes": "Vivi F0 : nouvelles poses de repos sans bascule brusque de la tete. Design V1, niveaux MAX 6000, 9 DR berrys de test, prestige et sauvegardes inchanges.",
+  "signature": "sYd4t4vebmBQlBwR4j/nNz1BQlAEsiReQp9h5JKEqvAB+zGfRhUg2uHIE7anqnn3wUOwMqAGUy2LH0WIn9vlcKfLFi9y6akE6Pe5ScbUtc7wLFFXGjFPZRkKNguJxqaTCSOV56bPTXGbB4Ut7Z4OCkfIo8UoGr3IZsYG6mp/sEvj/lWIRi6ILGtXO/4qnvS08xROUTuRuxumWxIp6DHanb1zrbBciTBdZWjxrFrqGEFb93IIjCAz32MERIYd1nPJPTpQhq+qPcoRWNEsjONsGCPYAhnX0EtGlV3h/KJJx+LOtgAsdsoZH0VlNKfovJB9rcUiAq/5Ysc1pMWbypR3vnQq1RHN7FvgMumyGE3sSpv1cSId1ER0PbY5kLBksniZ/u8FCWsNyfIw5lN2bQxjTOyDmIWHI3nNDGAcpkUYucwIHN2syRjnYdFh2yHWl88+DXNGx9dm89F9oUdz+TvdE/BYR4bHYD9c9wMved+DIDSXPM2WT2SvvMbE41LLQINE"
 }
