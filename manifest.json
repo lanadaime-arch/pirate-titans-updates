@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 949,
-  "versionName": "0.9.49",
+  "versionCode": 950,
+  "versionName": "0.9.50",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-949.zip",
-  "packageSha256": "55661f811aee9f4e6f8a32f56bcc14a74b719f8a04aeb7635457fb4c53862090",
-  "packageBytes": 3485359,
-  "notes": "Alvida Eveil 2 : troisieme apparence redessinee (manteau bleu et blanc, tricorne argent et massue saphir), 16 poses animees et portrait assorti. Formes 0 et 1, 9 DR berrys, prestige et sauvegardes conserves.",
-  "signature": "t7ZLmbS8hLcHWyDMVmrMuLVdZPNwkAyvXDjfGjeLup40Bhm3qhPICOE9foZckR9n91yVYkBKWBSCKfAzSmrMYlJNgL3OX87yHHEAAsdTj+L22vE0I5z1KlAD3bWemwLXnSSeMWiOWvAOBwIEhsHEryw0+zqbSJELQQd8PLDK6eZ3kA/wcPrCAwG9l0kpATS6AlJDUtMC62vCS5H//MLM0nqFgi0631RBLSIYhpkpK581mxA5papD7LBBXCsV/YvVE7i2JZxOOQWkjf1JaxP7aljxH0IAkWRoPOKq2Q6mxiS9Qsu04P0Kd4lrEplD1QbhQ76hA+05kcsLKUmBLIxaiwQnZ+sns71MR8O7hc/sMtFlAkiaXTty1lxdWIBNOsm9TEaBnDn0teWzfCiMmXTv+8DDnKGKUWPdAP4pAFAQSalgYwnBAQXKQKJ2wyJyZdMAU2qqbeB1VPY5NOTtlILtZu7EWk3fc1vWnnJlevRWRbwvTeLO5E/fVIhiAriy/Z1y"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-950.zip",
+  "packageSha256": "1b586e8682c1f1cd87bffab07a2df86396330aafc02c063ab89a7e2192f728c4",
+  "packageBytes": 3971384,
+  "notes": "Vivi F0 (Miss Wednesday) remplace Alvida : 48 poses, anneaux transparents, niveaux 6000, 9 DR berrys de test. Sauvegardes conservees et optimisation iPhone maintenue.",
+  "signature": "wXBKy688eVqmuEF8GjUHf2a8kqHG1kzei5AOctCJoCWAVx26WMfzSU/5yHfdnQ6ZpV1cUlev9TuRNDqDvgETrcIZ5bkI+O5ZgZoYL9v7738SsImJv1AB6bXiC46ImMvbmidYm8dEfzzFL1l7u3gf0CGwylavJuNN9kWyoePfkyK4wT7jd1DnncLxszwaJbxvEB2hgFHWmNOu4u4wUbZ5r5Uzldf1LGPe3308WfkBjsw66j+RxmzbtkikOUA0KA64Hf4BiHzj/yoTNbnroj4Vk8eZGPwrzGl8Dbv2zdfAPPk3GjIQAkz2CqIjeMk4b5UjTSx0riB5e9fII5gTUtOIU74BC9W79SsLVOw5qJdVYXnNa+l3WBzKFrXv/vMVc3FryCLQuYpZhN+FxeQHv2ggIdNZIH+79qcM3JtwlkIsImBElaK55zV0z8y89U89ZoWjKoCA9zg8MV1Pxg1iI1rysDdyrQzD5ebXTjBWC7qUXWXImBGnOXNLxJsgg+dq3qnv"
 }
