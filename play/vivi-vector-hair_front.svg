@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+<defs>
+<linearGradient id="hair"><stop stop-color="#186188"/><stop offset=".4" stop-color="#4bc5e2"/><stop offset="1" stop-color="#247da8"/></linearGradient>
+<linearGradient id="skin"><stop stop-color="#fbe6d2"/><stop offset="1" stop-color="#e0ad8c"/></linearGradient>
+<linearGradient id="cloth"><stop stop-color="#cacc9f"/><stop offset="1" stop-color="#799666"/></linearGradient>
+<linearGradient id="boot"><stop stop-color="#fffaf0"/><stop offset="1" stop-color="#b2c8ce"/></linearGradient>
+<linearGradient id="steel"><stop stop-color="#f7e1a4"/><stop offset=".5" stop-color="#adb3c3"/><stop offset="1" stop-color="#d5a456"/></linearGradient>
+</defs>
+<path d="M108 69 Q103 49 113 43 Q116 31 130 31 Q146 30 150 46 Q157 54 153 68 L147 65 Q146 57 143 53 Q140 66 131 66 L131 56 Q121 69 113 70 L115 59Z" fill="url(#hair)" stroke="#284760" stroke-width="2.2"/><path d="M112 48 Q123 38 135 42 Q146 42 149 54" fill="none" stroke="#c5f0f3" stroke-width="2.1" opacity=".7"/><path d="M126 40 Q125 56 117 63 M140 40 Q140 54 133 60" fill="none" stroke="#1d7aa0" stroke-width="2.3"/><path d="M148 51 Q157 65 150 87 Q148 92 153 97" fill="none" stroke="#26759e" stroke-width="4.5"/><path d="M148 55 Q151 69 149 80" fill="none" stroke="#baf2ed" stroke-width="1.5" opacity=".8"/>
+</svg>

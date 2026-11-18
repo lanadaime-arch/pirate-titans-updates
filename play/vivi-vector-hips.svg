@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+<defs>
+<linearGradient id="hair"><stop stop-color="#186188"/><stop offset=".4" stop-color="#4bc5e2"/><stop offset="1" stop-color="#247da8"/></linearGradient>
+<linearGradient id="skin"><stop stop-color="#fbe6d2"/><stop offset="1" stop-color="#e0ad8c"/></linearGradient>
+<linearGradient id="cloth"><stop stop-color="#cacc9f"/><stop offset="1" stop-color="#799666"/></linearGradient>
+<linearGradient id="boot"><stop stop-color="#fffaf0"/><stop offset="1" stop-color="#b2c8ce"/></linearGradient>
+<linearGradient id="steel"><stop stop-color="#f7e1a4"/><stop offset=".5" stop-color="#adb3c3"/><stop offset="1" stop-color="#d5a456"/></linearGradient>
+</defs>
+<path d="M108 145 Q124 150 145 146 Q151 151 152 165 L149 184 Q142 188 133 182 L130 169 L124 183 Q113 186 104 181 L104 164Z" fill="#fbf3e3" stroke="#40404b" stroke-width="2.3"/><path d="M108 155 Q124 158 147 155 L146 163 Q132 168 111 161Z" fill="#d7d8c3" stroke="#575b60" stroke-width="1.2"/><path d="M128 164 L129 174 M106 175 Q114 178 122 175 M136 175 Q143 178 151 175" fill="none" stroke="#b4aaa4" stroke-width="1.5"/>
+</svg>

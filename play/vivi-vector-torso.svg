@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+<defs>
+<linearGradient id="hair"><stop stop-color="#186188"/><stop offset=".4" stop-color="#4bc5e2"/><stop offset="1" stop-color="#247da8"/></linearGradient>
+<linearGradient id="skin"><stop stop-color="#fbe6d2"/><stop offset="1" stop-color="#e0ad8c"/></linearGradient>
+<linearGradient id="cloth"><stop stop-color="#cacc9f"/><stop offset="1" stop-color="#799666"/></linearGradient>
+<linearGradient id="boot"><stop stop-color="#fffaf0"/><stop offset="1" stop-color="#b2c8ce"/></linearGradient>
+<linearGradient id="steel"><stop stop-color="#f7e1a4"/><stop offset=".5" stop-color="#adb3c3"/><stop offset="1" stop-color="#d5a456"/></linearGradient>
+</defs>
+<path d="M122 89 Q127 93 136 90 L139 103 L121 108Z" fill="url(#skin)" stroke="#494751" stroke-width="1.8"/><path d="M111 101 Q118 97 123 101 Q127 106 134 101 Q140 96 149 101 L157 120 L149 151 Q127 158 108 150 L101 121Z" fill="url(#cloth)" stroke="#354450" stroke-width="2.6"/><path d="M105 114 Q116 111 124 116 L129 113 Q145 108 154 114" fill="none" stroke="#e1dfa5" stroke-width="2"/><path d="M124 105 Q128 118 132 105" fill="none" stroke="#587c57" stroke-width="2.5"/><path d="M109 145 Q127 149 148 145 L150 153 Q131 159 108 152Z" fill="#7b9967" stroke="#3a4d4d" stroke-width="1.4"/><path d="M106 132 L110 143 M153 133 L149 144" stroke="#648661" stroke-width="2"/>
+</svg>
