@@ -1,5 +1,5 @@
 {
-  "versionCode": 961,
-  "versionName": "0.9.61",
-  "notes": "Vivi : suppression des mouvements de tête parasites en début d’attaque normale et spéciale (vidéo 20917). Taille 135 %, animations suivantes, anneaux, dégâts et sauvegarde préservés."
+  "versionCode": 962,
+  "versionName": "0.9.62",
+  "notes": "Vivi : suppression d’une dernière pose parasite de tête relevée au début de l’attaque normale et spéciale (vidéo 20918). Taille 135 %, 48 cases, pieds, anneaux, dégâts et sauvegardes préservés."
 }
