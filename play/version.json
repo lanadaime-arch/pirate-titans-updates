@@ -1,5 +1,5 @@
 {
-  "versionCode": 953,
-  "versionName": "0.9.53",
-  "notes": "Vivi F0 : suppression des glissements de sprites et des fragments/pieds fantomes pendant repos, frappe et technique speciale. 48 poses V1, niveaux 6000 et 9 DR conserves."
+  "versionCode": 954,
+  "versionName": "0.9.54",
+  "notes": "Vivi F0 : taille reduite en arene et pieds ancres au sol, comme Alvida. Aucun changement au dessin, aux 48 poses, au prestige, aux 9 DR ou au niveau 6000."
 }

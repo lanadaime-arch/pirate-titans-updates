@@ -1,3 +1,9 @@
+/* V0.9.54 — Échelle de Vivi alignée sur la base Alvida V0.9.49.
+   Sprite : 174% → 145% de la hauteur du slot, soit 16,7% de réduction.
+   Préserver bottom:-2%, transform:translateX(-50%) et 4x12 cases WebP
+   pour éviter les pieds flottants, décalages ou fragments pendant les coups.
+   Aucun changement dans les dessins, éveils, dégâts ou cadences.
+ */
 /* V0.9.53 — CORRECTION DES GLISSEMENTS DE PLANCHE
    Chaque case doit s'afficher instantanément. Avec 'linear', les gaps minimes
    entre les sélecteurs @keyframes faisaient défiler la planche 4x12 :
@@ -10,7 +16,7 @@
    V0.9.52: idle uses only neutral V1 poses 0, 1, 2 and safe in-betweens 16, 20; exclude 3 and 17-19 (face/head snapping).
    Every frame is a single flattened character. Keep alpha holes in both ring weapons. */
 .v08-formation .crew-slot.prototype-vivi .vivi-v1-actor{position:absolute;inset:0;pointer-events:none;transform-origin:50% 89%;animation:viviBodyIdle 2.6s ease-in-out infinite}
-.v08-formation .crew-slot.prototype-vivi .vivi-v1-sprite{position:absolute;left:50%;bottom:-2%;height:174%;aspect-ratio:1;width:auto;max-width:none;transform:translateX(-50%);background:url("./vivi-f0-sheet-v6.webp") 0 0 no-repeat;background-size:400% 1200%;image-rendering:auto;animation:viviIdle 1.900s step-end infinite;filter:drop-shadow(0 3px 2px #151d2d66)}
+.v08-formation .crew-slot.prototype-vivi .vivi-v1-sprite{position:absolute;left:50%;bottom:-2%;height:145%;aspect-ratio:1;width:auto;max-width:none;transform:translateX(-50%);background:url("./vivi-f0-sheet-v6.webp") 0 0 no-repeat;background-size:400% 1200%;image-rendering:auto;animation:viviIdle 1.900s step-end infinite;filter:drop-shadow(0 3px 2px #151d2d66)}
 .v08-formation .crew-slot.prototype-vivi.strike:not(.special) .vivi-v1-sprite{animation:viviAttack 2.238s step-end 1 both}
 .v08-formation .crew-slot.prototype-vivi.strike.special .vivi-v1-sprite{animation:viviSpecial 2.397s step-end 1 both}
 .v08-formation .crew-slot.prototype-vivi.strike:not(.special) .vivi-v1-actor{animation:viviBodyStrike 2.238s ease-in-out 1 both}
