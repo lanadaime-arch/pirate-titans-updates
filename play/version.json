@@ -1,5 +1,5 @@
 {
-  "versionCode": 966,
-  "versionName": "0.9.66",
-  "notes": "Nouveau moteur 2D articulé intégré au jeu (préparation technique). Vivi conserve ses animations actuelles en attendant de vrais calques adaptés. Gameplay et sauvegardes inchangés."
+  "versionCode": 967,
+  "versionName": "0.9.67",
+  "notes": "Vivi : premier personnage vectoriel articulé à 9 éléments, sélectionnable dans les réglages du jeu pour un essai sur Android et iPhone. Ancienne V6 par défaut, sauvegardes et gameplay inchangés."
 }

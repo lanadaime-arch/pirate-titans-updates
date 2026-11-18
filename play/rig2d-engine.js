@@ -26,8 +26,8 @@
         'identifiant de calque absent, dupliqué ou invalide');
       ids.add(part.id);
       assert(typeof part.src === 'string' &&
-        /^\.\/[a-zA-Z0-9_.-]+\.(?:png|webp)$/.test(part.src),
-        'ressource locale PNG ou WebP requise pour ' + part.id);
+        /^\.\/[a-zA-Z0-9_.-]+\.(?:png|webp|svg)$/.test(part.src),
+        'ressource locale PNG, WebP ou SVG requise pour ' + part.id);
       const p = part.pivot;
       assert(Array.isArray(p) && p.length === 2 &&
         p.every(x => within(x, 0, 1)), 'pivot normalisé invalide pour ' + part.id);
