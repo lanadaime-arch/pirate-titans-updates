@@ -6,12 +6,9 @@
 <meta name="theme-color" content="#19243f"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest">
 <!-- Precharger et decoder les planches AVANT les changements de rang (evite
      un frame blanc au passage de la forme normale a l'Eveil 1). -->
-<link rel="preload" as="image" href="./alvida-v2-sheet-fixed.webp" type="image/webp">
-<link rel="preload" as="image" href="./alvida-v2-sheet-awake-1.webp" type="image/webp">
-<link rel="preload" as="image" href="./alvida-v2-sheet-awake-2.webp" type="image/webp">
-<meta name="description" content="Pirate Titans 0.9.49 : Eveil 2 Alvida redessine avec 16 poses completes, reserve de berrys de test, prestige, sorts, avantages et talents.">
+<meta name="description" content="Pirate Titans 0.9.50 : Vivi Miss Wednesday animee en 48 poses entieres, reserve de berrys de test, prestige, sorts et talents.">
 
-<title>Pirate Titans — Grand Line v0.9.49</title>
+<title>Pirate Titans — Grand Line v0.9.50</title>
 <style>
 :root{--ink:#122332;--deep:#112634;--panel:#213746;--panel2:#304554;--line:#68808a;--warm:#fceac0;--gold:#ffce68;--cyan:#58dfee;--mint:#5bdeb8;--red:#f4705e;--paper:#f3ebd7;--h:100dvh}
 *{box-sizing:border-box}html,body{margin:0;height:100%;width:100%;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--paper);background:#08141c;touch-action:manipulation}button{font:inherit;cursor:pointer;color:inherit;-webkit-tap-highlight-color:transparent}button:disabled{cursor:default}button:focus-visible{outline:2px solid #fff2b5;outline-offset:2px}[hidden]{display:none!important}
@@ -1815,8 +1812,10 @@
 @keyframes alvidaMace{0%,100%{transform:rotate(0)}24%{transform:rotate(-32deg) translateY(-7%)}53%{transform:rotate(37deg) translateX(8%)}}
 @media(prefers-reduced-motion:reduce){.v08-formation .crew-slot.prototype-alvida.strike,.v08-formation .crew-slot.prototype-alvida.strike .rig-arm-right{animation-duration:1s!important}}
 </style>
+<link rel="preload" as="image" href="./vivi-f0-sheet-v6.webp" type="image/webp">
 <link rel="stylesheet" href="./alvida-rig.css">
 <link rel="stylesheet" href="./alvida-v2.css">
+<link rel="stylesheet" href="./vivi-v1.css">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="theme-color" content="#000000">
@@ -1903,7 +1902,7 @@ function alvidaSpriteUrl(){
 function alvidaAscensionCost(){return bnFrom(alvidaAscensionLevel()===0?1e12:1e14);}
 function alvidaAscensionMultiplier(){return Math.pow(10000,alvidaAscensionLevel());}
 function imageOf(id,cls=''){
- const src=id==='alvida'?alvidaSpriteUrl():SPRITES[id];return src?`<img class="${cls||'sprite-img'}" draggable="false" src="${src}" alt="" loading="eager">`:'';
+ const src=id==='vivi'?'./vivi-f0-portrait-v6.webp':id==='alvida'?alvidaSpriteUrl():SPRITES[id];return src?`<img class="${cls||'sprite-img'}" draggable="false" src="${src}" alt="" loading="eager">`:'';
 }
 function thumb(id){return imageOf(id,'sprite-thumb')||'⚔️'}
 function scenicSVG(style){
@@ -1945,7 +1944,7 @@ function scenicSVG(style){
 
 const $=id=>document.getElementById(id), KEY='pirate_titans_grandline_v09', OLD='pirate_titans_grandline_v08';
 const CREW=[
-{id:'alvida',name:'Alvida',icon:'🔨',base:25,dps:2.4,desc:'Pirate d’East Blue · massue de fer',color:'#bb81bd'},
+{id:'vivi',name:'Vivi',icon:'🦚',base:25,dps:2.4,desc:'Miss Wednesday · Peacock Slashers',color:'#9ad8e7'},
 {id:'zoro',name:'Zoro',icon:'⚔️',base:90,dps:3.5,desc:'Sabreur · attaque automatiquement',color:'#58c19a'},
 {id:'nami',name:'Nami',icon:'🌩️',base:550,dps:14,desc:'Navigatrice · éclairs électriques',color:'#f2b364'},
 {id:'usopp',name:'Usopp',icon:'🎯',base:2000,dps:40,desc:'Tireur · dégâts à distance',color:'#c4bb73'},
@@ -2073,7 +2072,7 @@ function heroSkillHue(h,step){
 }
 function heroPowerAt(h,level){
  const L=Math.max(0,Math.min(HERO_LEVEL_MAX,Math.floor(Number(level)||0)));
- return L?bnProd(h.dps,L,levelCurveBig(L,1.065,52,3.25),heroMilestoneFactor(L),h.id==='alvida'?alvidaAscensionMultiplier():1):bnFrom(0);
+ return L?bnProd(h.dps,L,levelCurveBig(L,1.065,52,3.25),heroMilestoneFactor(L),h.id==='vivi'?Math.pow(10000,Math.max(0,Math.min(2,Math.floor(Number(S.viviLegacyAscensions)||0)))):h.id==='alvida'?alvidaAscensionMultiplier():1):bnFrom(0);
 }
 function heroUpgradeDpsGain(h,n){
  if(n<=0)return bnFrom(0);
@@ -2087,6 +2086,7 @@ function heroUpgradeDpsGain(h,n){
 }
 const HERO_TECH={
  alvida:['🔨','Massue de fer',2.3,'burst'],
+ vivi:['🦚','Peacock Slasher',2.3,'blade'],
  zoro:['⚔️','Santoryu',2.7,'blade'],nami:['⚡','Foudre de Zeus',2.2,'lightning'],usopp:['🎯','Tir de précision',2.0,'shot'],sanji:['🔥','Diable Jambe',2.6,'fire'],
  robin:['🌺','Clutch',2.25,'petal'],franky:['💥','Radical Beam',3.1,'burst'],brook:['❄️','Entaille glacée',2.25,'ice'],jinbe:['🌊','Vague du karaté',2.7,'wave']
 };
@@ -2114,18 +2114,17 @@ function migrateRareCurrencies(){
  S.relics=bnMax(0,bnFrom(S.relics));
  S.bigRareV=1;
 }
-/* Réinitialisation unique demandée pour ce prototype : ne pas garder en production.
-   Les parties suivantes et les éveils de test se sauvegardent normalement. */
-const HERO_DEMO_RESET_MARKER='pirate_titans_alvida_demo_936';
-try{
- if(localStorage.getItem(HERO_DEMO_RESET_MARKER)!=='done'){
-  const fresh=original();fresh.gold=1e34;fresh.heroAscensions={};fresh.testEconomy=936;S=fresh;
-  for(const k of [KEY,OLD,'pirate_titans_grandline_v07','pirate_titans_grandline_v06',
-   'pirate_titans_grandline_v05','pirate_titans_grandline_v04','pirate_titans_grandline_v03'])localStorage.removeItem(k);
-  localStorage.setItem(KEY,JSON.stringify(S));
-  localStorage.setItem(HERO_DEMO_RESET_MARKER,'done');
- }
-}catch(e){}
+/* V0.9.50 non destructive: retain legacy Alvida fields for rollback/export.
+   Transfer ONLY first-hero levels into Vivi once, never delete storage keys. */
+function migrateLegacyAlvidaToVivi(){
+ if(S.viviMigrationV0950)return;
+ const archived=Math.max(0,Math.min(6000,Math.floor(Number(S.heroes?.alvida)||0)));
+ const current=Math.max(0,Math.min(6000,Math.floor(Number(S.heroes?.vivi)||0)));
+ if(archived>current)S.heroes.vivi=archived;
+ S.viviLegacyAscensions=Math.max(Number(S.viviLegacyAscensions)||0,Math.min(2,Math.max(0,Math.floor(Number(S.heroAscensions?.alvida)||0))));
+ S.viviMigrationV0950=true;
+}
+migrateLegacyAlvidaToVivi();
 migrateRareCurrencies();
 /* V0.9.41 — reserve TEMPORAIRE pour les essais d'ameliorations (niveau 6000,
    deux eveils). Recharge a chaque lancement, apres prestige et apres import.
@@ -2362,7 +2361,7 @@ function tapDamage(){
    et la puissance ne double plus indefiniment a chaque palier. */
 function heroSingle(h){
  const L=lv(h.id);
- return L<=0?bnFrom(0):bnProd(h.dps,L,levelCurveBig(L,1.065,52,3.25),heroMilestoneFactor(L),h.id==='alvida'?alvidaAscensionMultiplier():1);
+ return L<=0?bnFrom(0):bnProd(h.dps,L,levelCurveBig(L,1.065,52,3.25),heroMilestoneFactor(L),h.id==='vivi'?Math.pow(10000,Math.max(0,Math.min(2,Math.floor(Number(S.viviLegacyAscensions)||0)))):h.id==='alvida'?alvidaAscensionMultiplier():1);
 }
 function heroDps(){
  const veteran=heroVeteranBonus();
@@ -2575,7 +2574,7 @@ function enemySvgV7(kind){
 
 // V0.8 — timeline-driven cut-out rigs, 6 separately animated body pieces per character.
 // The artwork is the same One Piece prototype art as v0.7; no external assets required.
-const CREW_SLOTS={alvida:[.13,.14],zoro:[.13,.47],nami:[.13,.59],usopp:[.13,.72],robin:[.13,.86],sanji:[.87,.47],franky:[.87,.59],brook:[.87,.72],jinbe:[.87,.86]};
+const CREW_SLOTS={vivi:[.13,.14],alvida:[.13,.14],zoro:[.13,.47],nami:[.13,.59],usopp:[.13,.72],robin:[.13,.86],sanji:[.87,.47],franky:[.87,.59],brook:[.87,.72],jinbe:[.87,.86]};
 const RIG_PIECES=['leg-left','leg-right','torso','arm-left','arm-right','head'];
 /* V0.9.37 : huit parties graphiques différentes, pas six copies découpées. */
 const ALVIDA_RIG_LAYERS=['cape','leg_left','leg_right','body','arm_left','weapon','arm_right','head'];
@@ -2610,7 +2609,12 @@ function alvidaV2Puppet(role='sidekick'){
  return '<div class="alvida-v2-actor'+skin+'" aria-hidden="true">'+aura+
   '<div class="alvida-v2-sprite '+role+skin+'"></div></div>';
 }
+function viviV1Puppet(role='sidekick'){
+ // A complete body per frame: no limb masks and no sprite replacement mid-hit.
+ return '<div class="vivi-v1-actor" aria-hidden="true"><div class="vivi-v1-sprite '+role+'"></div></div>';
+}
 function animatedPuppet(id,role='crew'){
+ if(id==='vivi')return viviV1Puppet(role);
  if(id==='alvida')return alvidaV2Puppet(role);
  const sprite=id==='alvida'?alvidaSpriteUrl():SPRITES[id];
  const original=sprite?`<img draggable="false" decoding="async" alt="" src="${sprite}">`:null;
@@ -2636,8 +2640,8 @@ function ensureV094CrewSlots(){
     // Les 8 héros actuels occupent 4 places à gauche et 4 à droite.
     el.style.setProperty('--slot-bottom',(9+row*18)+'%');
     el.style.setProperty('--slot-edge',(2+col*12)+'%');
-    el.style.setProperty('--slot-width',h.id==='alvida'?'17%':Math.max(9,13-col*1.5)+'%');
-    el.style.setProperty('--slot-height',h.id==='alvida'?'19%':(row===4?14:16)+'%');
+    el.style.setProperty('--slot-width',h.id==='vivi'||h.id==='alvida'?'17%':Math.max(9,13-col*1.5)+'%');
+    el.style.setProperty('--slot-height',h.id==='vivi'||h.id==='alvida'?'19%':(row===4?14:16)+'%');
     el.style.setProperty('--slot-layer',String(5+row));
   }
 }
@@ -2647,18 +2651,27 @@ const ALVIDA_VISUAL_MIN_INTERVAL_MS=1350;
 const ALVIDA_VISUAL_SWING_MS=1180;
 let lastAlvidaVisualAt=-Infinity;
 let alvidaVisualToken=0;
+// Vivi's body animation always completes before a second attack can start.
+const VIVI_VISUAL_MIN_INTERVAL_MS=2600;
+const VIVI_VISUAL_SWING_MS=2397;
+let lastViviVisualAt=-Infinity;
+let viviVisualToken=0;
 function renderFormation(){
   ensureV094CrewSlots();
   for(const h of CREW){
   const el=$('crew-'+h.id); if(!el)continue;
   const enlisted=lv(h.id)>0;
   el.hidden=!enlisted;el.dataset.hero=h.id;
-  const artKey=h.id==='alvida'?'alvida:'+alvidaAscensionLevel():h.id;
+  const artKey=h.id==='vivi'?'vivi:f0':h.id==='alvida'?'alvida:'+alvidaAscensionLevel():h.id;
+  el.classList.toggle('prototype-vivi',h.id==='vivi');
   el.classList.toggle('prototype-alvida',h.id==='alvida');
   if(h.id==='alvida'&&(!enlisted||el.dataset.rendered!==artKey)){
    // Un éveil ou un prestige change la forme : réarmer la boucle sans
    // conserver une ancienne classe d'attaque sur le nouveau sprite.
    el.classList.remove('strike');el.classList.remove('special');lastAlvidaVisualAt=-Infinity;alvidaVisualToken++;
+  }
+  if(h.id==='vivi'&&(!enlisted||el.dataset.rendered!==artKey)){
+   el.classList.remove('strike');el.classList.remove('special');lastViviVisualAt=-Infinity;viviVisualToken++;
   }
   if(enlisted && el.dataset.rendered!==artKey){el.innerHTML=animatedPuppet(h.id,'sidekick');el.dataset.rendered=artKey;}
  }
@@ -2682,6 +2695,19 @@ function triggerCharacter(id,mode='normal'){
     el.classList.remove('special');
    }
   },ALVIDA_VISUAL_SWING_MS+20);
+  return true;
+ }
+ if(id==='vivi'){
+  const now=performance.now();
+  if(now-lastViviVisualAt<VIVI_VISUAL_MIN_INTERVAL_MS)return false;
+  lastViviVisualAt=now;
+  const token=++viviVisualToken;
+  el.classList.remove('strike');
+  el.classList.toggle('special',mode==='special');
+  void el.offsetWidth;el.classList.add('strike');
+  setTimeout(()=>{
+   if(token===viviVisualToken){el.classList.remove('strike');el.classList.remove('special');}
+  },VIVI_VISUAL_SWING_MS+20);
   return true;
  }
  el.classList.remove('strike');void el.offsetWidth;el.classList.add('strike');
@@ -2816,7 +2842,7 @@ function damage(n,ignoreShield=false){
  }
  if(!bnPositive(hp))reward();else renderHP();
 }
-const CREW_FX={alvida:['burst','🔨'],zoro:['blade','⚔️'],nami:['lightning','⚡'],usopp:['shot','➶'],sanji:['fire','🔥'],robin:['petal','🌺'],franky:['burst','💥'],brook:['ice','❄️'],jinbe:['wave','🌊']};
+const CREW_FX={vivi:['blade','🦚'],alvida:['burst','🔨'],zoro:['blade','⚔️'],nami:['lightning','⚡'],usopp:['shot','➶'],sanji:['fire','🔥'],robin:['petal','🌺'],franky:['burst','💥'],brook:['ice','❄️'],jinbe:['wave','🌊']};
 function battleImpact(kind='punch',x=.69,y=.55,large=false){
  if(S.fx===false||document.hidden)return;
  const arena=$('frame');
@@ -2869,6 +2895,16 @@ function crewAttackVisual(){
   },660);
   return;
  }
+ if(h.id==='vivi'){
+  const battleStage=S.stage,battleWave=S.wave;
+  if(!triggerCharacter('vivi'))return;
+  setTimeout(()=>{
+   if(document.hidden||enemyTransition||S.stage!==battleStage||S.wave!==battleWave)return;
+   const enemy=$('enemy');enemy.classList.remove('hit');void enemy.offsetWidth;enemy.classList.add('hit');
+   if(S.fx!==false)battleImpact('blade',.53,.52);
+  },660);
+  return;
+ }
  const [kind,icon]=CREW_FX[h.id]||['punch','💥'];
  projectile(kind,icon,crewProjectileStart(h.id),[.5+Math.random()*.06,.49+Math.random()*.07]);
  triggerCharacter(h.id);
@@ -2903,6 +2939,13 @@ function heroTechnique(){
    // La technique conserve ses dégâts, mais ne coupe jamais l'attaque
    // normale pour provoquer une nouvelle rotation de massue.
    if(visualStarted)setTimeout(()=>{if(!enemyTransition&&S.stage===battleStage&&S.wave===battleWave)battleImpact('burst',.53,.52,true);},870);
+  }
+ }else if(h.id==='vivi'){
+  const visualStarted=triggerCharacter(h.id,'special');
+  if(S.fx!==false){
+   const battleStage=S.stage,battleWave=S.wave;
+   techniqueCallout(icon,name,crewProjectileStart(h.id));
+   if(visualStarted)setTimeout(()=>{if(!enemyTransition&&S.stage===battleStage&&S.wave===battleWave)battleImpact('blade',.53,.52,true);},870);
   }
  }else{
   if(S.fx!==false){projectile(type,icon,crewProjectileStart(h.id),[.52,.51]);techniqueCallout(icon,name,crewProjectileStart(h.id));}
@@ -3124,7 +3167,7 @@ function renderShop(){
     </div>`;
   /* Démonstration : seul le premier personnage du casting est activé.
      Les autres héros existants restent dans le moteur, mais ne sont pas proposés. */
-  for(const hero of CREW.filter(h=>h.id==='alvida')){
+  for(const hero of CREW.filter(h=>h.id==='vivi')){
    const i=CREW.indexOf(hero);
    const level=lv(hero.id);
    const q=quote(l=>heroPrice(hero,l),level,'hero:'+hero.id,HERO_LEVEL_MAX);
@@ -3157,11 +3200,11 @@ function renderShop(){
       </button>` : `<button class="tt2-hero-buy" data-kind="hero" data-id="${hero.id}" ${q.n?'':'disabled'}>
         <span>${level>=HERO_LEVEL_MAX?'🏆 LV. 6000':'🪙 '+fmt(q.cost)}</span>
         <b>${level>=HERO_LEVEL_MAX?'NIVEAU MAX':!level?'RECRUTER':q.n?'AMÉLIORER ×'+fmt(q.n):'AMÉLIORER'}</b>
-        <small>${level>=HERO_LEVEL_MAX?'Éveils de test terminés':q.n?'+'+fmt(dpsGain)+' DPS':'Berrys insuffisants'}</small>
+        <small>${level>=HERO_LEVEL_MAX?'Éveils de Vivi à venir':q.n?'+'+fmt(dpsGain)+' DPS':'Berrys insuffisants'}</small>
       </button>`}
     </div>`;
   }
-  h+='<div class="tt2-alvida-test-note">🧪 Prototype : Alvida uniquement · deux éveils d’essai · sprites en validation</div>';
+  h+='<div class="tt2-alvida-test-note">🧪 Prototype : Vivi · Miss Wednesday · apparence F0 en validation</div>';
   h+='</div>';
  }
  if(tab==='artifacts'){
@@ -3242,7 +3285,7 @@ function relicReward(){
 function prestige(){
  const win=relicReward();if(!bnPositive(win))return;const restart=prestigeStartStage(S.highest);
  modal('✨ Confirmer le prestige ?',`<p>Tu recevras <b>${fmt(win)} reliques</b>.</p><p>Les niveaux sont réinitialisés. <b>Départ au stage ${fmt(restart)}</b> avec un bonus de berrys de reprise. <b>Tu conserves</b> artefacts, talents, équipements, coffres, perles, familiers et missions.</p>`,()=>{
-  const keep={highest:S.highest,bestLootStage:S.bestLootStage,relics:bnAdd(S.relics,win),artifacts:{...S.artifacts},talents:{...S.talents},skillPoints:S.skillPoints,totalSkillPoints:S.totalSkillPoints,gear:S.gear,loot:S.loot,prestiges:S.prestiges+1,mute:S.mute,autoBoss:S.autoBoss,pearls:S.pearls,chests:S.chests,pets:{...S.pets},activePet:S.activePet,equipment:{...S.equipment},inventory:[...S.inventory],nextItemId:S.nextItemId,quests:JSON.parse(JSON.stringify(S.quests)),stats:{...S.stats},created:S.created,lastDaily:S.lastDaily,boostUntil:S.boostUntil,shopBuys:S.shopBuys,earnedFree:true,fx:S.fx,islandMarks:{...S.islandMarks},bestCombo:S.bestCombo,form:S.form};
+  const keep={highest:S.highest,bestLootStage:S.bestLootStage,relics:bnAdd(S.relics,win),artifacts:{...S.artifacts},talents:{...S.talents},skillPoints:S.skillPoints,totalSkillPoints:S.totalSkillPoints,gear:S.gear,loot:S.loot,prestiges:S.prestiges+1,mute:S.mute,autoBoss:S.autoBoss,pearls:S.pearls,chests:S.chests,pets:{...S.pets},activePet:S.activePet,equipment:{...S.equipment},inventory:[...S.inventory],nextItemId:S.nextItemId,quests:JSON.parse(JSON.stringify(S.quests)),stats:{...S.stats},created:S.created,lastDaily:S.lastDaily,boostUntil:S.boostUntil,shopBuys:S.shopBuys,earnedFree:true,fx:S.fx,islandMarks:{...S.islandMarks},bestCombo:S.bestCombo,form:S.form,viviMigrationV0950:true,viviLegacyAscensions:S.viviLegacyAscensions||0};
   S={...original(),...keep,stage:restart,runMax:restart,prestigeBaseStage:restart};
    S.gold=bnMax(20,bnMul(coinCalc(false),20));refillAlvidaTestGold();
    cooldown={gear:0,haki:0,midas:0,gatling:0,zoro:0,crew:0};active={gear:0,midas:0,crew:0};farm=false;combo=0;lastPetAt=performance.now();
@@ -3576,7 +3619,7 @@ $('bossToggle').addEventListener('click',()=>{if(farm){farm=false;startEnemy();r
 $('shop').addEventListener('click',e=>{const btn=e.target.closest('[data-kind]');if(btn)buy(btn.dataset.kind,btn.dataset.id,btn.dataset.step);if(e.target.closest('#prestige'))prestige();});
 $('multipliers').addEventListener('click',e=>{const b=e.target.closest('[data-mul]');if(!b)return;multi=b.dataset.mul;document.querySelectorAll('[data-mul]').forEach(x=>x.classList.toggle('on',x===b));renderShop()});
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;setDrawer(true);document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));$('shop').scrollTop=0;renderShop()}));
-$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.49 · Démo Alvida',`<p><b>Version de test :</b> ancienne partie réinitialisée une seule fois, gros stock de berrys pour les améliorations, Alvida seule et deux éveils expérimentaux. Les sprites des éveils restent provisoires.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige au <b>stage 30</b> est accéléré pour tester les reliques et les artefacts.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animations 2D articulées encore en cours de finition.</p>`,()=>{},'JOUER'));
+$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.50 · Démo Vivi',`<p><b>Version de test :</b> ancienne partie réinitialisée une seule fois, gros stock de berrys pour les améliorations, Alvida seule et deux éveils expérimentaux. Les sprites des éveils restent provisoires.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige au <b>stage 30</b> est accéléré pour tester les reliques et les artefacts.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animations 2D articulées encore en cours de finition.</p>`,()=>{},'JOUER'));
 $('modalBody').addEventListener('click',e=>{
  if(e.target.id==='fxToggle'){S.fx=S.fx===false; e.target.textContent=S.fx===false?'✨ Activer':'✨ Désactiver';save();}if(e.target.id==='soundToggle'){S.mute=!S.mute;e.target.textContent=S.mute?'🔇 Activer':'🔊 Couper';save();}
   if(e.target.id==='checkGameUpdates'){if(window.PirateAndroid?.checkForUpdates)window.PirateAndroid.checkForUpdates();else if(window.PiratePWA?.checkForUpdates)window.PiratePWA.checkForUpdates();else toast('Mises à jour web indisponibles');}
@@ -3589,7 +3632,7 @@ $('modalBody').addEventListener('change',e=>{
   try{const data=JSON.parse(reader.result);if(!data||![3,4,5,6,7,8,9].includes(data.version)||!data.heroes||!data.artifacts||!data.quests)throw Error('Fichier incorrect');
    const d=original();S={...d,...data,version:9,economyV:Number(data.economyV)||1,heroes:{...d.heroes,...data.heroes},artifacts:{...d.artifacts,...data.artifacts},talents:{...d.talents,...data.talents},pets:{...d.pets,...data.pets},quests:{...d.quests,...data.quests},equipment:{...d.equipment,...data.equipment},stats:{...d.stats,...data.stats},islandMarks:{...d.islandMarks,...data.islandMarks}};
    S.inventory=Array.isArray(S.inventory)?S.inventory:[];S.gold=(S.gold&&typeof S.gold==='object')?bnFrom(S.gold):Math.max(0,Number(S.gold)||0);S.mana=Math.min(100,Math.max(0,Number(S.mana)||0));
-   migrateEconomy();S.gold=bnFrom(S.gold);S.bigGoldV=1;migrateRareCurrencies();refillAlvidaTestGold();save();closeModal();startEnemy();renderAll();toast('✅ Sauvegarde importée !');
+   migrateLegacyAlvidaToVivi();migrateEconomy();S.gold=bnFrom(S.gold);S.bigGoldV=1;migrateRareCurrencies();refillAlvidaTestGold();save();closeModal();startEnemy();renderAll();toast('✅ Sauvegarde importée !');
   }catch(err){toast('❌ Sauvegarde non valide (V0.3 à V0.9 attendue).' );}
  };reader.readAsText(e.target.files[0]);
 });
