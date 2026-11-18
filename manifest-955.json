@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 955,
+  "versionName": "0.9.55",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-955.zip",
+  "packageSha256": "6ddabb685509d985a2e1ab68f2bbd7b191555c52409fa2be5554b8a4126dace9",
+  "packageBytes": 3973576,
+  "notes": "Test : Déferlante des mers améliorable jusqu'à 100 niveaux par coup (500 vagues, boss inclus) selon la puissance, et deux éveils temporaires de Vivi sans changement visuel.",
+  "signature": "V9PCoccv6JUrjCTatwPnLMUP1L1peSKvsVZ4yR1RyRnOGbi97D7VkzsvbnDci5KRkhMljd+FFV2w4VSD1uAlFH0rR0WWYOCtIbsp81wkT0VmjgA1zDJsyhkZyJrlO3qj8YKnliDZFujF3Y/ZN3xOW62KW55b14KZshLgmPqQTaqC25sGK5zOgYq04WtIbSgMrNYC1njMvDVqyfz9UFQYAYhEf6cYdu3XEZgcxBqO8GNMc5hiZPlaWrNiGeLagOAe2nF7chjonugXFeftiBgfNa1if6R44QQmiPyw1lrWfhD9peZQGMMf26Dx2yIjj+ujTZRhYSsM09J5p1bzjaIBeP2AMY8Xc5P7W8cN1ITltI2g8ONnN5yKalVa7uNuEBRy400uWhfeCLptFlPT8MQzdnVJQJC0LSltsyERQ+oMU/LGt1sOOXdjDzpbJb1voFQ3JJDJKke59+0FAyXaXA6Y+f7eA8+l09qyQsce03E16NDtoPUrcgLG/7sp192LRjhQ"
+}
