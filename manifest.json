@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 967,
-  "versionName": "0.9.67",
+  "versionCode": 968,
+  "versionName": "0.9.68",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-967.zip",
-  "packageSha256": "f4d9c118e1d641f54e6b07d812a3ffed693451ec42c442e0e2e6b553b48c787a",
-  "packageBytes": 3990134,
-  "notes": "Vivi : premier personnage vectoriel articulé à 9 éléments, sélectionnable dans les réglages du jeu pour un essai sur Android et iPhone. Ancienne V6 par défaut, sauvegardes et gameplay inchangés.",
-  "signature": "QiU08rKrodmW89RLzXTvlZVxa+mmJQ+OMSLSIXGoe+ArJD7cGPQJT8pN/jUIYvNDlOsHChxuAVHkwnaGV1mrRnyrqPpf4ChxALk782VdaRCDvQ+HQKvcVE+rq1CHE5lecP0o0JiGfWP0xeEOqtPXEme0IFViTH5KC3fpg43VHq5alhQx4zpipjaFwN5vwx55sUrIR9Kd5eNN9UEYxywR0M3RvBa/l+yLT9hJ9SosW6WH9CRlBfOL77osKp6t3f6tfoqcHrBc7KNg2Dzz+3sefkRlP4ZcBRrDvZg8tliyiy7H+be6Rlgg8HIP/DIgFiUklgYrFwphb0YcqrHxRwBj8Pj/3jJpI5ltKQ8OLbcqqeO5oe4LTCmUUBXAqAFwMEwFXrXL5zX50fNqj+aPxQqIVhuHE9x7ktqTU8UrnGNdULjtd1gN6z4MrVnumB/gXSYS+n2CJmHJgBJDb/MM4lCW7hZExix2k2kP2X5+UALFpVSdqR8ETqB/Wdqyjr2HWcs4"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-968.zip",
+  "packageSha256": "7d33b017d7f612164449852b00a5158b0fc91b0cb209a53aa93e3d58bd1a4f2c",
+  "packageBytes": 3993193,
+  "notes": "Vivi articulée : 9 parties graphiques retravaillées vers son apparence V1 (cheveux, visage, blouse, ceinture, armes, bottes). Option dans l'appli uniquement ; Vivi V6 par défaut. Progression inchangée.",
+  "signature": "zSBB1HjpMR1aQRiF7q8KEbtbo3UtPBE8H5QHOwUAtQ1pS94CCVUcPrksbIj8OUCDJv4AvNXHUNqXwDHzGGinjS349jKSzj4lReX+SK4iduJc0QlWhdO+F4hS8wMBXi8Omsr2YaZEyIUlDx6TGvHcsFSbgET6l3y/FlIpp6g4bAKyC3Osky7xdx/NSx1NC9QJqVs0z6QbKKWPiyJFuO3Mj6EE9tAgR77BLiIATheUH8PKwuq4P3sXZXodvEnbW4xR4UMdIP/dGayVz5oALJ4Ghj9RRgca7t5mwsqhcILnTGlkkYx+g+QHI9oeeZ+rRIkl9qVtZM5k17LdkrSdIjcvTDIpk0Kxazp/YLeL9ajKxmBlkAfMeOFUbtxNANVwaoLGg/Jxqmf5bugyPRJvaURcgluR5McuM/n9mGeNEdE6MTPejX22MxEdGPodvQs2azYDq1+exZ1Wgl0lLhxel0njpCfDQ5dif+dW7zWHipK8NSbPn0QXSKntQ0Umvi46cFLc"
 }

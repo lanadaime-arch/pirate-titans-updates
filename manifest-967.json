@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 967,
+  "versionName": "0.9.67",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-967.zip",
+  "packageSha256": "f4d9c118e1d641f54e6b07d812a3ffed693451ec42c442e0e2e6b553b48c787a",
+  "packageBytes": 3990134,
+  "notes": "Vivi : premier personnage vectoriel articulé à 9 éléments, sélectionnable dans les réglages du jeu pour un essai sur Android et iPhone. Ancienne V6 par défaut, sauvegardes et gameplay inchangés.",
+  "signature": "QiU08rKrodmW89RLzXTvlZVxa+mmJQ+OMSLSIXGoe+ArJD7cGPQJT8pN/jUIYvNDlOsHChxuAVHkwnaGV1mrRnyrqPpf4ChxALk782VdaRCDvQ+HQKvcVE+rq1CHE5lecP0o0JiGfWP0xeEOqtPXEme0IFViTH5KC3fpg43VHq5alhQx4zpipjaFwN5vwx55sUrIR9Kd5eNN9UEYxywR0M3RvBa/l+yLT9hJ9SosW6WH9CRlBfOL77osKp6t3f6tfoqcHrBc7KNg2Dzz+3sefkRlP4ZcBRrDvZg8tliyiy7H+be6Rlgg8HIP/DIgFiUklgYrFwphb0YcqrHxRwBj8Pj/3jJpI5ltKQ8OLbcqqeO5oe4LTCmUUBXAqAFwMEwFXrXL5zX50fNqj+aPxQqIVhuHE9x7ktqTU8UrnGNdULjtd1gN6z4MrVnumB/gXSYS+n2CJmHJgBJDb/MM4lCW7hZExix2k2kP2X5+UALFpVSdqR8ETqB/Wdqyjr2HWcs4"
+}
