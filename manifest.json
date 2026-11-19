@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 971,
-  "versionName": "0.9.71",
+  "versionCode": 972,
+  "versionName": "0.9.72",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-971.zip",
-  "packageSha256": "5d2d98c19519dba54a96aeb483b47abe9a5693e7cef9d1acf11b27a8996d6bb8",
-  "packageBytes": 4141821,
-  "notes": "Vivi : 8 poses complètes, préparation et récupération plus progressives, pieds recalés et anneaux transparents. Comparaison dans les réglages Android/iPhone ; V6, 4 poses et sauvegardes préservées.",
-  "signature": "x9Kq/vdr0Q73//sYOMiwf4uvGDUEn6gI1xMemgpIeS9e1QLXokO2efftVPhbMtH8iKLsdejX124pViyc6tZyZz55Lxy80MinAB2vVraqHwDpLQp9wjs80fsxDdChGFVoPL1Ww7V8GJIA/ww9g/sp1j9sEC6ENyfgLO44KW2sBDU03TYaCLl3N17yH1nRA24HjI0E+PrzH+AC+1O9AYBQYE9ZRu6usx0py3QN1MEZ/qdW/2nxmYpNoXABwNeZDrxvcuG8Uj2rllZUFh1YnZZau5xRHbCmXEX0MBorDfTA8xuJgmj1feacnfXdBu3Uyr4sz6LYzNUQ4OaTsq9qJGMwcEn5oAPMIRzeWHJ8hsb0iK2EALLc/RbJFP3uwpbXkb4oA+qOkonNKXP83NjuIqj6Oyakl0tN8RGGcUu411NZ+OpHS3GEqwQzFbq+aCEQdgvqpooDihVifRLGpNlcmCmSXNmsyzfKllOrwsFK4pGQWSLcZkV02Dagq4n2IPVdK+hp"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-972.zip",
+  "packageSha256": "797c1ed65efcdc04029d71203a6eec642540f26b40d38ea793f2c6566486945a",
+  "packageBytes": 4140845,
+  "notes": "Vivi : anciens essais vectoriel et 4 poses retirés des réglages et du chargement. Essai 8 poses proposé, V6 en secours, sauvegardes préservées.",
+  "signature": "FWJVTIrtE9x2k9+2rxjFSdhw01F1WWVaUoRT5kmtRKiH3mrkFb2f4OAmceg/G8fN4V6R1Yigh0I4pLb5eWVwswf+9kpuvfkzCGyta2370gQks53xDEhx5Qy08O65fhQ6+1tf7EwcZb1OhPbNGWo4SuLpzBsE4PK6BiWv7J+WIuLJ8N6l5dQGgMDSINrUU2hLnv6838KL38uz3nNmyyLwvpzM9h7yv1Wx/oZbK7Dempk93WKJtC+GBBHwRHzkJgw3W2kUwYKTztXDs17GhB9Dn69+TZI5OIAN3W1wLfVmMdGQg/KlfgO1yF0rpId1F2GStYrBg8fITN9NrzNZyGgfJCPpGLvAPCjie30ehvy/UIi34iHxz25GFYeB9WAj/xr46KFBJQg5z2KUvygwjgU3W7BDoFy9Sjqi1OiEJ2Rbhd1XFByZ9JrPSy1ovKfvzoqztCLuwEpGPQ0rhw8B+WScPRyqrOKMxHjxEXlhvnEDztoPJSgNTVYsbckOxZlAzm9L"
 }
