@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 972,
-  "versionName": "0.9.72",
+  "versionCode": 973,
+  "versionName": "0.9.73",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-972.zip",
-  "packageSha256": "797c1ed65efcdc04029d71203a6eec642540f26b40d38ea793f2c6566486945a",
-  "packageBytes": 4140845,
-  "notes": "Vivi : anciens essais vectoriel et 4 poses retirés des réglages et du chargement. Essai 8 poses proposé, V6 en secours, sauvegardes préservées.",
-  "signature": "FWJVTIrtE9x2k9+2rxjFSdhw01F1WWVaUoRT5kmtRKiH3mrkFb2f4OAmceg/G8fN4V6R1Yigh0I4pLb5eWVwswf+9kpuvfkzCGyta2370gQks53xDEhx5Qy08O65fhQ6+1tf7EwcZb1OhPbNGWo4SuLpzBsE4PK6BiWv7J+WIuLJ8N6l5dQGgMDSINrUU2hLnv6838KL38uz3nNmyyLwvpzM9h7yv1Wx/oZbK7Dempk93WKJtC+GBBHwRHzkJgw3W2kUwYKTztXDs17GhB9Dn69+TZI5OIAN3W1wLfVmMdGQg/KlfgO1yF0rpId1F2GStYrBg8fITN9NrzNZyGgfJCPpGLvAPCjie30ehvy/UIi34iHxz25GFYeB9WAj/xr46KFBJQg5z2KUvygwjgU3W7BDoFy9Sjqi1OiEJ2Rbhd1XFByZ9JrPSy1ovKfvzoqztCLuwEpGPQ0rhw8B+WScPRyqrOKMxHjxEXlhvnEDztoPJSgNTVYsbckOxZlAzm9L"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-973.zip",
+  "packageSha256": "b2de702fa4b09f44d2f5f333a7723eb714a74f0f8de4dbdd92fb6639120cd7a5",
+  "packageBytes": 4141145,
+  "notes": "Vivi : emplacement ramené à 14 % en largeur et 16 % en hauteur de la formation pour préparer un équipage de 48 héros, sans toucher aux images, au combat ni aux sauvegardes.",
+  "signature": "f4qh4YDMzMBhdqCi2pBsxO6Dvvwn1E2C2dFqdlCwEWxP1wdw1w1/QBvlsHj6bmQ/QjHCtl4n6qT+BNRtL8fyrpOJaP7JkCrTeeAT5ptImpg/NKMUCDCg0nu7DVP7rtID0tX0jtkYG2MHD24jMAHNCxvZAqnx8hVuYPg0PboBLViEauuHEgAaSlrksOJJu2wD5WQhsf377dtHl10gqxxz+c7ib0Kx1q04ZThjCf4TANjM6N6C38zRaZqQiA4J7lfCYivf82ct1SZbGKONoKldzWOjNsQS03EThwVdyKPlkSLGJfOlrPXDoAzd7mTmRU/jVDMaj4yHQ2CA44FbqwA2W0ZFh3KrydSZSfMr9iBIRWhdcpFqQ53M6uFBwxyvnYN6FC7iNkpsZoUY+t21VzuozE1srTtA7iW+Ic+I9C8HedOfJPnj0h9+Uu013cGcA3DbhUQ76qfcevgEoDdG9ABsqzJE1NvOheFm0YIL78yaXrMtqmQIMi8+c/uK9WpPNvcK"
 }

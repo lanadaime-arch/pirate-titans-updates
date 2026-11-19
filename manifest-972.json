@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 972,
+  "versionName": "0.9.72",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-972.zip",
+  "packageSha256": "797c1ed65efcdc04029d71203a6eec642540f26b40d38ea793f2c6566486945a",
+  "packageBytes": 4140845,
+  "notes": "Vivi : anciens essais vectoriel et 4 poses retirés des réglages et du chargement. Essai 8 poses proposé, V6 en secours, sauvegardes préservées.",
+  "signature": "FWJVTIrtE9x2k9+2rxjFSdhw01F1WWVaUoRT5kmtRKiH3mrkFb2f4OAmceg/G8fN4V6R1Yigh0I4pLb5eWVwswf+9kpuvfkzCGyta2370gQks53xDEhx5Qy08O65fhQ6+1tf7EwcZb1OhPbNGWo4SuLpzBsE4PK6BiWv7J+WIuLJ8N6l5dQGgMDSINrUU2hLnv6838KL38uz3nNmyyLwvpzM9h7yv1Wx/oZbK7Dempk93WKJtC+GBBHwRHzkJgw3W2kUwYKTztXDs17GhB9Dn69+TZI5OIAN3W1wLfVmMdGQg/KlfgO1yF0rpId1F2GStYrBg8fITN9NrzNZyGgfJCPpGLvAPCjie30ehvy/UIi34iHxz25GFYeB9WAj/xr46KFBJQg5z2KUvygwjgU3W7BDoFy9Sjqi1OiEJ2Rbhd1XFByZ9JrPSy1ovKfvzoqztCLuwEpGPQ0rhw8B+WScPRyqrOKMxHjxEXlhvnEDztoPJSgNTVYsbckOxZlAzm9L"
+}
