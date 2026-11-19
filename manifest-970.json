@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 970,
+  "versionName": "0.9.70",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-970.zip",
+  "packageSha256": "c029899e3a162e8d92c322cb81ac7618f4e2af97ea7bb48ffb5e02320117f1a5",
+  "packageBytes": 4029809,
+  "notes": "Vivi : première animation en 4 poses complètes dessinées, fidèle à la tenue V1. Comparaison facultative dans le jeu Android/iPhone ; V6 par défaut, aucune modification aux dégâts, compétences ou sauvegardes.",
+  "signature": "dJZsMzjX1++gu7NvX5NVvMc4hC8HVlf0ij4VWGDlhrWhJkPhBjFc/9y/0+LICqIH6DKKL2WYim/GOP1vxJkZo/kfKWJvo74pVwftjWtqsKU3s7jd2J8C4wm1TxUsFhd7N4IXD6eaDFNluN5AgBIR83FEs9rAFQnrZRhx1jBRbR/hnUR9ISmG6rhUGHLajFUprYQsS9WlcIvsvTpGMbh4IOb4PtIONz+PB1ilc7rDrEOfBq/6Dz42+aFrnOU35VKfTRVk0RW8nuL03NsazkUWKnErQiFMLjCgPK2uTFEt1KVwBv2LgG/grSnp3TTyv+oZd7lAcER02qSI0+jk5Bv8a3edHqgEw3ZonPKz9Xk/KifL1tLvqSiGOQFQh/Yq0TyYQqIMzeU50u11Qjt5eaC4fdS7t6ZJWKBImRn/fBrLBL1y3pIj6orEWsYmI2Oiz5m/yhzFg++GmF9wYW+vSNz5kafupbDyrZU7+rkm8TozUSgRnidT2XwUa7V8cHpsM4n8"
+}
