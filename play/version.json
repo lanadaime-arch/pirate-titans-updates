@@ -1,5 +1,5 @@
 {
-  "versionCode": 973,
-  "versionName": "0.9.73",
-  "notes": "Vivi : emplacement ramené à 14 % en largeur et 16 % en hauteur de la formation pour préparer un équipage de 48 héros, sans toucher aux images, au combat ni aux sauvegardes."
+  "versionCode": 974,
+  "versionName": "0.9.74",
+  "notes": "Vivi huit poses : suppression du bond global de 0,5 seconde au milieu du cycle dessiné. Animations d'origine, cadence, taille, autres héros et sauvegardes conservés."
 }

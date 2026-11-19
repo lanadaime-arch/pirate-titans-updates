@@ -8,6 +8,9 @@
  background-size:800% 100%;image-rendering:auto;
  filter:drop-shadow(0 3px 2px #151d2d66)
 }
+/* Le bond global de 0,5 s se terminait brutalement avant la fin des
+   2,238/2,397 s de la frappe dessinée. Désactivation propre à Vivi 8 poses. */
+.v08-formation .crew-slot.prototype-vivi.vivi-eight-mode.strike{animation:none}
 .v08-formation .crew-slot.prototype-vivi.strike:not(.special) .vivi-eight-sprite{
  animation:viviEightAttack 2.238s step-end 1 both
 }

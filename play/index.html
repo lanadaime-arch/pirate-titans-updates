@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#19243f"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest">
 <!-- Precharger et decoder les planches AVANT les changements de rang (evite
      un frame blanc au passage de la forme normale a l'Eveil 1). -->
-<meta name="description" content="Pirate Titans 0.9.73 : Vivi en huit poses dessinées avec pieds recalés, option dans le jeu, V6 et sauvegardes préservées.">
+<meta name="description" content="Pirate Titans 0.9.74 : Vivi en huit poses dessinées avec pieds recalés, option dans le jeu, V6 et sauvegardes préservées.">
 
-<title>Pirate Titans — Grand Line v0.9.73</title>
+<title>Pirate Titans — Grand Line v0.9.74</title>
 <style>
 :root{--ink:#122332;--deep:#112634;--panel:#213746;--panel2:#304554;--line:#68808a;--warm:#fceac0;--gold:#ffce68;--cyan:#58dfee;--mint:#5bdeb8;--red:#f4705e;--paper:#f3ebd7;--h:100dvh}
 *{box-sizing:border-box}html,body{margin:0;height:100%;width:100%;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--paper);background:#08141c;touch-action:manipulation}button{font:inherit;cursor:pointer;color:inherit;-webkit-tap-highlight-color:transparent}button:disabled{cursor:default}button:focus-visible{outline:2px solid #fff2b5;outline-offset:2px}[hidden]{display:none!important}
@@ -2805,6 +2805,8 @@ function renderFormation(){
   el.hidden=!enlisted;el.dataset.hero=h.id;
   const artKey=h.id==='vivi'?(viviEightPreview&&viviEightReady?'vivi:eight:v1':'vivi:f0'):h.id==='alvida'?'alvida:'+alvidaAscensionLevel():h.id;
   el.classList.toggle('prototype-vivi',h.id==='vivi');
+  // Le cycle dessiné inclut déjà sa frappe ; pas de bond global de 500 ms.
+  el.classList.toggle('vivi-eight-mode',h.id==='vivi'&&enlisted&&viviEightPreview&&viviEightReady);
   el.classList.toggle('prototype-alvida',h.id==='alvida');
   if(h.id==='alvida'&&(!enlisted||el.dataset.rendered!==artKey)){
    // Un éveil ou un prestige change la forme : réarmer la boucle sans
@@ -3137,9 +3139,18 @@ function modal(title,body,cb,label='CONTINUER',cancel=false){$('modalTitle').tex
 function closeModal(){$('veil').hidden=true;modalCb=null;}
 
 /* V0.9.58 — Notes éditoriales locales : ne changent pas la sauvegarde du jeu. */
-const PATCH_NOTES_VERSION=973;
+const PATCH_NOTES_VERSION=974;
 const PATCH_NOTES_SEEN_KEY='pirate_titans_patchnotes_seen_v1';
 const PATCH_NOTES=[
+ {code:974,version:'0.9.74',date:'19 novembre 2026',title:'Vivi : supprimer un mouvement parasite pendant la frappe',sections:[
+  {name:'Animation de Vivi',items:[
+   'Le bond automatique de 0,5 seconde ne se superpose plus aux huit poses dessinées : fini le retour au point de départ au milieu du coup.',
+   'Les huit dessins sont inchangés : ni interpolation des membres ni nouvelle transformation du personnage.'
+  ]},
+  {name:'Combat et stabilité',items:[
+   'Durées des cycles, cadence de frappe, dégâts et sauvegardes inchangés.',
+   'La correction ne touche ni les autres héros ni la V6 de secours. Fluidité à vérifier dans le jeu sur téléphone.'
+  ]}]},
  {code:973,version:'0.9.73',date:'19 novembre 2026',title:'Vivi : gabarit plus compact pour préparer le futur équipage',sections:[
   {name:'Cadrage en combat',items:[
    'L’emplacement de Vivi est moins haut et moins large pour mieux s’aligner avec les autres héros et laisser respirer l’arène.',
@@ -3989,7 +4000,7 @@ $('multipliers').addEventListener('click',e=>{const b=e.target.closest('[data-mu
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;setDrawer(true);document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));$('shop').scrollTop=0;renderShop()}));
 $('patchNotesButton').addEventListener('click',openPatchNotes);
 refreshPatchNotesBadge();
-$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.73 · Démo Vivi',`<p><b>Version de test :</b> réserve de berrys de test, Vivi seule, deux éveils temporaires sans changement d’apparence, et passif Déferlante des mers préactivé (rang 3 offert) jusqu’à 100 niveaux par attaque.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige au <b>stage 30</b> est accéléré pour tester les reliques et les artefacts.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b>
+$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.74 · Démo Vivi',`<p><b>Version de test :</b> réserve de berrys de test, Vivi seule, deux éveils temporaires sans changement d’apparence, et passif Déferlante des mers préactivé (rang 3 offert) jusqu’à 100 niveaux par attaque.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige au <b>stage 30</b> est accéléré pour tester les reliques et les artefacts.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b>
 <button id="viviEightToggle" class="save-btn" type="button">${viviEightPreview?"🎞️ 8 poses dessinées (essai) — revenir à V6":"🎞️ Tester les 8 poses dessinées"}</button>
 <br><small>Test de la nouvelle animation en huit poses dans le jeu. Les anciens essais ne sont plus proposés. La V6 reste temporairement en secours ; sauvegardes et dégâts inchangés.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animation 2D dessinée encore en cours de finition.</p>`,()=>{},'JOUER'));
 $('modalBody').addEventListener('click',e=>{
