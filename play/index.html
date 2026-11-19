@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#19243f"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest">
 <!-- Precharger et decoder les planches AVANT les changements de rang (evite
      un frame blanc au passage de la forme normale a l'Eveil 1). -->
-<meta name="description" content="Pirate Titans 0.9.69 : Vivi articulee plus dynamique, bassin et jambes relies, Vivi V6 toujours disponible.">
+<meta name="description" content="Pirate Titans 0.9.70 : Vivi V1 animee avec quatre poses complètes, option facultative dans le jeu, V6 et sauvegardes conservees.">
 
-<title>Pirate Titans — Grand Line v0.9.69</title>
+<title>Pirate Titans — Grand Line v0.9.70</title>
 <style>
 :root{--ink:#122332;--deep:#112634;--panel:#213746;--panel2:#304554;--line:#68808a;--warm:#fceac0;--gold:#ffce68;--cyan:#58dfee;--mint:#5bdeb8;--red:#f4705e;--paper:#f3ebd7;--h:100dvh}
 *{box-sizing:border-box}html,body{margin:0;height:100%;width:100%;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--paper);background:#08141c;touch-action:manipulation}button{font:inherit;cursor:pointer;color:inherit;-webkit-tap-highlight-color:transparent}button:disabled{cursor:default}button:focus-visible{outline:2px solid #fff2b5;outline-offset:2px}[hidden]{display:none!important}
@@ -1854,6 +1854,7 @@
 <link rel="stylesheet" href="./alvida-rig.css">
 <link rel="stylesheet" href="./alvida-v2.css">
 <link rel="stylesheet" href="./vivi-v1.css">
+<link rel="stylesheet" href="./vivi-painted.css">
 <link rel="stylesheet" href="./vivi-rig-vector.css">
 <script src="./rig2d-engine.js"></script>
 <script src="./vivi-rig-vector.js"></script>
@@ -2773,6 +2774,27 @@ let viviVisualToken=0;
 const VIVI_VECTOR_STORAGE_KEY='pirate_titans_vivi_vector_preview_v1';
 let viviVectorPreview=false;
 try{viviVectorPreview=localStorage.getItem(VIVI_VECTOR_STORAGE_KEY)==='1';}catch(_){}
+/* Images clés complètes dessinées, pas de pièces SVG découpées.
+   Préférence hors sauvegarde principale et maintien de V6 si WebP indisponible. */
+const VIVI_PAINTED_STORAGE_KEY='pirate_titans_vivi_painted_preview_v1';
+let viviPaintedPreview=false;
+let viviPaintedReady=false;
+try{viviPaintedPreview=localStorage.getItem(VIVI_PAINTED_STORAGE_KEY)==='1';}catch(_){}
+if(viviPaintedPreview) viviVectorPreview=false;
+const viviPaintedPreload=new Image();
+viviPaintedPreload.onload=()=>{
+ viviPaintedReady=true;
+ renderFormation();
+ const btn=document.getElementById('viviPaintedToggle');
+ if(btn)btn.textContent=viviPaintedPreview?'🎬 4 poses dessinées (essai) — revenir à V6':'🎬 Tester les 4 poses dessinées';
+};
+viviPaintedPreload.onerror=()=>{
+ viviPaintedReady=false;
+ viviPaintedPreview=false;
+ try{localStorage.removeItem(VIVI_PAINTED_STORAGE_KEY);}catch(_){}
+ renderFormation();
+};
+viviPaintedPreload.src='./vivi-v1-4pose-v1.webp';
 let viviRigActor=null;
 let viviRigGeneration=0;
 async function mountViviRig(el,generation){
@@ -2795,9 +2817,24 @@ async function mountViviRig(el,generation){
 }
 function toggleViviVectorPreview(){
  viviVectorPreview=!viviVectorPreview;
+ if(viviVectorPreview){
+  viviPaintedPreview=false;
+  try{localStorage.setItem(VIVI_PAINTED_STORAGE_KEY,'0');}catch(_){}
+ }
  try{localStorage.setItem(VIVI_VECTOR_STORAGE_KEY,viviVectorPreview?'1':'0');}catch(_){}
  renderFormation();
  return viviVectorPreview;
+}
+function toggleViviPaintedPreview(){
+ if(!viviPaintedReady){toast('Les poses de Vivi sont en cours de chargement.');return false;}
+ viviPaintedPreview=!viviPaintedPreview;
+ if(viviPaintedPreview){
+  viviVectorPreview=false;
+  try{localStorage.setItem(VIVI_VECTOR_STORAGE_KEY,'0');}catch(_){}
+ }
+ try{localStorage.setItem(VIVI_PAINTED_STORAGE_KEY,viviPaintedPreview?'1':'0');}catch(_){}
+ renderFormation();
+ return viviPaintedPreview;
 }
 function renderFormation(){
   ensureV094CrewSlots();
@@ -2805,7 +2842,7 @@ function renderFormation(){
   const el=$('crew-'+h.id); if(!el)continue;
   const enlisted=lv(h.id)>0;
   el.hidden=!enlisted;el.dataset.hero=h.id;
-  const artKey=h.id==='vivi'?(viviVectorPreview?'vivi:vector:v1':'vivi:f0'):h.id==='alvida'?'alvida:'+alvidaAscensionLevel():h.id;
+  const artKey=h.id==='vivi'?(viviPaintedPreview&&viviPaintedReady?'vivi:painted:v1':viviVectorPreview?'vivi:vector:v1':'vivi:f0'):h.id==='alvida'?'alvida:'+alvidaAscensionLevel():h.id;
   el.classList.toggle('prototype-vivi',h.id==='vivi');
   el.classList.toggle('prototype-alvida',h.id==='alvida');
   if(h.id==='alvida'&&(!enlisted||el.dataset.rendered!==artKey)){
@@ -2818,7 +2855,7 @@ function renderFormation(){
    viviRigGeneration++;if(viviRigActor){viviRigActor.destroy();viviRigActor=null;}
   }
   if(enlisted && el.dataset.rendered!==artKey){
-   el.innerHTML=h.id==='vivi'&&viviVectorPreview?'<div class="vivi-vector-actor" aria-hidden="true"><div class="vivi-vector-canvas"></div></div>':animatedPuppet(h.id,'sidekick');
+   el.innerHTML=h.id==='vivi'&&viviPaintedPreview&&viviPaintedReady?'<div class="vivi-painted-actor" aria-hidden="true"><div class="vivi-painted-sprite"></div></div>':h.id==='vivi'&&viviVectorPreview?'<div class="vivi-vector-actor" aria-hidden="true"><div class="vivi-vector-canvas"></div></div>':animatedPuppet(h.id,'sidekick');
    el.dataset.rendered=artKey;
    if(h.id==='vivi'&&viviVectorPreview)void mountViviRig(el,viviRigGeneration);
   }
@@ -3147,9 +3184,20 @@ function modal(title,body,cb,label='CONTINUER',cancel=false){$('modalTitle').tex
 function closeModal(){$('veil').hidden=true;modalCb=null;}
 
 /* V0.9.58 — Notes éditoriales locales : ne changent pas la sauvegarde du jeu. */
-const PATCH_NOTES_VERSION=969;
+const PATCH_NOTES_VERSION=970;
 const PATCH_NOTES_SEEN_KEY='pirate_titans_patchnotes_seen_v1';
 const PATCH_NOTES=[
+ {code:970,version:'0.9.70',date:'19 novembre 2026',title:'Vivi : premières poses complètes dessinées',sections:[
+  {name:'Nouveau dessin',items:[
+   'Première planche de quatre vraies poses transparentes, réalisée avec une seule silhouette détaillée cohérente : repos, préparation, frappe vers l’ennemi et récupération.',
+   'Le personnage garde sa blouse verte, son short blanc, ses bottes et deux armes en anneaux ajourés. Chaque image représente le corps entier, sans joints artificiellement découpés.',
+   'La nouvelle méthode évite les membres détachés de l’ancienne version articulée. Quatre poses ne constituent toutefois pas encore une animation aussi fluide que Tap Titans 2.'
+  ]},
+  {name:'Test dans Pirate Titans',items:[
+   'Nouveau bouton 🎬 Tester les 4 poses dessinées dans les réglages Android et iPhone. L’ancienne méthode articulée reste aussi accessible pour comparer.',
+   'La V6 reste le rendu par défaut : aucune modification des sauvegardes, dégâts, compétences, prestige ou niveaux.',
+   'Les transitions doivent encore être contrôlées sur téléphone avant d’étendre cette méthode aux autres héros.'
+  ]}]},
  {code:969,version:'0.9.69',date:'19 novembre 2026',title:'Vivi articulée : une attaque du corps entier',sections:[
   {name:'Animation 2D',items:[
    'Les jambes et le buste sont désormais reliés au bassin dans la hiérarchie 2D, les bras et la tête suivent le mouvement du corps.',
@@ -3958,11 +4006,23 @@ $('multipliers').addEventListener('click',e=>{const b=e.target.closest('[data-mu
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;setDrawer(true);document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));$('shop').scrollTop=0;renderShop()}));
 $('patchNotesButton').addEventListener('click',openPatchNotes);
 refreshPatchNotesBadge();
-$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.69 · Démo Vivi',`<p><b>Version de test :</b> réserve de berrys de test, Vivi seule, deux éveils temporaires sans changement d’apparence, et passif Déferlante des mers préactivé (rang 3 offert) jusqu’à 100 niveaux par attaque.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige au <b>stage 30</b> est accéléré pour tester les reliques et les artefacts.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b> <button id="viviVectorToggle" class="save-btn" type="button">${viviVectorPreview?"🎨 2D articulée (essai) — revenir à V6":"🎨 Tester la 2D articulée"}</button><br><small>Dessin vectoriel provisoire à 9 parties. Comparaison dans cette application uniquement. Ton jeu et tes sauvegardes ne changent pas.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animations 2D articulées encore en cours de finition.</p>`,()=>{},'JOUER'));
+$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.70 · Démo Vivi',`<p><b>Version de test :</b> réserve de berrys de test, Vivi seule, deux éveils temporaires sans changement d’apparence, et passif Déferlante des mers préactivé (rang 3 offert) jusqu’à 100 niveaux par attaque.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige au <b>stage 30</b> est accéléré pour tester les reliques et les artefacts.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b>
+<button id="viviPaintedToggle" class="save-btn" type="button">${viviPaintedPreview?"🎬 4 poses dessinées (essai) — revenir à V6":"🎬 Tester les 4 poses dessinées"}</button>
+<button id="viviVectorToggle" class="save-btn" type="button">${viviVectorPreview?"🎨 2D articulée (essai) — revenir à V6":"🎨 Ancienne 2D articulée"}</button>
+<br><small>Nouvelle piste : personnage entier dessiné à chaque pose. Seulement 4 poses pour ce premier cycle : fluidité à valider dans le jeu. V6 par défaut, retour immédiat et sauvegardes conservées.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animations 2D articulées encore en cours de finition.</p>`,()=>{},'JOUER'));
 $('modalBody').addEventListener('click',e=>{
+ if(e.target.id==='viviPaintedToggle'){
+  const enabled=toggleViviPaintedPreview();
+  e.target.textContent=enabled?'🎬 4 poses dessinées (essai) — revenir à V6':'🎬 Tester les 4 poses dessinées';
+  const other=document.getElementById('viviVectorToggle');
+  if(other)other.textContent='🎨 Ancienne 2D articulée';
+  if(viviPaintedReady)toast(enabled?'Vivi : nouvelles poses complètes actives':'Vivi V6 restaurée');
+ }
  if(e.target.id==='viviVectorToggle'){
   const enabled=toggleViviVectorPreview();
-  e.target.textContent=enabled?'🎨 2D articulée (essai) — revenir à V6':'🎨 Tester la 2D articulée';
+  e.target.textContent=enabled?'🎨 2D articulée (essai) — revenir à V6':'🎨 Ancienne 2D articulée';
+  const other=document.getElementById('viviPaintedToggle');
+  if(other)other.textContent='🎬 Tester les 4 poses dessinées';
   toast(enabled?'Vivi articulée : essai actif':'Vivi V6 restaurée');
  }
  if(e.target.id==='fxToggle'){S.fx=S.fx===false; e.target.textContent=S.fx===false?'✨ Activer':'✨ Désactiver';save();}if(e.target.id==='soundToggle'){S.mute=!S.mute;e.target.textContent=S.mute?'🔇 Activer':'🔊 Couper';save();}

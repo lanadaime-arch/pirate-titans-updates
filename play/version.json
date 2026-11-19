@@ -1,5 +1,5 @@
 {
-  "versionCode": 969,
-  "versionName": "0.9.69",
-  "notes": "Vivi articulée : jambes et buste rattachés au bassin ; attaques plus dynamiques et orientées vers l'ennemi, avec appuis et retour au repos. Essai dans l'appli ; V6, dégâts et sauvegardes inchangés."
+  "versionCode": 970,
+  "versionName": "0.9.70",
+  "notes": "Vivi : première animation en 4 poses complètes dessinées, fidèle à la tenue V1. Comparaison facultative dans le jeu Android/iPhone ; V6 par défaut, aucune modification aux dégâts, compétences ou sauvegardes."
 }
