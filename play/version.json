@@ -1,5 +1,5 @@
 {
-  "versionCode": 977,
-  "versionName": "0.9.77",
-  "notes": "Vivi reconstruite sur la méthode Alvida : 16 poses 2D, attaque 1,04 s, spéciale 1,18 s et moteur commun pour les futurs héros. Plus d’anciens boutons d’essai. Progression et sauvegardes intactes. À évaluer sur téléphone."
+  "versionCode": 978,
+  "versionName": "0.9.78",
+  "notes": "Nettoyage des essais de limites : Vivi revient en éveil 0 avec son DPS de base. Déferlante des mers, ses sauts de niveaux et le crédit automatique de berrys sont retirés. Niveaux, record, reliques et sauvegardes conservés. Animation V0.9.77 inchangée."
 }

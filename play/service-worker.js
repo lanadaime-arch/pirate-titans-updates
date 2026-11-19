@@ -1,5 +1,5 @@
 /* Network-first updates and cached offline fallback. Never cache update/version.json. */
-const CACHE_NAME = 'pirate-titans-iphone-v977';
+const CACHE_NAME = 'pirate-titans-iphone-v978';
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(['./', './index.html'])).then(() => self.skipWaiting()));
 });
