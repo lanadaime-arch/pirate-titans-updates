@@ -1,5 +1,5 @@
 {
   "versionCode": 978,
   "versionName": "0.9.78",
-  "notes": "Nettoyage des essais de limites : Vivi revient en éveil 0 avec son DPS de base. Déferlante des mers, ses sauts de niveaux et le crédit automatique de berrys sont retirés. Niveaux, record, reliques et sauvegardes conservés. Animation V0.9.77 inchangée."
+  "notes": "Vivi revient en éveil 0 et retrouve son DPS de base. Déferlante des mers et les berrys de test automatiques sont retirés. Records, niveaux, reliques et sauvegardes conservés. Animation de Vivi inchangée."
 }
