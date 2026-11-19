@@ -1,5 +1,5 @@
 {
-  "versionCode": 974,
-  "versionName": "0.9.74",
-  "notes": "Vivi huit poses : suppression du bond global de 0,5 seconde au milieu du cycle dessiné. Animations d'origine, cadence, taille, autres héros et sauvegardes conservés."
+  "versionCode": 975,
+  "versionName": "0.9.75",
+  "notes": "Vivi : 16 poses complètes dessinées et transparentes. Remplace l'essai à 8 poses dans les réglages, conserve V6 en secours et les sauvegardes intactes."
 }
