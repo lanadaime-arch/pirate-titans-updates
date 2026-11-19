@@ -1,0 +1,59 @@
+/* Vivi rebuilt using Alvida's validated movement principles. 
+   Full-body source atlas: 4 x 4, 16x224px, body position stable. */
+.v08-formation .crew-slot.motion-vivi .hero-motion-actor{
+  position:absolute;inset:0;pointer-events:none;transform-origin:50% 86%;
+  animation:viviCleanBreath 2.6s ease-in-out infinite;
+}
+.v08-formation .crew-slot.motion-vivi.strike:not(.special) .hero-motion-actor{
+  animation:viviCleanWeight 1.04s ease-in-out 1 both;
+}
+.v08-formation .crew-slot.motion-vivi.strike.special .hero-motion-actor{
+  animation:viviCleanSpecialWeight 1.18s ease-in-out 1 both;
+}
+.v08-formation .crew-slot.motion-vivi .hero-motion-sprite{
+  filter:drop-shadow(0 3px 2px #111b2966);
+}
+.v08-formation .crew-slot.motion-vivi .hero-motion-actor::before{
+  content:"";position:absolute;left:24%;bottom:-3%;width:55%;height:8%;
+  background:radial-gradient(ellipse,#17233466 0%,#17233433 44%,transparent 72%);
+  border-radius:50%;pointer-events:none;transform-origin:50% 50%;
+  animation:viviCleanShadow 2.6s ease-in-out infinite;
+}
+.v08-formation .crew-slot.motion-vivi.strike:not(.special) .hero-motion-actor::before{
+  animation:viviCleanShadowHit 1.04s ease-in-out 1 both;
+}
+.v08-formation .crew-slot.motion-vivi.strike.special .hero-motion-actor::before{
+  animation:viviCleanShadowHit 1.18s ease-in-out 1 both;
+}
+@keyframes viviCleanBreath{
+  0%,100%{transform:translateY(0) scaleY(1)}
+  25%{transform:translateY(-.35%) scaleY(1.004)}
+  60%{transform:translateY(.15%) scaleY(.998)}
+}
+@keyframes viviCleanWeight{
+  0%,100%{transform:translate(0,0) rotate(0) scale(1)}
+  17%{transform:translate(-.9%,.7%) rotate(-.5deg) scaleY(.996)}
+  39%{transform:translate(-1.5%,.6%) rotate(-.9deg) scaleY(.99)}
+  53%{transform:translate(1.2%,-1.7%) rotate(.5deg) scale(1.005)}
+  67%{transform:translate(2.6%,-1.3%) rotate(1.5deg) scale(.997)}
+  82%{transform:translate(1.1%,.7%) rotate(.7deg)}
+  94%{transform:translate(-.2%,0) rotate(-.2deg)}
+}
+@keyframes viviCleanSpecialWeight{
+  0%,100%{transform:translate(0,0) rotate(0) scale(1)}
+  25%{transform:translate(-1.9%,1.3%) rotate(-1deg) scaleY(.985)}
+  46%{transform:translate(-2%,-1%) rotate(-.8deg) scaleY(1.005)}
+  73%{transform:translate(3%,-1.8%) rotate(1.8deg) scaleY(.993)}
+  83%{transform:translate(2%,.5%) rotate(1deg)}
+  95%{transform:translate(-.2%,0) rotate(0)}
+}
+@keyframes viviCleanShadow{
+  0%,100%{opacity:.65;transform:scale(1)}
+  50%{opacity:.52;transform:scale(.95)}
+}
+@keyframes viviCleanShadowHit{
+  0%,100%{opacity:.65;transform:scale(1)}
+  33%,52%{opacity:.44;transform:scale(.85)}
+  66%{opacity:.78;transform:scale(1.18)}
+  88%{opacity:.6;transform:scale(.96)}
+}

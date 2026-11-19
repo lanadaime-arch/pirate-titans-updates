@@ -1,5 +1,5 @@
 {
-  "versionCode": 976,
-  "versionName": "0.9.76",
-  "notes": "Vivi : 24 poses intégrales en 2D, préparation et récupération plus progressives. Un seul essai dans les réglages, V6 en secours ; dégâts, taille et sauvegardes inchangés."
+  "versionCode": 977,
+  "versionName": "0.9.77",
+  "notes": "Vivi reconstruite sur la méthode Alvida : 16 poses 2D, attaque 1,04 s, spéciale 1,18 s et moteur commun pour les futurs héros. Plus d’anciens boutons d’essai. Progression et sauvegardes intactes. À évaluer sur téléphone."
 }
