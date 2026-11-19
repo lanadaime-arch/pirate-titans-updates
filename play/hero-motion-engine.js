@@ -6,7 +6,7 @@
 (function(root){
  'use strict';
  const profiles=new Map(), sessions=new Map(), compiled=new Map();
- const validId=/^[a-z][a-z0-9-]{0,39}$/;
+ const validId=/^[a-z][a-z0-9_-]{0,39}$/; // IDs du casting officiel : bon_clay, big_mom
  const validAsset=/^\.\/[a-zA-Z0-9_./-]+\.(?:webp|png)$/;
  const finitePositive=x=>Number.isFinite(x)&&x>0;
  const pct=x=>Number(x.toFixed(5)).toString()+'%';
