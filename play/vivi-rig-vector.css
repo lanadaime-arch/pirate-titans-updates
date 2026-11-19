@@ -1,5 +1,0 @@
-/* V0.9.67 — 2D vectorielle dans l'application seulement. Aucun changement de la V6 par défaut. */
-.v08-formation .crew-slot.prototype-vivi .vivi-vector-actor{position:absolute;inset:0;pointer-events:none;}
-.v08-formation .crew-slot.prototype-vivi .vivi-vector-canvas{position:absolute;left:50%;bottom:-2%;height:135%;width:auto;aspect-ratio:1;transform:translateX(-50%);pointer-events:none;filter:drop-shadow(0 3px 2px #151d2d66)}
-.v08-formation .crew-slot.prototype-vivi .vivi-vector-canvas .pirate-rig2d{width:100%;height:100%}
-.v08-formation .crew-slot.prototype-vivi .vivi-vector-canvas .pirate-rig2d-part img{width:100%;height:100%}
