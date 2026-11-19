@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 974,
+  "versionName": "0.9.74",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-974.zip",
+  "packageSha256": "db64198cb6b6eb1e79949697c5a430e275167d243cf57f8049d1089546d04537",
+  "packageBytes": 4141484,
+  "notes": "Vivi huit poses : suppression du bond global de 0,5 seconde au milieu du cycle dessiné. Animations d'origine, cadence, taille, autres héros et sauvegardes conservés.",
+  "signature": "hny6lmBQPpfx/1x6gGnoOEcNj4rHFn6J6F1h6ADUoNYuxG24NSeEvDK9/5L4CcJl7f/b6gsFAbCpNhhSJbu72XydRsndEqrJzDxcMgvPxy94Y0qhxLstqS74QcrA7Q/U1fCh3ri2puiN6ltpUHs+DbRR3StlU2UYFKfM4u68CrZ2osqrjE8KTyRnKA7z2518CfzwMS0dS1AvCA99m/Z8ebdB7yGdm9nQvZSVPXsIJ3cZc819fnxmsaARf11MN/MJpEPXsGmVk7TUQIdGZimr+K1naZV80rnh6UdYCX1dfB0fRSoLWcHZF0fZMbkPF9l4VBmZLXiBYZdJRAa78MU95+JLY///Xm65oh/cegHxFD520HG3qTPfnzP+6hfHqxwzu/R7qacVWmb+gWDBg8EPwOB+CFiQ7q/1ITHwh9eYcMgtI0tdVW7YnyViku4Cft5oX9dLR9XB70JnOM1LAEGRr5NaMuyME/og4CxJI9AqbhvH4FBv10S5ihQMJNnizC12"
+}
