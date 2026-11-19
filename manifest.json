@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 976,
-  "versionName": "0.9.76",
+  "versionCode": 977,
+  "versionName": "0.9.77",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-976.zip",
-  "packageSha256": "0d7bdb7eb4df6ddb3f408a4d2b25143e440e0f65dc4fe376f55d1c3a41a7e62b",
-  "packageBytes": 4553738,
-  "notes": "Vivi : 24 poses intégrales en 2D, préparation et récupération plus progressives. Un seul essai dans les réglages, V6 en secours ; dégâts, taille et sauvegardes inchangés.",
-  "signature": "rCsWQNXre4GV1NhRgLac7gr5KL1lMxARsRs00ZHkueJ3rP00eV6FdywrQwXqyHHZCOlw+U2u+X78IvOQKC0ye5dxL/VnjJusCdYfaPO8964zbm+OQoCWjJveObF8ykIu582xUWvXLrdP89B0S015y1glWmU639FcgLuLuJ3HkJ8oUiCJdlVJEJXfVoAQuTNceAomxk50OVFPIijY9FYHvrG6e25VET+9fBLeux+ugdFJ7PRRdI/tmoCNirm3HAHf8FNcrcxjkkqWv16lC83SMuVl/L/JOzDOvY2mjBV5RFA1SBwpMiyM5FINY4FEfTe5s4kPEiE0TbCVToeLYtkvOfVTaoshR4VWUyTerluNcJhydXaBTkUuXMoT2whGsWbNVBHg9VvjTAQfHa8ZF88p7AiQwIERcbpUIdD0T7uym7/oTwwaOdW67csWhJPkMthuv7izC1QYEZL5p16AY4CQRJ77lEHqdWoukYr3/ZKmKgR+EvM9He5kfiF5X3dfqKHq"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-977.zip",
+  "packageSha256": "73ce3a3be6a77be0b070ee90da03e9b662cb669a2592ff5e4921c2148d95fe90",
+  "packageBytes": 4831841,
+  "notes": "Vivi reconstruite sur la méthode Alvida : 16 poses 2D, attaque 1,04 s, spéciale 1,18 s et moteur commun pour les futurs héros. Plus d’anciens boutons d’essai. Progression et sauvegardes intactes. À évaluer sur téléphone.",
+  "signature": "vximPwl+lBA9OMre3D+1BALXTGu1vss6+eWbhNglTlIBfWU3nGeb2CMCjmozppp1SGMIfJjtHsHA7odcpwm+bMfDcPxN5gkfjYD1hn74X/2tje6ttsjRyTsCFBw3Mg6L0mxG5oTYH0tFaCwJeAoX2P0Ysl78FNLp3FfxI2DqS6UUGtD9bomw/ThKKkSse5FPsE9Eq52CUVAx0IkuZhlGci5WaUu3QayaxZIoc8Z1r8Xa5/5CbAJmfb9nRxCsii/5rP8Eqf/BjAD1tyuUnPF6kAwASH+58Ze8M12QlrcKd4p7LrNiZk8qFb4IXHQ50j+QbSHo1IDwVpSB/9JNPBKJySO5dKSrFvS4UdRMrYLBvRPxtFpQVGMKWND+eeQiwDcgbjttnyWDdq7PJZhQuL78LKyUmCON7acA4GAYOtkv2DvJoimHIuniMMcYfpl8rJcPtWk2zOTWJQhv7/sgpgF+XtgjxQIlfzP0u/iQBFcY6IcvHXK4dBL/3GtKwnngi2U2"
 }
