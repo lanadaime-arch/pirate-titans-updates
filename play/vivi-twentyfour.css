@@ -1,0 +1,45 @@
+/* V0.9.76 — 24 dessins entiers, WebP 12×2 : 2880×352 / 240×176 chaque pose.
+   Le sprite reste à taille fixe et ancré à la même plateforme, sans rig ni découpage. */
+.v08-formation .crew-slot.prototype-vivi .vivi-twentyfour-actor{position:absolute;inset:0;pointer-events:none}
+.v08-formation .crew-slot.prototype-vivi .vivi-twentyfour-sprite{
+ position:absolute;left:50%;bottom:-2%;height:135%;aspect-ratio:240/176;width:auto;max-width:none;
+ transform:translateX(-50%);background:url("./vivi-v3-24pose-v1.webp") 0 0 no-repeat;
+ background-size:1200% 200%;image-rendering:auto;
+ filter:drop-shadow(0 3px 2px #151d2d66)
+}
+/* Ne pas superposer le bond global de 500 ms au cycle dessiné. */
+.v08-formation .crew-slot.prototype-vivi.vivi-twentyfour-mode.strike{animation:none}
+.v08-formation .crew-slot.prototype-vivi.strike:not(.special) .vivi-twentyfour-sprite{
+ animation:viviTwentyFourAttack 2.238s step-end 1 both
+}
+.v08-formation .crew-slot.prototype-vivi.strike.special .vivi-twentyfour-sprite{
+ animation:viviTwentyFourAttack 2.397s step-end 1 both
+}
+/* Séquence commune provisoire à la frappe et à la spéciale, sans fausse différence artistique. */
+@keyframes viviTwentyFourAttack{
+ 0%,5.99%{background-position:0% 0%}
+ 6%,11.99%{background-position:9.09% 0%}
+ 12%,17.99%{background-position:18.18% 0%}
+ 18%,22.99%{background-position:27.27% 0%}
+ 23%,26.99%{background-position:36.36% 0%}
+ 27%,29.99%{background-position:45.45% 0%}
+ 30%,32.99%{background-position:54.55% 0%}
+ 33%,35.99%{background-position:63.64% 0%}
+ 36%,38.99%{background-position:72.73% 0%}
+ 39%,41.99%{background-position:81.82% 0%}
+ 42%,44.99%{background-position:90.91% 0%}
+ 45%,47.99%{background-position:100% 0%}
+ 48%,51.99%{background-position:0% 100%}
+ 52%,55.99%{background-position:9.09% 100%}
+ 56%,59.99%{background-position:18.18% 100%}
+ 60%,64.99%{background-position:27.27% 100%}
+ 65%,69.99%{background-position:36.36% 100%}
+ 70%,74.99%{background-position:45.45% 100%}
+ 75%,79.99%{background-position:54.55% 100%}
+ 80%,84.99%{background-position:63.64% 100%}
+ 85%,88.99%{background-position:72.73% 100%}
+ 89%,92.99%{background-position:81.82% 100%}
+ 93%,96.99%{background-position:90.91% 100%}
+ 97%,99.59%{background-position:100% 100%}
+ 99.6%,100%{background-position:0% 0%}
+}
