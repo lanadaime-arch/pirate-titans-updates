@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 977,
-  "versionName": "0.9.77",
+  "versionCode": 978,
+  "versionName": "0.9.78",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-977.zip",
-  "packageSha256": "73ce3a3be6a77be0b070ee90da03e9b662cb669a2592ff5e4921c2148d95fe90",
-  "packageBytes": 4831841,
-  "notes": "Vivi reconstruite sur la méthode Alvida : 16 poses 2D, attaque 1,04 s, spéciale 1,18 s et moteur commun pour les futurs héros. Plus d’anciens boutons d’essai. Progression et sauvegardes intactes. À évaluer sur téléphone.",
-  "signature": "vximPwl+lBA9OMre3D+1BALXTGu1vss6+eWbhNglTlIBfWU3nGeb2CMCjmozppp1SGMIfJjtHsHA7odcpwm+bMfDcPxN5gkfjYD1hn74X/2tje6ttsjRyTsCFBw3Mg6L0mxG5oTYH0tFaCwJeAoX2P0Ysl78FNLp3FfxI2DqS6UUGtD9bomw/ThKKkSse5FPsE9Eq52CUVAx0IkuZhlGci5WaUu3QayaxZIoc8Z1r8Xa5/5CbAJmfb9nRxCsii/5rP8Eqf/BjAD1tyuUnPF6kAwASH+58Ze8M12QlrcKd4p7LrNiZk8qFb4IXHQ50j+QbSHo1IDwVpSB/9JNPBKJySO5dKSrFvS4UdRMrYLBvRPxtFpQVGMKWND+eeQiwDcgbjttnyWDdq7PJZhQuL78LKyUmCON7acA4GAYOtkv2DvJoimHIuniMMcYfpl8rJcPtWk2zOTWJQhv7/sgpgF+XtgjxQIlfzP0u/iQBFcY6IcvHXK4dBL/3GtKwnngi2U2"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-978.zip",
+  "packageSha256": "0c6118ccc1e70e93e89a6a45a42322b33d6403febb4686d53b72d9f30933ccb0",
+  "packageBytes": 3783870,
+  "notes": "Vivi revient en éveil 0 et retrouve son DPS de base. Déferlante des mers et les berrys de test automatiques sont retirés. Records, niveaux, reliques et sauvegardes conservés. Animation de Vivi inchangée.",
+  "signature": "RNopkymxCer8pSogu3hzryNGgFtm74WSf0xgN6kXKNWbJ+0j4EMB2QVsA9Z6EljZb3PbHgkbsz9HRVYSTNQSsaLg2cm63ehvM0CbKVITLmPmtoSM8SoEkNVz/HUrOaftOiXJrpeuF7ZfCJAR+EVN6zerrm/XLmdaNBaRPd/D4cOZ0VQAiPsLmXLt4p9sBqAIobc6cIaniiWc5NDxrAC5i+lIZ5xQkgW0RgaQc8NRmFrt906vLEKW/v47+bG6szVW6FqxAPKLAclB7Fhu7xpmpzUhfJs0/nLbihNQj4R1SS29zBSlLzngCjapiuEM/R/rCf3fYESwiEqIWEfmGRjWTz2HMXnw4TmHTWi6LpIBQodvXljDZ2VO+7VfheQ7Ggofs37Iq9emJiPxMGKlBX3iEFIlnU/pn/OZGRIXiwGt6kQ48XZ6e9hO04BFrT5+2shV8axu/x+unFwSnmhCBbaKOM3juTQ6BggCf5+yrddeopKk7r/zbTjCVzWr2m8OB8G6"
 }
