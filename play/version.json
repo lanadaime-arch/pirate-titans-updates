@@ -1,5 +1,5 @@
 {
-  "versionCode": 978,
-  "versionName": "0.9.78",
-  "notes": "Vivi revient en éveil 0 et retrouve son DPS de base. Déferlante des mers et les berrys de test automatiques sont retirés. Records, niveaux, reliques et sauvegardes conservés. Animation de Vivi inchangée."
+  "versionCode": 979,
+  "versionName": "0.9.79",
+  "notes": "Interface des héros épurée : aucune mention de rang pour les formes de base, indication des évolutions seulement lorsqu'elles sont débloquées. Dégâts, progression, animation et sauvegardes préservés."
 }

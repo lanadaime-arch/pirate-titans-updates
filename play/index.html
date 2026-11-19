@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#19243f"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest">
 <!-- Precharger et decoder les planches AVANT les changements de rang (evite
      un frame blanc au passage de la forme normale a l'Eveil 1). -->
-<meta name="description" content="Pirate Titans 0.9.78 : retrait des bonus temporaires de test de Vivi, éveil 0 et progression conservée.">
+<meta name="description" content="Pirate Titans 0.9.79 : présentation des héros simplifiée, progression et sauvegardes conservées.">
 
-<title>Pirate Titans — Grand Line v0.9.78</title>
+<title>Pirate Titans — Grand Line v0.9.79</title>
 <style>
 :root{--ink:#122332;--deep:#112634;--panel:#213746;--panel2:#304554;--line:#68808a;--warm:#fceac0;--gold:#ffce68;--cyan:#58dfee;--mint:#5bdeb8;--red:#f4705e;--paper:#f3ebd7;--h:100dvh}
 *{box-sizing:border-box}html,body{margin:0;height:100%;width:100%;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--paper);background:#08141c;touch-action:manipulation}button{font:inherit;cursor:pointer;color:inherit;-webkit-tap-highlight-color:transparent}button:disabled{cursor:default}button:focus-visible{outline:2px solid #fff2b5;outline-offset:2px}[hidden]{display:none!important}
@@ -3056,13 +3056,23 @@ function modal(title,body,cb,label='CONTINUER',cancel=false){$('modalTitle').tex
 function closeModal(){$('veil').hidden=true;modalCb=null;}
 
 /* V0.9.58 — Notes éditoriales locales : ne changent pas la sauvegarde du jeu. */
-const PATCH_NOTES_VERSION=978;
+const PATCH_NOTES_VERSION=979;
 const PATCH_NOTES_SEEN_KEY='pirate_titans_patchnotes_seen_v1';
 const PATCH_NOTES=[
+ {code:979,version:'0.9.79',date:'19 novembre 2026',title:'Présentation des héros simplifiée',sections:[
+  {name:'Interface des héros',items:[
+   'La forme normale des héros ne porte plus de mention de rang.',
+   'Le rang apparaît uniquement lorsqu’une évolution a réellement été obtenue.',
+   'Les indications de développement ont été retirées de la liste des héros et des réglages.'
+  ]},
+  {name:'Progression préservée',items:[
+   'Aucun changement aux dégâts, animations, niveaux, prestige ou sauvegardes.'
+  ]}
+ ]},
  {code:978,version:'0.9.78',date:'19 novembre 2026',title:'Fin des bonus de test de Vivi',sections:[
   {name:'Éveil de Vivi',items:[
-   'Les deux éveils provisoires sont retirés. Vivi revient en éveil 0 avec ses dégâts de base, y compris après prestige ou import de sauvegarde.',
-   'Les futurs éveils 1 et 2 restent à créer avec leurs véritables apparences et un équilibrage adapté.'
+   'Les deux bonus provisoires d’éveil sont retirés. Vivi retrouve sa forme normale et ses dégâts de base, y compris après prestige ou import de sauvegarde.',
+   'La puissance expérimentale ne s’applique plus à la progression.'
   ]},
   {name:'Combat et progression',items:[
    'Déferlante des mers et son saut automatique de 100 niveaux sont retirés : les ennemis et boss sont combattus normalement.',
@@ -3493,11 +3503,12 @@ function renderShop(){
    const dpsGain=q.n?heroUpgradeDpsGain(hero,q.n):bnFrom(0);
    const canAscend=level===HERO_LEVEL_MAX&&hero.id==='alvida'&&alvidaAscensionLevel()<2;
    const ascCost=canAscend?alvidaAscensionCost():bnFrom(0);
+    const awakenedRank=Math.max(0,Math.floor(Number(S.heroAscensions?.[hero.id])||0));
    h+=`<div class="tt2-hero-row ${level?'is-recruited':'is-locked'}">
       <button class="tt2-hero-portrait" data-kind="heroInfo" data-id="${hero.id}" aria-label="Voir les techniques de ${hero.name}">
         ${thumb(hero.id)}<span class="tt2-hero-portrait-track"><i style="width:${progress}%"></i></span></button>
       <div class="tt2-hero-info">
-        <strong>${hero.name}${hero.id==='vivi'?' · Éveil 0':hero.id==='alvida'&&alvidaAscensionLevel()>0?' · Éveil '+alvidaAscensionLevel():''}</strong>
+        <strong>${hero.name}${awakenedRank>0?' · Éveil '+awakenedRank:''}</strong>
         <div class="tt2-hero-metrics"><b>Lv. ${heroLevelText(level)}</b><small>DPS : ${fmt(dps)} (${shareText})</small></div>
         <div class="tt2-hero-skills" aria-label="Paliers de ${hero.name}">${mastery}${levelsTag}</div>
       </div>
@@ -3511,7 +3522,7 @@ function renderShop(){
       </button>`}
     </div>`;
   }
-  h+='<div class="tt2-alvida-test-note">🦚 Vivi · Éveil 0 · Miss Wednesday (base). Les vrais éveils restent à concevoir</div>';
+  
   h+='</div>';
  }
  if(tab==='artifacts'){
@@ -3676,7 +3687,7 @@ function showHeroInfo(id,focusLevel=0){
    (step.detail?'<small>'+step.detail+'</small>':'')+'<b>'+step.gain+'</b></div></div>';
  }).join('');
  const heading=upcoming?'PROCHAIN DÉBLOCAGE · LV. '+heroLevelText(goal):'NIVEAU MAX · 6000';
- const nextTitle=upcoming?stepTitle(upcoming)+' · '+formatX(upcoming.factor)+' DPS personnel':h.id==='vivi'?'Tous les paliers acquis · éveils visuels à venir':'Tous les paliers sont acquis';
+ const nextTitle=upcoming?stepTitle(upcoming)+' · '+formatX(upcoming.factor)+' DPS personnel':'Tous les paliers sont acquis';
  const body='<div class="tt2-hero-sheet">'+
   '<div class="tt2-hero-detail-head">'+
   '<div class="tt2-hero-detail-portrait">'+thumb(h.id)+'</div>'+
@@ -3929,7 +3940,7 @@ $('multipliers').addEventListener('click',e=>{const b=e.target.closest('[data-mu
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;setDrawer(true);document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));$('shop').scrollTop=0;renderShop()}));
 $('patchNotesButton').addEventListener('click',openPatchNotes);
 refreshPatchNotesBadge();
-$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.78 · Démo Vivi',`<p><b>Progression :</b> Vivi est de retour en éveil 0, avec son animation 2D de 16 poses. Les véritables éveils 1 et 2 seront travaillés plus tard. Les bonus de test des limites ont été retirés.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige devient disponible au <b>stage 30</b>. Les jalons permettent ensuite un départ avancé après prestige.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b> nouvelle attaque 2D dessinée en 16 poses, courte et dynamique, sur la méthode Alvida.<br><small>Aucune ancienne animation ni bouton d'essai à sélectionner. Tes niveaux, records et sauvegardes sont préservés ; seuls les bonus temporaires de test ont été retirés.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animation 2D dessinée encore en cours de finition.</p>`,()=>{},'JOUER'));
+$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.79 · Démo Vivi',`<p><b>Progression :</b> Vivi possède son animation 2D de 16 poses et ses dégâts de base. Les bonus temporaires de test ont été retirés.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige devient disponible au <b>stage 30</b>. Les jalons permettent ensuite un départ avancé après prestige.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b> nouvelle attaque 2D dessinée en 16 poses, courte et dynamique, sur la méthode Alvida.<br><small>Aucune ancienne animation ni bouton d'essai à sélectionner. Tes niveaux, records et sauvegardes sont préservés ; seuls les bonus temporaires de test ont été retirés.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animation 2D dessinée encore en cours de finition.</p>`,()=>{},'JOUER'));
 $('modalBody').addEventListener('click',e=>{
   if(e.target.id==='fxToggle'){S.fx=S.fx===false; e.target.textContent=S.fx===false?'✨ Activer':'✨ Désactiver';save();}if(e.target.id==='soundToggle'){S.mute=!S.mute;e.target.textContent=S.mute?'🔇 Activer':'🔊 Couper';save();}
   if(e.target.id==='checkGameUpdates'){if(window.PirateAndroid?.checkForUpdates)window.PirateAndroid.checkForUpdates();else if(window.PiratePWA?.checkForUpdates)window.PiratePWA.checkForUpdates();else toast('Mises à jour web indisponibles');}
