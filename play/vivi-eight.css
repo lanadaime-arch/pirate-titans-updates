@@ -1,0 +1,39 @@
+/* V0.9.71 — huit poses complètes et indépendantes, sans masques, rig ni zoom.
+   WebP 8×1 : 1408×176. Pieds alignés à la même ligne, anneaux transparents.
+   CSS step-end évite tout glissement des colonnes entre deux dessins. */
+.v08-formation .crew-slot.prototype-vivi .vivi-eight-actor{position:absolute;inset:0;pointer-events:none}
+.v08-formation .crew-slot.prototype-vivi .vivi-eight-sprite{
+ position:absolute;left:50%;bottom:-2%;height:135%;aspect-ratio:1;width:auto;max-width:none;
+ transform:translateX(-50%);background:url("./vivi-v1-8pose-v1.webp") 0 0 no-repeat;
+ background-size:800% 100%;image-rendering:auto;
+ filter:drop-shadow(0 3px 2px #151d2d66)
+}
+.v08-formation .crew-slot.prototype-vivi.strike:not(.special) .vivi-eight-sprite{
+ animation:viviEightAttack 2.238s step-end 1 both
+}
+.v08-formation .crew-slot.prototype-vivi.strike.special .vivi-eight-sprite{
+ animation:viviEightSpecial 2.397s step-end 1 both
+}
+/* Ne jamais animer les coordonnées de l'atlas en linear : apparition de fragments. */
+@keyframes viviEightAttack{
+ 0%,9.9%{background-position:0% 0%}
+ 10%,19.9%{background-position:14.285714% 0%}
+ 20%,29.9%{background-position:28.571429% 0%}
+ 30%,39.9%{background-position:42.857143% 0%}
+ 40%,53.9%{background-position:57.142857% 0%}
+ 54%,65.9%{background-position:71.428571% 0%}
+ 66%,77.9%{background-position:85.714286% 0%}
+ 78%,87.9%{background-position:100% 0%}
+ 88%,100%{background-position:0% 0%}
+}
+@keyframes viviEightSpecial{
+ 0%,5.9%{background-position:0% 0%}
+ 6%,14.9%{background-position:14.285714% 0%}
+ 15%,23.9%{background-position:28.571429% 0%}
+ 24%,34.9%{background-position:42.857143% 0%}
+ 35%,47.9%{background-position:57.142857% 0%}
+ 48%,59.9%{background-position:71.428571% 0%}
+ 60%,74.9%{background-position:85.714286% 0%}
+ 75%,87.9%{background-position:100% 0%}
+ 88%,100%{background-position:0% 0%}
+}

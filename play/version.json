@@ -1,5 +1,5 @@
 {
-  "versionCode": 970,
-  "versionName": "0.9.70",
-  "notes": "Vivi : première animation en 4 poses complètes dessinées, fidèle à la tenue V1. Comparaison facultative dans le jeu Android/iPhone ; V6 par défaut, aucune modification aux dégâts, compétences ou sauvegardes."
+  "versionCode": 971,
+  "versionName": "0.9.71",
+  "notes": "Vivi : 8 poses complètes, préparation et récupération plus progressives, pieds recalés et anneaux transparents. Comparaison dans les réglages Android/iPhone ; V6, 4 poses et sauvegardes préservées."
 }
