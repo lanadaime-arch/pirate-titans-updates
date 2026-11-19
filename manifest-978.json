@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 978,
+  "versionName": "0.9.78",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-978.zip",
+  "packageSha256": "0c6118ccc1e70e93e89a6a45a42322b33d6403febb4686d53b72d9f30933ccb0",
+  "packageBytes": 3783870,
+  "notes": "Vivi revient en éveil 0 et retrouve son DPS de base. Déferlante des mers et les berrys de test automatiques sont retirés. Records, niveaux, reliques et sauvegardes conservés. Animation de Vivi inchangée.",
+  "signature": "RNopkymxCer8pSogu3hzryNGgFtm74WSf0xgN6kXKNWbJ+0j4EMB2QVsA9Z6EljZb3PbHgkbsz9HRVYSTNQSsaLg2cm63ehvM0CbKVITLmPmtoSM8SoEkNVz/HUrOaftOiXJrpeuF7ZfCJAR+EVN6zerrm/XLmdaNBaRPd/D4cOZ0VQAiPsLmXLt4p9sBqAIobc6cIaniiWc5NDxrAC5i+lIZ5xQkgW0RgaQc8NRmFrt906vLEKW/v47+bG6szVW6FqxAPKLAclB7Fhu7xpmpzUhfJs0/nLbihNQj4R1SS29zBSlLzngCjapiuEM/R/rCf3fYESwiEqIWEfmGRjWTz2HMXnw4TmHTWi6LpIBQodvXljDZ2VO+7VfheQ7Ggofs37Iq9emJiPxMGKlBX3iEFIlnU/pn/OZGRIXiwGt6kQ48XZ6e9hO04BFrT5+2shV8axu/x+unFwSnmhCBbaKOM3juTQ6BggCf5+yrddeopKk7r/zbTjCVzWr2m8OB8G6"
+}
