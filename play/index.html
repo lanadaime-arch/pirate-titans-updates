@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#19243f"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest">
 <!-- Precharger et decoder les planches AVANT les changements de rang (evite
      un frame blanc au passage de la forme normale a l'Eveil 1). -->
-<meta name="description" content="Pirate Titans 0.9.82 : nouvel étalonnage des proportions de l'arène, combattants, boss et butin au sol.">
+<meta name="description" content="Pirate Titans 0.9.83 : couture combat-menu compacte, HUD supérieur, menus resserrés et butin au sol.">
 
-<title>Pirate Titans — Grand Line v0.9.82</title>
+<title>Pirate Titans — Grand Line v0.9.83</title>
 <style>
 :root{--ink:#122332;--deep:#112634;--panel:#213746;--panel2:#304554;--line:#68808a;--warm:#fceac0;--gold:#ffce68;--cyan:#58dfee;--mint:#5bdeb8;--red:#f4705e;--paper:#f3ebd7;--h:100dvh}
 *{box-sizing:border-box}html,body{margin:0;height:100%;width:100%;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--paper);background:#08141c;touch-action:manipulation}button{font:inherit;cursor:pointer;color:inherit;-webkit-tap-highlight-color:transparent}button:disabled{cursor:default}button:focus-visible{outline:2px solid #fff2b5;outline-offset:2px}[hidden]{display:none!important}
@@ -1928,6 +1928,83 @@
 /* Butin posé près du capitaine sur la ligne du sol, non dans un coin de l'arène. */
 .app .frame .loot-pile{left:27%!important;bottom:37%!important;min-width:61px;min-height:42px}
 @media(max-width:360px){.app .frame .loot-pile{left:25%!important;min-width:54px}}
+
+.app.expanded .sheet{overflow:visible!important}
+/* V0.9.83 — capture TT2/Pirate Titans 21097/21101 : vraie couture.
+   Le seuil de 52.8% est mesure sur la hauteur UTILE, pas un 50/50 invente.
+   Sol, bandes noires et taille des combattants restent independants du tiroir. */
+.app.expanded:not(.max-drawer) .sheet{
+ top:52.8%!important;bottom:var(--nav-h)!important;
+ height:auto!important;min-height:0!important;max-height:none!important;
+ border-top:2px solid #9799a5!important;
+}
+.app.expanded .sheet-grip{
+ position:relative!important;display:block!important;overflow:visible!important;
+ height:0!important;min-height:0!important;flex:0 0 0!important;
+ margin:0!important;padding:0!important;border:0!important;
+ background:transparent!important;z-index:5;pointer-events:none;
+}
+.app.expanded .sheet-grip #drawerMax,
+.app.expanded .sheet-grip #sheetExpand{
+ position:absolute!important;top:-28px!important;
+ width:41px!important;height:29px!important;min-height:29px!important;
+ flex:none!important;display:grid!important;place-items:center!important;
+ padding:0!important;margin:0!important;line-height:1!important;
+ font-size:18px!important;font-weight:950!important;letter-spacing:0!important;
+ border:2px solid #a1a0a8!important;border-bottom:0!important;
+ border-radius:8px 8px 0 0!important;color:#f7f3e9!important;
+ background:linear-gradient(#53515c,#333741)!important;
+ text-shadow:0 1px #171820!important;box-shadow:0 -2px 4px #12121b77!important;
+ pointer-events:auto;touch-action:manipulation;
+}
+.app.expanded .sheet-grip #drawerMax{right:41px!important;left:auto!important}
+.app.expanded .sheet-grip #sheetExpand{right:0!important;left:auto!important;border-left:0!important}
+.app.expanded .sheet-grip #sheetExpand:focus-visible,
+.app.expanded .sheet-grip #drawerMax:focus-visible{outline:2px solid #ffe0a5;outline-offset:1px}
+.app.expanded .sheet-top{
+ min-height:25px!important;padding:2px 6px!important;gap:4px!important;
+}
+.app.expanded .sheet.captain-mode .sheet-top{min-height:25px!important;padding:2px 6px!important}
+/* Ouvrir depuis le HUD ferme : petite languette, aucun bandeau plein ecran. */
+.app:not(.expanded) #drawerOpen{
+ position:absolute!important;left:calc(50% - 24px)!important;right:auto!important;
+ bottom:calc(var(--nav-h) + var(--actions-h) + var(--summary-h))!important;
+ width:48px!important;height:27px!important;min-height:27px!important;
+ border:2px solid #9c98a3!important;border-bottom:0!important;
+ border-radius:8px 8px 0 0!important;
+ display:grid!important;place-items:center!important;
+ padding:0!important;background:linear-gradient(#555361,#302f43)!important;
+ color:#fff1ce!important;font-size:14px!important;z-index:21!important;
+}
+.app:not(.expanded) #drawerOpen b{font-size:15px!important}
+.app .hud{
+ /* La bande letterbox offre DEJA de l'espace de securite : ne pas
+    ajouter une deuxieme fois le safe-area-inset du systeme. */
+ padding-top:max(4px,calc(env(safe-area-inset-top,0px) - var(--letterbox,0px)))!important;
+}
+/* Le haut des menus TT2 est dense ; ne pas ratatiner les cartes des heros. */
+.app .tt2-heroes-tools{padding:2px!important;gap:1px!important}
+.app .tt2-hero-tool{min-height:44px!important;gap:1px!important;padding:1px 0!important}
+.app .tt2-hero-tool span{font-size:clamp(17px,4.8vw,22px)!important}
+.app .tt2-heroes-buy-mode{min-height:31px!important;font-size:clamp(9px,2.5vw,11px)!important}
+.app .tt2-captain-actions{padding:1px!important}
+.app .tt2-captain-actions button:not(.tt2-captain-max){min-height:41px!important}
+.app .tt2-eq-categories .tt2-eq-category{min-height:50px!important;padding:2px 1px!important}
+.app .tt2-eq-category .gear-icon{font-size:clamp(17px,4.6vw,23px)!important}
+/* Le ramassage est un petit objet sous les pieds des personnages, pas un
+   placard sur le torse du monstre. A gauche des commandes de combat. */
+.app .frame .loot-pile{
+ left:57%!important;bottom:42.5%!important;z-index:24;
+ min-width:54px!important;min-height:41px!important;
+ padding:3px 5px!important;transform:translateZ(0);
+}
+@media(max-width:360px){
+ .app .frame .loot-pile{left:57%!important;min-width:50px!important}
+ .app.expanded .sheet-grip #drawerMax,
+ .app.expanded .sheet-grip #sheetExpand{width:39px!important}
+ .app.expanded .sheet-grip #drawerMax{right:39px!important}
+}
+/* Aucune icone d'evenement multijoueur ajoutée sur les cotes : choix valide. */
 </style>
 <link rel="preload" as="image" href="./vivi-alvida-base-16f-224.webp" type="image/webp">
 <link rel="stylesheet" href="./alvida-rig.css">
@@ -1988,7 +2065,7 @@
     <div class="stat-mini" title="Gain du prestige actuel"><span class="stat-icon">✨</span><b id="summaryPrestige">0</b><small>reliques</small></div>
     <div class="stat-mini" title="Trésors disponibles"><span class="stat-icon">🎁</span><b id="summaryChest">0</b><small>butins au sol</small></div>
   </div>
-  <button id="drawerOpen" class="drawer-open" aria-label="Ouvrir les améliorations" aria-expanded="false" aria-controls="sheetPanel"><b>▲</b> AMÉLIORATIONS <b>▲</b></button>
+  <button id="drawerOpen" class="drawer-open" aria-label="Ouvrir le panneau" aria-expanded="false" aria-controls="sheetPanel" title="Ouvrir les améliorations"><b>▲</b></button>
   <div class="actionbar"><div class="actionrow">
     <button class="spell" id="skillGear" aria-label="Gear Second, 25 mana"><span class="sig">🔥</span><span class="spell-text"><strong>GEAR 2</strong><span>25</span></span><span class="cool" hidden></span></button>
     <button class="spell" id="skillHaki" aria-label="Haki des Rois, 50 mana"><span class="sig">⚡</span><span class="spell-text"><strong>HAKI</strong><span>50</span></span><span class="cool" hidden></span></button>
@@ -1997,7 +2074,7 @@
   <button class="spell" id="skillZoro" aria-label="Entaille de Zoro, 45 mana"><span class="sig">🗡️</span><span class="spell-text"><strong>ENTAILLE</strong><span>45</span></span><span class="cool" hidden></span></button>
   <button class="spell" id="skillCrew" aria-label="Cri de l'équipage, 40 mana"><span class="sig">🏴‍☠️</span><span class="spell-text"><strong>ÉQUIPAGE</strong><span>40</span></span><span class="cool" hidden></span></button>
   </div><div class="mana"><span>💧 <span id="manaText">100/100</span></span><div class="mana-track"><span id="manaFill"></span></div><span id="tapPower">TAP 2</span></div></div>
-  <section class="sheet" id="sheetPanel" aria-label="Améliorations et menus du jeu"><div class="sheet-grip"><button id="sheetExpand" aria-label="Agrandir ou réduire le panneau"><span id="gripArrow">▲</span><span>▼ FERMER LE PANNEAU</span></button><button id="drawerMax" aria-label="Agrandir le panneau" title="Agrandir le panneau">⬆</button></div><div class="sheet-top"><div class="sheet-left"><div class="sheet-title" id="sheetTitle">LUFFY · CAPITAINE</div><div class="sheet-sub" id="sheetSub">Augmente tes dégâts au toucher</div></div><div class="multipliers" id="multipliers"><button class="multi on" data-mul="1">×1</button><button class="multi" data-mul="10">×10</button><button class="multi" data-mul="100">×100</button><button class="multi" data-mul="max">MAX</button></div></div><div class="scroll" id="shop"></div></section>
+  <section class="sheet" id="sheetPanel" aria-label="Améliorations et menus du jeu"><div class="sheet-grip"><button id="drawerMax" type="button" aria-label="Agrandir le panneau" title="Agrandir le panneau">▲</button><button id="sheetExpand" type="button" aria-label="Fermer le panneau" title="Fermer le panneau">✕</button></div><div class="sheet-top"><div class="sheet-left"><div class="sheet-title" id="sheetTitle">LUFFY · CAPITAINE</div><div class="sheet-sub" id="sheetSub">Augmente tes dégâts au toucher</div></div><div class="multipliers" id="multipliers"><button class="multi on" data-mul="1">×1</button><button class="multi" data-mul="10">×10</button><button class="multi" data-mul="100">×100</button><button class="multi" data-mul="max">MAX</button></div></div><div class="scroll" id="shop"></div></section>
   <nav class="nav tt2-nav" aria-label="Menu principal">
 <button class="active" data-tab="master" aria-label="Capitaine" title="Capitaine"><span>🗡️</span><small>CAPITAINE</small><i class="tt2-alert" data-alert-for="master" hidden></i></button>
 <button data-tab="heroes" aria-label="Héros" title="Héros"><span>⚔️</span><small>HÉROS</small></button>
@@ -3213,9 +3290,22 @@ function modal(title,body,cb,label='CONTINUER',cancel=false){$('modalTitle').tex
 function closeModal(){$('veil').hidden=true;modalCb=null;}
 
 /* V0.9.58 — Notes éditoriales locales : ne changent pas la sauvegarde du jeu. */
-const PATCH_NOTES_VERSION=982;
+const PATCH_NOTES_VERSION=983;
 const PATCH_NOTES_SEEN_KEY='pirate_titans_patchnotes_seen_v1';
 const PATCH_NOTES=[
+ {code:983,version:'0.9.83',date:'21 novembre 2026',title:'La vraie séparation entre combat et menus',sections:[
+  {name:'Une couture inspirée de TT2',items:[
+   'Le tiroir semi-ouvert se rattache au sol de l’arène, sans grande bande de terre inutile.',
+   'Une petite encoche porte désormais deux boutons distincts : flèche pour agrandir ou réduire le panneau, croix pour le fermer.',
+   'Retoucher l’onglet actif referme également le panneau ; le combat reste ancré à la même taille.'
+  ]},
+  {name:'Lisibilité et menus',items:[
+   'Le HUD supérieur évite le double espacement de sécurité sur les téléphones concernés.',
+   'L’en-tête du menu Héros et les catégories d’équipement sont compacts, sans réduire toutes les lignes des héros.',
+   'Le coffre à récupérer est rapproché du sol, à côté de Luffy, au lieu de recouvrir les ennemis.',
+   'Aucun bouton d’événement multijoueur n’est ajouté sur les côtés.'
+  ]}
+ ]},
  {code:982,version:'0.9.82',date:'20 novembre 2026',title:'Premier étalonnage de l’écran de combat',sections:[
   {name:'Proportions à tester sur téléphone',items:[
    'Les ennemis ordinaires sont mieux différenciés des grands boss et le capitaine gagne en lisibilité.',
@@ -4177,10 +4267,10 @@ $('skillGear').addEventListener('click',()=>useSkill('gear'));$('skillHaki').add
 $('bossToggle').addEventListener('click',()=>{if(farm){farm=false;startEnemy();renderHud();return;}toggleBoss()});
 $('shop').addEventListener('click',e=>{const btn=e.target.closest('[data-kind]');if(btn)buy(btn.dataset.kind,btn.dataset.id,btn.dataset.step);if(e.target.closest('#prestige'))prestige();});
 $('multipliers').addEventListener('click',e=>{const b=e.target.closest('[data-mul]');if(!b)return;multi=b.dataset.mul;document.querySelectorAll('[data-mul]').forEach(x=>x.classList.toggle('on',x===b));renderShop()});
-document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;setDrawer(true);document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));$('shop').scrollTop=0;renderShop()}));
+document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{const requested=b.dataset.tab;if(tab===requested&&$('app').classList.contains('expanded')){setDrawer(false);return;}tab=requested;setDrawer(true);document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));$('shop').scrollTop=0;renderShop()}));
 $('patchNotesButton').addEventListener('click',openPatchNotes);
 refreshPatchNotesBadge();
-$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.82 · Démo Vivi',`<p><b>Progression :</b> Vivi possède son animation 2D de 16 poses et ses dégâts de base. Les bonus temporaires de test ont été retirés.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige devient disponible au <b>stage 30</b>. Les jalons permettent ensuite un départ avancé après prestige.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button> <button id="testResetWaveOne" class="save-btn" type="button" style="border-color:#e8bd72">🔄 Recommencer à la vague 1</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b> nouvelle attaque 2D dessinée en 16 poses, courte et dynamique, sur la méthode Alvida.<br><small>Aucune ancienne animation ni bouton d'essai à sélectionner. La V0.9.81 a remis les anciennes parties de test à zéro une seule fois. Ta progression après ce reset est sauvegardée normalement ; le bouton Recommencer permet un nouveau test.</small></p><p><b>Équipements :</b> <button id="autoSellCommonToggle" class="save-btn" type="button">${S.autoSellCommon===true?'✅ Vente auto des communs':'⬜ Vente auto des communs'}</button><br><small>Gratuit : les communs récupérés deviennent des perles ; les autres vont dans l’inventaire.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animation 2D dessinée encore en cours de finition.</p>`,()=>{},'JOUER'));
+$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.83 · Démo Vivi',`<p><b>Progression :</b> Vivi possède son animation 2D de 16 poses et ses dégâts de base. Les bonus temporaires de test ont été retirés.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige devient disponible au <b>stage 30</b>. Les jalons permettent ensuite un départ avancé après prestige.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button> <button id="testResetWaveOne" class="save-btn" type="button" style="border-color:#e8bd72">🔄 Recommencer à la vague 1</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b> nouvelle attaque 2D dessinée en 16 poses, courte et dynamique, sur la méthode Alvida.<br><small>Aucune ancienne animation ni bouton d'essai à sélectionner. La V0.9.81 a remis les anciennes parties de test à zéro une seule fois. Ta progression après ce reset est sauvegardée normalement ; le bouton Recommencer permet un nouveau test.</small></p><p><b>Équipements :</b> <button id="autoSellCommonToggle" class="save-btn" type="button">${S.autoSellCommon===true?'✅ Vente auto des communs':'⬜ Vente auto des communs'}</button><br><small>Gratuit : les communs récupérés deviennent des perles ; les autres vont dans l’inventaire.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animation 2D dessinée encore en cours de finition.</p>`,()=>{},'JOUER'));
 $('modalBody').addEventListener('click',e=>{
   if(e.target.id==='skipLootReveal'){const reveal=e.target.closest('.loot-reveal');if(reveal)reveal.classList.add('loot-reveal-skipped');e.target.hidden=true;return;}if(e.target.id==='autoSellCommonToggle'){S.autoSellCommon=S.autoSellCommon!==true;e.target.textContent=S.autoSellCommon?'✅ Vente auto des communs':'⬜ Vente auto des communs';save();}if(e.target.id==='fxToggle'){S.fx=S.fx===false; e.target.textContent=S.fx===false?'✨ Activer':'✨ Désactiver';save();}if(e.target.id==='soundToggle'){S.mute=!S.mute;e.target.textContent=S.mute?'🔇 Activer':'🔊 Couper';save();}
   if(e.target.id==='checkGameUpdates'){if(window.PirateAndroid?.checkForUpdates)window.PirateAndroid.checkForUpdates();else if(window.PiratePWA?.checkForUpdates)window.PiratePWA.checkForUpdates();else toast('Mises à jour web indisponibles');}
@@ -4201,22 +4291,25 @@ $('modalBody').addEventListener('change',e=>{
 function exportSave(){save();if(window.PirateAndroid?.exportSave){window.PirateAndroid.exportSave(JSON.stringify(S,null,2));return;}const blob=new Blob([JSON.stringify(S,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='pirate-titans-sauvegarde-v09.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),5000);toast('💾 Sauvegarde exportée !')}
 $('modalClose').addEventListener('click',closeModal);
 function setDrawer(open){
- $('app').classList.toggle('expanded',!!open);
- if(!open){$('app').classList.remove('max-drawer');$('drawerMax').textContent='⬆';}
- $('gripArrow').textContent=open?'▼':'▲';
- $('sheetExpand').setAttribute('aria-label',open?'Fermer les améliorations':'Ouvrir les améliorations');
+ const app=$('app');
+ app.classList.toggle('expanded',!!open);
+ if(!open)app.classList.remove('max-drawer');
+ $('drawerMax').textContent=app.classList.contains('max-drawer')?'▼':'▲';
+ $('sheetExpand').setAttribute('aria-label','Fermer le panneau');
  $('sheetExpand').setAttribute('aria-expanded',String(!!open));
  $('drawerOpen').setAttribute('aria-expanded',String(!!open));
  $('sheetPanel').setAttribute('aria-hidden',String(!open));
- $('drawerMax').setAttribute('aria-label',$('app').classList.contains('max-drawer')?'Réduire à mi-hauteur':'Agrandir en plein écran');
+ $('drawerMax').setAttribute('aria-label',app.classList.contains('max-drawer')?'Réduire à mi-hauteur':'Agrandir le panneau');
 }
 setDrawer(false);
 $('drawerOpen').addEventListener('click',()=>setDrawer(true));
-$('sheetExpand').addEventListener('click',()=>setDrawer(!$('app').classList.contains('expanded')));
-$('drawerMax').addEventListener('click',()=>{setDrawer(true);const full=$('app').classList.toggle('max-drawer');$('drawerMax').textContent=full?'⬇':'⬆';$('drawerMax').setAttribute('aria-label',full?'Réduire à mi-hauteur':'Agrandir en plein écran');});
-let drawerTouchStart=null;
-$('sheetExpand').addEventListener('touchstart',e=>{drawerTouchStart=e.touches[0]?.clientY??null;},{passive:true});
-$('sheetExpand').addEventListener('touchend',e=>{if(drawerTouchStart===null)return;const dy=(e.changedTouches[0]?.clientY??drawerTouchStart)-drawerTouchStart;drawerTouchStart=null;if(dy>35){if($('app').classList.contains('max-drawer')){$('drawerMax').click();}else setDrawer(false);}else if(dy< -35 && !$('app').classList.contains('max-drawer'))$('drawerMax').click();},{passive:true});
+$('sheetExpand').addEventListener('click',()=>setDrawer(false));
+$('drawerMax').addEventListener('click',()=>{
+ setDrawer(true);
+ const full=$('app').classList.toggle('max-drawer');
+ $('drawerMax').textContent=full?'▼':'▲';
+ $('drawerMax').setAttribute('aria-label',full?'Réduire à mi-hauteur':'Agrandir le panneau');
+});
 document.addEventListener('keydown',e=>{if(e.key==='Escape' && $('app').classList.contains('expanded') && $('veil').hidden)setDrawer(false)});
 $('dailyBtn').addEventListener('click',showDaily);$('questsBtn').addEventListener('click',showQuests);$('undergroundMilestone').addEventListener('click',showJourneyMilestones);$('shopBtn').addEventListener('click',()=>{tab='market';setDrawer(true);document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x.dataset.tab==='market'));$('shop').scrollTop=0;renderShop();});
 $('modalBody').addEventListener('click',e=>{const b=e.target.closest('[data-modal-kind]');if(!b)return;if(b.dataset.modalKind==='form'){const f=FORMS.find(x=>x.id===b.dataset.modalId);if(f&&S.highest>=f.level){S.form=f.id;renderArt();renderAll();save();toast('🌀 '+f.name+' équipé !');showForms();}return;}if(b.dataset.modalKind==='daily')claimDaily();else if(b.dataset.modalKind==='quest'){const id=b.dataset.modalId;closeModal();buy('quest',id);showQuests();}else if(b.dataset.modalKind==='talent'){const id=b.dataset.modalId;closeModal();buy('talent',id);showTree();}else if(b.dataset.modalKind==='heroMastery'){showHeroMasteries(b.dataset.modalId);}});

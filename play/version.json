@@ -1,5 +1,5 @@
 {
-  "versionCode": 982,
-  "versionName": "0.9.82",
-  "notes": "Premier réglage des proportions de la scène : ennemis ordinaires et boss mieux différenciés, Vivi et Luffy plus lisibles, coffre rapproché du héros. Contrôle visuel TT2 encore à poursuivre."
+  "versionCode": 983,
+  "versionName": "0.9.83",
+  "notes": "Raccord combat-menu aligné sur les captures TT2 avec flèche et croix intégrées à la couture ; HUD supérieur sans double marge de sécurité, en-têtes plus compacts et coffre au sol près du héros."
 }
