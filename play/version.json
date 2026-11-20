@@ -1,5 +1,5 @@
 {
-  "versionCode": 979,
-  "versionName": "0.9.79",
-  "notes": "Interface des héros épurée : aucune mention de rang pour les formes de base, indication des évolutions seulement lorsqu'elles sont débloquées. Dégâts, progression, animation et sauvegardes préservés."
+  "versionCode": 980,
+  "versionName": "0.9.80",
+  "notes": "Butin sous forme de coffres au sol, inventaire de 100 équipements, catégories et vente protégée. Ancien stock de coffres supprimé."
 }

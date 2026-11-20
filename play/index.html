@@ -8,7 +8,7 @@
      un frame blanc au passage de la forme normale a l'Eveil 1). -->
 <meta name="description" content="Pirate Titans 0.9.79 : présentation des héros simplifiée, progression et sauvegardes conservées.">
 
-<title>Pirate Titans — Grand Line v0.9.79</title>
+<title>Pirate Titans — Grand Line v0.9.80</title>
 <style>
 :root{--ink:#122332;--deep:#112634;--panel:#213746;--panel2:#304554;--line:#68808a;--warm:#fceac0;--gold:#ffce68;--cyan:#58dfee;--mint:#5bdeb8;--red:#f4705e;--paper:#f3ebd7;--h:100dvh}
 *{box-sizing:border-box}html,body{margin:0;height:100%;width:100%;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--paper);background:#08141c;touch-action:manipulation}button{font:inherit;cursor:pointer;color:inherit;-webkit-tap-highlight-color:transparent}button:disabled{cursor:default}button:focus-visible{outline:2px solid #fff2b5;outline-offset:2px}[hidden]{display:none!important}
@@ -1849,6 +1849,63 @@
 @media(max-width:355px){.app .header-actions #patchNotesButton{width:29px!important;min-width:29px!important;height:29px!important;min-height:29px!important}
  #veil .modal.patchnotes-modal{width:96vw;max-height:calc(100dvh - 32px)}
  #veil .modal.patchnotes-modal #modalBody{padding:10px 9px 5px}}
+/* BRANCHE DE TRAVAIL : récupération de butin sur l'arène. */
+.frame .loot-pile{position:absolute;left:4%;bottom:12%;z-index:24;min-width:62px;min-height:44px;padding:4px 7px;border:2px solid #ffe0a0;border-radius:14px;background:linear-gradient(155deg,#94602d,#372523);box-shadow:0 3px 0 #201315,0 0 12px #ffda6480;color:#fff8d9;font-size:19px;font-weight:900;cursor:pointer;touch-action:manipulation;display:flex;align-items:center;justify-content:center;gap:3px;transform:translateZ(0)}
+.frame .loot-pile span{border-radius:10px;background:#1c223a;border:1px solid #ffd993;font-size:11px;min-width:22px;padding:3px 4px}
+.frame .loot-pile[hidden]{display:none!important}
+.frame .pirate-chest{display:block;position:relative;width:35px;height:25px;flex:none;border:2px solid #322015;border-radius:3px 3px 7px 7px;background:linear-gradient(90deg,#63371f 0 16%,#b17937 18% 35%,#5d351e 39% 72%,#a96b2e 75% 100%);box-shadow:inset 0 -5px #392318,0 2px 2px #151018a0}
+.frame .pirate-chest::before{content:"";position:absolute;left:-3px;right:-3px;top:-11px;height:12px;border:2px solid #30201b;border-radius:10px 10px 2px 2px;background:linear-gradient(#c59045,#694022);box-shadow:inset 0 2px #f3c56d}
+.frame .pirate-chest::after{content:"◆";position:absolute;left:12px;top:1px;font-size:10px;line-height:14px;color:#ffdf75;text-shadow:0 1px #51321b}
+@keyframes pirate-chest-drop{0%{transform:translateY(-55px) rotate(-9deg);opacity:0}65%{transform:translateY(4px) rotate(2deg);opacity:1}100%{transform:translateY(0) rotate(0);opacity:1}}
+.frame .loot-pile:not([hidden]) .pirate-chest{animation:pirate-chest-drop .48s cubic-bezier(.25,.7,.35,1.2) both}
+.app.reduce-motion .loot-pile .pirate-chest{animation:none!important}
+@media(prefers-reduced-motion:reduce){.frame .loot-pile .pirate-chest{animation:none!important}}
+.loot-reveal-row{display:flex;align-items:center;gap:11px;padding:7px 3px;border-bottom:1px solid #7778}
+.loot-reveal-icon{width:43px;height:43px;border-radius:10px;background:#3d5272;display:grid;place-items:center;font-size:23px;flex:none}
+.loot-reveal-row b{display:block;font-size:13px}.loot-reveal-row small{display:block;color:#ddd;font-size:11px}
+.loot-reveal-diamonds{padding:11px 5px;margin:8px 0;background:#27374b;border:1px solid #63b8ed;border-radius:8px;color:#bcf3ff;font-weight:bold}
+@media(max-width:360px){.frame .loot-pile{left:2%;min-width:52px;padding:3px 4px;font-size:17px}}
+
+/* Séquence d'affichage des récompenses ; Passer révèle immédiatement les éléments. */
+@keyframes loot-card-appear{from{opacity:0;transform:translateY(9px) scale(.96)}to{opacity:1;transform:none}}
+.loot-reveal .loot-reveal-row{animation:loot-card-appear .25s ease-out both;animation-delay:var(--loot-delay,0ms)}
+.loot-reveal.loot-reveal-skipped .loot-reveal-row{animation:none!important;opacity:1!important;transform:none!important}
+.loot-reveal-skip{padding:8px 12px;margin:6px auto 10px;display:block;background:#4a5168;color:#fff4cc;border:1px solid #f0d392;border-radius:7px;font-weight:900;cursor:pointer}
+.loot-reveal-skip[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){.loot-reveal .loot-reveal-row{animation:none!important;opacity:1!important}}
+
+/* Équipement V0.9.80 : cinq emplacements, sélection, vente protégée ; disposition mobile. */
+.app .tt2-eq-status{display:flex;justify-content:space-between;gap:5px;padding:6px 8px;background:#45434b;border-bottom:2px solid #24232c;color:#e5e6ea;font-size:10px;font-weight:900}.app .tt2-eq-status b{color:#ffe4a1}
+.app .tt2-eq-categories{display:grid;grid-template-columns:repeat(5,minmax(0,1fr)) minmax(34px,.8fr);gap:2px;padding:4px 3px;background:#22212b}
+.app .tt2-eq-categories .tt2-eq-category{position:relative;min-width:0;min-height:60px;padding:4px 1px 3px;border-radius:2px;border:1px solid #73727a;background:linear-gradient(#474852,#272b35);color:#fff;cursor:pointer}
+.app .tt2-eq-categories .tt2-eq-category.chosen{background:linear-gradient(#786336,#483a30);border:2px solid #ffdc8a}
+.app .tt2-eq-category .gear-icon{display:block;font-size:clamp(19px,5vw,26px)}.app .tt2-eq-category strong{display:block;font-size:clamp(7px,2vw,9px);color:#f1e6d1;white-space:nowrap}
+.app .tt2-eq-category small{display:block;font-size:7px;color:#b3dec5}
+.app .tt2-eq-new{display:inline-block;font-style:normal;font-size:8px;font-weight:1000;padding:1px 3px;color:#452708;background:#f3aa43;border-radius:2px;vertical-align:middle}
+.app .tt2-eq-category .tt2-eq-new{position:absolute;right:0;top:0;font-size:6px}
+.app .tt2-eq-forge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;background:#25262d;color:#92949f;font-size:19px;border:1px solid #50505c}
+.app .tt2-eq-forge strong{font-size:7px;color:#c3c0c6}.app .tt2-eq-forge small{font-size:9px}
+.app .tt2-eq-bonus{display:flex;justify-content:space-between;gap:6px;align-items:center;padding:7px 9px;background:#302e36;color:#eae1d0;font-size:9px}
+.app .tt2-eq-bonus b{color:#abedbf;text-align:right}
+.app .tt2-eq-item{min-height:69px;padding:7px 8px;gap:7px}
+.app .tt2-eq-item .item-icon{flex:none;width:44px;height:44px;border-radius:3px;background:#252734}
+.app .tt2-eq-item .item-icon.rarity-0{border-color:#94949b}.app .tt2-eq-item .item-icon.rarity-1{border-color:#77bce7}
+.app .tt2-eq-item .item-icon.rarity-2{border-color:#b58bf5}.app .tt2-eq-item .item-icon.rarity-3{border-color:#ecd070}
+.app .tt2-eq-item .item-details b{font-size:11px}.app .tt2-eq-item .item-details small{font-size:9px;line-height:1.35}
+.app .tt2-eq-rarity.rarity-1{color:#7fcaff}.app .tt2-eq-rarity.rarity-2{color:#c8a6ff}.app .tt2-eq-rarity.rarity-3{color:#ffe08b}
+.app .tt2-eq-equipped{background:linear-gradient(#354639,#29372d)!important;border-left:3px solid #84d58a}.app .tt2-eq-worn{color:#b8f3c1;flex:none;font-size:9px;font-weight:900}
+.app .tt2-eq-actions{width:86px;flex:none;display:flex;flex-direction:column;gap:3px}
+.app .tt2-eq-actions button{min-height:25px;font-size:9px;font-weight:900;cursor:pointer;touch-action:manipulation;border-radius:2px}
+.app .tt2-eq-equip{background:linear-gradient(#a5e996,#479c60);border:1px solid #c2ffa9;color:#153b1e}
+.app .tt2-eq-secondary{display:flex;gap:3px}.app .tt2-eq-secondary button{min-width:0;flex:1;background:#555560;border:1px solid #898a97;color:#fff;font-size:8px}
+.app .tt2-eq-secondary button:first-child{flex:0 0 30px;font-size:14px}.app .tt2-eq-secondary button:disabled{opacity:.45}
+.app .tt2-eq-empty{padding:17px 9px;text-align:center;color:#ece6d7;font-size:11px}.app .tt2-eq-empty small{display:block;margin-top:5px;color:#b9b9c6;font-size:9px}
+.app .tt2-eq-sale{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 9px;border-top:2px solid #66616e;background:#2b2a34}
+.app .tt2-eq-sale strong{display:block;font-size:10px;color:#eee7cf}.app .tt2-eq-sale small{display:block;font-size:9px;color:#aee0bb;margin-top:4px}
+.app .tt2-eq-sale button{min-width:84px;flex:none;padding:8px 5px;border:1px solid #e5bd70;background:linear-gradient(#ebbf78,#aa6e35);color:#3d2813;font-size:9px;font-weight:900;border-radius:3px}.app .tt2-eq-sale button:disabled{filter:grayscale(1);opacity:.5}
+@media(max-width:360px){.app .tt2-eq-actions{width:76px}.app .tt2-eq-item .item-icon{width:38px;height:38px}.app .tt2-eq-category strong{font-size:7px}}
+
+
 </style>
 <link rel="preload" as="image" href="./vivi-alvida-base-16f-224.webp" type="image/webp">
 <link rel="stylesheet" href="./alvida-rig.css">
@@ -1887,6 +1944,7 @@
   <div class="hero" id="hero" role="img" aria-label="Luffy, devant le monstre"></div>
   <div class="form-tag" id="formTag">👒 BASE</div>
   <div class="pet" id="pet"></div>
+  <button type="button" class="loot-pile" id="lootPile" hidden aria-label="Ramasser les équipements au sol" title="Ramasser les équipements"><span class="pirate-chest" aria-hidden="true"></span><span id="lootPileCount">0</span></button>
 </div>
     <div class="tap-area" id="tapArea" tabindex="0" role="button" aria-label="Attaquer l’ennemi au toucher"></div><div class="tap-call" id="tapCall">👆 TOUCHE LE MONSTRE</div><div class="flash" id="flash"></div><div class="quick-menu"><button id="dailyBtn" title="Récompense du jour">🎁</button><button id="questsBtn" title="Missions et succès">🏆</button><button id="shopBtn" title="Boutique gratuite">🏪</button></div>
     <div class="worldbar"><span id="stageFooter">🏝️ East Blue</span><span id="combo">MEILLEUR STAGE : 1</span></div>
@@ -1906,7 +1964,7 @@
   <div class="closed-summary" id="closedSummary" aria-label="Statistiques de combat">
     <div class="stat-mini" title="Dégâts de l'équipage"><span class="stat-icon">⚔️</span><b id="summaryDps">0</b><small>DPS</small></div>
     <div class="stat-mini" title="Gain du prestige actuel"><span class="stat-icon">✨</span><b id="summaryPrestige">0</b><small>reliques</small></div>
-    <div class="stat-mini" title="Trésors disponibles"><span class="stat-icon">🎁</span><b id="summaryChest">0</b><small>coffres</small></div>
+    <div class="stat-mini" title="Trésors disponibles"><span class="stat-icon">🎁</span><b id="summaryChest">0</b><small>butins au sol</small></div>
   </div>
   <button id="drawerOpen" class="drawer-open" aria-label="Ouvrir les améliorations" aria-expanded="false" aria-controls="sheetPanel"><b>▲</b> AMÉLIORATIONS <b>▲</b></button>
   <div class="actionbar"><div class="actionrow">
@@ -2137,8 +2195,8 @@ const HERO_TECH={
  robin:['🌺','Clutch',2.25,'petal'],franky:['💥','Radical Beam',3.1,'burst'],brook:['❄️','Entaille glacée',2.25,'ice'],jinbe:['🌊','Vague du karaté',2.7,'wave']
 };
 const QUESTS=[{id:'tap',name:'La volonté du capitaine',icon:'👆',base:45,step:35,reward:3,unit:'attaques'}, {id:'boss',name:'Chasseur de capitaines',icon:'👑',base:2,step:2,reward:5,unit:'boss'}, {id:'upgrade',name:'Un équipage plus fort',icon:'⚔️',base:15,step:15,reward:4,unit:'niveaux achetés'}];
-const original=()=>({version:9,economyV:2,gold:20,stage:1,wave:1,highest:1,runMax:1,prestigeBaseStage:1,bestLootStage:0,master:0,heroes:{},heroAscensions:{},artifacts:{},talents:{},relics:0,prestiges:0,skillPoints:0,totalSkillPoints:0,mana:100,autoBoss:true,mute:true,created:Date.now(),lastSeen:Date.now(),gear:0,loot:0,pets:{gull:1},activePet:'gull',pearls:0,chests:0,equipment:{weapon:null,emblem:null,charm:null,aura:null,slash:null},inventory:[],nextItemId:1,quests:{tap:{progress:0,cycle:0},boss:{progress:0,cycle:0},upgrade:{progress:0,cycle:0}},stats:{taps:0,bosses:0,upgrades:0},lastDaily:"",boostUntil:0,shopBuys:0,earnedFree:true,fx:true,islandMarks:{},bestCombo:0,form:'base'});
-let S=original(),tab='master',multi='1',hp=0,maxHp=0,bossEnd=0,farm=false,toastTimer=null,modalCb=null,audio=null,lastTick=performance.now(),lastHud=0,lastSave=Date.now(),lastAttack=0;
+const original=()=>({version:9,economyV:2,gold:20,stage:1,wave:1,highest:1,runMax:1,prestigeBaseStage:1,bestLootStage:0,master:0,heroes:{},heroAscensions:{},artifacts:{},talents:{},relics:0,prestiges:0,skillPoints:0,totalSkillPoints:0,mana:100,autoBoss:true,mute:true,created:Date.now(),lastSeen:Date.now(),gear:0,loot:0,pets:{gull:1},activePet:'gull',pearls:0,chests:0,lootChestVisualMigrationV0980:false,autoSellCommon:false,equipment:{weapon:null,emblem:null,charm:null,aura:null,slash:null},inventory:[],nextItemId:1,quests:{tap:{progress:0,cycle:0},boss:{progress:0,cycle:0},upgrade:{progress:0,cycle:0}},stats:{taps:0,bosses:0,upgrades:0},lastDaily:"",boostUntil:0,shopBuys:0,earnedFree:true,fx:true,islandMarks:{},bestCombo:0,form:'base'});
+let S=original(),tab='master',multi='1',selectedEquipmentSlot='weapon',hp=0,maxHp=0,bossEnd=0,farm=false,toastTimer=null,modalCb=null,audio=null,lastTick=performance.now(),lastHud=0,lastSave=Date.now(),lastAttack=0;
 let cooldown={gear:0,haki:0,midas:0,gatling:0,zoro:0,crew:0},active={gear:0,midas:0,crew:0},lastCaptainUI=0;
 let combo=0,lastTapAt=0,lastPetAt=performance.now(), lastPetFlash=0,lastCrewVisual=0,crewIndex=0,bossRaged=false,lastBossThump=0,previousIsland="",recentBattleLoot=null,enemyTransition=false,respawnTimer=null;
 let bossTactic={phase:'idle',next:0,end:0,hits:0,shieldUntil:0,kind:'punch'};
@@ -2178,6 +2236,15 @@ function clearViviTrialBonuses(){
  delete S.surgeRank;
  S.viviTrialCleanupV0978=true;
 }
+/* V0.9.80 : purge UNIQUEMENT les coffres hérités du vieux système,
+   jamais les équipements déjà acquis. La migration est propre à chaque
+   sauvegarde, idempotente et ne touche pas aux nouveaux drops futurs. */
+function migrateLegacyChestsToVisualDrops(){
+ if(S.lootChestVisualMigrationV0980===true)return false;
+ S.chests=0;
+ S.lootChestVisualMigrationV0980=true;
+ return true;
+}
 migrateLegacyAlvidaToVivi();
 clearViviTrialBonuses();
 migrateRareCurrencies();
@@ -2199,6 +2266,11 @@ function restoreReachedMilestones(){
  }
 }
 restoreReachedMilestones();
+/* Les jalons retroactifs appartiennent encore au stock historique :
+   ils ne doivent PAS reapparaitre au sol pendant la migration. */
+if(migrateLegacyChestsToVisualDrops()){
+ try{localStorage.setItem(KEY,JSON.stringify(S));}catch(_){}
+}
 const offline=Math.min(7200,Math.max(0,Math.round((Date.now()-S.lastSeen)/1000)));
 /* V0.9.21 : notation de la reference Tap Titans 2.
    K/M/B/T, puis AA, AB... AZ, BA... ZZ, AAA, AAB... 
@@ -2468,8 +2540,8 @@ function petDamage(){
   bnMul(heroDps(),.3)),1+.15*level,talentFactor('pet')));
 }
 function rarityName(t){return ['Commun','Rare','Épique','Légendaire'][Math.max(0,Math.min(3,t))]}
-function openChest(){
- if(!S.chests)return;S.chests--;
+function generateEquipmentItem(){
+ 
  const slot=SLOT[Math.floor(Math.random()*SLOT.length)].id;
  const roll=Math.random(),rarity=roll<.07?3:roll<.26?2:roll<.60?1:0;
  const level=Math.max(1,Math.floor(S.stage));
@@ -2484,8 +2556,59 @@ function openChest(){
  const icon=SLOT.find(s=>s.id===slot).icon;
  const item={id:S.nextItemId++,slot,rarity,bonus:Math.max(0,multiplier-1),
   multiplier,level,icon,name:names[slot][Math.floor(Math.random()*3)]};
- S.inventory.push(item);if(S.inventory.length>100){const old=S.inventory.shift();S.pearls=bnAdd(S.pearls,[1,5,12,25][Math.max(0,Math.min(3,old.rarity))]);}
- toast('🎁 '+rarityName(rarity)+' : '+item.name+' !');
+ return item;
+}
+/* Le tri porte uniquement sur le lot récupéré.
+   Aucun équipement ancien dans S.inventory n'est trié ou vendu. */
+function sortCollectedEquipmentBatch(items,autoSellCommon=false,keepLimit=100){
+ const recycled=[],candidates=[];
+ const cap=Math.max(0,Math.floor(Number(keepLimit)||0));
+ for(const item of items){
+  if(autoSellCommon===true&&item.rarity===0)recycled.push(item);
+  else candidates.push(item);
+ }
+ if(candidates.length<=cap)return {kept:candidates,recycled};
+ const priorities=candidates.map((item,index)=>({item,index}));
+ priorities.sort((x,y)=>y.item.rarity-x.item.rarity||x.index-y.index);
+ const selected=new Set(priorities.slice(0,cap).map(x=>x.index));
+ const kept=[];
+ for(let i=0;i<candidates.length;i++){
+  if(selected.has(i))kept.push(candidates[i]);
+  else recycled.push(candidates[i]);
+ }
+ return {kept,recycled};
+}
+/* TT2 : 100 pièces au TOTAL, y compris les cinq emplacements portés.
+   Aucune vente forcée des anciens objets, même pour une sauvegarde héritée
+   dépassant déjà la capacité ; seuls les nouveaux objets sont recyclables. */
+const EQUIPMENT_INVENTORY_CAP=100;
+function equipmentOwnedCount(){
+ return (Array.isArray(S.inventory)?S.inventory.length:0)+Object.values(S.equipment||{}).filter(Boolean).length;
+}
+function equipmentFreeSlots(){return Math.max(0,EQUIPMENT_INVENTORY_CAP-equipmentOwnedCount());}
+function collectGroundLoot(maxItems=Infinity){
+ // Seulement les nouveaux drops apres migration, jamais le vieux stock.
+ const pending=Math.max(0,Math.floor(Number(S.chests)||0));
+ const limit=Number.isFinite(maxItems)?Math.max(0,Math.min(pending,Math.floor(maxItems))):pending;
+ if(!limit){toast('🧰 Aucun coffre à récupérer.');return;}
+ const batch=[];
+ for(let i=0;i<limit;i++)batch.push(generateEquipmentItem());
+ S.chests-=limit;
+ const {kept,recycled}=sortCollectedEquipmentBatch(batch,S.autoSellCommon===true,equipmentFreeSlots());
+ let recoveredPearls=0,commonsSold=0;
+ const yields=[1,5,12,25];
+ for(const item of recycled){
+  recoveredPearls+=yields[Math.max(0,Math.min(3,item.rarity))];
+  if(item.rarity===0)commonsSold++;
+ }
+ if(recoveredPearls)S.pearls=bnAdd(S.pearls,recoveredPearls);
+ for(const item of kept)item.new=true;
+ S.inventory.push(...kept);
+ const rows=kept.map((item,i)=>'<div class="loot-reveal-row" style="--loot-delay:'+Math.min(i,55)*65+'ms"><span class="loot-reveal-icon">'+item.icon+'</span><span><b>'+item.name+'</b><small>'+rarityName(item.rarity)+' · Niv. '+fmt(item.level)+'</small></span></div>').join('');
+ const gems=recoveredPearls?'<div class="loot-reveal-diamonds">💎 +'+fmt(recoveredPearls)+' perles · '+recycled.length+' équipement(s) recyclé(s), dont '+commonsSold+' commun(s)</div>':'';
+ const skip=S.fx===false?'':'<button id="skipLootReveal" type="button" class="loot-reveal-skip">⏭ PASSER</button>';
+ const message='<div class="loot-reveal"><p>🧰 '+limit+' équipements récupérés · '+kept.length+' conservés · '+recycled.length+' vendus.</p>'+skip+(rows||'<p>Aucun équipement conservé dans ce lot.</p>')+gems+(S.chests?'<p class="fine">Encore '+fmt(S.chests)+' équipements au sol.</p>':'')+'</div>';
+ renderAll();save();modal('🎁 BUTIN RÉCUPÉRÉ',message,()=>{},'FERMER');
 }
 function announce(t){const el=$('banner');el.textContent=t;el.classList.remove('show');void el.offsetWidth;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),1750)}
 /* Les achats MAX sont exacts mais les devis memorises par heros/niveau :
@@ -2876,7 +2999,7 @@ function reward(){
  if(farm){queueEnemySpawn();return;}
  if(boss){
   S.stats.bosses++;missionAdd('boss',1);
-  if(cleared%10===0){S.chests++;S.pearls=bnAdd(S.pearls,2);bonusChests++;bonusPearls+=2;toast('🎁 Coffre + 2 perles ! Ouvre l’onglet BUTIN.');announce('🎁 BUTIN DU BOSS !');}
+  if(cleared%10===0){S.chests++;S.pearls=bnAdd(S.pearls,2);bonusChests++;bonusPearls+=2;toast('🎁 Coffre au sol + 2 perles ! Ramasse-le près du héros.');announce('🎁 BUTIN DU BOSS !');}
   S.stage++;S.wave=1;S.highest=Math.max(S.highest,S.stage);S.runMax=Math.max(S.runMax,S.stage);
   const reached=journeyMilestone(S.stage);
   if(reached&&!S.islandMarks[S.stage]){
@@ -3056,9 +3179,25 @@ function modal(title,body,cb,label='CONTINUER',cancel=false){$('modalTitle').tex
 function closeModal(){$('veil').hidden=true;modalCb=null;}
 
 /* V0.9.58 — Notes éditoriales locales : ne changent pas la sauvegarde du jeu. */
-const PATCH_NOTES_VERSION=979;
+const PATCH_NOTES_VERSION=980;
 const PATCH_NOTES_SEEN_KEY='pirate_titans_patchnotes_seen_v1';
 const PATCH_NOTES=[
+ {code:980,version:'0.9.80',date:'20 novembre 2026',title:'Coffres au sol et refonte des équipements',sections:[
+  {name:'Récompenses de combat',items:[
+   'Les nouveaux équipements apparaissent au sol sous la forme d’un coffre à ramasser près du héros.',
+   'Le ramassage révèle les équipements et permet de passer l’animation sans perdre les récompenses.',
+   'L’ancien stock de coffres en attente disparaît lors de cette mise à jour : ces parties sont des essais de développement.'
+  ]},
+  {name:'Équipement',items:[
+   'Nouvel inventaire classé en cinq catégories, avec équipement porté, rareté et nouveaux objets signalés.',
+   'Le maximum est de 100 équipements au total, pièces portées comprises ; le surplus des nouvelles trouvailles est recyclé.',
+   'Verrouillage des objets, vente individuelle et vente globale avec confirmation. La vente automatique des communs est facultative.'
+  ]},
+  {name:'Tests et améliorations',items:[
+   'Corrections des contrôles automatiques du jeu et de Vivi.',
+   'Les progressions enregistrées sur les versions de développement ne sont pas destinées à être conservées jusqu’à la version finale.'
+  ]}
+ ]},
  {code:979,version:'0.9.79',date:'19 novembre 2026',title:'Présentation des héros simplifiée',sections:[
   {name:'Interface des héros',items:[
    'La forme normale des héros ne porte plus de mention de rang.',
@@ -3308,6 +3447,23 @@ function openPatchNotes(){
  try{localStorage.setItem(PATCH_NOTES_SEEN_KEY,String(PATCH_NOTES_VERSION));}catch(_){}
  refreshPatchNotesBadge();
 }
+/* Ne jamais vendre des équipements équipés ou verrouillés. */
+function equipmentSaleValue(item){return [1,5,12,25][Math.max(0,Math.min(3,Math.floor(Number(item.rarity)||0)))];}
+function equipmentUnlockedItems(){return S.inventory.filter(item=>item&&item.locked!==true);}
+function sellUnlockedEquipment(){
+ const selling=equipmentUnlockedItems();if(!selling.length)return {count:0,earned:0};
+ const earned=selling.reduce((n,item)=>n+equipmentSaleValue(item),0);
+ S.inventory=S.inventory.filter(item=>!item||item.locked===true);
+ S.pearls=bnAdd(S.pearls,earned);
+ return {count:selling.length,earned};
+}
+function showSellUnlockedGearConfirm(){
+ const items=equipmentUnlockedItems();if(!items.length){toast('🔒 Aucun équipement à vendre');return;}
+ const value=items.reduce((n,item)=>n+equipmentSaleValue(item),0);
+ modal('🔨 Confirmer la vente',`<p>Vendre <b>${items.length} équipements déverrouillés</b> contre <b>💎 ${fmt(value)} perles</b> ?</p><p class="fine">Les objets équipés et verrouillés restent intacts. Action irréversible.</p>`,()=>{
+  const sold=sellUnlockedEquipment();renderAll();save();toast('💎 '+sold.count+' équipements vendus · +'+fmt(sold.earned)+' perles');
+ },'TOUT VENDRE',true);
+}
 function buy(kind,id,step){
  if(kind==='master'){
   const q=quote(masterPrice,S.master);if(!q.n||bnCompare(q.cost,S.gold)>0)return;
@@ -3354,12 +3510,10 @@ function buy(kind,id,step){
   const qdef=QUESTS.find(x=>x.id===id),q=S.quests[id];if(!qdef||!q||q.progress<questGoal(qdef))return;
   const reward=qdef.reward+q.cycle;S.pearls=bnAdd(S.pearls,reward);q.progress-=questGoal(qdef);q.cycle++;
   toast('💎 Mission accomplie : +'+reward+' perles !');flash();
- }else if(kind==='chest'){
-  openChest();
  }else if(kind==='equip'){
   const idx=S.inventory.findIndex(x=>String(x.id)===String(id));if(idx<0)return;
   const item=S.inventory.splice(idx,1)[0],old=S.equipment[item.slot];
-  S.equipment[item.slot]=item;if(old)S.inventory.unshift(old);
+  S.equipment[item.slot]=item;item.new=false;if(old)S.inventory.unshift(old);
   toast('✨ '+item.name+' équipé !');
  }else if(kind==='formOpen'){showForms();return;
  }else if(kind==='heroInfo'){showHeroInfo(id,Number(step)||0);return;
@@ -3390,10 +3544,19 @@ function buy(kind,id,step){
  }else if(kind==='collection'){showCollection();return;
  }else if(kind==='daily'){claimDaily();return;
  }else if(kind==='market'){purchaseMarket(id);return;
+ }else if(kind==='gearFilter'){
+  if(!SLOT.some(slot=>slot.id===id))return;
+  selectedEquipmentSlot=id;renderShop();$('shop').scrollTop=0;return;
+ }else if(kind==='gearLock'){
+  const item=S.inventory.find(x=>String(x.id)===String(id));if(!item)return;
+  item.locked=item.locked!==true;toast(item.locked?'🔒 Équipement protégé':'🔓 Équipement déverrouillé');
+ }else if(kind==='sellUnlockedGear'){
+  showSellUnlockedGearConfirm();return;
  }else if(kind==='salvage'){
   const idx=S.inventory.findIndex(x=>String(x.id)===String(id));if(idx<0)return;
-  const item=S.inventory.splice(idx,1)[0],yieldPearls=[1,5,12,25][Math.max(0,Math.min(3,item.rarity))];S.pearls=bnAdd(S.pearls,yieldPearls);
-  toast('🔨 Équipement fondu : +'+yieldPearls+' perles');
+  if(S.inventory[idx].locked===true){toast('🔒 Déverrouille cet équipement avant de le vendre');return;}
+  const item=S.inventory.splice(idx,1)[0],yieldPearls=equipmentSaleValue(item);S.pearls=bnAdd(S.pearls,yieldPearls);
+  toast('🔨 Équipement vendu : +'+yieldPearls+' perles');
  }else return;
  renderAll();save();
 }
@@ -3552,16 +3715,29 @@ function renderShop(){
   }
  }
  if(tab==='equipment'){
-  $('sheetTitle').textContent='👕 ÉQUIPEMENT';$('sheetSub').textContent=`${S.inventory.length} en réserve · cinq emplacements`;
-  h+=`<div class="tt2-slot-title">ÉQUIPEMENT PORTÉ</div><div class="gear-grid tt2-gear-slots">`;
-  for(const slot of SLOT){const it=S.equipment[slot.id];h+=`<div class="gear-slot"><div class="gear-icon">${it?it.icon:slot.icon}</div><strong>${slot.name}</strong><small>${gearDescription(it)}</small></div>`;}
-  h+=`</div><div class="tt2-slot-title">INVENTAIRE · ${S.inventory.length}/100</div>`;
-  if(!S.inventory.length)h+=`<div class="note">Aucun objet en réserve. Le ramassage direct sur le terrain sera ajouté dans une mise à jour dédiée.</div>`;
-  for(const it of [...S.inventory].reverse()){
-    h+=`<div class="item-row"><span class="item-icon rarity-${it.rarity}">${it.icon}</span><div class="item-details"><b>${it.name}</b><small>${rarityName(it.rarity)} · ${gearDescription(it)}</small></div><div class="item-buttons"><button data-kind="equip" data-id="${it.id}">ÉQUIPER</button><button data-kind="salvage" data-id="${it.id}">FONDRE</button></div></div>`;
+  const slot=SLOT.find(x=>x.id===selectedEquipmentSlot)||SLOT[0];
+  const worn=S.equipment[slot.id];
+  const entries=S.inventory.filter(x=>x&&x.slot===slot.id).slice().reverse();
+  const unlocked=equipmentUnlockedItems();
+  const total=unlocked.reduce((n,x)=>n+equipmentSaleValue(x),0);
+  $('sheetTitle').textContent='👕 ÉQUIPEMENT';
+  $('sheetSub').textContent=equipmentOwnedCount()+'/100 équipements · 💎 '+fmt(S.pearls)+' perles';
+  h+='<div class="tt2-eq-status"><span><b>'+equipmentOwnedCount()+'/100</b> ÉQUIPEMENTS POSSÉDÉS</span><span>💎 '+fmt(S.pearls)+'</span></div>';
+  h+='<div class="gear-grid tt2-gear-slots tt2-eq-categories" role="group" aria-label="Catégories d’équipement">';
+  for(const category of SLOT){
+   const active=S.equipment[category.id],selected=slot.id===category.id;
+   const news=S.inventory.some(x=>x&&x.slot===category.id&&x.new===true);
+   h+='<button type="button" class="gear-slot tt2-eq-category '+(selected?'chosen':'')+'" data-kind="gearFilter" data-id="'+category.id+'" aria-pressed="'+selected+'"><span class="gear-icon">'+category.icon+'</span><strong>'+category.name+'</strong>'+(news?'<em class="tt2-eq-new">NEW</em>':'')+'<small>'+(active?'✓ Porté':'—')+'</small></button>';
   }
-  // Conserver l'accès aux coffres gagnés, en attendant les drops de combat.
-  if(S.chests)h+=`<div class="tt2-pending-chest"><span>🎁 ${S.chests} coffre(s) conservé(s)</span><button data-kind="chest">OUVRIR UN COFFRE</button></div>`;
+  h+='<div class="tt2-eq-forge" aria-label="Forge non disponible">⚒<strong>FORGE</strong><small>🔒</small></div></div>';
+  h+='<div class="tt2-eq-bonus"><span>'+slot.name.toUpperCase()+' · '+slot.effect+'</span><b>'+(worn?gearDescription(worn):'Aucun bonus équipé')+'</b></div>';
+  h+='<div class="tt2-slot-title">'+slot.name.toUpperCase()+' · '+(entries.length+(worn?1:0))+' OBJET(S)</div>';
+  if(worn)h+='<div class="item-row tt2-eq-item tt2-eq-equipped"><span class="item-icon rarity-'+worn.rarity+'">'+worn.icon+'</span><div class="item-details"><b>'+worn.name+'</b><small>Lv. '+fmt(worn.level||1)+' · '+rarityName(worn.rarity)+'</small><small>'+gearDescription(worn)+'</small></div><span class="tt2-eq-worn">✓ ÉQUIPÉ</span></div>';
+  if(!worn&&!entries.length)h+='<div class="tt2-eq-empty">Aucun équipement dans cette catégorie.<small>Les nouveaux coffres apparaissent près du héros pendant le combat.</small></div>';
+  for(const item of entries){
+   h+='<div class="item-row tt2-eq-item"><span class="item-icon rarity-'+item.rarity+'">'+item.icon+'</span><div class="item-details"><b>'+item.name+(item.new===true?' <em class="tt2-eq-new">NEW</em>':'')+'</b><small>Lv. '+fmt(item.level||1)+' · <span class="tt2-eq-rarity rarity-'+item.rarity+'">'+rarityName(item.rarity)+'</span></small><small>'+gearDescription(item)+'</small></div><div class="tt2-eq-actions"><button class="tt2-eq-equip" data-kind="equip" data-id="'+item.id+'">ÉQUIPER</button><div class="tt2-eq-secondary"><button data-kind="gearLock" data-id="'+item.id+'" aria-label="'+(item.locked===true?'Déverrouiller':'Verrouiller')+'" title="'+(item.locked===true?'Déverrouiller':'Verrouiller')+'">'+(item.locked===true?'🔒':'🔓')+'</button><button data-kind="salvage" data-id="'+item.id+'" '+(item.locked===true?'disabled':'')+'>VENDRE</button></div></div></div>';
+  }
+  h+='<div class="tt2-eq-sale"><div><strong>Vendre tout le matériel déverrouillé</strong><small>'+unlocked.length+' objet(s) · 💎 '+fmt(total)+' perles</small></div><button data-kind="sellUnlockedGear" '+(unlocked.length?'':'disabled')+'>TOUT VENDRE</button></div>';
  }
  if(tab==='pets'){
   $('sheetTitle').textContent='🐣 FAMILIERS';$('sheetSub').textContent=`💎 ${fmt(S.pearls)} perles · actif et passifs`;
@@ -3576,7 +3752,7 @@ function renderShop(){
   h+=`<div class="loot-top"><div>🎁 RÉCOMPENSE QUOTIDIENNE <small>5 perles + 1 coffre par jour</small></div><button class="loot-action" data-kind="daily" ${S.lastDaily===todayKey()?'disabled':''}>${S.lastDaily===todayKey()?'DÉJÀ RÉCUPÉRÉ':'RÉCUPÉRER'}</button></div>`;
   h+=`<div class="shop-banner">TRÉSORS ET AMÉLIORATIONS</div><div class="shop-grid">`;
   const wares=[
-   {id:'chest',icon:'🎁',name:'Coffre du pirate',desc:'Un équipement aléatoire',price:6,unit:'💎'},
+   {id:'chest',icon:'🎁',name:'Butin d’équipement',desc:'Un nouveau coffre au sol',price:6,unit:'💎'},
    {id:'egg',icon:'🥚',name:'Œuf mystérieux',desc:'Un niveau de familier aléatoire',price:9,unit:'💎'},
    {id:'talent',icon:'🌳',name:'Point de talent',desc:'Un point permanent pour tes builds',price:14,unit:'💎'},
    {id:'boost',icon:'⚡',name:'Butin doublé',desc:'Berrys ×2 pendant 2 minutes',price:5,unit:'💎'},
@@ -3588,7 +3764,7 @@ function renderShop(){
  }
  container.innerHTML=h;
  if(tab==='master')refreshCaptainSpellButtons();
- for(const [key,count] of [['master',S.skillPoints],['equipment',S.chests],['market',S.lastDaily===todayKey()?0:1]]){
+ for(const [key,count] of [['master',S.skillPoints],['equipment',0],['market',S.lastDaily===todayKey()?0:1]]){
   const badge=document.querySelector('[data-alert-for="'+key+'"]');if(!badge)continue;
   badge.hidden=!(count>0);badge.textContent=count>99?'99+':String(count);
  }
@@ -3602,8 +3778,8 @@ function relicReward(){
 }
 function prestige(){
  const win=relicReward();if(!bnPositive(win))return;const restart=prestigeStartStage(S.highest);
- modal('✨ Confirmer le prestige ?',`<p>Tu recevras <b>${fmt(win)} reliques</b>.</p><p>Les niveaux sont réinitialisés. <b>Départ au stage ${fmt(restart)}</b> avec un bonus de berrys de reprise. <b>Tu conserves</b> artefacts, talents, équipements, coffres, perles, familiers et missions.</p>`,()=>{
-  const keep={highest:S.highest,bestLootStage:S.bestLootStage,relics:bnAdd(S.relics,win),artifacts:{...S.artifacts},talents:{...S.talents},skillPoints:S.skillPoints,totalSkillPoints:S.totalSkillPoints,gear:S.gear,loot:S.loot,prestiges:S.prestiges+1,mute:S.mute,autoBoss:S.autoBoss,pearls:S.pearls,chests:S.chests,pets:{...S.pets},activePet:S.activePet,equipment:{...S.equipment},inventory:[...S.inventory],nextItemId:S.nextItemId,quests:JSON.parse(JSON.stringify(S.quests)),stats:{...S.stats},created:S.created,lastDaily:S.lastDaily,boostUntil:S.boostUntil,shopBuys:S.shopBuys,earnedFree:true,fx:S.fx,islandMarks:{...S.islandMarks},bestCombo:S.bestCombo,form:S.form,viviMigrationV0950:true,viviTrialCleanupV0978:true};
+ modal('✨ Confirmer le prestige ?',`<p>Tu recevras <b>${fmt(win)} reliques</b>.</p><p>Les niveaux sont réinitialisés. <b>Départ au stage ${fmt(restart)}</b> avec un bonus de berrys de reprise. <b>Tu conserves</b> artefacts, talents, équipements, coffres au sol, perles, familiers et missions.</p>`,()=>{
+  const keep={highest:S.highest,bestLootStage:S.bestLootStage,relics:bnAdd(S.relics,win),artifacts:{...S.artifacts},talents:{...S.talents},skillPoints:S.skillPoints,totalSkillPoints:S.totalSkillPoints,gear:S.gear,loot:S.loot,prestiges:S.prestiges+1,mute:S.mute,autoBoss:S.autoBoss,pearls:S.pearls,chests:S.chests,lootChestVisualMigrationV0980:S.lootChestVisualMigrationV0980===true,autoSellCommon:S.autoSellCommon===true,pets:{...S.pets},activePet:S.activePet,equipment:{...S.equipment},inventory:[...S.inventory],nextItemId:S.nextItemId,quests:JSON.parse(JSON.stringify(S.quests)),stats:{...S.stats},created:S.created,lastDaily:S.lastDaily,boostUntil:S.boostUntil,shopBuys:S.shopBuys,earnedFree:true,fx:S.fx,islandMarks:{...S.islandMarks},bestCombo:S.bestCombo,form:S.form,viviMigrationV0950:true,viviTrialCleanupV0978:true};
   S={...original(),...keep,stage:restart,runMax:restart,prestigeBaseStage:restart};
    clearViviTrialBonuses();
    S.gold=bnMax(20,bnMul(coinCalc(false),20));
@@ -3632,7 +3808,7 @@ function purchaseMarket(id){
  const data={chest:6,egg:9,talent:14,boost:5,berries:4,relic:12};
  const price=data[id];if(!price||bnCompare(S.pearls,price)<0){toast('💎 Pas assez de perles — termine des missions !');return;}
  S.pearls=bnSub(S.pearls,price);S.shopBuys=(S.shopBuys||0)+1;
- if(id==='chest'){S.chests++;toast('🎁 +1 coffre · retrouve-le dans ÉQUIPEMENT');}
+ if(id==='chest'){S.chests++;toast('🎁 +1 butin au sol · ramasse le coffre près du héros');}
  else if(id==='egg'){const pet=PETS[Math.floor(Math.random()*PETS.length)];S.pets[pet.id]=petlv(pet.id)+1;toast('🥚 '+pet.name+' · niveau '+fmt(S.pets[pet.id]));renderArt();}
  else if(id==='talent'){S.skillPoints++;S.totalSkillPoints++;toast('🌳 +1 point de talent permanent !');}
  else if(id==='boost'){S.boostUntil=Math.max(Date.now(),S.boostUntil||0)+120000;toast('⚡ Berrys ×2 pendant 2 minutes !');}
@@ -3872,7 +4048,7 @@ function renderHud(){
  $('milestoneReward').textContent='💎 '+prize.pearls+' · 🎁 '+prize.chests;
  $('milestoneFill').style.width=(100*Math.min(1,Math.max(0,(currentMilestone-lastMilestone)/(nextMilestone-lastMilestone))))+'%';
  $('manaText').textContent=Math.floor(S.mana)+'/100';$('manaFill').style.width=S.mana+'%';
-  $('summaryDps').textContent=fmt(d);$('summaryPrestige').textContent=fmt(relicReward());$('summaryChest').textContent=String(S.chests||0);
+  $('summaryDps').textContent=fmt(d);$('summaryPrestige').textContent=fmt(relicReward());$('summaryChest').textContent=String(S.chests||0);const pile=$('lootPile'),pileCount=$('lootPileCount');if(pile&&pileCount){const pending=Math.max(0,Math.floor(Number(S.chests)||0));pile.hidden=pending===0;if(pileCount.textContent!==String(pending))pileCount.textContent=String(pending);}
   $('pulseWave').textContent=(S.wave||1)+'/5';
   $('pulseCrew').textContent=CREW.filter(h=>lv(h.id)>0).length+'/'+CREW.length;
   $('pulsePearls').textContent=fmt(S.pearls);
@@ -3932,7 +4108,7 @@ function tick(now){
  if(Date.now()-lastSave>5000){save();lastSave=Date.now();}
  schedulePirateTick();
 }
-$('tapArea').addEventListener('pointerdown',e=>{e.preventDefault();hit(e)});$('tapArea').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();hit()}});
+$('tapArea').addEventListener('pointerdown',e=>{e.preventDefault();const pile=$('lootPile');if(pile&&!pile.hidden){const r=pile.getBoundingClientRect();if(e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom){collectGroundLoot();return;}}hit(e)});$('lootPile').addEventListener('pointerdown',e=>e.stopPropagation());$('lootPile').addEventListener('click',e=>{e.preventDefault();e.stopPropagation();collectGroundLoot();});$('tapArea').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();hit()}});
 $('skillGear').addEventListener('click',()=>useSkill('gear'));$('skillHaki').addEventListener('click',()=>useSkill('haki'));$('skillMidas').addEventListener('click',()=>useSkill('midas'));$('skillGatling').addEventListener('click',()=>useSkill('gatling'));$('skillZoro').addEventListener('click',()=>useSkill('zoro'));$('skillCrew').addEventListener('click',()=>useSkill('crew'));
 $('bossToggle').addEventListener('click',()=>{if(farm){farm=false;startEnemy();renderHud();return;}toggleBoss()});
 $('shop').addEventListener('click',e=>{const btn=e.target.closest('[data-kind]');if(btn)buy(btn.dataset.kind,btn.dataset.id,btn.dataset.step);if(e.target.closest('#prestige'))prestige();});
@@ -3940,9 +4116,9 @@ $('multipliers').addEventListener('click',e=>{const b=e.target.closest('[data-mu
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;setDrawer(true);document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));$('shop').scrollTop=0;renderShop()}));
 $('patchNotesButton').addEventListener('click',openPatchNotes);
 refreshPatchNotesBadge();
-$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.79 · Démo Vivi',`<p><b>Progression :</b> Vivi possède son animation 2D de 16 poses et ses dégâts de base. Les bonus temporaires de test ont été retirés.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige devient disponible au <b>stage 30</b>. Les jalons permettent ensuite un départ avancé après prestige.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b> nouvelle attaque 2D dessinée en 16 poses, courte et dynamique, sur la méthode Alvida.<br><small>Aucune ancienne animation ni bouton d'essai à sélectionner. Tes niveaux, records et sauvegardes sont préservés ; seuls les bonus temporaires de test ont été retirés.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animation 2D dessinée encore en cours de finition.</p>`,()=>{},'JOUER'));
+$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.80 · Démo Vivi',`<p><b>Progression :</b> Vivi possède son animation 2D de 16 poses et ses dégâts de base. Les bonus temporaires de test ont été retirés.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige devient disponible au <b>stage 30</b>. Les jalons permettent ensuite un départ avancé après prestige.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b> nouvelle attaque 2D dessinée en 16 poses, courte et dynamique, sur la méthode Alvida.<br><small>Aucune ancienne animation ni bouton d'essai à sélectionner. Tes niveaux, records et sauvegardes sont préservés ; seuls les bonus temporaires de test ont été retirés.</small></p><p><b>Équipements :</b> <button id="autoSellCommonToggle" class="save-btn" type="button">${S.autoSellCommon===true?'✅ Vente auto des communs':'⬜ Vente auto des communs'}</button><br><small>Gratuit : les communs récupérés deviennent des perles ; les autres vont dans l’inventaire.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animation 2D dessinée encore en cours de finition.</p>`,()=>{},'JOUER'));
 $('modalBody').addEventListener('click',e=>{
-  if(e.target.id==='fxToggle'){S.fx=S.fx===false; e.target.textContent=S.fx===false?'✨ Activer':'✨ Désactiver';save();}if(e.target.id==='soundToggle'){S.mute=!S.mute;e.target.textContent=S.mute?'🔇 Activer':'🔊 Couper';save();}
+  if(e.target.id==='skipLootReveal'){const reveal=e.target.closest('.loot-reveal');if(reveal)reveal.classList.add('loot-reveal-skipped');e.target.hidden=true;return;}if(e.target.id==='autoSellCommonToggle'){S.autoSellCommon=S.autoSellCommon!==true;e.target.textContent=S.autoSellCommon?'✅ Vente auto des communs':'⬜ Vente auto des communs';save();}if(e.target.id==='fxToggle'){S.fx=S.fx===false; e.target.textContent=S.fx===false?'✨ Activer':'✨ Désactiver';save();}if(e.target.id==='soundToggle'){S.mute=!S.mute;e.target.textContent=S.mute?'🔇 Activer':'🔊 Couper';save();}
   if(e.target.id==='checkGameUpdates'){if(window.PirateAndroid?.checkForUpdates)window.PirateAndroid.checkForUpdates();else if(window.PiratePWA?.checkForUpdates)window.PiratePWA.checkForUpdates();else toast('Mises à jour web indisponibles');}
  if(e.target.id==='saveExport')exportSave();
  if(e.target.id==='saveImport')$('importFile')?.click();
@@ -3953,7 +4129,7 @@ $('modalBody').addEventListener('change',e=>{
   try{const data=JSON.parse(reader.result);if(!data||![3,4,5,6,7,8,9].includes(data.version)||!data.heroes||!data.artifacts||!data.quests)throw Error('Fichier incorrect');
    const d=original();S={...d,...data,version:9,economyV:Number(data.economyV)||1,heroes:{...d.heroes,...data.heroes},artifacts:{...d.artifacts,...data.artifacts},talents:{...d.talents,...data.talents},pets:{...d.pets,...data.pets},quests:{...d.quests,...data.quests},equipment:{...d.equipment,...data.equipment},stats:{...d.stats,...data.stats},islandMarks:{...d.islandMarks,...data.islandMarks}};
    S.inventory=Array.isArray(S.inventory)?S.inventory:[];S.gold=(S.gold&&typeof S.gold==='object')?bnFrom(S.gold):Math.max(0,Number(S.gold)||0);S.mana=Math.min(100,Math.max(0,Number(S.mana)||0));
-   migrateLegacyAlvidaToVivi();clearViviTrialBonuses();migrateEconomy();S.gold=bnFrom(S.gold);S.bigGoldV=1;migrateRareCurrencies();save();closeModal();startEnemy();renderAll();toast('✅ Sauvegarde importée !');
+   migrateLegacyAlvidaToVivi();clearViviTrialBonuses();migrateEconomy();S.gold=bnFrom(S.gold);S.bigGoldV=1;migrateRareCurrencies();migrateLegacyChestsToVisualDrops();save();closeModal();startEnemy();renderAll();toast('✅ Sauvegarde importée !');
   }catch(err){toast('❌ Sauvegarde non valide (V0.3 à V0.9 attendue).' );}
  };reader.readAsText(e.target.files[0]);
 });
