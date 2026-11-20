@@ -1,5 +1,5 @@
 {
-  "versionCode": 980,
-  "versionName": "0.9.80",
-  "notes": "Butin sous forme de coffres au sol, inventaire de 100 équipements, catégories et vente protégée. Ancien stock de coffres supprimé."
+  "versionCode": 981,
+  "versionName": "0.9.81",
+  "notes": "Remise à zéro unique des parties de test à la vague 1, avec un bouton pour recommencer à volonté. Nouveau système de coffres et inventaire de 100 équipements conservés."
 }

@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#19243f"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest">
 <!-- Precharger et decoder les planches AVANT les changements de rang (evite
      un frame blanc au passage de la forme normale a l'Eveil 1). -->
-<meta name="description" content="Pirate Titans 0.9.79 : présentation des héros simplifiée, progression et sauvegardes conservées.">
+<meta name="description" content="Pirate Titans 0.9.81 : parties de test recommencées à la vague 1 et bouton de remise à zéro.">
 
-<title>Pirate Titans — Grand Line v0.9.80</title>
+<title>Pirate Titans — Grand Line v0.9.81</title>
 <style>
 :root{--ink:#122332;--deep:#112634;--panel:#213746;--panel2:#304554;--line:#68808a;--warm:#fceac0;--gold:#ffce68;--cyan:#58dfee;--mint:#5bdeb8;--red:#f4705e;--paper:#f3ebd7;--h:100dvh}
 *{box-sizing:border-box}html,body{margin:0;height:100%;width:100%;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--paper);background:#08141c;touch-action:manipulation}button{font:inherit;cursor:pointer;color:inherit;-webkit-tap-highlight-color:transparent}button:disabled{cursor:default}button:focus-visible{outline:2px solid #fff2b5;outline-offset:2px}[hidden]{display:none!important}
@@ -2210,7 +2210,19 @@ try{
   S.chests=Math.max(0,Number(S.chests)||0);S.inventory=Array.isArray(S.inventory)?S.inventory:[];
    S.prestigeBaseStage=Math.max(1,Math.min(Math.floor(Number(S.stage)||1),Math.floor(Number(S.prestigeBaseStage)||1)));
  }
-}catch(e){}
+ }catch(e){}
+/* V0.9.81 — une réinitialisation de toutes les anciennes parties de TEST.
+   L'état conserve le marqueur afin que les prochains lancements et prestiges
+   n'effacent PAS la nouvelle progression. Aucun stock historique préservé. */
+function resetTestProgressStateV0981(){
+ const prefs={mute:S.mute!==false,fx:S.fx!==false,autoBoss:S.autoBoss!==false,autoSellCommon:S.autoSellCommon===true};
+ S={...original(),...prefs,testProgressResetV0981:true,lootChestVisualMigrationV0980:true};
+ return S;
+}
+if(S.testProgressResetV0981!==true){
+ resetTestProgressStateV0981();
+ try{localStorage.setItem(KEY,JSON.stringify(S));}catch(_){}
+}
 /* Conversion non destructive : les sauvegardes Number V0.9.24 et les sauvegardes
    {mantissa,exponent} utilisent le même moteur, sans réévaluer les gains. */
 function migrateRareCurrencies(){
@@ -3179,9 +3191,20 @@ function modal(title,body,cb,label='CONTINUER',cancel=false){$('modalTitle').tex
 function closeModal(){$('veil').hidden=true;modalCb=null;}
 
 /* V0.9.58 — Notes éditoriales locales : ne changent pas la sauvegarde du jeu. */
-const PATCH_NOTES_VERSION=980;
+const PATCH_NOTES_VERSION=981;
 const PATCH_NOTES_SEEN_KEY='pirate_titans_patchnotes_seen_v1';
 const PATCH_NOTES=[
+ {code:981,version:'0.9.81',date:'20 novembre 2026',title:'Toutes les parties de test repartent à la vague 1',sections:[
+  {name:'Nouveau départ de test',items:[
+   'La première ouverture de cette version recommence automatiquement une seule fois à la vague 1, avec des équipements, héros et ressources de départ.',
+   'Les parties actuelles sont des essais de développement : leur ancienne progression n’est pas conservée.',
+   'La progression de la nouvelle partie est ensuite sauvegardée normalement, même après redémarrage ou prestige.'
+  ]},
+  {name:'Réinitialisation à volonté',items:[
+   'Nouveau bouton Recommencer à la vague 1 dans les paramètres, avec confirmation avant de supprimer la progression.',
+   'Pratique pour tester plusieurs fois les débuts du jeu, les premières récompenses et la progression de Vivi.'
+  ]}
+ ]},
  {code:980,version:'0.9.80',date:'20 novembre 2026',title:'Coffres au sol et refonte des équipements',sections:[
   {name:'Récompenses de combat',items:[
    'Les nouveaux équipements apparaissent au sol sous la forme d’un coffre à ramasser près du héros.',
@@ -3779,7 +3802,7 @@ function relicReward(){
 function prestige(){
  const win=relicReward();if(!bnPositive(win))return;const restart=prestigeStartStage(S.highest);
  modal('✨ Confirmer le prestige ?',`<p>Tu recevras <b>${fmt(win)} reliques</b>.</p><p>Les niveaux sont réinitialisés. <b>Départ au stage ${fmt(restart)}</b> avec un bonus de berrys de reprise. <b>Tu conserves</b> artefacts, talents, équipements, coffres au sol, perles, familiers et missions.</p>`,()=>{
-  const keep={highest:S.highest,bestLootStage:S.bestLootStage,relics:bnAdd(S.relics,win),artifacts:{...S.artifacts},talents:{...S.talents},skillPoints:S.skillPoints,totalSkillPoints:S.totalSkillPoints,gear:S.gear,loot:S.loot,prestiges:S.prestiges+1,mute:S.mute,autoBoss:S.autoBoss,pearls:S.pearls,chests:S.chests,lootChestVisualMigrationV0980:S.lootChestVisualMigrationV0980===true,autoSellCommon:S.autoSellCommon===true,pets:{...S.pets},activePet:S.activePet,equipment:{...S.equipment},inventory:[...S.inventory],nextItemId:S.nextItemId,quests:JSON.parse(JSON.stringify(S.quests)),stats:{...S.stats},created:S.created,lastDaily:S.lastDaily,boostUntil:S.boostUntil,shopBuys:S.shopBuys,earnedFree:true,fx:S.fx,islandMarks:{...S.islandMarks},bestCombo:S.bestCombo,form:S.form,viviMigrationV0950:true,viviTrialCleanupV0978:true};
+  const keep={highest:S.highest,bestLootStage:S.bestLootStage,relics:bnAdd(S.relics,win),artifacts:{...S.artifacts},talents:{...S.talents},skillPoints:S.skillPoints,totalSkillPoints:S.totalSkillPoints,gear:S.gear,loot:S.loot,prestiges:S.prestiges+1,mute:S.mute,autoBoss:S.autoBoss,pearls:S.pearls,chests:S.chests,lootChestVisualMigrationV0980:S.lootChestVisualMigrationV0980===true,testProgressResetV0981:S.testProgressResetV0981===true,autoSellCommon:S.autoSellCommon===true,pets:{...S.pets},activePet:S.activePet,equipment:{...S.equipment},inventory:[...S.inventory],nextItemId:S.nextItemId,quests:JSON.parse(JSON.stringify(S.quests)),stats:{...S.stats},created:S.created,lastDaily:S.lastDaily,boostUntil:S.boostUntil,shopBuys:S.shopBuys,earnedFree:true,fx:S.fx,islandMarks:{...S.islandMarks},bestCombo:S.bestCombo,form:S.form,viviMigrationV0950:true,viviTrialCleanupV0978:true};
   S={...original(),...keep,stage:restart,runMax:restart,prestigeBaseStage:restart};
    clearViviTrialBonuses();
    S.gold=bnMax(20,bnMul(coinCalc(false),20));
@@ -4073,6 +4096,17 @@ function renderHud(){
 }
 function renderAll(){renderHud();renderShop();}
 function save(){S.lastSeen=Date.now();try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+/* Rejouer le démarrage est un outil de test, sans suppression à chaque ouverture. */
+function showResetTestConfirmV0981(){
+ modal('🔄 Recommencer à la vague 1 ?',`<p><b>Toute la progression de cette partie de test sera effacée.</b> Tu repartiras vague 1 avec les héros, équipements, reliques et ressources de départ.</p><p class="fine">Les réglages son et effets sont conservés. La partie progressera ensuite normalement.</p>`,()=>{
+  resetTestProgressStateV0981();
+  clearViviTrialBonuses();migrateRareCurrencies();
+  cooldown={gear:0,haki:0,midas:0,gatling:0,zoro:0,crew:0};
+  active={gear:0,midas:0,crew:0};farm=false;combo=0;lastPetAt=performance.now();lastTick=performance.now();
+  if(respawnTimer!==null){clearTimeout(respawnTimer);respawnTimer=null;}
+  startEnemy();renderAll();save();toast('🏴‍☠️ Nouvelle partie de test : vague 1 !');
+ },'RECOMMENCER',true);
+}
 /* iOS PWA performance: cap expensive game ticks around 30fps. */
 const PIRATE_IOS_ECO_TICK = /iPhone|iPad|iPod/.test(navigator.userAgent) && !window.PirateAndroid;
 function schedulePirateTick(){
@@ -4116,12 +4150,13 @@ $('multipliers').addEventListener('click',e=>{const b=e.target.closest('[data-mu
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;setDrawer(true);document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));$('shop').scrollTop=0;renderShop()}));
 $('patchNotesButton').addEventListener('click',openPatchNotes);
 refreshPatchNotesBadge();
-$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.80 · Démo Vivi',`<p><b>Progression :</b> Vivi possède son animation 2D de 16 poses et ses dégâts de base. Les bonus temporaires de test ont été retirés.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige devient disponible au <b>stage 30</b>. Les jalons permettent ensuite un départ avancé après prestige.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b> nouvelle attaque 2D dessinée en 16 poses, courte et dynamique, sur la méthode Alvida.<br><small>Aucune ancienne animation ni bouton d'essai à sélectionner. Tes niveaux, records et sauvegardes sont préservés ; seuls les bonus temporaires de test ont été retirés.</small></p><p><b>Équipements :</b> <button id="autoSellCommonToggle" class="save-btn" type="button">${S.autoSellCommon===true?'✅ Vente auto des communs':'⬜ Vente auto des communs'}</button><br><small>Gratuit : les communs récupérés deviennent des perles ; les autres vont dans l’inventaire.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animation 2D dessinée encore en cours de finition.</p>`,()=>{},'JOUER'));
+$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.81 · Démo Vivi',`<p><b>Progression :</b> Vivi possède son animation 2D de 16 poses et ses dégâts de base. Les bonus temporaires de test ont été retirés.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige devient disponible au <b>stage 30</b>. Les jalons permettent ensuite un départ avancé après prestige.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button> <button id="testResetWaveOne" class="save-btn" type="button" style="border-color:#e8bd72">🔄 Recommencer à la vague 1</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b> nouvelle attaque 2D dessinée en 16 poses, courte et dynamique, sur la méthode Alvida.<br><small>Aucune ancienne animation ni bouton d'essai à sélectionner. Tes niveaux, records et sauvegardes sont préservés ; seuls les bonus temporaires de test ont été retirés.</small></p><p><b>Équipements :</b> <button id="autoSellCommonToggle" class="save-btn" type="button">${S.autoSellCommon===true?'✅ Vente auto des communs':'⬜ Vente auto des communs'}</button><br><small>Gratuit : les communs récupérés deviennent des perles ; les autres vont dans l’inventaire.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animation 2D dessinée encore en cours de finition.</p>`,()=>{},'JOUER'));
 $('modalBody').addEventListener('click',e=>{
   if(e.target.id==='skipLootReveal'){const reveal=e.target.closest('.loot-reveal');if(reveal)reveal.classList.add('loot-reveal-skipped');e.target.hidden=true;return;}if(e.target.id==='autoSellCommonToggle'){S.autoSellCommon=S.autoSellCommon!==true;e.target.textContent=S.autoSellCommon?'✅ Vente auto des communs':'⬜ Vente auto des communs';save();}if(e.target.id==='fxToggle'){S.fx=S.fx===false; e.target.textContent=S.fx===false?'✨ Activer':'✨ Désactiver';save();}if(e.target.id==='soundToggle'){S.mute=!S.mute;e.target.textContent=S.mute?'🔇 Activer':'🔊 Couper';save();}
   if(e.target.id==='checkGameUpdates'){if(window.PirateAndroid?.checkForUpdates)window.PirateAndroid.checkForUpdates();else if(window.PiratePWA?.checkForUpdates)window.PiratePWA.checkForUpdates();else toast('Mises à jour web indisponibles');}
  if(e.target.id==='saveExport')exportSave();
  if(e.target.id==='saveImport')$('importFile')?.click();
+ if(e.target.id==='testResetWaveOne'){showResetTestConfirmV0981();return;}
 });
 $('modalBody').addEventListener('change',e=>{
  if(e.target.id!=='importFile'||!e.target.files?.length)return;
@@ -4129,7 +4164,7 @@ $('modalBody').addEventListener('change',e=>{
   try{const data=JSON.parse(reader.result);if(!data||![3,4,5,6,7,8,9].includes(data.version)||!data.heroes||!data.artifacts||!data.quests)throw Error('Fichier incorrect');
    const d=original();S={...d,...data,version:9,economyV:Number(data.economyV)||1,heroes:{...d.heroes,...data.heroes},artifacts:{...d.artifacts,...data.artifacts},talents:{...d.talents,...data.talents},pets:{...d.pets,...data.pets},quests:{...d.quests,...data.quests},equipment:{...d.equipment,...data.equipment},stats:{...d.stats,...data.stats},islandMarks:{...d.islandMarks,...data.islandMarks}};
    S.inventory=Array.isArray(S.inventory)?S.inventory:[];S.gold=(S.gold&&typeof S.gold==='object')?bnFrom(S.gold):Math.max(0,Number(S.gold)||0);S.mana=Math.min(100,Math.max(0,Number(S.mana)||0));
-   migrateLegacyAlvidaToVivi();clearViviTrialBonuses();migrateEconomy();S.gold=bnFrom(S.gold);S.bigGoldV=1;migrateRareCurrencies();migrateLegacyChestsToVisualDrops();save();closeModal();startEnemy();renderAll();toast('✅ Sauvegarde importée !');
+   S.testProgressResetV0981=true;migrateLegacyAlvidaToVivi();clearViviTrialBonuses();migrateEconomy();S.gold=bnFrom(S.gold);S.bigGoldV=1;migrateRareCurrencies();migrateLegacyChestsToVisualDrops();save();closeModal();startEnemy();renderAll();toast('✅ Sauvegarde importée !');
   }catch(err){toast('❌ Sauvegarde non valide (V0.3 à V0.9 attendue).' );}
  };reader.readAsText(e.target.files[0]);
 });
@@ -4169,7 +4204,7 @@ if(resourceBtn)resourceBtn.addEventListener('click',()=>{
 });
 
 startEnemy();renderAll();schedulePirateTick();save();try{if(window.PirateAndroid?.gameReady)window.PirateAndroid.gameReady();}catch(e){}
-let welcome=true;try{welcome=!localStorage.getItem('pirate_titans_v09_seen')}catch(e){}if(welcome && !(S.stats?.taps>0||S.stats?.upgrades>0||S.highest>1)){setTimeout(()=>modal('🏴‍☠️ PIRATE TITANS V0.9.23',`<p>Nouveautés V0.9.23 : <b>multiplicateurs spécialisés pour les artefacts, six talents, équipements de cinq types et familiers actifs/passifs</b>, tout en conservant la progression, combat fixe, ouverture du panneau sans zoom, <b>formes de Luffy</b> et <b>attaques spéciales des boss tous les 10 stages</b> : contre-les avec 5 touches rapides ou tes sorts !</p><p>👆 <b>Tape et enchaîne les combos</b> · ⚔️ recrute ton équipage · 🎒 ouvre des coffres · 🐣 élève tes familiers · 📜 accomplis des missions · ✨ recommence plus fort après un prestige.</p><p>Tu démarres avec 20 berrys et peux réclamer chaque jour 5 perles + 1 coffre avec 🎁. Aucun achat en euros !</p><p class="fine">Prototype de démonstration fan-made, non affilié à One Piece ni à Tap Titans 2.</p>`,()=>{try{localStorage.setItem('pirate_titans_v09_seen','1')}catch(e){}},"C'EST PARTI !"),280)}
+let welcome=true;try{welcome=!localStorage.getItem('pirate_titans_v09_seen')}catch(e){}if(welcome && !(S.stats?.taps>0||S.stats?.upgrades>0||S.highest>1)){setTimeout(()=>modal('🏴‍☠️ PIRATE TITANS V0.9.81',`<p>Nouveautés V0.9.23 : <b>multiplicateurs spécialisés pour les artefacts, six talents, équipements de cinq types et familiers actifs/passifs</b>, tout en conservant la progression, combat fixe, ouverture du panneau sans zoom, <b>formes de Luffy</b> et <b>attaques spéciales des boss tous les 10 stages</b> : contre-les avec 5 touches rapides ou tes sorts !</p><p>👆 <b>Tape et enchaîne les combos</b> · ⚔️ recrute ton équipage · 🎒 ouvre des coffres · 🐣 élève tes familiers · 📜 accomplis des missions · ✨ recommence plus fort après un prestige.</p><p>Tu démarres avec 20 berrys et peux réclamer chaque jour 5 perles + 1 coffre avec 🎁. Aucun achat en euros !</p><p class="fine">Prototype de démonstration fan-made, non affilié à One Piece ni à Tap Titans 2.</p>`,()=>{try{localStorage.setItem('pirate_titans_v09_seen','1')}catch(e){}},"C'EST PARTI !"),280)}
 if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
 })();
 </script>
