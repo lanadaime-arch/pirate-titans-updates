@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#19243f"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest">
 <!-- Precharger et decoder les planches AVANT les changements de rang (evite
      un frame blanc au passage de la forme normale a l'Eveil 1). -->
-<meta name="description" content="Pirate Titans 0.9.81 : parties de test recommencées à la vague 1 et bouton de remise à zéro.">
+<meta name="description" content="Pirate Titans 0.9.82 : nouvel étalonnage des proportions de l'arène, combattants, boss et butin au sol.">
 
-<title>Pirate Titans — Grand Line v0.9.81</title>
+<title>Pirate Titans — Grand Line v0.9.82</title>
 <style>
 :root{--ink:#122332;--deep:#112634;--panel:#213746;--panel2:#304554;--line:#68808a;--warm:#fceac0;--gold:#ffce68;--cyan:#58dfee;--mint:#5bdeb8;--red:#f4705e;--paper:#f3ebd7;--h:100dvh}
 *{box-sizing:border-box}html,body{margin:0;height:100%;width:100%;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--paper);background:#08141c;touch-action:manipulation}button{font:inherit;cursor:pointer;color:inherit;-webkit-tap-highlight-color:transparent}button:disabled{cursor:default}button:focus-visible{outline:2px solid #fff2b5;outline-offset:2px}[hidden]{display:none!important}
@@ -1906,6 +1906,28 @@
 @media(max-width:360px){.app .tt2-eq-actions{width:76px}.app .tt2-eq-item .item-icon{width:38px;height:38px}.app .tt2-eq-category strong{font-size:7px}}
 
 
+
+/* V0.9.82 candidate — première correction mesurée sur l'arène Android 592×1280.
+   Garder les boss grands ; donner une silhouette distincte aux titans normaux.
+   Ces rapports sont candidats, pas une mesure exacte de TT2 8.4.2. */
+.app .v08-formation .enemy:not(.boss),
+.app.expanded .v08-formation .enemy:not(.boss),
+.app.expanded.max-drawer .v08-formation .enemy:not(.boss){
+ width:49%!important;height:79%!important;left:25.5%!important;bottom:12%!important;
+}
+.app .v08-formation .enemy.boss,
+.app.expanded .v08-formation .enemy.boss,
+.app.expanded.max-drawer .v08-formation .enemy.boss{
+ width:62%!important;height:90%!important;left:19%!important;bottom:11%!important;
+}
+.app .v08-formation .hero,
+.app.expanded .v08-formation .hero,
+.app.expanded.max-drawer .v08-formation .hero{
+ width:21%!important;height:27%!important;left:39.5%!important;bottom:-1%!important;
+}
+/* Butin posé près du capitaine sur la ligne du sol, non dans un coin de l'arène. */
+.app .frame .loot-pile{left:27%!important;bottom:37%!important;min-width:61px;min-height:42px}
+@media(max-width:360px){.app .frame .loot-pile{left:25%!important;min-width:54px}}
 </style>
 <link rel="preload" as="image" href="./vivi-alvida-base-16f-224.webp" type="image/webp">
 <link rel="stylesheet" href="./alvida-rig.css">
@@ -2821,8 +2843,8 @@ function ensureV094CrewSlots(){
     // empiler automatiquement 48 silhouettes autour du monstre.
     el.style.setProperty('--slot-bottom',(9+row*18)+'%');
     el.style.setProperty('--slot-edge',(2+col*12)+'%');
-    el.style.setProperty('--slot-width',h.id==='vivi'?'14%':h.id==='alvida'?'17%':Math.max(9,13-col*1.5)+'%');
-    el.style.setProperty('--slot-height',h.id==='vivi'?'16%':h.id==='alvida'?'19%':(row===4?14:16)+'%');
+    el.style.setProperty('--slot-width',h.id==='vivi'?'16%':h.id==='alvida'?'17%':Math.max(9,13-col*1.5)+'%');
+    el.style.setProperty('--slot-height',h.id==='vivi'?'19%':h.id==='alvida'?'19%':(row===4?14:16)+'%');
     el.style.setProperty('--slot-layer',String(5+row));
   }
 }
@@ -3191,9 +3213,17 @@ function modal(title,body,cb,label='CONTINUER',cancel=false){$('modalTitle').tex
 function closeModal(){$('veil').hidden=true;modalCb=null;}
 
 /* V0.9.58 — Notes éditoriales locales : ne changent pas la sauvegarde du jeu. */
-const PATCH_NOTES_VERSION=981;
+const PATCH_NOTES_VERSION=982;
 const PATCH_NOTES_SEEN_KEY='pirate_titans_patchnotes_seen_v1';
 const PATCH_NOTES=[
+ {code:982,version:'0.9.82',date:'20 novembre 2026',title:'Premier étalonnage de l’écran de combat',sections:[
+  {name:'Proportions à tester sur téléphone',items:[
+   'Les ennemis ordinaires sont mieux différenciés des grands boss et le capitaine gagne en lisibilité.',
+   'Vivi occupe davantage son emplacement dans la formation sans changer son animation de 16 dessins.',
+   'Les coffres à récupérer sont repositionnés au sol près de Luffy.',
+   'Cette étape de cadrage reste expérimentale : l’équivalence exacte des proportions TT2 demande un contrôle vidéo côte à côte.'
+  ]}
+ ]},
  {code:981,version:'0.9.81',date:'20 novembre 2026',title:'Toutes les parties de test repartent à la vague 1',sections:[
   {name:'Nouveau départ de test',items:[
    'La première ouverture de cette version recommence automatiquement une seule fois à la vague 1, avec des équipements, héros et ressources de départ.',
@@ -4150,7 +4180,7 @@ $('multipliers').addEventListener('click',e=>{const b=e.target.closest('[data-mu
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.tab;setDrawer(true);document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));$('shop').scrollTop=0;renderShop()}));
 $('patchNotesButton').addEventListener('click',openPatchNotes);
 refreshPatchNotesBadge();
-$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.81 · Démo Vivi',`<p><b>Progression :</b> Vivi possède son animation 2D de 16 poses et ses dégâts de base. Les bonus temporaires de test ont été retirés.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige devient disponible au <b>stage 30</b>. Les jalons permettent ensuite un départ avancé après prestige.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button> <button id="testResetWaveOne" class="save-btn" type="button" style="border-color:#e8bd72">🔄 Recommencer à la vague 1</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b> nouvelle attaque 2D dessinée en 16 poses, courte et dynamique, sur la méthode Alvida.<br><small>Aucune ancienne animation ni bouton d'essai à sélectionner. Tes niveaux, records et sauvegardes sont préservés ; seuls les bonus temporaires de test ont été retirés.</small></p><p><b>Équipements :</b> <button id="autoSellCommonToggle" class="save-btn" type="button">${S.autoSellCommon===true?'✅ Vente auto des communs':'⬜ Vente auto des communs'}</button><br><small>Gratuit : les communs récupérés deviennent des perles ; les autres vont dans l’inventaire.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animation 2D dessinée encore en cours de finition.</p>`,()=>{},'JOUER'));
+$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.82 · Démo Vivi',`<p><b>Progression :</b> Vivi possède son animation 2D de 16 poses et ses dégâts de base. Les bonus temporaires de test ont été retirés.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige devient disponible au <b>stage 30</b>. Les jalons permettent ensuite un départ avancé après prestige.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button> <button id="testResetWaveOne" class="save-btn" type="button" style="border-color:#e8bd72">🔄 Recommencer à la vague 1</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b> nouvelle attaque 2D dessinée en 16 poses, courte et dynamique, sur la méthode Alvida.<br><small>Aucune ancienne animation ni bouton d'essai à sélectionner. La V0.9.81 a remis les anciennes parties de test à zéro une seule fois. Ta progression après ce reset est sauvegardée normalement ; le bouton Recommencer permet un nouveau test.</small></p><p><b>Équipements :</b> <button id="autoSellCommonToggle" class="save-btn" type="button">${S.autoSellCommon===true?'✅ Vente auto des communs':'⬜ Vente auto des communs'}</button><br><small>Gratuit : les communs récupérés deviennent des perles ; les autres vont dans l’inventaire.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animation 2D dessinée encore en cours de finition.</p>`,()=>{},'JOUER'));
 $('modalBody').addEventListener('click',e=>{
   if(e.target.id==='skipLootReveal'){const reveal=e.target.closest('.loot-reveal');if(reveal)reveal.classList.add('loot-reveal-skipped');e.target.hidden=true;return;}if(e.target.id==='autoSellCommonToggle'){S.autoSellCommon=S.autoSellCommon!==true;e.target.textContent=S.autoSellCommon?'✅ Vente auto des communs':'⬜ Vente auto des communs';save();}if(e.target.id==='fxToggle'){S.fx=S.fx===false; e.target.textContent=S.fx===false?'✨ Activer':'✨ Désactiver';save();}if(e.target.id==='soundToggle'){S.mute=!S.mute;e.target.textContent=S.mute?'🔇 Activer':'🔊 Couper';save();}
   if(e.target.id==='checkGameUpdates'){if(window.PirateAndroid?.checkForUpdates)window.PirateAndroid.checkForUpdates();else if(window.PiratePWA?.checkForUpdates)window.PiratePWA.checkForUpdates();else toast('Mises à jour web indisponibles');}

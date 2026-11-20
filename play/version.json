@@ -1,5 +1,5 @@
 {
-  "versionCode": 981,
-  "versionName": "0.9.81",
-  "notes": "Remise à zéro unique des parties de test à la vague 1, avec un bouton pour recommencer à volonté. Nouveau système de coffres et inventaire de 100 équipements conservés."
+  "versionCode": 982,
+  "versionName": "0.9.82",
+  "notes": "Premier réglage des proportions de la scène : ennemis ordinaires et boss mieux différenciés, Vivi et Luffy plus lisibles, coffre rapproché du héros. Contrôle visuel TT2 encore à poursuivre."
 }
