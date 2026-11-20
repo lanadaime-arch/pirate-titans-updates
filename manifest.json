@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 980,
-  "versionName": "0.9.80",
+  "versionCode": 981,
+  "versionName": "0.9.81",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-980.zip",
-  "packageSha256": "cfe2f941204486b9770f7531f5387e047bfb914094177f18b6c9f56cb819666f",
-  "packageBytes": 3789364,
-  "notes": "Butin sous forme de coffres au sol, inventaire de 100 équipements, catégories et vente protégée. Ancien stock de coffres supprimé.",
-  "signature": "KHOYWQbaisDAfYbaUL8z6HxR14bosNwRoAbqbzza+HtGQgPrER+9boa9vbC9b+L7O9823Xj4MhcYpJor1QfPbHnxUWIKHr+zv5YWSPMFjIgYxIdJXLanem0FUtgET2DEe4+orjwG7ddS6JyKTBiti5DzYtRkjWRoeLGYt6KTKg9SaQcFaflos1fZlwOnwMSnqG/DGaTBY5PqQQutmXqtFLayEc3W1USnUjPaBU2sAQWTdH9CmyOfYcbzl7vGaanzOa35eYcDUh28rOUqUQIzvjhrp2xPnWnYFOSOOp3dWYbpn6CUHWlvtzo/3bRuQhf7mlKBaCVx0Hdw+YoOdkFulRMb3dYZlIX09k/UGEEE6ZYxKKOmpjZnvnLIG5Cfpy+5G0//U01/pr0/xM39mk95kh9kcUue7OY5h/Dl3apNQaiW81GIaOKELdkrOKwDmeVsQyssIgyHWQT8x8PCR/iIxvEi9rATExuAf68vsuVj8/+tqA+sznUrMsUh2B/bozUR"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-981.zip",
+  "packageSha256": "34fd228c4de2770e04418bbeef63f368d213e27758b993f6930c285d0b816ca5",
+  "packageBytes": 3790165,
+  "notes": "Remise à zéro unique des parties de test à la vague 1, avec un bouton pour recommencer à volonté. Nouveau système de coffres et inventaire de 100 équipements conservés.",
+  "signature": "uSCvOsgW/XihjVk8bF9rJ7+gsYZjFNzIt19MGzR75sZrarZXMiN4gFnYsEzNvupvG2buXfyQyAMp0QaYziqtYdMw0t0ArRWs9C43xXBnxuDs/w/pQ5yhe1LkhWedjixMHJAsgWEaIFoGIh/uT0QcOF1F1lk/AbSti7rFuHfUyeAG/JyfaUei+LCvuyP6LL1LVcs/ciqFDoBVyPccX/jn5qC5CYR8PuTEAnL7pD/sx32p6Uug1xTnoafbttiyhGH9uXiilHvFkudenj+zIO03Jn8zUW9uujehImQ+v/lzdzaFhKPuPAzFqOJicBYtmk7euKeffcr5UhvYu+p2GDHOZh3AvsE3EopKNTotiEYHQHKrR7F6e34xXhDVkP5BonDmj5+h9tGGKQg0dPoG9xxkA+0jAjqr06P4LyEogKqsIPQ9odc1Xu/kKkuizLSTp7d8gLkZMTAoCm/H7OpgQUjT/sASBAv4RpKQy01OqKB40l0ItmoH1h//9WON0eKjrH3q"
 }
