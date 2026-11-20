@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 982,
+  "versionName": "0.9.82",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-982.zip",
+  "packageSha256": "d101cb4c702ea323682b0f2ea7cd08544a8c4326f2f4759754ac2e7c4578657c",
+  "packageBytes": 3790819,
+  "notes": "Premier réglage des proportions de la scène : ennemis ordinaires et boss mieux différenciés, Vivi et Luffy plus lisibles, coffre rapproché du héros. Contrôle visuel TT2 encore à poursuivre.",
+  "signature": "qXykxzLpFhee4B8bEIWCG2s1Dy8C4ZuNORHKDKy66y3udnQ4V874AqfrPyZQJsY/wCgTu9V/5B+g0hFrutskY6AC7+6uxdjd0ctqsTZ8S3PU+tnM3He45daKw7pT898X8avS9YnUN7Q1QAjw0aFgwP+F8+O09yees9FA3ScPIEOofhQ11PNs9aqSm6AQ4JkVeh2NiJ9fyo/GDt5E252S5vFGxPk5e2+LSLrKBASZQ0N5d2SyC3vNXtPMAaHVsOzmiiDgMw+3cWtwum/y3TdmJrEckMMZ8qo6rBzhVH2cvSvRlJXaxVLRZ37IVCeElaNF3ieRK3C1QAcwn+9p5+HSHrJDcKRMgbaSC0jPbW88QhAPSQLocZGt6vqHbylX/psaoqyk8NUMY42hUKJWCCTWnWn/V6tr56oxFDvJDYaWLDZQdwqrJhYa3kflhktRxiKOdRyej92gULinskenEPV6OAofnWrRTkneBzEw3TnN2F1SZh0fy5eXWF4IPrreuv6+"
+}
