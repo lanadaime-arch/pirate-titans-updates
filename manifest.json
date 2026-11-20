@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 979,
-  "versionName": "0.9.79",
+  "versionCode": 980,
+  "versionName": "0.9.80",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-979.zip",
-  "packageSha256": "18e5952834e3d4c0a4c445bda76bac74000acd9a14b84f4a95ea7dae526433b5",
-  "packageBytes": 3783896,
-  "notes": "Interface des héros épurée : aucune mention de rang pour les formes de base, indication des évolutions seulement lorsqu'elles sont débloquées. Dégâts, progression, animation et sauvegardes préservés.",
-  "signature": "MdA+Dg6TXFV2ULGS7XpO/daPs9AUS/wl+/hJtSzG5NBXnl0ShrUvV1keO4SNHlp49xzVIOzrUExletTSvLBkgaw7LnttoWApd2K1KgoO8AyEdyOONSgSFESj8dp3t0XBZMGqwjtq0qydfGhNz8snLeTy/RKjQww0aODZwj1ON+SjZSuCa9GFJwjxQ/MINWpYhBeUTZbCGEAfDxrpAEp/bnuzMqhs8Ip0/yxw0XPbMMvn7D45tIW3R6qHvi3ifAVo+TEo5SrQyz0y3Z/dZL4UzW4j2PA225SDz3zKrdNBexKesMOdSF4IPoy2QEhX10nM2hD5witfvE5ufAe+nEe2ImEBNsa3mcmdYm2Y/o0s8ccf1fq4JxMxfpjCC748DSo7wxAX5Jh/6+de5KNF6rVYkjaSqXd4ARc3o5whPG0yLqbKYjunCxZRexEbqmZv3Ny+t/0KMT0lfUViTW7hVSlOvwx6va/ojhdDiKd4ZJRl5961N/vcnuAvxsX7gaul+yLq"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-980.zip",
+  "packageSha256": "cfe2f941204486b9770f7531f5387e047bfb914094177f18b6c9f56cb819666f",
+  "packageBytes": 3789364,
+  "notes": "Butin sous forme de coffres au sol, inventaire de 100 équipements, catégories et vente protégée. Ancien stock de coffres supprimé.",
+  "signature": "KHOYWQbaisDAfYbaUL8z6HxR14bosNwRoAbqbzza+HtGQgPrER+9boa9vbC9b+L7O9823Xj4MhcYpJor1QfPbHnxUWIKHr+zv5YWSPMFjIgYxIdJXLanem0FUtgET2DEe4+orjwG7ddS6JyKTBiti5DzYtRkjWRoeLGYt6KTKg9SaQcFaflos1fZlwOnwMSnqG/DGaTBY5PqQQutmXqtFLayEc3W1USnUjPaBU2sAQWTdH9CmyOfYcbzl7vGaanzOa35eYcDUh28rOUqUQIzvjhrp2xPnWnYFOSOOp3dWYbpn6CUHWlvtzo/3bRuQhf7mlKBaCVx0Hdw+YoOdkFulRMb3dYZlIX09k/UGEEE6ZYxKKOmpjZnvnLIG5Cfpy+5G0//U01/pr0/xM39mk95kh9kcUue7OY5h/Dl3apNQaiW81GIaOKELdkrOKwDmeVsQyssIgyHWQT8x8PCR/iIxvEi9rATExuAf68vsuVj8/+tqA+sznUrMsUh2B/bozUR"
 }
