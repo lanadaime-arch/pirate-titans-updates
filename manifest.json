@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 986,
-  "versionName": "0.9.86",
+  "versionCode": 987,
+  "versionName": "0.9.87",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-986.zip",
-  "packageSha256": "4f704e01f7c20c405a09e4ee020c0cd6b6633f6b3679cdd620d898d9f013a493",
-  "packageBytes": 3793921,
-  "notes": "Jonction TT2 : languette trapézoïdale réinsérée sous la ligne du sol, sans masquer Luffy ; coffre à gauche du héros et barre de boss plus lisible, d'après captures 21112/21113.",
-  "signature": "PB7aurt93e5Otd4tOTcbKGus2qZpqCY2oOisU7/IO7NN57rk56tyczVo43HZOQ8oJQN57JzKC70oQMaaisDkRfVwfk7TogbOyktHTDXBWjR9Yd75DfnZ8+tVyTtpjZkeK5BaaQOh2R+OZVQsnsO53dHqgpcswXvSQ9vPhH/Gm1b6YZyFncxwJ7tDBR1eRWOazuhsbDlVSwTYrdua7X4elnl5Vd6m8okykHw7Yeij+7vDLeRjNL+cSjUxuI7fyA9/QT0jV9ChSVJqtlIFIkY0SmeWSOw9LzPYyM4QyTg5lODQn0bSTsJKV7za3mN8YsoPKxLmMjmFMN4q4Lw1H/b1pgEUIJ0X13XCneYSNdp7g/n6AWIChWqqZHPvhBG+ZGOVYE+ekJQHZ2JHQ4EXB1/z0GV22TMjFHImJOXj8CdU30EO972FtrFSy0u3IIm6wm5EHmBeyz+RUzLgYp/wzibTm/47tNiGt+LVKSJBuwSMoBZFIDgNxhbPohojuL8zpIfG"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-987.zip",
+  "packageSha256": "62a56ea975187355a28dd2a5b2d7498c8ae30250bec0c4df3f720312d93dbbb3",
+  "packageBytes": 3794808,
+  "notes": "Audit des captures 21114/21115/21116 et TT2 21097/21096 : séparation semi-ouverte maintenue au bon niveau, bandes flèche/croix et DPS/or compactées, stage entièrement visible en vue agrandie, toasts sous les fiches.",
+  "signature": "EE+DflewWOg2q0DFC0X3Zi5ByUj7s27p5UIdIaYi1pvDvyQkt0QV2HbwnzTV51D85BLzck+tq0HSX6A3Nb36pbegvkpspm5VZjxktmYa7C3zKXzMeJfpUcI3ywd97bmPfMGKaI/tQ+v76UfN6BGsbgS6vtnLYI89o2MJxJ3UOfLOzIRzSt9r/weTUAFYpLVDOkoxNafPegO+pqd4dxgFuhlRhbXGhOwO7rJ+7oR3Y3HdABWYUbAeAxj8ooHhzPUi9Dnd1Gnelm7of/t+2t4oOalFC5MPoJqfG/9xHTx/EOJmtaFwKn9Hm9A3UTiG13Rkokgqs4fkkCJojoRUZZFnckHMB1a2Y0IuncUaE7NdQSOMwd+G6pF6bgVJvaQhLUzvKxsVhVZRnGwOgrbHjhBjcjhXtFYuDAxAi+wiiT4t35gvW2zWxBn4a9hB78uRzmceP16BLDBIz+RSYgEL/zzn95zFD5NrU8xw0cY90rzq6wUNMQ4O6DkCv1xwJVDMmjcb"
 }
