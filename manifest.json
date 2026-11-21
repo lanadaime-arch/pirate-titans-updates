@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 984,
-  "versionName": "0.9.84",
+  "versionCode": 985,
+  "versionName": "0.9.85",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-984.zip",
-  "packageSha256": "4da102f7eb4ad6c781dfc22e6f5c6177b7c9ec827148ad16b70aa6fad299684e",
-  "packageBytes": 3792962,
-  "notes": "Correction observée sur Android 0.9.83 : coffre de butin au pied de Luffy plutôt que sur le torse ennemi, languette du panneau fermé rattachée au sol, compteur de butin au singulier. Animation ennemis encore en chantier.",
-  "signature": "SSoGpW3oQKi6l4BdhvAV3yKSo+EnMQeJPtaLjjOTsspyh82j5nMJHDKJ+Q19exQAD2FLrbUXD1dGmQ31t/S3gEId1IGBEBcmFTRbu5G9ZylW5Vw+Pk5MomdZfqw4NgqsTjaYGfMh69peuA/19mKk5DdvYoI3TrUn3YRYX3kL3m/qRmkCTARQl/iA8PBJfCcMDkfEvAC6vo6vFfvtl7DqRtQ65YwMlOy+9/B37RRLxxLo8lDYxAx4tO5n8AqUQf5z7U1iTegdIkQ27hVqDqlBvshY1rFTDRlZTtB7/3kTruS6AZ7jkP8lOJTkB9LZywAbRCk6CXny+XF/YT+XN+u2DetOsqUvx/VlO3tbIeuUJo7HELa3qqCrpJS2oqk+i2McG2+BTJrPbV57AHtCPPItc2+ydy2a+/glOgGaR3gVvWeAPLrOwtSqQJLQAdltLzI5fWlXPd8hSPkX0Nho33VAYWFTJl6fOOF3Bs6UEB96MlABqm39yZbtcGldTGp2JHRB"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-985.zip",
+  "packageSha256": "0a237d83ba5cd882974bf56ff5f92b9c025a8141e1ef376e2492df9441427d70",
+  "packageBytes": 3793077,
+  "notes": "Tiroir TT2 : suppression du bouton d'ouverture indépendant, languette trapézoïdale flèche/croix accolée au sol, ouverture par les six onglets, transition entre deux hauteurs.",
+  "signature": "O7agCWS51iwAzKaEtwoJH5XHDz99BjLq1mcycSfqhnhrwCwKNcq3Nia/4cW7UwM/FB4DdhGzmEoBLxSymNiAiiG8ndc/ekuPuBgbZ8dC2TlDSMZ3vfBAiUeijDeFHsmOFxVOwVezwkOdkCuZOTt57DmaFeczLfZbsNtwajxcFkJ8Ha3CQh+3zOmDPznUqf8kZcPnYQskJzRawWcSv795rxxCiW/Z1Nzq1Nppkroy7DJskmmqWhYwY7anR10euNDg9qYPL9KJr+ntSM0ltYm07bBdtyTEwX390CC7l4PDGBEBsHATOscQAc+X4JNXTnPB4+ZxFDdEt8u06NGC3eDX0eDDbVUtu+Fgu4nTckMdJN+RtarbbwLaHivHcLF048UMnp0JpjJ2eOpXEFRCmRgSFVQT4EFZb4Tte8Q4vjdwlZq7Dc3mqJWnyw82oI6xBdakOb5+BY+VAkTSbT0Tn+dshY3cJGf3CGBgvThq02HjE9vhG4Y6f+2hUACu52FP9tH+"
 }
