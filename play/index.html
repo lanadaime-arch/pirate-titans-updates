@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#19243f"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest">
 <!-- Precharger et decoder les planches AVANT les changements de rang (evite
      un frame blanc au passage de la forme normale a l'Eveil 1). -->
-<meta name="description" content="Pirate Titans 0.9.83 : couture combat-menu compacte, HUD supérieur, menus resserrés et butin au sol.">
+<meta name="description" content="Pirate Titans 0.9.84 : coffre ancré au sol, ouverture du panneau fixée à la couture et lisibilité du butin.">
 
-<title>Pirate Titans — Grand Line v0.9.83</title>
+<title>Pirate Titans — Grand Line v0.9.84</title>
 <style>
 :root{--ink:#122332;--deep:#112634;--panel:#213746;--panel2:#304554;--line:#68808a;--warm:#fceac0;--gold:#ffce68;--cyan:#58dfee;--mint:#5bdeb8;--red:#f4705e;--paper:#f3ebd7;--h:100dvh}
 *{box-sizing:border-box}html,body{margin:0;height:100%;width:100%;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--paper);background:#08141c;touch-action:manipulation}button{font:inherit;cursor:pointer;color:inherit;-webkit-tap-highlight-color:transparent}button:disabled{cursor:default}button:focus-visible{outline:2px solid #fff2b5;outline-offset:2px}[hidden]{display:none!important}
@@ -2005,6 +2005,30 @@
  .app.expanded .sheet-grip #drawerMax{right:39px!important}
 }
 /* Aucune icone d'evenement multijoueur ajoutée sur les cotes : choix valide. */
+
+/* V0.9.84 — résultats vidéo réelle Android 21106.mp4.
+   #lootPile appartient à #formation : les pourcentages bottom/left
+   sont relatifs à la FORMATION et NON à .frame. La 0.9.83 le
+   positionnait ainsi en plein milieu du torse ennemi (vidéo 00:02/00:38).
+   Descendre au sol sans agrandir le coffre ni masquer Luffy/Vivi. */
+.app .v08-formation #lootPile{
+ left:24%!important;bottom:-5%!important;z-index:24!important;
+ transform:scale(.8)!important;transform-origin:bottom left!important;
+ min-width:54px!important;min-height:41px!important;
+}
+@media(max-width:360px){
+ .app .v08-formation #lootPile{left:23%!important;bottom:-4%!important}
+}
+/* La petite languette du tiroir FERME doit toucher le sol (52.8% de
+   la hauteur utile), comme la couture du tiroir ouvert, sans flotter au
+   milieu des stats/reliques. Elle reste à droite pour ne pas couvrir Luffy. */
+.app:not(.expanded) #drawerOpen{
+ top:calc(52.8% - 27px)!important;bottom:auto!important;
+ left:auto!important;right:4px!important;
+ transform:none!important;
+}
+/* En mode ferme les commandes et les recompenses souterraines restent
+   accessibles : le seul outil interactif sur la couture est la languette. */
 </style>
 <link rel="preload" as="image" href="./vivi-alvida-base-16f-224.webp" type="image/webp">
 <link rel="stylesheet" href="./alvida-rig.css">
@@ -2063,7 +2087,7 @@
   <div class="closed-summary" id="closedSummary" aria-label="Statistiques de combat">
     <div class="stat-mini" title="Dégâts de l'équipage"><span class="stat-icon">⚔️</span><b id="summaryDps">0</b><small>DPS</small></div>
     <div class="stat-mini" title="Gain du prestige actuel"><span class="stat-icon">✨</span><b id="summaryPrestige">0</b><small>reliques</small></div>
-    <div class="stat-mini" title="Trésors disponibles"><span class="stat-icon">🎁</span><b id="summaryChest">0</b><small>butins au sol</small></div>
+    <div class="stat-mini" title="Trésors disponibles"><span class="stat-icon">🎁</span><b id="summaryChest">0</b><small id="summaryChestLabel">butins au sol</small></div>
   </div>
   <button id="drawerOpen" class="drawer-open" aria-label="Ouvrir le panneau" aria-expanded="false" aria-controls="sheetPanel" title="Ouvrir les améliorations"><b>▲</b></button>
   <div class="actionbar"><div class="actionrow">
@@ -3290,9 +3314,17 @@ function modal(title,body,cb,label='CONTINUER',cancel=false){$('modalTitle').tex
 function closeModal(){$('veil').hidden=true;modalCb=null;}
 
 /* V0.9.58 — Notes éditoriales locales : ne changent pas la sauvegarde du jeu. */
-const PATCH_NOTES_VERSION=983;
+const PATCH_NOTES_VERSION=984;
 const PATCH_NOTES_SEEN_KEY='pirate_titans_patchnotes_seen_v1';
 const PATCH_NOTES=[
+ {code:984,version:'0.9.84',date:'21 novembre 2026',title:'Coffre enfin au sol et ouverture de panneau alignée',sections:[
+  {name:'Corrections après vidéo Android 21106',items:[
+   'Le coffre de récompense utilise maintenant le point d’ancrage réel de la formation : il est descendu près des pieds de Luffy au lieu de recouvrir le pirate.',
+   'La flèche qui ouvre un panneau fermé rejoint la frontière du sol à droite : plus de bouton flottant sur les informations de prestige.',
+   'Le compteur des récompenses affiche désormais correctement « 1 butin au sol » au singulier.',
+   'Les animations complètes des ennemis restent à améliorer dans les prochaines étapes.'
+  ]}
+ ]},
  {code:983,version:'0.9.83',date:'21 novembre 2026',title:'La vraie séparation entre combat et menus',sections:[
   {name:'Une couture inspirée de TT2',items:[
    'Le tiroir semi-ouvert se rattache au sol de l’arène, sans grande bande de terre inutile.',
@@ -4191,7 +4223,7 @@ function renderHud(){
  $('milestoneReward').textContent='💎 '+prize.pearls+' · 🎁 '+prize.chests;
  $('milestoneFill').style.width=(100*Math.min(1,Math.max(0,(currentMilestone-lastMilestone)/(nextMilestone-lastMilestone))))+'%';
  $('manaText').textContent=Math.floor(S.mana)+'/100';$('manaFill').style.width=S.mana+'%';
-  $('summaryDps').textContent=fmt(d);$('summaryPrestige').textContent=fmt(relicReward());$('summaryChest').textContent=String(S.chests||0);const pile=$('lootPile'),pileCount=$('lootPileCount');if(pile&&pileCount){const pending=Math.max(0,Math.floor(Number(S.chests)||0));pile.hidden=pending===0;if(pileCount.textContent!==String(pending))pileCount.textContent=String(pending);}
+  $('summaryDps').textContent=fmt(d);$('summaryPrestige').textContent=fmt(relicReward());$('summaryChest').textContent=String(S.chests||0);$('summaryChestLabel').textContent=Number(S.chests)===1?'butin au sol':'butins au sol';const pile=$('lootPile'),pileCount=$('lootPileCount');if(pile&&pileCount){const pending=Math.max(0,Math.floor(Number(S.chests)||0));pile.hidden=pending===0;if(pileCount.textContent!==String(pending))pileCount.textContent=String(pending);}
   $('pulseWave').textContent=(S.wave||1)+'/5';
   $('pulseCrew').textContent=CREW.filter(h=>lv(h.id)>0).length+'/'+CREW.length;
   $('pulsePearls').textContent=fmt(S.pearls);
@@ -4270,7 +4302,7 @@ $('multipliers').addEventListener('click',e=>{const b=e.target.closest('[data-mu
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{const requested=b.dataset.tab;if(tab===requested&&$('app').classList.contains('expanded')){setDrawer(false);return;}tab=requested;setDrawer(true);document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));$('shop').scrollTop=0;renderShop()}));
 $('patchNotesButton').addEventListener('click',openPatchNotes);
 refreshPatchNotesBadge();
-$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.83 · Démo Vivi',`<p><b>Progression :</b> Vivi possède son animation 2D de 16 poses et ses dégâts de base. Les bonus temporaires de test ont été retirés.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige devient disponible au <b>stage 30</b>. Les jalons permettent ensuite un départ avancé après prestige.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button> <button id="testResetWaveOne" class="save-btn" type="button" style="border-color:#e8bd72">🔄 Recommencer à la vague 1</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b> nouvelle attaque 2D dessinée en 16 poses, courte et dynamique, sur la méthode Alvida.<br><small>Aucune ancienne animation ni bouton d'essai à sélectionner. La V0.9.81 a remis les anciennes parties de test à zéro une seule fois. Ta progression après ce reset est sauvegardée normalement ; le bouton Recommencer permet un nouveau test.</small></p><p><b>Équipements :</b> <button id="autoSellCommonToggle" class="save-btn" type="button">${S.autoSellCommon===true?'✅ Vente auto des communs':'⬜ Vente auto des communs'}</button><br><small>Gratuit : les communs récupérés deviennent des perles ; les autres vont dans l’inventaire.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animation 2D dessinée encore en cours de finition.</p>`,()=>{},'JOUER'));
+$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.84 · Démo Vivi',`<p><b>Progression :</b> Vivi possède son animation 2D de 16 poses et ses dégâts de base. Les bonus temporaires de test ont été retirés.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige devient disponible au <b>stage 30</b>. Les jalons permettent ensuite un départ avancé après prestige.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button> <button id="testResetWaveOne" class="save-btn" type="button" style="border-color:#e8bd72">🔄 Recommencer à la vague 1</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b> nouvelle attaque 2D dessinée en 16 poses, courte et dynamique, sur la méthode Alvida.<br><small>Aucune ancienne animation ni bouton d'essai à sélectionner. La V0.9.81 a remis les anciennes parties de test à zéro une seule fois. Ta progression après ce reset est sauvegardée normalement ; le bouton Recommencer permet un nouveau test.</small></p><p><b>Équipements :</b> <button id="autoSellCommonToggle" class="save-btn" type="button">${S.autoSellCommon===true?'✅ Vente auto des communs':'⬜ Vente auto des communs'}</button><br><small>Gratuit : les communs récupérés deviennent des perles ; les autres vont dans l’inventaire.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animation 2D dessinée encore en cours de finition.</p>`,()=>{},'JOUER'));
 $('modalBody').addEventListener('click',e=>{
   if(e.target.id==='skipLootReveal'){const reveal=e.target.closest('.loot-reveal');if(reveal)reveal.classList.add('loot-reveal-skipped');e.target.hidden=true;return;}if(e.target.id==='autoSellCommonToggle'){S.autoSellCommon=S.autoSellCommon!==true;e.target.textContent=S.autoSellCommon?'✅ Vente auto des communs':'⬜ Vente auto des communs';save();}if(e.target.id==='fxToggle'){S.fx=S.fx===false; e.target.textContent=S.fx===false?'✨ Activer':'✨ Désactiver';save();}if(e.target.id==='soundToggle'){S.mute=!S.mute;e.target.textContent=S.mute?'🔇 Activer':'🔊 Couper';save();}
   if(e.target.id==='checkGameUpdates'){if(window.PirateAndroid?.checkForUpdates)window.PirateAndroid.checkForUpdates();else if(window.PiratePWA?.checkForUpdates)window.PiratePWA.checkForUpdates();else toast('Mises à jour web indisponibles');}
@@ -4327,7 +4359,7 @@ if(resourceBtn)resourceBtn.addEventListener('click',()=>{
 });
 
 startEnemy();renderAll();schedulePirateTick();save();try{if(window.PirateAndroid?.gameReady)window.PirateAndroid.gameReady();}catch(e){}
-let welcome=true;try{welcome=!localStorage.getItem('pirate_titans_v09_seen')}catch(e){}if(welcome && !(S.stats?.taps>0||S.stats?.upgrades>0||S.highest>1)){setTimeout(()=>modal('🏴‍☠️ PIRATE TITANS V0.9.81',`<p>Nouveautés V0.9.23 : <b>multiplicateurs spécialisés pour les artefacts, six talents, équipements de cinq types et familiers actifs/passifs</b>, tout en conservant la progression, combat fixe, ouverture du panneau sans zoom, <b>formes de Luffy</b> et <b>attaques spéciales des boss tous les 10 stages</b> : contre-les avec 5 touches rapides ou tes sorts !</p><p>👆 <b>Tape et enchaîne les combos</b> · ⚔️ recrute ton équipage · 🎒 ouvre des coffres · 🐣 élève tes familiers · 📜 accomplis des missions · ✨ recommence plus fort après un prestige.</p><p>Tu démarres avec 20 berrys et peux réclamer chaque jour 5 perles + 1 coffre avec 🎁. Aucun achat en euros !</p><p class="fine">Prototype de démonstration fan-made, non affilié à One Piece ni à Tap Titans 2.</p>`,()=>{try{localStorage.setItem('pirate_titans_v09_seen','1')}catch(e){}},"C'EST PARTI !"),280)}
+let welcome=true;try{welcome=!localStorage.getItem('pirate_titans_v09_seen')}catch(e){}if(welcome && !(S.stats?.taps>0||S.stats?.upgrades>0||S.highest>1)){setTimeout(()=>modal('🏴‍☠️ PIRATE TITANS V0.9.84',`<p>Nouveautés V0.9.23 : <b>multiplicateurs spécialisés pour les artefacts, six talents, équipements de cinq types et familiers actifs/passifs</b>, tout en conservant la progression, combat fixe, ouverture du panneau sans zoom, <b>formes de Luffy</b> et <b>attaques spéciales des boss tous les 10 stages</b> : contre-les avec 5 touches rapides ou tes sorts !</p><p>👆 <b>Tape et enchaîne les combos</b> · ⚔️ recrute ton équipage · 🎒 ramasse le butin au sol · 🐣 élève tes familiers · 📜 accomplis des missions · ✨ recommence plus fort après un prestige.</p><p>Tu démarres avec 20 berrys et peux réclamer chaque jour 5 perles + 1 coffre avec 🎁. Aucun achat en euros !</p><p class="fine">Prototype de démonstration fan-made, non affilié à One Piece ni à Tap Titans 2.</p>`,()=>{try{localStorage.setItem('pirate_titans_v09_seen','1')}catch(e){}},"C'EST PARTI !"),280)}
 if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
 })();
 </script>
