@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 983,
-  "versionName": "0.9.83",
+  "versionCode": 984,
+  "versionName": "0.9.84",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-983.zip",
-  "packageSha256": "81ce77d1017f509cf9a03553e3681053ca06998c9061d1d8ef2967571da359cd",
-  "packageBytes": 3792224,
-  "notes": "Raccord combat-menu aligné sur les captures TT2 avec flèche et croix intégrées à la couture ; HUD supérieur sans double marge de sécurité, en-têtes plus compacts et coffre au sol près du héros.",
-  "signature": "wqysDX666a1Iz3UObK5Z9UDSQIXfuBM2r1uvetchGxR65vkiIqtKZUZqO0FKeMXJRPAbT/EDJeitDLkrB7umcNBuC8bQNWgWcltxsSRwJnM3cgizOY9GYV3s6yqSCRhFxbMmCqwgQmNXs0uT+8RA3QvCiIpqvf/spOftM093QQeT/eQKQaDYORYEGMNGOY+y0wfpKbbBrX3v4mo1a2LbS1ERG2w0PcmDCp7yIEynaBoU3Er6F766VUvzyvfcW4lUTVbBn+nLqd8bJ1gSqoIWdSizGJeFOVWtcCkJVKK6L6GuUHz2aXvwLVSLXdmua8tOovial4Cz/YUR7HlqVQ4APX5tKSVl1ov+e2Ld2M/h76xDaIxARvAq6Gwm1qw6V6Kx8cAOvaQ+wGu7FblJfJp3rejdlzyAa4Qt4xYzSkF11NtvMEgaL8/Ok9Va4CQ60WSD/6U7YD+HgRLImhd/IqXbbAyM951QQ0m/K2lDGzYX2QeKNBcdseVzjzVjLuuU2UJH"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-984.zip",
+  "packageSha256": "4da102f7eb4ad6c781dfc22e6f5c6177b7c9ec827148ad16b70aa6fad299684e",
+  "packageBytes": 3792962,
+  "notes": "Correction observée sur Android 0.9.83 : coffre de butin au pied de Luffy plutôt que sur le torse ennemi, languette du panneau fermé rattachée au sol, compteur de butin au singulier. Animation ennemis encore en chantier.",
+  "signature": "SSoGpW3oQKi6l4BdhvAV3yKSo+EnMQeJPtaLjjOTsspyh82j5nMJHDKJ+Q19exQAD2FLrbUXD1dGmQ31t/S3gEId1IGBEBcmFTRbu5G9ZylW5Vw+Pk5MomdZfqw4NgqsTjaYGfMh69peuA/19mKk5DdvYoI3TrUn3YRYX3kL3m/qRmkCTARQl/iA8PBJfCcMDkfEvAC6vo6vFfvtl7DqRtQ65YwMlOy+9/B37RRLxxLo8lDYxAx4tO5n8AqUQf5z7U1iTegdIkQ27hVqDqlBvshY1rFTDRlZTtB7/3kTruS6AZ7jkP8lOJTkB9LZywAbRCk6CXny+XF/YT+XN+u2DetOsqUvx/VlO3tbIeuUJo7HELa3qqCrpJS2oqk+i2McG2+BTJrPbV57AHtCPPItc2+ydy2a+/glOgGaR3gVvWeAPLrOwtSqQJLQAdltLzI5fWlXPd8hSPkX0Nho33VAYWFTJl6fOOF3Bs6UEB96MlABqm39yZbtcGldTGp2JHRB"
 }

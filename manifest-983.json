@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 983,
+  "versionName": "0.9.83",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-983.zip",
+  "packageSha256": "81ce77d1017f509cf9a03553e3681053ca06998c9061d1d8ef2967571da359cd",
+  "packageBytes": 3792224,
+  "notes": "Raccord combat-menu aligné sur les captures TT2 avec flèche et croix intégrées à la couture ; HUD supérieur sans double marge de sécurité, en-têtes plus compacts et coffre au sol près du héros.",
+  "signature": "wqysDX666a1Iz3UObK5Z9UDSQIXfuBM2r1uvetchGxR65vkiIqtKZUZqO0FKeMXJRPAbT/EDJeitDLkrB7umcNBuC8bQNWgWcltxsSRwJnM3cgizOY9GYV3s6yqSCRhFxbMmCqwgQmNXs0uT+8RA3QvCiIpqvf/spOftM093QQeT/eQKQaDYORYEGMNGOY+y0wfpKbbBrX3v4mo1a2LbS1ERG2w0PcmDCp7yIEynaBoU3Er6F766VUvzyvfcW4lUTVbBn+nLqd8bJ1gSqoIWdSizGJeFOVWtcCkJVKK6L6GuUHz2aXvwLVSLXdmua8tOovial4Cz/YUR7HlqVQ4APX5tKSVl1ov+e2Ld2M/h76xDaIxARvAq6Gwm1qw6V6Kx8cAOvaQ+wGu7FblJfJp3rejdlzyAa4Qt4xYzSkF11NtvMEgaL8/Ok9Va4CQ60WSD/6U7YD+HgRLImhd/IqXbbAyM951QQ0m/K2lDGzYX2QeKNBcdseVzjzVjLuuU2UJH"
+}
