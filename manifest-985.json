@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "versionCode": 985,
+  "versionName": "0.9.85",
+  "minShellVersion": 1,
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-985.zip",
+  "packageSha256": "0a237d83ba5cd882974bf56ff5f92b9c025a8141e1ef376e2492df9441427d70",
+  "packageBytes": 3793077,
+  "notes": "Tiroir TT2 : suppression du bouton d'ouverture indépendant, languette trapézoïdale flèche/croix accolée au sol, ouverture par les six onglets, transition entre deux hauteurs.",
+  "signature": "O7agCWS51iwAzKaEtwoJH5XHDz99BjLq1mcycSfqhnhrwCwKNcq3Nia/4cW7UwM/FB4DdhGzmEoBLxSymNiAiiG8ndc/ekuPuBgbZ8dC2TlDSMZ3vfBAiUeijDeFHsmOFxVOwVezwkOdkCuZOTt57DmaFeczLfZbsNtwajxcFkJ8Ha3CQh+3zOmDPznUqf8kZcPnYQskJzRawWcSv795rxxCiW/Z1Nzq1Nppkroy7DJskmmqWhYwY7anR10euNDg9qYPL9KJr+ntSM0ltYm07bBdtyTEwX390CC7l4PDGBEBsHATOscQAc+X4JNXTnPB4+ZxFDdEt8u06NGC3eDX0eDDbVUtu+Fgu4nTckMdJN+RtarbbwLaHivHcLF048UMnp0JpjJ2eOpXEFRCmRgSFVQT4EFZb4Tte8Q4vjdwlZq7Dc3mqJWnyw82oI6xBdakOb5+BY+VAkTSbT0Tn+dshY3cJGf3CGBgvThq02HjE9vhG4Y6f+2hUACu52FP9tH+"
+}

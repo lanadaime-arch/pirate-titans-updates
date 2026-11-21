@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "versionCode": 985,
-  "versionName": "0.9.85",
+  "versionCode": 986,
+  "versionName": "0.9.86",
   "minShellVersion": 1,
-  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-985.zip",
-  "packageSha256": "0a237d83ba5cd882974bf56ff5f92b9c025a8141e1ef376e2492df9441427d70",
-  "packageBytes": 3793077,
-  "notes": "Tiroir TT2 : suppression du bouton d'ouverture indépendant, languette trapézoïdale flèche/croix accolée au sol, ouverture par les six onglets, transition entre deux hauteurs.",
-  "signature": "O7agCWS51iwAzKaEtwoJH5XHDz99BjLq1mcycSfqhnhrwCwKNcq3Nia/4cW7UwM/FB4DdhGzmEoBLxSymNiAiiG8ndc/ekuPuBgbZ8dC2TlDSMZ3vfBAiUeijDeFHsmOFxVOwVezwkOdkCuZOTt57DmaFeczLfZbsNtwajxcFkJ8Ha3CQh+3zOmDPznUqf8kZcPnYQskJzRawWcSv795rxxCiW/Z1Nzq1Nppkroy7DJskmmqWhYwY7anR10euNDg9qYPL9KJr+ntSM0ltYm07bBdtyTEwX390CC7l4PDGBEBsHATOscQAc+X4JNXTnPB4+ZxFDdEt8u06NGC3eDX0eDDbVUtu+Fgu4nTckMdJN+RtarbbwLaHivHcLF048UMnp0JpjJ2eOpXEFRCmRgSFVQT4EFZb4Tte8Q4vjdwlZq7Dc3mqJWnyw82oI6xBdakOb5+BY+VAkTSbT0Tn+dshY3cJGf3CGBgvThq02HjE9vhG4Y6f+2hUACu52FP9tH+"
+  "packageUrl": "https://lanadaime-arch.github.io/pirate-titans-updates/pirate-titans-game-986.zip",
+  "packageSha256": "4f704e01f7c20c405a09e4ee020c0cd6b6633f6b3679cdd620d898d9f013a493",
+  "packageBytes": 3793921,
+  "notes": "Jonction TT2 : languette trapézoïdale réinsérée sous la ligne du sol, sans masquer Luffy ; coffre à gauche du héros et barre de boss plus lisible, d'après captures 21112/21113.",
+  "signature": "PB7aurt93e5Otd4tOTcbKGus2qZpqCY2oOisU7/IO7NN57rk56tyczVo43HZOQ8oJQN57JzKC70oQMaaisDkRfVwfk7TogbOyktHTDXBWjR9Yd75DfnZ8+tVyTtpjZkeK5BaaQOh2R+OZVQsnsO53dHqgpcswXvSQ9vPhH/Gm1b6YZyFncxwJ7tDBR1eRWOazuhsbDlVSwTYrdua7X4elnl5Vd6m8okykHw7Yeij+7vDLeRjNL+cSjUxuI7fyA9/QT0jV9ChSVJqtlIFIkY0SmeWSOw9LzPYyM4QyTg5lODQn0bSTsJKV7za3mN8YsoPKxLmMjmFMN4q4Lw1H/b1pgEUIJ0X13XCneYSNdp7g/n6AWIChWqqZHPvhBG+ZGOVYE+ekJQHZ2JHQ4EXB1/z0GV22TMjFHImJOXj8CdU30EO972FtrFSy0u3IIm6wm5EHmBeyz+RUzLgYp/wzibTm/47tNiGt+LVKSJBuwSMoBZFIDgNxhbPohojuL8zpIfG"
 }
