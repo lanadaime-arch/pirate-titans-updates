@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#19243f"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="./manifest.webmanifest">
 <!-- Precharger et decoder les planches AVANT les changements de rang (evite
      un frame blanc au passage de la forme normale a l'Eveil 1). -->
-<meta name="description" content="Pirate Titans 0.9.84 : coffre ancré au sol, ouverture du panneau fixée à la couture et lisibilité du butin.">
+<meta name="description" content="Pirate Titans 0.9.85 : six onglets pour ouvrir le tiroir, une languette trapézoïdale pour flèche et croix.">
 
-<title>Pirate Titans — Grand Line v0.9.84</title>
+<title>Pirate Titans — Grand Line v0.9.85</title>
 <style>
 :root{--ink:#122332;--deep:#112634;--panel:#213746;--panel2:#304554;--line:#68808a;--warm:#fceac0;--gold:#ffce68;--cyan:#58dfee;--mint:#5bdeb8;--red:#f4705e;--paper:#f3ebd7;--h:100dvh}
 *{box-sizing:border-box}html,body{margin:0;height:100%;width:100%;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--paper);background:#08141c;touch-action:manipulation}button{font:inherit;cursor:pointer;color:inherit;-webkit-tap-highlight-color:transparent}button:disabled{cursor:default}button:focus-visible{outline:2px solid #fff2b5;outline-offset:2px}[hidden]{display:none!important}
@@ -1938,45 +1938,49 @@
  height:auto!important;min-height:0!important;max-height:none!important;
  border-top:2px solid #9799a5!important;
 }
+/* V0.9.85 — languette trapezoidale TT2; aucun bouton d'ouverture autonome. */
 .app.expanded .sheet-grip{
- position:relative!important;display:block!important;overflow:visible!important;
- height:0!important;min-height:0!important;flex:0 0 0!important;
- margin:0!important;padding:0!important;border:0!important;
- background:transparent!important;z-index:5;pointer-events:none;
+ position:absolute!important;top:-23px!important;right:0!important;left:auto!important;
+ width:120px!important;height:24px!important;min-height:24px!important;
+ flex:0 0 24px!important;margin:0!important;padding:0!important;border:0!important;
+ overflow:visible!important;display:flex!important;align-items:stretch!important;
+ justify-content:flex-end!important;background:transparent!important;
+ pointer-events:auto!important;isolation:isolate;z-index:6!important;
 }
-.app.expanded .sheet-grip #drawerMax,
+.app.expanded .sheet-grip::before,.app.expanded .sheet-grip::after{
+ content:'';position:absolute;inset:0;pointer-events:none;
+ clip-path:polygon(15px 100%,31px 0,100% 0,100% 100%);
+}
+.app.expanded .sheet-grip::before{background:#aab4c0;z-index:0}
+.app.expanded .sheet-grip::after{
+ inset:2px 1px 0 2px;background:linear-gradient(#5f606c,#343a45);z-index:0;
+}
+.app.expanded .sheet-grip #drawerMax,.app.expanded .sheet-grip #sheetExpand{
+ position:relative!important;top:0!important;left:auto!important;right:auto!important;
+ display:grid!important;place-items:center!important;
+ width:43px!important;height:24px!important;min-height:24px!important;
+ flex:0 0 43px!important;margin:0!important;padding:0!important;
+ border:0!important;border-radius:0!important;box-shadow:none!important;
+ background:transparent!important;color:#f5f6f7!important;
+ font-size:17px!important;font-weight:900!important;letter-spacing:0!important;
+ text-shadow:0 1px #222934!important;line-height:1!important;
+ z-index:1!important;pointer-events:auto!important;touch-action:manipulation;
+}
 .app.expanded .sheet-grip #sheetExpand{
- position:absolute!important;top:-28px!important;
- width:41px!important;height:29px!important;min-height:29px!important;
- flex:none!important;display:grid!important;place-items:center!important;
- padding:0!important;margin:0!important;line-height:1!important;
- font-size:18px!important;font-weight:950!important;letter-spacing:0!important;
- border:2px solid #a1a0a8!important;border-bottom:0!important;
- border-radius:8px 8px 0 0!important;color:#f7f3e9!important;
- background:linear-gradient(#53515c,#333741)!important;
- text-shadow:0 1px #171820!important;box-shadow:0 -2px 4px #12121b77!important;
- pointer-events:auto;touch-action:manipulation;
+ border-left:1px solid #8694a2!important;box-shadow:inset 1px 0 0 #c7cdd5!important;
 }
-.app.expanded .sheet-grip #drawerMax{right:41px!important;left:auto!important}
-.app.expanded .sheet-grip #sheetExpand{right:0!important;left:auto!important;border-left:0!important}
-.app.expanded .sheet-grip #sheetExpand:focus-visible,
-.app.expanded .sheet-grip #drawerMax:focus-visible{outline:2px solid #ffe0a5;outline-offset:1px}
+.app.expanded .sheet-grip #sheetExpand:focus-visible,.app.expanded .sheet-grip #drawerMax:focus-visible{outline:2px solid #ffe1a2;outline-offset:-2px}
+.app.expanded .sheet{transition:top .2s ease!important}
+.app.expanded.max-drawer .sheet{
+ top:var(--peek-h)!important;bottom:var(--nav-h)!important;
+ height:auto!important;min-height:0!important;max-height:none!important;
+}
+@media(max-width:360px){.app.expanded .sheet-grip{width:110px!important}}
+@media(prefers-reduced-motion:reduce){.app.expanded .sheet{transition:none!important}}
 .app.expanded .sheet-top{
  min-height:25px!important;padding:2px 6px!important;gap:4px!important;
 }
 .app.expanded .sheet.captain-mode .sheet-top{min-height:25px!important;padding:2px 6px!important}
-/* Ouvrir depuis le HUD ferme : petite languette, aucun bandeau plein ecran. */
-.app:not(.expanded) #drawerOpen{
- position:absolute!important;left:calc(50% - 24px)!important;right:auto!important;
- bottom:calc(var(--nav-h) + var(--actions-h) + var(--summary-h))!important;
- width:48px!important;height:27px!important;min-height:27px!important;
- border:2px solid #9c98a3!important;border-bottom:0!important;
- border-radius:8px 8px 0 0!important;
- display:grid!important;place-items:center!important;
- padding:0!important;background:linear-gradient(#555361,#302f43)!important;
- color:#fff1ce!important;font-size:14px!important;z-index:21!important;
-}
-.app:not(.expanded) #drawerOpen b{font-size:15px!important}
 .app .hud{
  /* La bande letterbox offre DEJA de l'espace de securite : ne pas
     ajouter une deuxieme fois le safe-area-inset du systeme. */
@@ -2000,9 +2004,6 @@
 }
 @media(max-width:360px){
  .app .frame .loot-pile{left:57%!important;min-width:50px!important}
- .app.expanded .sheet-grip #drawerMax,
- .app.expanded .sheet-grip #sheetExpand{width:39px!important}
- .app.expanded .sheet-grip #drawerMax{right:39px!important}
 }
 /* Aucune icone d'evenement multijoueur ajoutée sur les cotes : choix valide. */
 
@@ -2018,14 +2019,6 @@
 }
 @media(max-width:360px){
  .app .v08-formation #lootPile{left:23%!important;bottom:-4%!important}
-}
-/* La petite languette du tiroir FERME doit toucher le sol (52.8% de
-   la hauteur utile), comme la couture du tiroir ouvert, sans flotter au
-   milieu des stats/reliques. Elle reste à droite pour ne pas couvrir Luffy. */
-.app:not(.expanded) #drawerOpen{
- top:calc(52.8% - 27px)!important;bottom:auto!important;
- left:auto!important;right:4px!important;
- transform:none!important;
 }
 /* En mode ferme les commandes et les recompenses souterraines restent
    accessibles : le seul outil interactif sur la couture est la languette. */
@@ -2089,7 +2082,6 @@
     <div class="stat-mini" title="Gain du prestige actuel"><span class="stat-icon">✨</span><b id="summaryPrestige">0</b><small>reliques</small></div>
     <div class="stat-mini" title="Trésors disponibles"><span class="stat-icon">🎁</span><b id="summaryChest">0</b><small id="summaryChestLabel">butins au sol</small></div>
   </div>
-  <button id="drawerOpen" class="drawer-open" aria-label="Ouvrir le panneau" aria-expanded="false" aria-controls="sheetPanel" title="Ouvrir les améliorations"><b>▲</b></button>
   <div class="actionbar"><div class="actionrow">
     <button class="spell" id="skillGear" aria-label="Gear Second, 25 mana"><span class="sig">🔥</span><span class="spell-text"><strong>GEAR 2</strong><span>25</span></span><span class="cool" hidden></span></button>
     <button class="spell" id="skillHaki" aria-label="Haki des Rois, 50 mana"><span class="sig">⚡</span><span class="spell-text"><strong>HAKI</strong><span>50</span></span><span class="cool" hidden></span></button>
@@ -3314,9 +3306,21 @@ function modal(title,body,cb,label='CONTINUER',cancel=false){$('modalTitle').tex
 function closeModal(){$('veil').hidden=true;modalCb=null;}
 
 /* V0.9.58 — Notes éditoriales locales : ne changent pas la sauvegarde du jeu. */
-const PATCH_NOTES_VERSION=984;
+const PATCH_NOTES_VERSION=985;
 const PATCH_NOTES_SEEN_KEY='pirate_titans_patchnotes_seen_v1';
 const PATCH_NOTES=[
+ {code:985,version:'0.9.85',date:'21 novembre 2026',title:'Le tiroir sans bouton ajouté',sections:[
+  {name:'Un fonctionnement fidèle à TT2',items:[
+   'Suppression du bouton supplémentaire d’ouverture : les six onglets du bas ouvrent directement les menus.',
+   'La flèche de hauteur et la croix de fermeture sont regroupées dans une seule languette plate en forme de trapèze à la bordure du terrain.',
+   'La flèche agrandit ou réduit, la croix ferme et retoucher l’onglet actif referme le panneau.',
+   'Les hauteurs semi-ouverte et agrandie utilisent un même ancrage vertical avec une transition plus douce.'
+  ]},
+  {name:'Vérification à poursuivre',items:[
+   'Les trois états du tiroir restent à comparer visuellement sur Android et iPhone.',
+   'Aucun bouton d’événement multijoueur n’est ajouté sur les côtés.'
+  ]}
+ ]},
  {code:984,version:'0.9.84',date:'21 novembre 2026',title:'Coffre enfin au sol et ouverture de panneau alignée',sections:[
   {name:'Corrections après vidéo Android 21106',items:[
    'Le coffre de récompense utilise maintenant le point d’ancrage réel de la formation : il est descendu près des pieds de Luffy au lieu de recouvrir le pirate.',
@@ -4302,7 +4306,7 @@ $('multipliers').addEventListener('click',e=>{const b=e.target.closest('[data-mu
 document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{const requested=b.dataset.tab;if(tab===requested&&$('app').classList.contains('expanded')){setDrawer(false);return;}tab=requested;setDrawer(true);document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));$('shop').scrollTop=0;renderShop()}));
 $('patchNotesButton').addEventListener('click',openPatchNotes);
 refreshPatchNotesBadge();
-$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.84 · Démo Vivi',`<p><b>Progression :</b> Vivi possède son animation 2D de 16 poses et ses dégâts de base. Les bonus temporaires de test ont été retirés.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige devient disponible au <b>stage 30</b>. Les jalons permettent ensuite un départ avancé après prestige.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button> <button id="testResetWaveOne" class="save-btn" type="button" style="border-color:#e8bd72">🔄 Recommencer à la vague 1</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b> nouvelle attaque 2D dessinée en 16 poses, courte et dynamique, sur la méthode Alvida.<br><small>Aucune ancienne animation ni bouton d'essai à sélectionner. La V0.9.81 a remis les anciennes parties de test à zéro une seule fois. Ta progression après ce reset est sauvegardée normalement ; le bouton Recommencer permet un nouveau test.</small></p><p><b>Équipements :</b> <button id="autoSellCommonToggle" class="save-btn" type="button">${S.autoSellCommon===true?'✅ Vente auto des communs':'⬜ Vente auto des communs'}</button><br><small>Gratuit : les communs récupérés deviennent des perles ; les autres vont dans l’inventaire.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animation 2D dessinée encore en cours de finition.</p>`,()=>{},'JOUER'));
+$('settings').addEventListener('click',()=>modal('🏴‍☠️ Pirate Titans V0.9.85 · Démo Vivi',`<p><b>Progression :</b> Vivi possède son animation 2D de 16 poses et ses dégâts de base. Les bonus temporaires de test ont été retirés.</p><p><b>Un vrai idle tap RPG :</b> tape sur l’ennemi pour combattre. Recrute les héros afin qu’ils attaquent automatiquement, puis renforce Luffy.</p><p>Chaque stage comprend <b>4 ennemis et 1 boss</b>. Le boss doit être battu en 30 secondes. Si tu échoues, tu peux farmer puis retenter.</p><p>Les compétences consomment de la mana. Le prestige devient disponible au <b>stage 30</b>. Les jalons permettent ensuite un départ avancé après prestige.</p><p><b>V0.9.10 :</b> les jalons donnent des récompenses uniques et débloquent un départ avancé après prestige. Exemple : 10 000 → 9 000. Sauvegardes conservées.</p><p>🏪 <b>Aucune dépense en euros ni publicité.</b> Tous les objets de boutique se gagnent en jouant.</p><p><button id="checkGameUpdates" class="save-btn">🔄 Vérifier les mises à jour</button> <button id="saveExport" class="save-btn">📥 Exporter la sauvegarde</button> <button id="saveImport" class="save-btn">📤 Importer une sauvegarde</button> <button id="testResetWaveOne" class="save-btn" type="button" style="border-color:#e8bd72">🔄 Recommencer à la vague 1</button><input type="file" accept="application/json,.json" id="importFile" hidden></p><p><b>Animation Vivi :</b> nouvelle attaque 2D dessinée en 16 poses, courte et dynamique, sur la méthode Alvida.<br><small>Aucune ancienne animation ni bouton d'essai à sélectionner. La V0.9.81 a remis les anciennes parties de test à zéro une seule fois. Ta progression après ce reset est sauvegardée normalement ; le bouton Recommencer permet un nouveau test.</small></p><p><b>Équipements :</b> <button id="autoSellCommonToggle" class="save-btn" type="button">${S.autoSellCommon===true?'✅ Vente auto des communs':'⬜ Vente auto des communs'}</button><br><small>Gratuit : les communs récupérés deviennent des perles ; les autres vont dans l’inventaire.</small></p><p><b>Effets :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="fxToggle">${S.fx===false?'✨ Activer':'✨ Désactiver'}</button><br><br><b>Audio :</b> <button style="background:#274c62;border:1px solid #9ab8c1;border-radius:6px;padding:4px 12px;" id="soundToggle">${S.mute?'🔇 Activer':'🔊 Couper'}</button></p><p class="fine">Prototype fan-made non commercial. Personnages de One Piece utilisés à titre de démonstration ; aucun visuel officiel inclus. Sauvegarde locale dans le navigateur. Animation 2D dessinée encore en cours de finition.</p>`,()=>{},'JOUER'));
 $('modalBody').addEventListener('click',e=>{
   if(e.target.id==='skipLootReveal'){const reveal=e.target.closest('.loot-reveal');if(reveal)reveal.classList.add('loot-reveal-skipped');e.target.hidden=true;return;}if(e.target.id==='autoSellCommonToggle'){S.autoSellCommon=S.autoSellCommon!==true;e.target.textContent=S.autoSellCommon?'✅ Vente auto des communs':'⬜ Vente auto des communs';save();}if(e.target.id==='fxToggle'){S.fx=S.fx===false; e.target.textContent=S.fx===false?'✨ Activer':'✨ Désactiver';save();}if(e.target.id==='soundToggle'){S.mute=!S.mute;e.target.textContent=S.mute?'🔇 Activer':'🔊 Couper';save();}
   if(e.target.id==='checkGameUpdates'){if(window.PirateAndroid?.checkForUpdates)window.PirateAndroid.checkForUpdates();else if(window.PiratePWA?.checkForUpdates)window.PiratePWA.checkForUpdates();else toast('Mises à jour web indisponibles');}
@@ -4329,12 +4333,11 @@ function setDrawer(open){
  $('drawerMax').textContent=app.classList.contains('max-drawer')?'▼':'▲';
  $('sheetExpand').setAttribute('aria-label','Fermer le panneau');
  $('sheetExpand').setAttribute('aria-expanded',String(!!open));
- $('drawerOpen').setAttribute('aria-expanded',String(!!open));
+ document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-expanded',String(!!open&&b.dataset.tab===tab)));
  $('sheetPanel').setAttribute('aria-hidden',String(!open));
  $('drawerMax').setAttribute('aria-label',app.classList.contains('max-drawer')?'Réduire à mi-hauteur':'Agrandir le panneau');
 }
 setDrawer(false);
-$('drawerOpen').addEventListener('click',()=>setDrawer(true));
 $('sheetExpand').addEventListener('click',()=>setDrawer(false));
 $('drawerMax').addEventListener('click',()=>{
  setDrawer(true);
@@ -4359,7 +4362,7 @@ if(resourceBtn)resourceBtn.addEventListener('click',()=>{
 });
 
 startEnemy();renderAll();schedulePirateTick();save();try{if(window.PirateAndroid?.gameReady)window.PirateAndroid.gameReady();}catch(e){}
-let welcome=true;try{welcome=!localStorage.getItem('pirate_titans_v09_seen')}catch(e){}if(welcome && !(S.stats?.taps>0||S.stats?.upgrades>0||S.highest>1)){setTimeout(()=>modal('🏴‍☠️ PIRATE TITANS V0.9.84',`<p>Nouveautés V0.9.23 : <b>multiplicateurs spécialisés pour les artefacts, six talents, équipements de cinq types et familiers actifs/passifs</b>, tout en conservant la progression, combat fixe, ouverture du panneau sans zoom, <b>formes de Luffy</b> et <b>attaques spéciales des boss tous les 10 stages</b> : contre-les avec 5 touches rapides ou tes sorts !</p><p>👆 <b>Tape et enchaîne les combos</b> · ⚔️ recrute ton équipage · 🎒 ramasse le butin au sol · 🐣 élève tes familiers · 📜 accomplis des missions · ✨ recommence plus fort après un prestige.</p><p>Tu démarres avec 20 berrys et peux réclamer chaque jour 5 perles + 1 coffre avec 🎁. Aucun achat en euros !</p><p class="fine">Prototype de démonstration fan-made, non affilié à One Piece ni à Tap Titans 2.</p>`,()=>{try{localStorage.setItem('pirate_titans_v09_seen','1')}catch(e){}},"C'EST PARTI !"),280)}
+let welcome=true;try{welcome=!localStorage.getItem('pirate_titans_v09_seen')}catch(e){}if(welcome && !(S.stats?.taps>0||S.stats?.upgrades>0||S.highest>1)){setTimeout(()=>modal('🏴‍☠️ PIRATE TITANS V0.9.85',`<p>Nouveautés V0.9.23 : <b>multiplicateurs spécialisés pour les artefacts, six talents, équipements de cinq types et familiers actifs/passifs</b>, tout en conservant la progression, combat fixe, ouverture du panneau sans zoom, <b>formes de Luffy</b> et <b>attaques spéciales des boss tous les 10 stages</b> : contre-les avec 5 touches rapides ou tes sorts !</p><p>👆 <b>Tape et enchaîne les combos</b> · ⚔️ recrute ton équipage · 🎒 ramasse le butin au sol · 🐣 élève tes familiers · 📜 accomplis des missions · ✨ recommence plus fort après un prestige.</p><p>Tu démarres avec 20 berrys et peux réclamer chaque jour 5 perles + 1 coffre avec 🎁. Aucun achat en euros !</p><p class="fine">Prototype de démonstration fan-made, non affilié à One Piece ni à Tap Titans 2.</p>`,()=>{try{localStorage.setItem('pirate_titans_v09_seen','1')}catch(e){}},"C'EST PARTI !"),280)}
 if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
 })();
 </script>
