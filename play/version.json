@@ -1,5 +1,5 @@
 {
-  "versionCode": 986,
-  "versionName": "0.9.86",
-  "notes": "Jonction TT2 : languette trapézoïdale réinsérée sous la ligne du sol, sans masquer Luffy ; coffre à gauche du héros et barre de boss plus lisible, d'après captures 21112/21113."
+  "versionCode": 987,
+  "versionName": "0.9.87",
+  "notes": "Audit des captures 21114/21115/21116 et TT2 21097/21096 : séparation semi-ouverte maintenue au bon niveau, bandes flèche/croix et DPS/or compactées, stage entièrement visible en vue agrandie, toasts sous les fiches."
 }
